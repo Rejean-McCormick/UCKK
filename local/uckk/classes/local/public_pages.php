@@ -77,11 +77,20 @@ final class public_pages {
         $PAGE->set_pagelayout('local_uckk_public');
         $PAGE->set_title(self::page_title($slug));
         $PAGE->set_heading(self::site_heading());
-        $PAGE->set_cacheable(true);
 
-        $csspath = $CFG->dirroot . '/local/uckk/styles.css';
-        $cssrev = file_exists($csspath) ? filemtime($csspath) : time();
-        $PAGE->requires->css(new moodle_url('/local/uckk/styles.css', ['v' => $cssrev]));
+        // Public content can vary for the same URL according to Moodle's
+        // session theme. Do not allow a browser/proxy cache to pin one public
+        // identity and serve it after the session theme has changed.
+        $PAGE->set_cacheable(false);
+
+        // The UCKK public stylesheet is part of the UCKK identity. Alternate
+        // Moodle themes may provide their own public-page presentation and should
+        // not inherit UCKK's visual layer accidentally.
+        if (!public_site_context::is_math()) {
+            $csspath = $CFG->dirroot . '/local/uckk/styles.css';
+            $cssrev = file_exists($csspath) ? filemtime($csspath) : time();
+            $PAGE->requires->css(new moodle_url('/local/uckk/styles.css', ['v' => $cssrev]));
+        }
 
         self::setup_breadcrumb($slug);
     }
@@ -95,7 +104,7 @@ final class public_pages {
     private static function setup_breadcrumb(string $slug): void {
         global $PAGE;
 
-        $rootlabel = self::string_or_fallback('pluginname', 'UCKK core');
+        $rootlabel = self::site_heading();
 
         $PAGE->navbar->ignore_active();
 
@@ -120,14 +129,21 @@ final class public_pages {
      */
     public static function definition(string $slug): array {
         $slug = self::clean_slug($slug);
-        $definitions = self::page_definitions();
 
-        $definition = self::merge_definition(
-            self::base_definition($slug),
-            $definitions[$slug] ?? []
-        );
+        if (public_site_context::is_math()) {
+            $definition = self::merge_definition(
+                self::base_definition($slug),
+                self::math_page_definition($slug)
+            );
+        } else {
+            $definitions = self::page_definitions();
+            $definition = self::merge_definition(
+                self::base_definition($slug),
+                $definitions[$slug] ?? []
+            );
+        }
 
-        if ($slug === self::KEY_PROGRAMS) {
+        if ($slug === self::KEY_PROGRAMS && !public_site_context::is_math()) {
             $definition = self::with_program_cards($definition);
         }
 
@@ -163,7 +179,7 @@ final class public_pages {
             'visualstyle' => 'civic-encyclopedic-retrofuturism',
             'fontstrategy' => 'libre-baskerville-primary-eb-garamond-accent',
 
-            'navigation' => self::default_navigation(),
+            'navigation' => self::site_navigation(),
             'quicklinks' => [],
             'sections' => [],
             'cards' => [],
@@ -1366,6 +1382,45 @@ final class public_pages {
     }
 
     /**
+     * Public navigation for the active Moodle theme/site identity.
+     *
+     * @return array<int, array<string, mixed>>
+     */
+    private static function site_navigation(): array {
+        if (public_site_context::is_math()) {
+            return \local_uckk\local\public_pages\math\site::navigation();
+        }
+
+        return self::default_navigation();
+    }
+
+    /**
+     * Return a mathematics public-page definition using the same one-class-per-page
+     * convention already used by the canonical UCKK public pages.
+     *
+     * @param string $slug Sanitised page slug.
+     * @return array<string, mixed>
+     */
+    private static function math_page_definition(string $slug): array {
+        $classes = [
+            self::KEY_HOME => \local_uckk\local\public_pages\math\home::class,
+            self::KEY_ABOUT => \local_uckk\local\public_pages\math\about::class,
+            self::KEY_PROGRAMS => \local_uckk\local\public_pages\math\programs::class,
+            self::KEY_COURSES => \local_uckk\local\public_pages\math\courses::class,
+            self::KEY_CHALLENGES => \local_uckk\local\public_pages\math\challenges::class,
+            self::KEY_ASSEMBLIES => \local_uckk\local\public_pages\math\assemblies::class,
+            self::KEY_INTEGRITY => \local_uckk\local\public_pages\math\integrity::class,
+            self::KEY_ARCHIVES => \local_uckk\local\public_pages\math\archives::class,
+            self::KEY_MEDIATHEQUE => \local_uckk\local\public_pages\math\mediatheque::class,
+            self::KEY_NEWS => \local_uckk\local\public_pages\math\news::class,
+            self::KEY_CONTACT => \local_uckk\local\public_pages\math\contact::class,
+        ];
+
+        $class = $classes[$slug] ?? $classes[self::KEY_HOME];
+        return $class::definition();
+    }
+
+    /**
      * Default public navigation.
      *
      * @return array<int, array<string, mixed>>
@@ -1481,6 +1536,10 @@ final class public_pages {
      * @return string
      */
     private static function page_title(string $slug): string {
+        if (public_site_context::is_math()) {
+            return \local_uckk\local\public_pages\math\site::page_title($slug);
+        }
+
         $fallbacks = [
             self::KEY_HOME => 'UCKK',
             self::KEY_ABOUT => 'À propos',
@@ -1521,6 +1580,10 @@ final class public_pages {
      * @return string
      */
     private static function site_heading(): string {
+        if (public_site_context::is_math()) {
+            return \local_uckk\local\public_pages\math\site::heading();
+        }
+
         return self::string_or_fallback('uckkfullname', 'Univers-Cité King Klown');
     }
 

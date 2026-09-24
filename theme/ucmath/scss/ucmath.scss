@@ -1,0 +1,278 @@
+:root {
+    --ucmath-bg: #f7f8fa;
+    --ucmath-paper: #ffffff;
+    --ucmath-ink: #15171a;
+    --ucmath-muted: #626975;
+    --ucmath-line: #d9dde4;
+    --ucmath-accent: #1457d9;
+    --ucmath-accent-soft: #edf3ff;
+    --ucmath-width: 1080px;
+}
+
+body.theme-ucmath {
+    background: var(--ucmath-bg);
+    color: var(--ucmath-ink);
+}
+
+.theme-ucmath .ucmath-page-wrapper {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(20, 87, 217, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20, 87, 217, .035) 1px, transparent 1px),
+        var(--ucmath-bg);
+    background-size: 32px 32px;
+}
+
+.theme-ucmath .ucmath-page {
+    width: min(calc(100% - 2rem), 1180px);
+    margin: 0 auto;
+    padding: 1.5rem 0 4rem;
+}
+
+.ucmath-public {
+    width: min(100%, var(--ucmath-width));
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.ucmath-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .65rem 0 1rem;
+    border-bottom: 1px solid var(--ucmath-line);
+}
+
+.ucmath-wordmark {
+    color: var(--ucmath-ink);
+    font-size: .92rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    text-decoration: none;
+}
+
+.ucmath-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: .15rem;
+    padding: .15rem;
+    border: 1px solid var(--ucmath-line);
+    border-radius: 999px;
+    background: var(--ucmath-paper);
+}
+
+.ucmath-switcher__link {
+    padding: .32rem .62rem;
+    border-radius: 999px;
+    color: var(--ucmath-muted);
+    font-size: .78rem;
+    text-decoration: none;
+}
+
+.ucmath-switcher__link.is-active {
+    background: var(--ucmath-ink);
+    color: #fff;
+}
+
+.ucmath-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: .9rem 0;
+    border-bottom: 1px solid var(--ucmath-line);
+}
+
+.ucmath-nav__link {
+    color: var(--ucmath-muted);
+    font-size: .86rem;
+    text-decoration: none;
+}
+
+.ucmath-nav__link:hover,
+.ucmath-nav__link.is-active {
+    color: var(--ucmath-accent);
+}
+
+.ucmath-main {
+    padding: 3rem 0 1rem;
+}
+
+.ucmath-hero {
+    max-width: 860px;
+    padding: 2rem 0 4rem;
+}
+
+.ucmath-eyebrow,
+.ucmath-section__index {
+    margin: 0 0 .8rem;
+    color: var(--ucmath-accent);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .78rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.ucmath-title {
+    max-width: 850px;
+    margin: 0;
+    font-size: clamp(2.7rem, 8vw, 6.8rem);
+    font-weight: 650;
+    line-height: .98;
+    letter-spacing: -.055em;
+}
+
+.ucmath-subtitle {
+    max-width: 760px;
+    margin: 1.5rem 0 0;
+    font-size: clamp(1.15rem, 2vw, 1.55rem);
+    line-height: 1.45;
+}
+
+.ucmath-summary {
+    max-width: 760px;
+    margin: 1.2rem 0 0;
+    color: var(--ucmath-muted);
+    font-size: 1rem;
+    line-height: 1.72;
+}
+
+.ucmath-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
+}
+
+.ucmath-grid--quicklinks {
+    margin-bottom: 4rem;
+}
+
+.ucmath-tile,
+.ucmath-card {
+    min-height: 150px;
+    padding: 1.2rem;
+    border: 1px solid var(--ucmath-line);
+    background: rgba(255, 255, 255, .78);
+}
+
+.ucmath-tile {
+    display: flex;
+    flex-direction: column;
+    gap: .55rem;
+    color: var(--ucmath-ink);
+    text-decoration: none;
+}
+
+.ucmath-tile:hover {
+    border-color: var(--ucmath-accent);
+    background: var(--ucmath-accent-soft);
+}
+
+.ucmath-tile span,
+.ucmath-card p {
+    color: var(--ucmath-muted);
+    line-height: 1.55;
+}
+
+.ucmath-sections {
+    border-top: 1px solid var(--ucmath-line);
+}
+
+.ucmath-section {
+    display: grid;
+    grid-template-columns: minmax(60px, 110px) minmax(220px, 1fr) minmax(260px, 1.6fr);
+    gap: 1.5rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--ucmath-line);
+}
+
+.ucmath-section h2,
+.ucmath-cards h2,
+.ucmath-cta h2 {
+    margin: 0;
+    font-size: 1.35rem;
+    letter-spacing: -.025em;
+}
+
+.ucmath-section p,
+.ucmath-section ul {
+    margin: 0;
+    color: var(--ucmath-muted);
+    line-height: 1.65;
+}
+
+.ucmath-cards,
+.ucmath-embedded-surface,
+.ucmath-notes,
+.ucmath-cta {
+    margin-top: 4rem;
+}
+
+.ucmath-cards > h2 {
+    margin-bottom: 1rem;
+}
+
+.ucmath-card h3 {
+    margin-top: 0;
+}
+
+.ucmath-card a,
+.ucmath-cta a {
+    color: var(--ucmath-accent);
+    font-weight: 600;
+}
+
+.ucmath-note,
+.ucmath-cta {
+    padding: 1.25rem;
+    border-left: 3px solid var(--ucmath-accent);
+    background: var(--ucmath-paper);
+}
+
+.ucmath-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--ucmath-line);
+    color: var(--ucmath-muted);
+    font-size: .8rem;
+}
+
+/* Re-skin local_uckk dynamic explorer partials without loading UCKK CSS. */
+.theme-ucmath [class^="local-uckk-course-explorer"],
+.theme-ucmath [class*=" local-uckk-course-explorer"],
+.theme-ucmath [class^="local-uckk-mediatheque"],
+.theme-ucmath [class*=" local-uckk-mediatheque"] {
+    font-family: inherit;
+}
+
+.theme-ucmath .local-uckk-course-explorer,
+.theme-ucmath .local-uckk-mediatheque-explorer {
+    padding: 1rem;
+    border: 1px solid var(--ucmath-line);
+    background: var(--ucmath-paper);
+}
+
+.theme-ucmath input,
+.theme-ucmath select,
+.theme-ucmath button,
+.theme-ucmath .btn {
+    border-radius: .2rem;
+}
+
+@media (max-width: 720px) {
+    .ucmath-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .ucmath-title {
+        font-size: clamp(2.5rem, 14vw, 4.5rem);
+    }
+
+    .ucmath-section {
+        grid-template-columns: 1fr;
+        gap: .7rem;
+    }
+}

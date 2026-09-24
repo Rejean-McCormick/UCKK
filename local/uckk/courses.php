@@ -102,6 +102,7 @@ function local_uckk_public_courses_request_state(): array {
  * @return array<string, mixed>
  */
 function local_uckk_public_courses_enrich_definition(array $definition, array $state): array {
+    $ismath = \local_uckk\local\public_site_context::is_math();
     $allcards = local_uckk_public_courses_get_cards();
     $filters = local_uckk_public_courses_category_filters($allcards, $state['category']);
 
@@ -115,15 +116,17 @@ function local_uckk_public_courses_enrich_definition(array $definition, array $s
 
     $definition['sections'] = [
         [
-            'eyebrow' => 'Répertoire public',
+            'eyebrow' => $ismath ? 'Catalogue' : 'Répertoire public',
             'title' => 'Explorer les cours',
-            'body' => 'Les cours ci-dessous sont visibles publiquement et accessibles en consultation. Ils structurent les Voies, les preuves de progression et la puissance opératoire des Joueurs de l’UCKK.',
+            'body' => $ismath
+                ? 'Les cours ci-dessous sont ceux que Moodle rend actuellement publics selon leur visibilité et leurs permissions. Le site mathématique les présente sans maintenir une copie parallèle du catalogue.'
+                : 'Les cours ci-dessous sont visibles publiquement et accessibles en consultation. Ils structurent les Voies, les preuves de progression et la puissance opératoire des Joueurs de l’UCKK.',
             'type' => 'courses-intro',
         ],
     ];
 
     $definition['cards'] = [];
-    $definition['cardsheading'] = 'Cours publics';
+    $definition['cardsheading'] = $ismath ? 'Cours disponibles' : 'Cours publics';
 
     $definition['has_course_explorer'] = true;
     $definition['course_explorer'] = local_uckk_public_courses_explorer_context($state, $filters, $cards, count($allcards));
@@ -136,8 +139,10 @@ function local_uckk_public_courses_enrich_definition(array $definition, array $s
     ];
 
     $definition['cta'] = [
-        'title' => 'Index des cours',
-        'body' => 'L’index permet aussi de parcourir les espaces de cours.',
+        'title' => 'Index Moodle des cours',
+        'body' => $ismath
+            ? 'L’index Moodle donne accès aux mêmes espaces de cours et reste la référence de l’état actuellement publié.'
+            : 'L’index permet aussi de parcourir les espaces de cours.',
         'url' => '/course/index.php',
         'label' => 'Ouvrir l’index',
     ];
@@ -150,7 +155,9 @@ function local_uckk_public_courses_enrich_definition(array $definition, array $s
         $definition['notices'][] = [
             'type' => 'warning',
             'title' => 'Aucun cours public',
-            'body' => 'Aucun cours visible n’est actuellement disponible dans le répertoire public UCKK.',
+            'body' => $ismath
+                ? 'Aucun cours visible n’est actuellement disponible dans le catalogue.'
+                : 'Aucun cours visible n’est actuellement disponible dans le répertoire public UCKK.',
         ];
     }
 

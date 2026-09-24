@@ -105,6 +105,10 @@ if (class_exists('\local_uckk\local\public_pages')) {
 
 $PAGE->set_url($url);
 
+$ismathsite = class_exists('\\local_uckk\\local\\public_site_context')
+    && \local_uckk\local\public_site_context::is_math();
+$publiclibrarytitle = $ismathsite ? 'Bibliothèque mathématique' : get_string('mediatheque_title', 'local_uckk');
+
 $explorerid = html_writer::random_id('local-uckk-mediatheque-explorer-');
 
 $page = max(1, $urlparams['page']);
@@ -206,7 +210,7 @@ if ($isitemrequest) {
     }
 
     if (!empty($mediathequeitem['title'])) {
-        $PAGE->set_title(format_string((string)$mediathequeitem['title']) . ' | ' . get_string('mediatheque_title', 'local_uckk'));
+        $PAGE->set_title(format_string((string)$mediathequeitem['title']) . ' | ' . $publiclibrarytitle);
     }
 }
 
@@ -262,7 +266,9 @@ if (class_exists('\local_uckk\output\public_page')) {
 
         $definition['quicklinks'][] = [
             'label' => 'Ajouter un média',
-            'description' => 'Ajouter directement un média à la Médiathèque centrale UCKK.',
+            'description' => $ismathsite
+                ? 'Ajouter directement un média à la bibliothèque.'
+                : 'Ajouter directement un média à la Médiathèque centrale UCKK.',
             'url' => '/local/uckk/mediatheque_add.php',
         ];
     }

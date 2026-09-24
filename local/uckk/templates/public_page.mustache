@@ -161,6 +161,27 @@
     {{#ispublic}}data-public="true"{{/ispublic}}
 >
     <div class="local-uckk-public-shell" data-region="local-uckk-public-shell">
+        {{#hassiteswitcher}}
+            <nav
+                class="local-uckk-site-switcher"
+                aria-label="{{siteswitcherlabel}}"
+                data-region="local-uckk-site-switcher"
+                data-enabled="{{#siteswitcherenabled}}true{{/siteswitcherenabled}}{{^siteswitcherenabled}}false{{/siteswitcherenabled}}"
+            >
+                <span class="local-uckk-site-switcher__label">{{siteswitcherlabel}}</span>
+                <span class="local-uckk-site-switcher__items">
+                    {{#siteswitcher}}
+                        <a
+                            class="{{classes}}"
+                            href="{{url}}"
+                            data-theme="{{theme}}"
+                            {{#hasariacurrent}}aria-current="{{ariacurrent}}"{{/hasariacurrent}}
+                        >{{label}}</a>
+                    {{/siteswitcher}}
+                </span>
+            </nav>
+        {{/hassiteswitcher}}
+
         {{#hasnavigation}}
             <nav
                 class="{{navigationclasses}}"

@@ -1,0 +1,132 @@
+{{!
+    Minimal public-page override for theme_ucmath.
+    The data contract remains owned by local_uckk\output\public_page.
+}}
+<div
+    id="{{uniqid}}"
+    class="ucmath-public"
+    data-region="local-uckk-public-page"
+    data-page-slug="{{slug}}"
+>
+    <header class="ucmath-header">
+        <a class="ucmath-wordmark" href="/local/uckk/index.php">Univers-Cité des mathématiques</a>
+
+        {{#hassiteswitcher}}
+            <nav class="ucmath-switcher" aria-label="{{siteswitcherlabel}}" data-enabled="{{#siteswitcherenabled}}true{{/siteswitcherenabled}}{{^siteswitcherenabled}}false{{/siteswitcherenabled}}">
+                {{#siteswitcher}}
+                    <a class="ucmath-switcher__link {{#active}}is-active{{/active}}" href="{{url}}" {{#hasariacurrent}}aria-current="{{ariacurrent}}"{{/hasariacurrent}}>{{label}}</a>
+                {{/siteswitcher}}
+            </nav>
+        {{/hassiteswitcher}}
+    </header>
+
+    {{#hasnavigation}}
+        <nav class="ucmath-nav" aria-label="Navigation publique">
+            {{#navigation}}
+                <a class="ucmath-nav__link {{#active}}is-active{{/active}}" href="{{url}}" {{#hasariacurrent}}aria-current="{{ariacurrent}}"{{/hasariacurrent}}>{{label}}</a>
+            {{/navigation}}
+        </nav>
+    {{/hasnavigation}}
+
+    <main class="ucmath-main">
+        <section class="ucmath-hero">
+            {{#eyebrow}}<p class="ucmath-eyebrow">{{eyebrow}}</p>{{/eyebrow}}
+            <h1 class="ucmath-title">{{title}}</h1>
+            {{#subtitle}}<p class="ucmath-subtitle">{{subtitle}}</p>{{/subtitle}}
+            {{#summary}}<p class="ucmath-summary">{{summary}}</p>{{/summary}}
+        </section>
+
+        {{#hasquicklinks}}
+            <section class="ucmath-grid ucmath-grid--quicklinks" aria-label="Repères rapides">
+                {{#quicklinks}}
+                    <a class="ucmath-tile" href="{{url}}">
+                        <strong>{{label}}</strong>
+                        {{#description}}<span>{{description}}</span>{{/description}}
+                    </a>
+                {{/quicklinks}}
+            </section>
+        {{/hasquicklinks}}
+
+        {{#hassections}}
+            <div class="ucmath-sections">
+                {{#sections}}
+                    <section class="ucmath-section">
+                        {{#eyebrow}}<p class="ucmath-section__index">{{eyebrow}}</p>{{/eyebrow}}
+                        {{#title}}<h2>{{title}}</h2>{{/title}}
+                        {{#body}}<p>{{body}}</p>{{/body}}
+                        {{#hasitems}}
+                            <ul>
+                                {{#items}}<li>{{text}}</li>{{/items}}
+                            </ul>
+                        {{/hasitems}}
+                    </section>
+                {{/sections}}
+            </div>
+        {{/hassections}}
+
+        {{#has_course_explorer}}
+            <section class="ucmath-embedded-surface">
+                {{> local_uckk/pages/course_explorer }}
+            </section>
+        {{/has_course_explorer}}
+
+        {{#has_mediatheque_item}}
+            <section class="ucmath-embedded-surface">
+                {{> local_uckk/pages/mediatheque_item }}
+            </section>
+        {{/has_mediatheque_item}}
+        {{#has_mediatheque_item_error}}
+            <section class="ucmath-embedded-surface">
+                {{> local_uckk/pages/mediatheque_item }}
+            </section>
+        {{/has_mediatheque_item_error}}
+        {{^has_mediatheque_item}}
+            {{^has_mediatheque_item_error}}
+                {{#has_mediatheque_explorer}}
+                    <section class="ucmath-embedded-surface">
+                        {{> local_uckk/pages/mediatheque_explorer }}
+                    </section>
+                {{/has_mediatheque_explorer}}
+            {{/has_mediatheque_item_error}}
+        {{/has_mediatheque_item}}
+
+        {{#hascards}}
+            <section class="ucmath-cards">
+                <h2>{{cardsheading}}</h2>
+                <div class="ucmath-grid">
+                    {{#cards}}
+                        <article class="ucmath-card">
+                            <h3>{{title}}</h3>
+                            {{#body}}<p>{{body}}</p>{{/body}}
+                            {{#hasaction}}<a href="{{url}}">{{actionlabel}}</a>{{/hasaction}}
+                        </article>
+                    {{/cards}}
+                </div>
+            </section>
+        {{/hascards}}
+
+        {{#hasnotices}}
+            <section class="ucmath-notes">
+                {{#notices}}
+                    <article class="ucmath-note">
+                        {{#title}}<strong>{{title}}</strong>{{/title}}
+                        {{#body}}<p>{{body}}</p>{{/body}}
+                    </article>
+                {{/notices}}
+            </section>
+        {{/hasnotices}}
+
+        {{#hascta}}
+            <section class="ucmath-cta">
+                {{#cta.title}}<h2>{{cta.title}}</h2>{{/cta.title}}
+                {{#cta.body}}<p>{{cta.body}}</p>{{/cta.body}}
+                {{#cta.hasaction}}<a href="{{cta.url}}">{{cta.label}}</a>{{/cta.hasaction}}
+            </section>
+        {{/hascta}}
+    </main>
+
+    <footer class="ucmath-footer">
+        <span>Univers-Cité des mathématiques</span>
+        <span aria-hidden="true">∎</span>
+    </footer>
+</div>

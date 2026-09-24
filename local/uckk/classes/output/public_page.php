@@ -171,6 +171,12 @@ final class public_page implements renderable, templatable {
         $data->hasnavigation = !empty($data->navigation);
         $data->navigationclasses = self::navigation_classes($navigationlayout);
 
+        $switcher = self::export_site_switcher();
+        $data->hassiteswitcher = $switcher['enabled'] && !empty($switcher['items']);
+        $data->siteswitcherlabel = $switcher['label'];
+        $data->siteswitcherenabled = $switcher['enabled'];
+        $data->siteswitcher = $switcher['items'];
+
         $data->quicklinks = self::export_quicklinks(
             self::array_value($this->definition, 'quicklinks')
         );
@@ -610,6 +616,50 @@ final class public_page implements renderable, templatable {
         }
 
         return $out;
+    }
+
+    /**
+     * Export the public-site switcher using Moodle's native session-theme URL.
+     *
+     * No custom preference is stored here. The `theme` query parameter is
+     * interpreted by Moodle when "Allow theme changes in the URL" is enabled.
+     *
+     * @return array{label: string, enabled: bool, items: array<int, stdClass>}
+     */
+    private static function export_site_switcher(): array {
+        global $CFG, $PAGE;
+
+        $currenttheme = '';
+        try {
+            $currenttheme = (string)$PAGE->theme->name;
+        } catch (\Throwable $exception) {
+            $currenttheme = '';
+        }
+        $currentsite = \local_uckk\local\public_site_context::from_theme_name($currenttheme);
+
+        $baseurl = isset($PAGE->url) ? clone $PAGE->url : new moodle_url('/');
+        $items = [];
+
+        foreach (\local_uckk\local\public_site_context::sites() as $site) {
+            $url = clone $baseurl;
+            $url->param('theme', $site['theme']);
+
+            $item = new stdClass();
+            $item->theme = $site['theme'];
+            $item->label = $site['label'];
+            $item->url = $url->out(false);
+            $item->active = $site['site'] === $currentsite;
+            $item->ariacurrent = $item->active ? 'true' : '';
+            $item->hasariacurrent = $item->active;
+            $item->classes = 'local-uckk-site-switcher__link' . ($item->active ? ' is-active' : '');
+            $items[] = $item;
+        }
+
+        return [
+            'label' => 'Changer de site',
+            'enabled' => !empty($CFG->allowthemechangeonurl),
+            'items' => $items,
+        ];
     }
 
     /**
