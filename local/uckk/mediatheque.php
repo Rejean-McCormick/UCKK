@@ -105,9 +105,14 @@ if (class_exists('\local_uckk\local\public_pages')) {
 
 $PAGE->set_url($url);
 
-$ismathsite = class_exists('\\local_uckk\\local\\public_site_context')
-    && \local_uckk\local\public_site_context::is_math();
-$publiclibrarytitle = $ismathsite ? 'Bibliothèque mathématique' : get_string('mediatheque_title', 'local_uckk');
+$currentsite = \local_uckk\local\public_site_context::current();
+if ($currentsite === \local_uckk\local\public_site_context::SITE_MATH) {
+    $publiclibrarytitle = 'Bibliothèque mathématique';
+} else if ($currentsite === \local_uckk\local\public_site_context::SITE_UCC) {
+    $publiclibrarytitle = 'Médiathèque UCC';
+} else {
+    $publiclibrarytitle = get_string('mediatheque_title', 'local_uckk');
+}
 
 $explorerid = html_writer::random_id('local-uckk-mediatheque-explorer-');
 

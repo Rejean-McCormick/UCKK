@@ -1,0 +1,589 @@
+{
+  "schema_version": "UCC-LEGACY-ALIASES-1.0",
+  "universe_id": "ucc",
+  "policy": "Canonical UCC ids are public/integration identities; UCKK ids remain technical aliases during Moodle migration.",
+  "voies": [
+    {
+      "canonical_id": "ucc:voie:oeuvres-institutions",
+      "canonical_code": "OEU",
+      "legacy_voie_id": "voie_architecture_sociotechnique",
+      "legacy_code": "AS",
+      "canonical_category_idnumber": "UCC-OEU",
+      "legacy_category_idnumber": "UCKK-AS"
+    },
+    {
+      "canonical_id": "ucc:voie:creation-sciences-ecologie",
+      "canonical_code": "SCI",
+      "legacy_voie_id": "voie_ecologie",
+      "legacy_code": "ECL",
+      "canonical_category_idnumber": "UCC-SCI",
+      "legacy_category_idnumber": "UCKK-ECL"
+    },
+    {
+      "canonical_id": "ucc:voie:economie-travail",
+      "canonical_code": "ECO",
+      "legacy_voie_id": "voie_economie",
+      "legacy_code": "EC",
+      "canonical_category_idnumber": "UCC-ECO",
+      "legacy_category_idnumber": "UCKK-EC"
+    },
+    {
+      "canonical_id": "ucc:voie:theologie-tradition",
+      "canonical_code": "THE",
+      "legacy_voie_id": "voie_ecosysteme_digital_koa",
+      "legacy_code": "KOA",
+      "canonical_category_idnumber": "UCC-THE",
+      "legacy_category_idnumber": "UCKK-KOA"
+    },
+    {
+      "canonical_id": "ucc:voie:arts-culture",
+      "canonical_code": "ART",
+      "legacy_voie_id": "voie_grand_jeu_social",
+      "legacy_code": "GJS",
+      "canonical_category_idnumber": "UCC-ART",
+      "legacy_category_idnumber": "UCKK-GJS"
+    },
+    {
+      "canonical_id": "ucc:voie:education-universites",
+      "canonical_code": "EDU",
+      "legacy_voie_id": "voie_ia_gouvernable",
+      "legacy_code": "IA",
+      "canonical_category_idnumber": "UCC-EDU",
+      "legacy_category_idnumber": "UCKK-IA"
+    },
+    {
+      "canonical_id": "ucc:voie:sante-soin",
+      "canonical_code": "SAN",
+      "legacy_voie_id": "voie_intervention_sociale_systemes_humains",
+      "legacy_code": "IS",
+      "canonical_category_idnumber": "UCC-SAN",
+      "legacy_category_idnumber": "UCKK-IS"
+    },
+    {
+      "canonical_id": "ucc:voie:langage-lettres",
+      "canonical_code": "LET",
+      "legacy_voie_id": "voie_linguistique_architecture_du_sens",
+      "legacy_code": "LI",
+      "canonical_category_idnumber": "UCC-LET",
+      "legacy_category_idnumber": "UCKK-LI"
+    },
+    {
+      "canonical_id": "ucc:voie:philosophie-personne",
+      "canonical_code": "PHI",
+      "legacy_voie_id": "voie_metaphysique",
+      "legacy_code": "ME",
+      "canonical_category_idnumber": "UCC-PHI",
+      "legacy_category_idnumber": "UCKK-ME"
+    },
+    {
+      "canonical_id": "ucc:voie:droit-politique-bien-commun",
+      "canonical_code": "GOV",
+      "legacy_voie_id": "voie_sciences_politiques",
+      "legacy_code": "SP",
+      "canonical_category_idnumber": "UCC-GOV",
+      "legacy_category_idnumber": "UCKK-SP"
+    }
+  ],
+  "courses": [
+    {
+      "canonical_id": "UCC-OEU-101",
+      "legacy_course_id": "AS101",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-OEU-102",
+      "legacy_course_id": "AS102",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-OEU-103",
+      "legacy_course_id": "AS103",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-OEU-104",
+      "legacy_course_id": "AS104",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-OEU-105",
+      "legacy_course_id": "AS105",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-OEU-106",
+      "legacy_course_id": "AS106",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-OEU-107",
+      "legacy_course_id": "AS107",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-OEU-108",
+      "legacy_course_id": "AS108",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-OEU-109",
+      "legacy_course_id": "AS109",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-OEU-110",
+      "legacy_course_id": "AS110",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SCI-101",
+      "legacy_course_id": "ECL101",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SCI-102",
+      "legacy_course_id": "ECL102",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SCI-103",
+      "legacy_course_id": "ECL103",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SCI-104",
+      "legacy_course_id": "ECL104",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SCI-105",
+      "legacy_course_id": "ECL105",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SCI-106",
+      "legacy_course_id": "ECL106",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SCI-107",
+      "legacy_course_id": "ECL107",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SCI-108",
+      "legacy_course_id": "ECL108",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SCI-109",
+      "legacy_course_id": "ECL109",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SCI-110",
+      "legacy_course_id": "ECL110",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ECO-101",
+      "legacy_course_id": "EC101",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ECO-102",
+      "legacy_course_id": "EC102",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ECO-103",
+      "legacy_course_id": "EC103",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ECO-104",
+      "legacy_course_id": "EC104",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ECO-105",
+      "legacy_course_id": "EC105",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ECO-106",
+      "legacy_course_id": "EC106",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ECO-107",
+      "legacy_course_id": "EC107",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ECO-108",
+      "legacy_course_id": "EC108",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ECO-109",
+      "legacy_course_id": "EC109",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ECO-110",
+      "legacy_course_id": "EC110",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-THE-101",
+      "legacy_course_id": "KOA101",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-THE-102",
+      "legacy_course_id": "KOA102",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-THE-103",
+      "legacy_course_id": "KOA103",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-THE-104",
+      "legacy_course_id": "KOA104",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-THE-105",
+      "legacy_course_id": "KOA105",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-THE-106",
+      "legacy_course_id": "KOA106",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-THE-107",
+      "legacy_course_id": "KOA107",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-THE-108",
+      "legacy_course_id": "KOA108",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-THE-109",
+      "legacy_course_id": "KOA109",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-THE-110",
+      "legacy_course_id": "KOA110",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ART-101",
+      "legacy_course_id": "GJS101",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ART-102",
+      "legacy_course_id": "GJS102",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ART-103",
+      "legacy_course_id": "GJS103",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ART-104",
+      "legacy_course_id": "GJS104",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ART-105",
+      "legacy_course_id": "GJS105",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ART-106",
+      "legacy_course_id": "GJS106",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ART-107",
+      "legacy_course_id": "GJS107",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ART-108",
+      "legacy_course_id": "GJS108",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ART-109",
+      "legacy_course_id": "GJS109",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-ART-110",
+      "legacy_course_id": "GJS110",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-EDU-101",
+      "legacy_course_id": "IA101",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-EDU-102",
+      "legacy_course_id": "IA102",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-EDU-103",
+      "legacy_course_id": "IA103",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-EDU-104",
+      "legacy_course_id": "IA104",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-EDU-105",
+      "legacy_course_id": "IA105",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-EDU-106",
+      "legacy_course_id": "IA106",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-EDU-107",
+      "legacy_course_id": "IA107",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-EDU-108",
+      "legacy_course_id": "IA108",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-EDU-109",
+      "legacy_course_id": "IA109",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-EDU-110",
+      "legacy_course_id": "IA110",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SAN-101",
+      "legacy_course_id": "IS101",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SAN-102",
+      "legacy_course_id": "IS102",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SAN-103",
+      "legacy_course_id": "IS103",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SAN-104",
+      "legacy_course_id": "IS104",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SAN-105",
+      "legacy_course_id": "IS105",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SAN-106",
+      "legacy_course_id": "IS106",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SAN-107",
+      "legacy_course_id": "IS107",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SAN-108",
+      "legacy_course_id": "IS108",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SAN-109",
+      "legacy_course_id": "IS109",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-SAN-110",
+      "legacy_course_id": "IS110",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-LET-101",
+      "legacy_course_id": "LI101",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-LET-102",
+      "legacy_course_id": "LI102",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-LET-103",
+      "legacy_course_id": "LI103",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-LET-104",
+      "legacy_course_id": "LI104",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-LET-105",
+      "legacy_course_id": "LI105",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-LET-106",
+      "legacy_course_id": "LI106",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-LET-107",
+      "legacy_course_id": "LI107",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-LET-108",
+      "legacy_course_id": "LI108",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-LET-109",
+      "legacy_course_id": "LI109",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-LET-110",
+      "legacy_course_id": "LI110",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-PHI-101",
+      "legacy_course_id": "ME101",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-PHI-102",
+      "legacy_course_id": "ME102",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-PHI-103",
+      "legacy_course_id": "ME103",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-PHI-104",
+      "legacy_course_id": "ME104",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-PHI-105",
+      "legacy_course_id": "ME105",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-PHI-106",
+      "legacy_course_id": "ME106",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-PHI-107",
+      "legacy_course_id": "ME107",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-PHI-108",
+      "legacy_course_id": "ME108",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-PHI-109",
+      "legacy_course_id": "ME109",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-PHI-110",
+      "legacy_course_id": "ME110",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-GOV-101",
+      "legacy_course_id": "SP101",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-GOV-102",
+      "legacy_course_id": "SP102",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-GOV-103",
+      "legacy_course_id": "SP103",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-GOV-104",
+      "legacy_course_id": "SP104",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-GOV-105",
+      "legacy_course_id": "SP105",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-GOV-106",
+      "legacy_course_id": "SP106",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-GOV-107",
+      "legacy_course_id": "SP107",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-GOV-108",
+      "legacy_course_id": "SP108",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-GOV-109",
+      "legacy_course_id": "SP109",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    },
+    {
+      "canonical_id": "UCC-GOV-110",
+      "legacy_course_id": "SP110",
+      "migration_policy": "Keep legacy Moodle idnumber/shortname until an explicit migration; expose canonical id in custom fields and integrations."
+    }
+  ]
+}

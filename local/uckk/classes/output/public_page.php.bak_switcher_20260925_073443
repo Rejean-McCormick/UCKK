@@ -640,20 +640,7 @@ final class public_page implements renderable, templatable {
         }
         $currentsite = \local_uckk\local\public_site_context::from_theme_name($currenttheme);
 
-        // Keep switching inside the public UCKK/UCC/Math surface.
-        // Authentication stays in the same Moodle session; only the active
-        // presentation theme changes. Never fall back to Moodle root, because
-        // that root may redirect guests to /login/index.php.
-        $baseurl = isset($PAGE->url)
-            ? clone $PAGE->url
-            : new moodle_url('/local/uckk/index.php');
-
-        $publicprefix = rtrim((string)$CFG->wwwroot, '/') . '/local/uckk/';
-        $currentbase = $baseurl->out_omit_querystring();
-
-        if (strpos($currentbase, $publicprefix) !== 0) {
-            $baseurl = new moodle_url('/local/uckk/index.php');
-        }
+        $baseurl = isset($PAGE->url) ? clone $PAGE->url : new moodle_url('/');
         $items = [];
 
         foreach (\local_uckk\local\public_site_context::sites() as $site) {

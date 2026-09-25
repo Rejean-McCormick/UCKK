@@ -66,7 +66,7 @@ final class public_pages {
      * @return void
      */
     public static function setup_page(string $slug, ?context $context = null): void {
-        global $CFG, $PAGE;
+        global $PAGE;
 
         $slug = self::clean_slug($slug);
         $context = $context ?? context_system::instance();
@@ -83,14 +83,10 @@ final class public_pages {
         // identity and serve it after the session theme has changed.
         $PAGE->set_cacheable(false);
 
-        // The UCKK public stylesheet is part of the UCKK identity. Alternate
-        // Moodle themes may provide their own public-page presentation and should
-        // not inherit UCKK's visual layer accidentally.
-        if (!public_site_context::is_math()) {
-            $csspath = $CFG->dirroot . '/local/uckk/styles.css';
-            $cssrev = file_exists($csspath) ? filemtime($csspath) : time();
-            $PAGE->requires->css(new moodle_url('/local/uckk/styles.css', ['v' => $cssrev]));
-        }
+        // local_uckk/styles.css is the plugin's canonical structural stylesheet.
+        // Moodle includes plugin styles through its normal CSS pipeline for every
+        // active theme. Theme-specific presentation therefore remains in the
+        // active theme SCSS, which naturally has the last word in the cascade.
 
         self::setup_breadcrumb($slug);
     }
@@ -129,25 +125,31 @@ final class public_pages {
      */
     public static function definition(string $slug): array {
         $slug = self::clean_slug($slug);
+        $site = public_site_context::current();
 
-        if (public_site_context::is_math()) {
-            $definition = self::merge_definition(
-                self::base_definition($slug),
-                self::math_page_definition($slug)
-            );
-        } else {
+        if ($site === public_site_context::SITE_UCKK) {
             $definitions = self::page_definitions();
             $definition = self::merge_definition(
                 self::base_definition($slug),
                 $definitions[$slug] ?? []
             );
+
+            if ($slug === self::KEY_PROGRAMS) {
+                $definition = self::with_program_cards($definition);
+            }
+
+            return $definition;
         }
 
-        if ($slug === self::KEY_PROGRAMS && !public_site_context::is_math()) {
-            $definition = self::with_program_cards($definition);
-        }
+        $definition = self::merge_definition(
+            self::base_definition($slug),
+            self::alternate_site_base_definition($site)
+        );
 
-        return $definition;
+        return self::merge_definition(
+            $definition,
+            self::alternate_page_definition($site, $slug)
+        );
     }
 
     /**
@@ -1387,36 +1389,63 @@ final class public_pages {
      * @return array<int, array<string, mixed>>
      */
     private static function site_navigation(): array {
-        if (public_site_context::is_math()) {
-            return \local_uckk\local\public_pages\math\site::navigation();
+        $site = public_site_context::current();
+
+        if ($site === public_site_context::SITE_UCKK) {
+            return self::default_navigation();
         }
 
-        return self::default_navigation();
+        $siteclass = self::alternate_site_class($site);
+        return $siteclass::navigation();
     }
 
     /**
-     * Return a mathematics public-page definition using the same one-class-per-page
-     * convention already used by the canonical UCKK public pages.
+     * Resolve the shared site metadata class for an alternate public identity.
      *
+     * @param string $site Public site key.
+     * @return class-string
+     */
+    private static function alternate_site_class(string $site): string {
+        $classes = [
+            public_site_context::SITE_UCC => \local_uckk\local\public_pages\ucc\site::class,
+            public_site_context::SITE_MATH => \local_uckk\local\public_pages\math\site::class,
+        ];
+
+        return $classes[$site] ?? \local_uckk\local\public_pages\math\site::class;
+    }
+
+    /**
+     * Return the shared base definition for an alternate public identity.
+     *
+     * @param string $site Public site key.
+     * @return array<string, mixed>
+     */
+    private static function alternate_site_base_definition(string $site): array {
+        $siteclass = self::alternate_site_class($site);
+        return $siteclass::base_definition();
+    }
+
+    /**
+     * Return an alternate public-page definition using the same one-class-per-page
+     * convention as the canonical UCKK public pages.
+     *
+     * @param string $site Public site key.
      * @param string $slug Sanitised page slug.
      * @return array<string, mixed>
      */
-    private static function math_page_definition(string $slug): array {
-        $classes = [
-            self::KEY_HOME => \local_uckk\local\public_pages\math\home::class,
-            self::KEY_ABOUT => \local_uckk\local\public_pages\math\about::class,
-            self::KEY_PROGRAMS => \local_uckk\local\public_pages\math\programs::class,
-            self::KEY_COURSES => \local_uckk\local\public_pages\math\courses::class,
-            self::KEY_CHALLENGES => \local_uckk\local\public_pages\math\challenges::class,
-            self::KEY_ASSEMBLIES => \local_uckk\local\public_pages\math\assemblies::class,
-            self::KEY_INTEGRITY => \local_uckk\local\public_pages\math\integrity::class,
-            self::KEY_ARCHIVES => \local_uckk\local\public_pages\math\archives::class,
-            self::KEY_MEDIATHEQUE => \local_uckk\local\public_pages\math\mediatheque::class,
-            self::KEY_NEWS => \local_uckk\local\public_pages\math\news::class,
-            self::KEY_CONTACT => \local_uckk\local\public_pages\math\contact::class,
+    private static function alternate_page_definition(string $site, string $slug): array {
+        $namespaces = [
+            public_site_context::SITE_UCC => 'local_uckk\\local\\public_pages\\ucc\\',
+            public_site_context::SITE_MATH => 'local_uckk\\local\\public_pages\\math\\',
         ];
 
-        $class = $classes[$slug] ?? $classes[self::KEY_HOME];
+        $namespace = $namespaces[$site] ?? $namespaces[public_site_context::SITE_MATH];
+        $class = $namespace . $slug;
+
+        if (!class_exists($class) || !method_exists($class, 'definition')) {
+            $class = $namespace . self::KEY_HOME;
+        }
+
         return $class::definition();
     }
 
@@ -1536,8 +1565,10 @@ final class public_pages {
      * @return string
      */
     private static function page_title(string $slug): string {
-        if (public_site_context::is_math()) {
-            return \local_uckk\local\public_pages\math\site::page_title($slug);
+        $site = public_site_context::current();
+        if ($site !== public_site_context::SITE_UCKK) {
+            $siteclass = self::alternate_site_class($site);
+            return $siteclass::page_title($slug);
         }
 
         $fallbacks = [
@@ -1580,8 +1611,10 @@ final class public_pages {
      * @return string
      */
     private static function site_heading(): string {
-        if (public_site_context::is_math()) {
-            return \local_uckk\local\public_pages\math\site::heading();
+        $site = public_site_context::current();
+        if ($site !== public_site_context::SITE_UCKK) {
+            $siteclass = self::alternate_site_class($site);
+            return $siteclass::heading();
         }
 
         return self::string_or_fallback('uckkfullname', 'Univers-Cité King Klown');

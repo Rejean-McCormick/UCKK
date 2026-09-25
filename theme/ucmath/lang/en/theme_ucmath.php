@@ -11,4 +11,4 @@ defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'Univers-Cité des mathématiques';
 $string['configtitle'] = 'Univers-Cité des mathématiques';
-$string['choosereadme'] = 'Minimal demonstration theme using Moodle native session themes to switch between two public experiences.';
+$string['choosereadme'] = 'Minimal demonstration theme using Moodle native session themes to switch among multiple public experiences.';

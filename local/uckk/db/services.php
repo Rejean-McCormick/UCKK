@@ -92,6 +92,22 @@ $functions = [
         'capabilities' => 'local/uckk:viewcampus',
     ],
 
+    'local_uckk_get_ucc_domains' => [
+        'classname' => 'local_uckk\external\get_ucc_domains',
+        'description' => 'Returns the four canonical UCC domains and their Voies.',
+        'type' => 'read',
+        'ajax' => true,
+        'capabilities' => 'local/uckk:viewcampus',
+    ],
+
+    'local_uckk_get_ucc_course' => [
+        'classname' => 'local_uckk\external\get_ucc_course',
+        'description' => 'Returns one canonical UCC course index entry and Kristal alignment.',
+        'type' => 'read',
+        'ajax' => true,
+        'capabilities' => 'local/uckk:viewcampus',
+    ],
+
     'local_uckk_get_status_options' => [
         'classname' => 'local_uckk\external\get_status_options',
         'description' => 'Returns supported UCKK status and visibility options.',
@@ -176,6 +192,8 @@ $services = [
             'local_uckk_get_pathway_map',
             'local_uckk_get_player_profile',
             'local_uckk_get_canon_items',
+            'local_uckk_get_ucc_domains',
+            'local_uckk_get_ucc_course',
             'local_uckk_get_status_options',
             'local_uckk_search_public_courses',
             'local_uckk_get_faculty_public_page',

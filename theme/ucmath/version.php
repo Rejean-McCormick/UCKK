@@ -17,11 +17,11 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'theme_ucmath';
-$plugin->version = 2026092401;
+$plugin->version = 2026092402;
 $plugin->requires = 2025041400; // Moodle 5.0 or later.
 $plugin->supported = [500, 503];
 $plugin->maturity = MATURITY_ALPHA;
-$plugin->release = '0.1.1';
+$plugin->release = '0.2.0';
 $plugin->dependencies = [
-    'local_uckk' => 2026092401,
+    'local_uckk' => 2026092402,
 ];

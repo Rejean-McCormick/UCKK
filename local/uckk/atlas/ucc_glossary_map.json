@@ -1,0 +1,3409 @@
+{
+  "schema_version": "UCC-KRISTAL-GLOSSARY-MAP-1.0",
+  "universe": "ucc",
+  "name": "Univers-Cité Catho",
+  "source_corpus": {
+    "artifact_type": "semantic_corpus",
+    "state_id": "sha256:5b5f48af42f5644d4d8817138c08f4f228832b364decd18cd830d0ad99a6ed93",
+    "artifact_status": "working",
+    "schema_version": "1.0",
+    "canonicalization_profile": "theophile.semantic-corpus.v1:jcs-rfc8785",
+    "warnings": [
+      {
+        "code": "PROJECTION_REQUIRES_REVIEW",
+        "message": "Corpus curaté avec assistance IA et contrôles automatisés ; aucune reconnaissance ecclésiale n’est revendiquée."
+      },
+      {
+        "code": "UNRECOGNIZED_AUTHORITY",
+        "message": "Aucune reconnaissance de ce corpus par une autorité ecclésiale n’est revendiquée."
+      }
+    ]
+  },
+  "themes": [
+    {
+      "theme_id": "urn:theophile:theme:action",
+      "label": "action",
+      "assertion_count": 3,
+      "course_refs": []
+    },
+    {
+      "theme_id": "urn:theophile:theme:action_et_sens",
+      "label": "action_et_sens",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-ART-106",
+        "UCC-LET-101"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:affects",
+      "label": "affects",
+      "assertion_count": 3,
+      "course_refs": []
+    },
+    {
+      "theme_id": "urn:theophile:theme:ame_et_corps",
+      "label": "ame_et_corps",
+      "assertion_count": 6,
+      "course_refs": [
+        "UCC-PHI-103"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:amour",
+      "label": "amour",
+      "assertion_count": 6,
+      "course_refs": [
+        "UCC-ECO-103",
+        "UCC-SAN-103"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:amour_et_politique",
+      "label": "amour_et_politique",
+      "assertion_count": 3,
+      "course_refs": []
+    },
+    {
+      "theme_id": "urn:theophile:theme:art_et_beaute",
+      "label": "art_et_beaute",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-ART-101",
+        "UCC-ART-102",
+        "UCC-ART-108",
+        "UCC-ART-109",
+        "UCC-ART-110"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:autorite",
+      "label": "autorite",
+      "assertion_count": 8,
+      "course_refs": [
+        "UCC-GOV-101",
+        "UCC-GOV-102",
+        "UCC-GOV-105",
+        "UCC-GOV-106",
+        "UCC-OEU-101",
+        "UCC-OEU-102",
+        "UCC-SAN-108",
+        "UCC-THE-108"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:autrui_et_empathie",
+      "label": "autrui_et_empathie",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-SAN-103"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:autrui_et_identite",
+      "label": "autrui_et_identite",
+      "assertion_count": 3,
+      "course_refs": []
+    },
+    {
+      "theme_id": "urn:theophile:theme:bien",
+      "label": "bien",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-GOV-101",
+        "UCC-PHI-105"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:bonheur",
+      "label": "bonheur",
+      "assertion_count": 8,
+      "course_refs": [
+        "UCC-PHI-105"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:certitude",
+      "label": "certitude",
+      "assertion_count": 5,
+      "course_refs": [
+        "UCC-LET-108",
+        "UCC-PHI-102",
+        "UCC-THE-110"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:christologie",
+      "label": "christologie",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-THE-104"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:condition_humaine",
+      "label": "condition_humaine",
+      "assertion_count": 5,
+      "course_refs": [
+        "UCC-ART-105",
+        "UCC-ART-106",
+        "UCC-LET-106",
+        "UCC-PHI-103",
+        "UCC-PHI-106",
+        "UCC-SAN-102",
+        "UCC-SAN-106",
+        "UCC-SCI-104"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:connaissance",
+      "label": "connaissance",
+      "assertion_count": 13,
+      "course_refs": [
+        "UCC-EDU-103",
+        "UCC-LET-109",
+        "UCC-OEU-105",
+        "UCC-PHI-102"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:conscience",
+      "label": "conscience",
+      "assertion_count": 9,
+      "course_refs": [
+        "UCC-EDU-104",
+        "UCC-GOV-109",
+        "UCC-PHI-104"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:contemplation",
+      "label": "contemplation",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-ART-101",
+        "UCC-ART-104",
+        "UCC-THE-109"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:corps_vecu",
+      "label": "corps_vecu",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-PHI-103",
+        "UCC-SAN-102",
+        "UCC-SCI-108"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:creation",
+      "label": "creation",
+      "assertion_count": 7,
+      "course_refs": [
+        "UCC-ART-101",
+        "UCC-ART-103",
+        "UCC-PHI-101",
+        "UCC-PHI-107",
+        "UCC-SCI-101",
+        "UCC-SCI-104",
+        "UCC-SCI-105"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:critique_des_preuves",
+      "label": "critique_des_preuves",
+      "assertion_count": 5,
+      "course_refs": [
+        "UCC-ECO-110",
+        "UCC-GOV-110",
+        "UCC-LET-105",
+        "UCC-OEU-105",
+        "UCC-OEU-108",
+        "UCC-PHI-110",
+        "UCC-SCI-110",
+        "UCC-THE-110"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:culture_et_liturgie",
+      "label": "culture_et_liturgie",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-ART-102",
+        "UCC-ART-103",
+        "UCC-ART-104",
+        "UCC-ART-106",
+        "UCC-ART-107",
+        "UCC-ART-110",
+        "UCC-EDU-107",
+        "UCC-LET-106",
+        "UCC-THE-106"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:developpement",
+      "label": "developpement",
+      "assertion_count": 9,
+      "course_refs": [
+        "UCC-THE-102"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:devenir_humain",
+      "label": "devenir_humain",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-EDU-101",
+        "UCC-PHI-107"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:dignite",
+      "label": "dignite",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-ECO-101",
+        "UCC-ECO-105",
+        "UCC-EDU-108",
+        "UCC-GOV-107",
+        "UCC-OEU-106",
+        "UCC-OEU-109",
+        "UCC-SAN-101",
+        "UCC-SAN-105",
+        "UCC-SAN-107",
+        "UCC-SAN-110",
+        "UCC-SCI-108"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:discernement",
+      "label": "discernement",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-PHI-104"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:dogme",
+      "label": "dogme",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-LET-108",
+        "UCC-THE-102",
+        "UCC-THE-108"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:droits_et_paix",
+      "label": "droits_et_paix",
+      "assertion_count": 5,
+      "course_refs": [
+        "UCC-GOV-104"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:ecologie",
+      "label": "ecologie",
+      "assertion_count": 1,
+      "course_refs": [
+        "UCC-SCI-105",
+        "UCC-SCI-106",
+        "UCC-SCI-109",
+        "UCC-SCI-110"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:economie",
+      "label": "economie",
+      "assertion_count": 5,
+      "course_refs": [
+        "UCC-ECO-103",
+        "UCC-ECO-104",
+        "UCC-ECO-105",
+        "UCC-ECO-106",
+        "UCC-ECO-107",
+        "UCC-ECO-109",
+        "UCC-ECO-110",
+        "UCC-OEU-104"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:economie_et_don",
+      "label": "economie_et_don",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-ECO-103",
+        "UCC-ECO-108"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:ecriture",
+      "label": "ecriture",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-LET-102",
+        "UCC-LET-103",
+        "UCC-THE-101"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:education",
+      "label": "education",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-EDU-101",
+        "UCC-EDU-102",
+        "UCC-EDU-103",
+        "UCC-EDU-104",
+        "UCC-EDU-105",
+        "UCC-EDU-106",
+        "UCC-EDU-107",
+        "UCC-EDU-108",
+        "UCC-EDU-109",
+        "UCC-EDU-110"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:eschatologie",
+      "label": "eschatologie",
+      "assertion_count": 1,
+      "course_refs": []
+    },
+    {
+      "theme_id": "urn:theophile:theme:esperance",
+      "label": "esperance",
+      "assertion_count": 5,
+      "course_refs": [
+        "UCC-ART-105",
+        "UCC-PHI-106",
+        "UCC-SAN-106",
+        "UCC-THE-105",
+        "UCC-THE-107"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:ethique",
+      "label": "ethique",
+      "assertion_count": 3,
+      "course_refs": []
+    },
+    {
+      "theme_id": "urn:theophile:theme:ethique_de_l_action",
+      "label": "ethique_de_l_action",
+      "assertion_count": 4,
+      "course_refs": []
+    },
+    {
+      "theme_id": "urn:theophile:theme:eucharistie",
+      "label": "eucharistie",
+      "assertion_count": 1,
+      "course_refs": [
+        "UCC-THE-106"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:evolution",
+      "label": "evolution",
+      "assertion_count": 2,
+      "course_refs": [
+        "UCC-SCI-104"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:foi",
+      "label": "foi",
+      "assertion_count": 1,
+      "course_refs": [
+        "UCC-THE-106",
+        "UCC-THE-107",
+        "UCC-THE-110"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:grace",
+      "label": "grace",
+      "assertion_count": 10,
+      "course_refs": [
+        "UCC-THE-104",
+        "UCC-THE-105"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:guerre_et_paix",
+      "label": "guerre_et_paix",
+      "assertion_count": 2,
+      "course_refs": [
+        "UCC-GOV-108"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:heliocentrisme",
+      "label": "heliocentrisme",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-SCI-103"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:hermeneutique",
+      "label": "hermeneutique",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-ART-105",
+        "UCC-EDU-105",
+        "UCC-LET-102",
+        "UCC-LET-104",
+        "UCC-LET-110",
+        "UCC-THE-101"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:histoire_des_doctrines",
+      "label": "histoire_des_doctrines",
+      "assertion_count": 5,
+      "course_refs": [
+        "UCC-ART-110",
+        "UCC-EDU-102",
+        "UCC-LET-103",
+        "UCC-LET-108",
+        "UCC-SCI-103",
+        "UCC-THE-102",
+        "UCC-THE-108"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:interiorite",
+      "label": "interiorite",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-THE-109"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:justice",
+      "label": "justice",
+      "assertion_count": 5,
+      "course_refs": [
+        "UCC-ECO-102",
+        "UCC-ECO-103",
+        "UCC-ECO-104",
+        "UCC-ECO-107",
+        "UCC-GOV-102",
+        "UCC-GOV-104",
+        "UCC-GOV-107",
+        "UCC-GOV-110",
+        "UCC-OEU-104",
+        "UCC-OEU-108",
+        "UCC-SAN-107",
+        "UCC-SCI-109"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:justice_sociale",
+      "label": "justice_sociale",
+      "assertion_count": 5,
+      "course_refs": [
+        "UCC-ECO-105",
+        "UCC-ECO-108",
+        "UCC-EDU-108",
+        "UCC-GOV-103",
+        "UCC-OEU-110",
+        "UCC-SAN-105",
+        "UCC-SCI-106"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:langage",
+      "label": "langage",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-ART-104",
+        "UCC-ART-105",
+        "UCC-ART-106",
+        "UCC-EDU-105",
+        "UCC-EDU-107",
+        "UCC-LET-101",
+        "UCC-LET-103",
+        "UCC-LET-104",
+        "UCC-LET-105",
+        "UCC-LET-106",
+        "UCC-LET-107",
+        "UCC-LET-109",
+        "UCC-LET-110",
+        "UCC-THE-103"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:liberte",
+      "label": "liberte",
+      "assertion_count": 6,
+      "course_refs": [
+        "UCC-EDU-104",
+        "UCC-GOV-104",
+        "UCC-GOV-109",
+        "UCC-PHI-104"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:limites_de_la_connaissance",
+      "label": "limites_de_la_connaissance",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-EDU-109",
+        "UCC-PHI-102",
+        "UCC-SCI-102"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:loi",
+      "label": "loi",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-ECO-104",
+        "UCC-GOV-102",
+        "UCC-GOV-106"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:loi_naturelle",
+      "label": "loi_naturelle",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-ECO-102",
+        "UCC-GOV-102",
+        "UCC-PHI-108"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:mal",
+      "label": "mal",
+      "assertion_count": 7,
+      "course_refs": [
+        "UCC-PHI-106"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:mariologie",
+      "label": "mariologie",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-ART-107",
+        "UCC-THE-107"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:metaphysique",
+      "label": "metaphysique",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-PHI-101",
+        "UCC-PHI-108",
+        "UCC-PHI-110"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:misericorde",
+      "label": "misericorde",
+      "assertion_count": 2,
+      "course_refs": [
+        "UCC-SAN-102",
+        "UCC-SAN-103",
+        "UCC-SAN-106"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:mission",
+      "label": "mission",
+      "assertion_count": 1,
+      "course_refs": [
+        "UCC-ECO-108",
+        "UCC-EDU-110",
+        "UCC-OEU-101",
+        "UCC-OEU-110",
+        "UCC-SAN-109",
+        "UCC-SAN-110"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:morale",
+      "label": "morale",
+      "assertion_count": 2,
+      "course_refs": [
+        "UCC-PHI-108",
+        "UCC-SAN-104"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:mystere_et_presence",
+      "label": "mystere_et_presence",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-ART-102",
+        "UCC-ART-103",
+        "UCC-ART-107",
+        "UCC-THE-103",
+        "UCC-THE-106",
+        "UCC-THE-109"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:mystique",
+      "label": "mystique",
+      "assertion_count": 10,
+      "course_refs": [
+        "UCC-ART-104",
+        "UCC-THE-109"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:non_violence",
+      "label": "non_violence",
+      "assertion_count": 2,
+      "course_refs": [
+        "UCC-GOV-108"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:noosphere",
+      "label": "noosphere",
+      "assertion_count": 4,
+      "course_refs": []
+    },
+    {
+      "theme_id": "urn:theophile:theme:paix",
+      "label": "paix",
+      "assertion_count": 1,
+      "course_refs": [
+        "UCC-GOV-108"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:pauvrete",
+      "label": "pauvrete",
+      "assertion_count": 5,
+      "course_refs": [
+        "UCC-ECO-105",
+        "UCC-EDU-108",
+        "UCC-SAN-105",
+        "UCC-SCI-106"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:peine_mort",
+      "label": "peine_mort",
+      "assertion_count": 1,
+      "course_refs": []
+    },
+    {
+      "theme_id": "urn:theophile:theme:personnalisme",
+      "label": "personnalisme",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-ART-109",
+        "UCC-ECO-101",
+        "UCC-EDU-101",
+        "UCC-PHI-103",
+        "UCC-SAN-101",
+        "UCC-SAN-107",
+        "UCC-THE-104"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:personne_et_communaute",
+      "label": "personne_et_communaute",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-ART-103",
+        "UCC-ECO-106",
+        "UCC-ECO-108",
+        "UCC-EDU-102",
+        "UCC-EDU-110",
+        "UCC-GOV-101",
+        "UCC-GOV-103",
+        "UCC-LET-107",
+        "UCC-OEU-101",
+        "UCC-OEU-106",
+        "UCC-OEU-109",
+        "UCC-SAN-106",
+        "UCC-SAN-107",
+        "UCC-SAN-109",
+        "UCC-SCI-105",
+        "UCC-SCI-109"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:philosophie_chretienne",
+      "label": "philosophie_chretienne",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-PHI-109"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:politique",
+      "label": "politique",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-GOV-101",
+        "UCC-GOV-105",
+        "UCC-GOV-106",
+        "UCC-GOV-110"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:politique_et_colonisation",
+      "label": "politique_et_colonisation",
+      "assertion_count": 5,
+      "course_refs": [
+        "UCC-GOV-107",
+        "UCC-LET-107"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:progres",
+      "label": "progres",
+      "assertion_count": 1,
+      "course_refs": [
+        "UCC-ART-108",
+        "UCC-ECO-109",
+        "UCC-EDU-106",
+        "UCC-EDU-109",
+        "UCC-OEU-107",
+        "UCC-PHI-107",
+        "UCC-SCI-107"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:propriete",
+      "label": "propriete",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-ECO-102",
+        "UCC-ECO-104",
+        "UCC-OEU-104"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:providence",
+      "label": "providence",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-PHI-106"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:prudence",
+      "label": "prudence",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-ECO-107",
+        "UCC-ECO-110",
+        "UCC-GOV-105",
+        "UCC-GOV-108",
+        "UCC-GOV-109",
+        "UCC-OEU-102",
+        "UCC-OEU-103",
+        "UCC-OEU-109",
+        "UCC-PHI-105",
+        "UCC-SAN-103",
+        "UCC-SAN-104",
+        "UCC-SCI-107",
+        "UCC-SCI-110"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:raison_et_emerveillement",
+      "label": "raison_et_emerveillement",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-ART-101",
+        "UCC-SCI-101"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:raison_et_foi",
+      "label": "raison_et_foi",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-EDU-103",
+        "UCC-LET-105",
+        "UCC-PHI-109",
+        "UCC-SCI-102",
+        "UCC-THE-110"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:reception",
+      "label": "reception",
+      "assertion_count": 2,
+      "course_refs": [
+        "UCC-ART-107",
+        "UCC-ART-109",
+        "UCC-ART-110",
+        "UCC-EDU-102",
+        "UCC-EDU-107",
+        "UCC-GOV-107",
+        "UCC-LET-102",
+        "UCC-LET-106",
+        "UCC-LET-107",
+        "UCC-LET-110",
+        "UCC-OEU-105",
+        "UCC-PHI-110",
+        "UCC-SAN-109",
+        "UCC-SCI-103",
+        "UCC-THE-101",
+        "UCC-THE-107",
+        "UCC-THE-108"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:reception_des_auteurs",
+      "label": "reception_des_auteurs",
+      "assertion_count": 2,
+      "course_refs": [
+        "UCC-ART-108",
+        "UCC-LET-103",
+        "UCC-PHI-109"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:religions",
+      "label": "religions",
+      "assertion_count": 2,
+      "course_refs": [
+        "UCC-GOV-104",
+        "UCC-GOV-106"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:responsabilite",
+      "label": "responsabilite",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-ART-109",
+        "UCC-ECO-102",
+        "UCC-ECO-107",
+        "UCC-ECO-109",
+        "UCC-EDU-104",
+        "UCC-EDU-109",
+        "UCC-EDU-110",
+        "UCC-GOV-103",
+        "UCC-GOV-105",
+        "UCC-GOV-109",
+        "UCC-LET-104",
+        "UCC-LET-110",
+        "UCC-OEU-101",
+        "UCC-OEU-102",
+        "UCC-OEU-103",
+        "UCC-OEU-107",
+        "UCC-OEU-108",
+        "UCC-OEU-109",
+        "UCC-OEU-110",
+        "UCC-PHI-104",
+        "UCC-SAN-101",
+        "UCC-SAN-108",
+        "UCC-SAN-110",
+        "UCC-SCI-105",
+        "UCC-SCI-106",
+        "UCC-SCI-107",
+        "UCC-SCI-108"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:resurrection",
+      "label": "resurrection",
+      "assertion_count": 5,
+      "course_refs": [
+        "UCC-THE-105"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:salut",
+      "label": "salut",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-THE-104",
+        "UCC-THE-105"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:science",
+      "label": "science",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-EDU-103",
+        "UCC-EDU-106",
+        "UCC-OEU-107",
+        "UCC-SCI-101",
+        "UCC-SCI-104",
+        "UCC-SCI-107"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:science_et_foi",
+      "label": "science_et_foi",
+      "assertion_count": 8,
+      "course_refs": [
+        "UCC-SCI-102",
+        "UCC-SCI-103",
+        "UCC-SCI-110"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:subsidiarite",
+      "label": "subsidiarite",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-ECO-106",
+        "UCC-GOV-103",
+        "UCC-GOV-110",
+        "UCC-OEU-102",
+        "UCC-OEU-110",
+        "UCC-SAN-108",
+        "UCC-SCI-109"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:temps",
+      "label": "temps",
+      "assertion_count": 2,
+      "course_refs": [
+        "UCC-PHI-107"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:theologie_naturelle",
+      "label": "theologie_naturelle",
+      "assertion_count": 14,
+      "course_refs": [
+        "UCC-PHI-101",
+        "UCC-SCI-101",
+        "UCC-THE-103"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:tradition_et_raison",
+      "label": "tradition_et_raison",
+      "assertion_count": 2,
+      "course_refs": [
+        "UCC-EDU-105",
+        "UCC-LET-102",
+        "UCC-LET-108",
+        "UCC-PHI-109",
+        "UCC-THE-101",
+        "UCC-THE-102"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:travail",
+      "label": "travail",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-ECO-101",
+        "UCC-ECO-106",
+        "UCC-ECO-109",
+        "UCC-EDU-106",
+        "UCC-OEU-103",
+        "UCC-OEU-104",
+        "UCC-OEU-106",
+        "UCC-OEU-107"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:travail_et_justice",
+      "label": "travail_et_justice",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-ECO-101",
+        "UCC-ECO-110",
+        "UCC-OEU-106"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:trinite",
+      "label": "trinite",
+      "assertion_count": 1,
+      "course_refs": [
+        "UCC-THE-103"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:universaux",
+      "label": "universaux",
+      "assertion_count": 2,
+      "course_refs": [
+        "UCC-LET-109",
+        "UCC-PHI-101",
+        "UCC-PHI-108"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:utopie_et_politique",
+      "label": "utopie_et_politique",
+      "assertion_count": 4,
+      "course_refs": []
+    },
+    {
+      "theme_id": "urn:theophile:theme:veracite",
+      "label": "veracite",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-LET-101",
+        "UCC-LET-104",
+        "UCC-LET-105",
+        "UCC-OEU-103",
+        "UCC-OEU-105",
+        "UCC-OEU-108"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:verite",
+      "label": "verite",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-ART-102",
+        "UCC-ART-108",
+        "UCC-LET-101",
+        "UCC-LET-109",
+        "UCC-PHI-102",
+        "UCC-PHI-110",
+        "UCC-SCI-102"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:vertus",
+      "label": "vertus",
+      "assertion_count": 5,
+      "course_refs": [
+        "UCC-EDU-101",
+        "UCC-PHI-105"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:vie_et_soin",
+      "label": "vie_et_soin",
+      "assertion_count": 4,
+      "course_refs": [
+        "UCC-SAN-101",
+        "UCC-SAN-102",
+        "UCC-SAN-104",
+        "UCC-SAN-105",
+        "UCC-SAN-108",
+        "UCC-SAN-109",
+        "UCC-SAN-110",
+        "UCC-SCI-108"
+      ]
+    },
+    {
+      "theme_id": "urn:theophile:theme:vie_et_violence",
+      "label": "vie_et_violence",
+      "assertion_count": 3,
+      "course_refs": [
+        "UCC-SAN-104"
+      ]
+    }
+  ],
+  "course_alignments": [
+    {
+      "ucc_course_id": "UCC-OEU-101",
+      "legacy_course_id": "AS101",
+      "theme_refs": [
+        "urn:theophile:theme:mission",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:autorite"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 75,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 10,
+          "argument_count": 4,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-102",
+      "legacy_course_id": "AS102",
+      "theme_refs": [
+        "urn:theophile:theme:autorite",
+        "urn:theophile:theme:subsidiarite",
+        "urn:theophile:theme:prudence",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 78,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 10,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-103",
+      "legacy_course_id": "AS103",
+      "theme_refs": [
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:travail",
+        "urn:theophile:theme:prudence",
+        "urn:theophile:theme:veracite"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 57,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 5,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-104",
+      "legacy_course_id": "AS104",
+      "theme_refs": [
+        "urn:theophile:theme:propriete",
+        "urn:theophile:theme:economie",
+        "urn:theophile:theme:travail",
+        "urn:theophile:theme:justice"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 64,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 7,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-105",
+      "legacy_course_id": "AS105",
+      "theme_refs": [
+        "urn:theophile:theme:veracite",
+        "urn:theophile:theme:connaissance",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:critique_des_preuves"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 86,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 23,
+          "source_count": 8,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-106",
+      "legacy_course_id": "AS106",
+      "theme_refs": [
+        "urn:theophile:theme:travail",
+        "urn:theophile:theme:travail_et_justice",
+        "urn:theophile:theme:dignite",
+        "urn:theophile:theme:personne_et_communaute"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 67,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 15,
+          "source_count": 5,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-107",
+      "legacy_course_id": "AS107",
+      "theme_refs": [
+        "urn:theophile:theme:progres",
+        "urn:theophile:theme:science",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:travail"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 65,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 11,
+          "source_count": 6,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-108",
+      "legacy_course_id": "AS108",
+      "theme_refs": [
+        "urn:theophile:theme:veracite",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:justice",
+        "urn:theophile:theme:critique_des_preuves"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 69,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 6,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-109",
+      "legacy_course_id": "AS109",
+      "theme_refs": [
+        "urn:theophile:theme:prudence",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:dignite",
+        "urn:theophile:theme:personne_et_communaute"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 65,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 4,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-110",
+      "legacy_course_id": "AS110",
+      "theme_refs": [
+        "urn:theophile:theme:mission",
+        "urn:theophile:theme:subsidiarite",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:justice_sociale"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 67,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 13,
+          "source_count": 5,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-101",
+      "legacy_course_id": "ECL101",
+      "theme_refs": [
+        "urn:theophile:theme:creation",
+        "urn:theophile:theme:science",
+        "urn:theophile:theme:theologie_naturelle",
+        "urn:theophile:theme:raison_et_emerveillement"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 97,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 29,
+          "source_count": 9,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-102",
+      "legacy_course_id": "ECL102",
+      "theme_refs": [
+        "urn:theophile:theme:science_et_foi",
+        "urn:theophile:theme:raison_et_foi",
+        "urn:theophile:theme:limites_de_la_connaissance",
+        "urn:theophile:theme:verite"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 80,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 6,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-103",
+      "legacy_course_id": "ECL103",
+      "theme_refs": [
+        "urn:theophile:theme:heliocentrisme",
+        "urn:theophile:theme:science_et_foi",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:histoire_des_doctrines"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 70,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 7,
+          "argument_count": 3,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-104",
+      "legacy_course_id": "ECL104",
+      "theme_refs": [
+        "urn:theophile:theme:evolution",
+        "urn:theophile:theme:creation",
+        "urn:theophile:theme:condition_humaine",
+        "urn:theophile:theme:science"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 78,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 7,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-105",
+      "legacy_course_id": "ECL105",
+      "theme_refs": [
+        "urn:theophile:theme:ecologie",
+        "urn:theophile:theme:creation",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:personne_et_communaute"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 75,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 15,
+          "source_count": 5,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-106",
+      "legacy_course_id": "ECL106",
+      "theme_refs": [
+        "urn:theophile:theme:ecologie",
+        "urn:theophile:theme:pauvrete",
+        "urn:theophile:theme:justice_sociale",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 74,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 9,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-107",
+      "legacy_course_id": "ECL107",
+      "theme_refs": [
+        "urn:theophile:theme:progres",
+        "urn:theophile:theme:science",
+        "urn:theophile:theme:prudence",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 67,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 11,
+          "source_count": 5,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-108",
+      "legacy_course_id": "ECL108",
+      "theme_refs": [
+        "urn:theophile:theme:vie_et_soin",
+        "urn:theophile:theme:corps_vecu",
+        "urn:theophile:theme:dignite",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 59,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 4,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-109",
+      "legacy_course_id": "ECL109",
+      "theme_refs": [
+        "urn:theophile:theme:ecologie",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:subsidiarite",
+        "urn:theophile:theme:justice"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 74,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 5,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-110",
+      "legacy_course_id": "ECL110",
+      "theme_refs": [
+        "urn:theophile:theme:science_et_foi",
+        "urn:theophile:theme:ecologie",
+        "urn:theophile:theme:critique_des_preuves",
+        "urn:theophile:theme:prudence"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 79,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 17,
+          "source_count": 7,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-101",
+      "legacy_course_id": "EC101",
+      "theme_refs": [
+        "urn:theophile:theme:travail",
+        "urn:theophile:theme:travail_et_justice",
+        "urn:theophile:theme:dignite",
+        "urn:theophile:theme:personnalisme"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 62,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 15,
+          "source_count": 5,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-102",
+      "legacy_course_id": "EC102",
+      "theme_refs": [
+        "urn:theophile:theme:propriete",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:justice",
+        "urn:theophile:theme:loi_naturelle"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 71,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 5,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-103",
+      "legacy_course_id": "EC103",
+      "theme_refs": [
+        "urn:theophile:theme:economie_et_don",
+        "urn:theophile:theme:economie",
+        "urn:theophile:theme:amour",
+        "urn:theophile:theme:justice"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 86,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 20,
+          "source_count": 10,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-104",
+      "legacy_course_id": "EC104",
+      "theme_refs": [
+        "urn:theophile:theme:economie",
+        "urn:theophile:theme:propriete",
+        "urn:theophile:theme:loi",
+        "urn:theophile:theme:justice"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 69,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 6,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-105",
+      "legacy_course_id": "EC105",
+      "theme_refs": [
+        "urn:theophile:theme:pauvrete",
+        "urn:theophile:theme:justice_sociale",
+        "urn:theophile:theme:economie",
+        "urn:theophile:theme:dignite"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 74,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 19,
+          "source_count": 10,
+          "argument_count": 3,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-106",
+      "legacy_course_id": "EC106",
+      "theme_refs": [
+        "urn:theophile:theme:travail",
+        "urn:theophile:theme:subsidiarite",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:economie"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 69,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 6,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-107",
+      "legacy_course_id": "EC107",
+      "theme_refs": [
+        "urn:theophile:theme:economie",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:justice",
+        "urn:theophile:theme:prudence"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 69,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 6,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-108",
+      "legacy_course_id": "EC108",
+      "theme_refs": [
+        "urn:theophile:theme:economie_et_don",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:mission",
+        "urn:theophile:theme:justice_sociale"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 74,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 5,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-109",
+      "legacy_course_id": "EC109",
+      "theme_refs": [
+        "urn:theophile:theme:travail",
+        "urn:theophile:theme:progres",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:economie"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 67,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 6,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-110",
+      "legacy_course_id": "EC110",
+      "theme_refs": [
+        "urn:theophile:theme:economie",
+        "urn:theophile:theme:travail_et_justice",
+        "urn:theophile:theme:critique_des_preuves",
+        "urn:theophile:theme:prudence"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 71,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 17,
+          "source_count": 6,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-101",
+      "legacy_course_id": "KOA101",
+      "theme_refs": [
+        "urn:theophile:theme:ecriture",
+        "urn:theophile:theme:hermeneutique",
+        "urn:theophile:theme:tradition_et_raison",
+        "urn:theophile:theme:reception"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 62,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 6,
+          "argument_count": 2,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-102",
+      "legacy_course_id": "KOA102",
+      "theme_refs": [
+        "urn:theophile:theme:dogme",
+        "urn:theophile:theme:histoire_des_doctrines",
+        "urn:theophile:theme:tradition_et_raison",
+        "urn:theophile:theme:developpement"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 84,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 19,
+          "source_count": 9,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-103",
+      "legacy_course_id": "KOA103",
+      "theme_refs": [
+        "urn:theophile:theme:trinite",
+        "urn:theophile:theme:theologie_naturelle",
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:mystere_et_presence"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 82,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 21,
+          "source_count": 6,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-104",
+      "legacy_course_id": "KOA104",
+      "theme_refs": [
+        "urn:theophile:theme:christologie",
+        "urn:theophile:theme:salut",
+        "urn:theophile:theme:grace",
+        "urn:theophile:theme:personnalisme"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 83,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 22,
+          "source_count": 13,
+          "argument_count": 3,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-105",
+      "legacy_course_id": "KOA105",
+      "theme_refs": [
+        "urn:theophile:theme:grace",
+        "urn:theophile:theme:salut",
+        "urn:theophile:theme:resurrection",
+        "urn:theophile:theme:esperance"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 84,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 24,
+          "source_count": 15,
+          "argument_count": 2,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-106",
+      "legacy_course_id": "KOA106",
+      "theme_refs": [
+        "urn:theophile:theme:eucharistie",
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:mystere_et_presence",
+        "urn:theophile:theme:foi"
+      ],
+      "coverage": {
+        "level": "partial",
+        "coverage_score": 50,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 9,
+          "source_count": 4,
+          "argument_count": 2,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-107",
+      "legacy_course_id": "KOA107",
+      "theme_refs": [
+        "urn:theophile:theme:mariologie",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:foi",
+        "urn:theophile:theme:esperance"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 67,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 10,
+          "argument_count": 3,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-108",
+      "legacy_course_id": "KOA108",
+      "theme_refs": [
+        "urn:theophile:theme:autorite",
+        "urn:theophile:theme:dogme",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:histoire_des_doctrines"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 76,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 11,
+          "argument_count": 3,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-109",
+      "legacy_course_id": "KOA109",
+      "theme_refs": [
+        "urn:theophile:theme:mystique",
+        "urn:theophile:theme:contemplation",
+        "urn:theophile:theme:interiorite",
+        "urn:theophile:theme:mystere_et_presence"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 82,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 21,
+          "source_count": 10,
+          "argument_count": 4,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-110",
+      "legacy_course_id": "KOA110",
+      "theme_refs": [
+        "urn:theophile:theme:foi",
+        "urn:theophile:theme:raison_et_foi",
+        "urn:theophile:theme:critique_des_preuves",
+        "urn:theophile:theme:certitude"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 72,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 6,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-101",
+      "legacy_course_id": "GJS101",
+      "theme_refs": [
+        "urn:theophile:theme:art_et_beaute",
+        "urn:theophile:theme:creation",
+        "urn:theophile:theme:contemplation",
+        "urn:theophile:theme:raison_et_emerveillement"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 79,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 19,
+          "source_count": 6,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-102",
+      "legacy_course_id": "GJS102",
+      "theme_refs": [
+        "urn:theophile:theme:art_et_beaute",
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:mystere_et_presence",
+        "urn:theophile:theme:verite"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 59,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 4,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-103",
+      "legacy_course_id": "GJS103",
+      "theme_refs": [
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:creation",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:mystere_et_presence"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 80,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 6,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-104",
+      "legacy_course_id": "GJS104",
+      "theme_refs": [
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:contemplation",
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:mystique"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 85,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 21,
+          "source_count": 10,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-105",
+      "legacy_course_id": "GJS105",
+      "theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:hermeneutique",
+        "urn:theophile:theme:esperance",
+        "urn:theophile:theme:condition_humaine"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 77,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 17,
+          "source_count": 7,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-106",
+      "legacy_course_id": "GJS106",
+      "theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:action_et_sens",
+        "urn:theophile:theme:condition_humaine"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 73,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 4,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-107",
+      "legacy_course_id": "GJS107",
+      "theme_refs": [
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:mariologie",
+        "urn:theophile:theme:mystere_et_presence"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 69,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 13,
+          "source_count": 7,
+          "argument_count": 4,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-108",
+      "legacy_course_id": "GJS108",
+      "theme_refs": [
+        "urn:theophile:theme:art_et_beaute",
+        "urn:theophile:theme:progres",
+        "urn:theophile:theme:reception_des_auteurs",
+        "urn:theophile:theme:verite"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 65,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 10,
+          "source_count": 4,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-109",
+      "legacy_course_id": "GJS109",
+      "theme_refs": [
+        "urn:theophile:theme:art_et_beaute",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:personnalisme",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 61,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 13,
+          "source_count": 4,
+          "argument_count": 3,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-110",
+      "legacy_course_id": "GJS110",
+      "theme_refs": [
+        "urn:theophile:theme:art_et_beaute",
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:histoire_des_doctrines",
+        "urn:theophile:theme:reception"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 64,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 15,
+          "source_count": 5,
+          "argument_count": 3,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-101",
+      "legacy_course_id": "IA101",
+      "theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:personnalisme",
+        "urn:theophile:theme:devenir_humain",
+        "urn:theophile:theme:vertus"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 72,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 15,
+          "source_count": 5,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-102",
+      "legacy_course_id": "IA102",
+      "theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:histoire_des_doctrines",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:personne_et_communaute"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 71,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 5,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-103",
+      "legacy_course_id": "IA103",
+      "theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:connaissance",
+        "urn:theophile:theme:science",
+        "urn:theophile:theme:raison_et_foi"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 86,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 23,
+          "source_count": 8,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-104",
+      "legacy_course_id": "IA104",
+      "theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:liberte",
+        "urn:theophile:theme:conscience",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 83,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 21,
+          "source_count": 11,
+          "argument_count": 4,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-105",
+      "legacy_course_id": "IA105",
+      "theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:tradition_et_raison",
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:hermeneutique"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 62,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 4,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-106",
+      "legacy_course_id": "IA106",
+      "theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:science",
+        "urn:theophile:theme:travail",
+        "urn:theophile:theme:progres"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 65,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 11,
+          "source_count": 6,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-107",
+      "legacy_course_id": "IA107",
+      "theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:reception"
+      ],
+      "coverage": {
+        "level": "partial",
+        "coverage_score": 54,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 4,
+          "argument_count": 2,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-108",
+      "legacy_course_id": "IA108",
+      "theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:pauvrete",
+        "urn:theophile:theme:justice_sociale",
+        "urn:theophile:theme:dignite"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 70,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 17,
+          "source_count": 9,
+          "argument_count": 3,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-109",
+      "legacy_course_id": "IA109",
+      "theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:progres",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:limites_de_la_connaissance"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 69,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 11,
+          "source_count": 4,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-110",
+      "legacy_course_id": "IA110",
+      "theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:mission",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 64,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 11,
+          "source_count": 4,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-101",
+      "legacy_course_id": "IS101",
+      "theme_refs": [
+        "urn:theophile:theme:dignite",
+        "urn:theophile:theme:vie_et_soin",
+        "urn:theophile:theme:personnalisme",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 61,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 15,
+          "source_count": 4,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-102",
+      "legacy_course_id": "IS102",
+      "theme_refs": [
+        "urn:theophile:theme:corps_vecu",
+        "urn:theophile:theme:condition_humaine",
+        "urn:theophile:theme:vie_et_soin",
+        "urn:theophile:theme:misericorde"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 59,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 4,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-103",
+      "legacy_course_id": "IS103",
+      "theme_refs": [
+        "urn:theophile:theme:autrui_et_empathie",
+        "urn:theophile:theme:amour",
+        "urn:theophile:theme:misericorde",
+        "urn:theophile:theme:prudence"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 75,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 15,
+          "source_count": 8,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-104",
+      "legacy_course_id": "IS104",
+      "theme_refs": [
+        "urn:theophile:theme:vie_et_violence",
+        "urn:theophile:theme:vie_et_soin",
+        "urn:theophile:theme:morale",
+        "urn:theophile:theme:prudence"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 68,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 4,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-105",
+      "legacy_course_id": "IS105",
+      "theme_refs": [
+        "urn:theophile:theme:pauvrete",
+        "urn:theophile:theme:justice_sociale",
+        "urn:theophile:theme:vie_et_soin",
+        "urn:theophile:theme:dignite"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 72,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 9,
+          "argument_count": 3,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-106",
+      "legacy_course_id": "IS106",
+      "theme_refs": [
+        "urn:theophile:theme:condition_humaine",
+        "urn:theophile:theme:esperance",
+        "urn:theophile:theme:misericorde",
+        "urn:theophile:theme:personne_et_communaute"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 70,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 7,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-107",
+      "legacy_course_id": "IS107",
+      "theme_refs": [
+        "urn:theophile:theme:dignite",
+        "urn:theophile:theme:personnalisme",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:justice"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 64,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 17,
+          "source_count": 5,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-108",
+      "legacy_course_id": "IS108",
+      "theme_refs": [
+        "urn:theophile:theme:vie_et_soin",
+        "urn:theophile:theme:autorite",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:subsidiarite"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 80,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 19,
+          "source_count": 10,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-109",
+      "legacy_course_id": "IS109",
+      "theme_refs": [
+        "urn:theophile:theme:mission",
+        "urn:theophile:theme:vie_et_soin",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:reception"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 61,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 11,
+          "source_count": 4,
+          "argument_count": 3,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-110",
+      "legacy_course_id": "IS110",
+      "theme_refs": [
+        "urn:theophile:theme:vie_et_soin",
+        "urn:theophile:theme:dignite",
+        "urn:theophile:theme:mission",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "coverage": {
+        "level": "partial",
+        "coverage_score": 54,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 4,
+          "argument_count": 2,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-101",
+      "legacy_course_id": "LI101",
+      "theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:veracite",
+        "urn:theophile:theme:verite",
+        "urn:theophile:theme:action_et_sens"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 69,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 13,
+          "source_count": 4,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-102",
+      "legacy_course_id": "LI102",
+      "theme_refs": [
+        "urn:theophile:theme:ecriture",
+        "urn:theophile:theme:hermeneutique",
+        "urn:theophile:theme:tradition_et_raison",
+        "urn:theophile:theme:reception"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 62,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 6,
+          "argument_count": 2,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-103",
+      "legacy_course_id": "LI103",
+      "theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:ecriture",
+        "urn:theophile:theme:reception_des_auteurs",
+        "urn:theophile:theme:histoire_des_doctrines"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 70,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 7,
+          "argument_count": 4,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-104",
+      "legacy_course_id": "LI104",
+      "theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:hermeneutique",
+        "urn:theophile:theme:veracite",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 69,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 13,
+          "source_count": 4,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-105",
+      "legacy_course_id": "LI105",
+      "theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:raison_et_foi",
+        "urn:theophile:theme:critique_des_preuves",
+        "urn:theophile:theme:veracite"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 66,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 5,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-106",
+      "legacy_course_id": "LI106",
+      "theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:condition_humaine"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 62,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 4,
+          "argument_count": 3,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-107",
+      "legacy_course_id": "LI107",
+      "theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:politique_et_colonisation",
+        "urn:theophile:theme:reception"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 68,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 4,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-108",
+      "legacy_course_id": "LI108",
+      "theme_refs": [
+        "urn:theophile:theme:dogme",
+        "urn:theophile:theme:histoire_des_doctrines",
+        "urn:theophile:theme:tradition_et_raison",
+        "urn:theophile:theme:certitude"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 77,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 15,
+          "source_count": 7,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-109",
+      "legacy_course_id": "LI109",
+      "theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:connaissance",
+        "urn:theophile:theme:universaux",
+        "urn:theophile:theme:verite"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 82,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 21,
+          "source_count": 7,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-110",
+      "legacy_course_id": "LI110",
+      "theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:hermeneutique",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 65,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 4,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-101",
+      "legacy_course_id": "ME101",
+      "theme_refs": [
+        "urn:theophile:theme:metaphysique",
+        "urn:theophile:theme:theologie_naturelle",
+        "urn:theophile:theme:universaux",
+        "urn:theophile:theme:creation"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 93,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 26,
+          "source_count": 8,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-102",
+      "legacy_course_id": "ME102",
+      "theme_refs": [
+        "urn:theophile:theme:verite",
+        "urn:theophile:theme:connaissance",
+        "urn:theophile:theme:certitude",
+        "urn:theophile:theme:limites_de_la_connaissance"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 91,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 25,
+          "source_count": 8,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-103",
+      "legacy_course_id": "ME103",
+      "theme_refs": [
+        "urn:theophile:theme:personnalisme",
+        "urn:theophile:theme:ame_et_corps",
+        "urn:theophile:theme:corps_vecu",
+        "urn:theophile:theme:condition_humaine"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 66,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 5,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-104",
+      "legacy_course_id": "ME104",
+      "theme_refs": [
+        "urn:theophile:theme:conscience",
+        "urn:theophile:theme:liberte",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:discernement"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 80,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 21,
+          "source_count": 10,
+          "argument_count": 3,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-105",
+      "legacy_course_id": "ME105",
+      "theme_refs": [
+        "urn:theophile:theme:bien",
+        "urn:theophile:theme:bonheur",
+        "urn:theophile:theme:vertus",
+        "urn:theophile:theme:prudence"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 81,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 19,
+          "source_count": 6,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-106",
+      "legacy_course_id": "ME106",
+      "theme_refs": [
+        "urn:theophile:theme:mal",
+        "urn:theophile:theme:providence",
+        "urn:theophile:theme:esperance",
+        "urn:theophile:theme:condition_humaine"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 82,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 20,
+          "source_count": 8,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-107",
+      "legacy_course_id": "ME107",
+      "theme_refs": [
+        "urn:theophile:theme:temps",
+        "urn:theophile:theme:creation",
+        "urn:theophile:theme:devenir_humain",
+        "urn:theophile:theme:progres"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 73,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 13,
+          "source_count": 6,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-108",
+      "legacy_course_id": "ME108",
+      "theme_refs": [
+        "urn:theophile:theme:universaux",
+        "urn:theophile:theme:loi_naturelle",
+        "urn:theophile:theme:metaphysique",
+        "urn:theophile:theme:morale"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 62,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 10,
+          "source_count": 4,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-109",
+      "legacy_course_id": "ME109",
+      "theme_refs": [
+        "urn:theophile:theme:philosophie_chretienne",
+        "urn:theophile:theme:reception_des_auteurs",
+        "urn:theophile:theme:raison_et_foi",
+        "urn:theophile:theme:tradition_et_raison"
+      ],
+      "coverage": {
+        "level": "partial",
+        "coverage_score": 51,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 10,
+          "source_count": 4,
+          "argument_count": 2,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-110",
+      "legacy_course_id": "ME110",
+      "theme_refs": [
+        "urn:theophile:theme:metaphysique",
+        "urn:theophile:theme:critique_des_preuves",
+        "urn:theophile:theme:verite",
+        "urn:theophile:theme:reception"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 62,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 13,
+          "source_count": 5,
+          "argument_count": 3,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-101",
+      "legacy_course_id": "SP101",
+      "theme_refs": [
+        "urn:theophile:theme:autorite",
+        "urn:theophile:theme:politique",
+        "urn:theophile:theme:bien",
+        "urn:theophile:theme:personne_et_communaute"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 84,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 19,
+          "source_count": 12,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-102",
+      "legacy_course_id": "SP102",
+      "theme_refs": [
+        "urn:theophile:theme:loi",
+        "urn:theophile:theme:loi_naturelle",
+        "urn:theophile:theme:justice",
+        "urn:theophile:theme:autorite"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 80,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 19,
+          "source_count": 11,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-103",
+      "legacy_course_id": "SP103",
+      "theme_refs": [
+        "urn:theophile:theme:subsidiarite",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:justice_sociale",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 76,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 5,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-104",
+      "legacy_course_id": "SP104",
+      "theme_refs": [
+        "urn:theophile:theme:droits_et_paix",
+        "urn:theophile:theme:liberte",
+        "urn:theophile:theme:religions",
+        "urn:theophile:theme:justice"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 79,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 8,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-105",
+      "legacy_course_id": "SP105",
+      "theme_refs": [
+        "urn:theophile:theme:politique",
+        "urn:theophile:theme:autorite",
+        "urn:theophile:theme:prudence",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 82,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 12,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-106",
+      "legacy_course_id": "SP106",
+      "theme_refs": [
+        "urn:theophile:theme:politique",
+        "urn:theophile:theme:religions",
+        "urn:theophile:theme:autorite",
+        "urn:theophile:theme:loi"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 78,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 17,
+          "source_count": 12,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-107",
+      "legacy_course_id": "SP107",
+      "theme_refs": [
+        "urn:theophile:theme:politique_et_colonisation",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:justice",
+        "urn:theophile:theme:dignite"
+      ],
+      "coverage": {
+        "level": "developed",
+        "coverage_score": 60,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 5,
+          "argument_count": 2,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-108",
+      "legacy_course_id": "SP108",
+      "theme_refs": [
+        "urn:theophile:theme:guerre_et_paix",
+        "urn:theophile:theme:paix",
+        "urn:theophile:theme:non_violence",
+        "urn:theophile:theme:prudence"
+      ],
+      "coverage": {
+        "level": "partial",
+        "coverage_score": 45,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 8,
+          "source_count": 4,
+          "argument_count": 2,
+          "evaluation_case_count": 2
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-109",
+      "legacy_course_id": "SP109",
+      "theme_refs": [
+        "urn:theophile:theme:prudence",
+        "urn:theophile:theme:conscience",
+        "urn:theophile:theme:liberte",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 83,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 21,
+          "source_count": 11,
+          "argument_count": 4,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-110",
+      "legacy_course_id": "SP110",
+      "theme_refs": [
+        "urn:theophile:theme:politique",
+        "urn:theophile:theme:subsidiarite",
+        "urn:theophile:theme:justice",
+        "urn:theophile:theme:critique_des_preuves"
+      ],
+      "coverage": {
+        "level": "strong",
+        "coverage_score": 79,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 8,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    }
+  ]
+}

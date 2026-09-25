@@ -1,0 +1,6 @@
+UCKK / UCC / Math switcher — installation locale
+Date: 20260924_233136
+Fichiers du paquet: 45
+Déjà à jour: 0
+Écrits: 45
+Backup: C:\mycode\UCKK\uckk-moodle\_backup_ucc_switcher_20260924_233136.zip

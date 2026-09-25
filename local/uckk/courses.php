@@ -102,7 +102,9 @@ function local_uckk_public_courses_request_state(): array {
  * @return array<string, mixed>
  */
 function local_uckk_public_courses_enrich_definition(array $definition, array $state): array {
-    $ismath = \local_uckk\local\public_site_context::is_math();
+    $site = \local_uckk\local\public_site_context::current();
+    $ismath = $site === \local_uckk\local\public_site_context::SITE_MATH;
+    $isucc = $site === \local_uckk\local\public_site_context::SITE_UCC;
     $allcards = local_uckk_public_courses_get_cards();
     $filters = local_uckk_public_courses_category_filters($allcards, $state['category']);
 
@@ -120,13 +122,15 @@ function local_uckk_public_courses_enrich_definition(array $definition, array $s
             'title' => 'Explorer les cours',
             'body' => $ismath
                 ? 'Les cours ci-dessous sont ceux que Moodle rend actuellement publics selon leur visibilité et leurs permissions. Le site mathématique les présente sans maintenir une copie parallèle du catalogue.'
-                : 'Les cours ci-dessous sont visibles publiquement et accessibles en consultation. Ils structurent les Voies, les preuves de progression et la puissance opératoire des Joueurs de l’UCKK.',
+                : ($isucc
+                    ? 'Les cours ci-dessous sont les espaces Moodle actuellement visibles. L’UCC les présente comme portes d’entrée vers les Voies et le corpus catholique, sans maintenir une copie parallèle du catalogue.'
+                    : 'Les cours ci-dessous sont visibles publiquement et accessibles en consultation. Ils structurent les Voies, les preuves de progression et la puissance opératoire des Joueurs de l’UCKK.'),
             'type' => 'courses-intro',
         ],
     ];
 
     $definition['cards'] = [];
-    $definition['cardsheading'] = $ismath ? 'Cours disponibles' : 'Cours publics';
+    $definition['cardsheading'] = $ismath ? 'Cours disponibles' : ($isucc ? 'Cours publics UCC' : 'Cours publics');
 
     $definition['has_course_explorer'] = true;
     $definition['course_explorer'] = local_uckk_public_courses_explorer_context($state, $filters, $cards, count($allcards));
@@ -142,7 +146,9 @@ function local_uckk_public_courses_enrich_definition(array $definition, array $s
         'title' => 'Index Moodle des cours',
         'body' => $ismath
             ? 'L’index Moodle donne accès aux mêmes espaces de cours et reste la référence de l’état actuellement publié.'
-            : 'L’index permet aussi de parcourir les espaces de cours.',
+            : ($isucc
+                ? 'L’index Moodle reste la référence de l’état actuellement publié des espaces de cours reliés à l’UCC.'
+                : 'L’index permet aussi de parcourir les espaces de cours.'),
         'url' => '/course/index.php',
         'label' => 'Ouvrir l’index',
     ];
@@ -157,7 +163,9 @@ function local_uckk_public_courses_enrich_definition(array $definition, array $s
             'title' => 'Aucun cours public',
             'body' => $ismath
                 ? 'Aucun cours visible n’est actuellement disponible dans le catalogue.'
-                : 'Aucun cours visible n’est actuellement disponible dans le répertoire public UCKK.',
+                : ($isucc
+                    ? 'Aucun cours visible n’est actuellement disponible dans le répertoire public UCC.'
+                    : 'Aucun cours visible n’est actuellement disponible dans le répertoire public UCKK.'),
         ];
     }
 
@@ -293,7 +301,13 @@ function local_uckk_public_courses_get_cards(): array {
         $summary = local_uckk_public_courses_plain_summary($record);
 
         if ($summary === '') {
-            $summary = 'Cours public UCKK disponible en consultation.';
+            if (\local_uckk\local\public_site_context::is_ucc()) {
+                $summary = 'Cours public UCC disponible en consultation.';
+            } else if (\local_uckk\local\public_site_context::is_math()) {
+                $summary = 'Cours public disponible en consultation.';
+            } else {
+                $summary = 'Cours public UCKK disponible en consultation.';
+            }
         }
 
         $title = $fullname !== '' ? $fullname : $shortname;
@@ -549,7 +563,7 @@ function local_uckk_public_courses_empty_voie_signature(): array {
  * @return array<string, array{slug: string, voie_id: string, label: string}>
  */
 function local_uckk_public_courses_voie_signature_map(): array {
-    return [
+    $map = [
         'GJS' => [
             'slug' => 'grand-jeu-social',
             'voie_id' => 'voie_grand_jeu_social',
@@ -601,6 +615,27 @@ function local_uckk_public_courses_voie_signature_map(): array {
             'label' => 'Architecture du kOA Digital Ecosystem',
         ],
     ];
+
+    if (\local_uckk\local\public_site_context::is_ucc()) {
+        $ucclabels = [
+            'GJS' => 'Arts, beauté et culture',
+            'ECL' => 'Création, sciences et écologie',
+            'EC' => 'Économie, travail et justice sociale',
+            'SP' => 'Droit, politique et bien commun',
+            'LI' => 'Langage, lettres et transmission',
+            'ME' => 'Philosophie, métaphysique et personne',
+            'IA' => 'Éducation, universités et transmission',
+            'IS' => 'Santé, soin et dignité',
+            'AS' => 'Œuvres, institutions et administration',
+            'KOA' => 'Théologie, Écriture et Tradition',
+        ];
+
+        foreach ($ucclabels as $code => $label) {
+            $map[$code]['label'] = $label;
+        }
+    }
+
+    return $map;
 }
 
 /**
@@ -799,6 +834,20 @@ function local_uckk_public_courses_clean_css_class(string $class): string {
  * @return string
  */
 function local_uckk_public_courses_public_category_label(string $categoryname, string $categoryidnumber): string {
+    if (\local_uckk\local\public_site_context::is_ucc()) {
+        $code = local_uckk_public_courses_voie_code_from_identifiers(
+            $categoryidnumber,
+            '',
+            '',
+            '',
+            $categoryname
+        );
+        $map = local_uckk_public_courses_voie_signature_map();
+        if ($code !== '' && isset($map[$code]['label'])) {
+            return local_uckk_public_courses_safe_param_text((string)$map[$code]['label']);
+        }
+    }
+
     $label = trim($categoryname !== '' ? $categoryname : $categoryidnumber);
 
     if ($label === '') {

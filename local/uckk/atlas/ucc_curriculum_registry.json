@@ -1,0 +1,3205 @@
+{
+  "schema_version": "UCC-CURRICULUM-1.0",
+  "universe_id": "ucc",
+  "name": "Univers-Cité Catho",
+  "technical_component": "local_uckk",
+  "kristal": {
+    "corpus_id": "corpus-catholique-theophile-v0.2.1",
+    "state_id": "sha256:5b5f48af42f5644d4d8817138c08f4f228832b364decd18cd830d0ad99a6ed93",
+    "artifact_status": "working",
+    "binding": "read_only_semantic_projection"
+  },
+  "domains": [
+    {
+      "domain_id": "kreative",
+      "code": "KRE",
+      "surface": "Kreative",
+      "door": "Créer",
+      "question": "Comment le corpus s’exprime-t-il dans les arts, les lettres, les langues et la culture?",
+      "purpose": "Explorer et produire les formes symboliques, artistiques, littéraires et culturelles liées au corpus.",
+      "ucc_voie_ids": [
+        "ucc:voie:arts-culture",
+        "ucc:voie:langage-lettres"
+      ],
+      "legacy_voie_ids": [
+        "voie_grand_jeu_social",
+        "voie_linguistique_architecture_du_sens"
+      ]
+    },
+    {
+      "domain_id": "konnected",
+      "code": "KON",
+      "surface": "KonnectED",
+      "door": "Comprendre",
+      "question": "Que dit le corpus, quelles sont ses sources et comment les connaissances s’articulent-elles?",
+      "purpose": "Étudier les concepts, sources, positions, arguments et controverses du corpus.",
+      "ucc_voie_ids": [
+        "ucc:voie:creation-sciences-ecologie",
+        "ucc:voie:theologie-tradition",
+        "ucc:voie:philosophie-personne"
+      ],
+      "legacy_voie_ids": [
+        "voie_ecologie",
+        "voie_ecosysteme_digital_koa",
+        "voie_metaphysique"
+      ]
+    },
+    {
+      "domain_id": "keenkonnect",
+      "code": "KEE",
+      "surface": "KeenKonnect",
+      "door": "Servir",
+      "question": "Comment le savoir se matérialise-t-il dans l’éducation, la santé et les œuvres de service?",
+      "purpose": "Relier le corpus aux métiers, aux institutions, aux sciences appliquées et aux œuvres de service.",
+      "ucc_voie_ids": [
+        "ucc:voie:oeuvres-institutions",
+        "ucc:voie:education-universites",
+        "ucc:voie:sante-soin"
+      ],
+      "legacy_voie_ids": [
+        "voie_architecture_sociotechnique",
+        "voie_ia_gouvernable",
+        "voie_intervention_sociale_systemes_humains"
+      ]
+    },
+    {
+      "domain_id": "ethikos",
+      "code": "ETH",
+      "surface": "Ethikos",
+      "door": "Gouverner",
+      "question": "Comment analyser les responsabilités économiques, juridiques, politiques et institutionnelles?",
+      "purpose": "Former au jugement, à la délibération, au droit, à la gouvernance et au bien commun sans confondre doctrine, faits et choix politiques.",
+      "ucc_voie_ids": [
+        "ucc:voie:economie-travail",
+        "ucc:voie:droit-politique-bien-commun"
+      ],
+      "legacy_voie_ids": [
+        "voie_economie",
+        "voie_sciences_politiques"
+      ]
+    }
+  ],
+  "voies": [
+    {
+      "ucc_voie_id": "ucc:voie:oeuvres-institutions",
+      "ucc_code": "OEU",
+      "legacy_voie_id": "voie_architecture_sociotechnique",
+      "legacy_code": "AS",
+      "domain_id": "keenkonnect",
+      "primary_surface": "KeenKonnect",
+      "title": "Voie des Œuvres, des institutions et de l’administration",
+      "course_ids": [
+        "UCC-OEU-101",
+        "UCC-OEU-102",
+        "UCC-OEU-103",
+        "UCC-OEU-104",
+        "UCC-OEU-105",
+        "UCC-OEU-106",
+        "UCC-OEU-107",
+        "UCC-OEU-108",
+        "UCC-OEU-109",
+        "UCC-OEU-110"
+      ],
+      "corpus_readiness": {
+        "method": "UCC-COVERAGE-1.0",
+        "average_score": 69.3,
+        "minimum_score": 57,
+        "maximum_score": 86,
+        "course_levels": {
+          "strong": 3,
+          "developed": 7
+        }
+      }
+    },
+    {
+      "ucc_voie_id": "ucc:voie:creation-sciences-ecologie",
+      "ucc_code": "SCI",
+      "legacy_voie_id": "voie_ecologie",
+      "legacy_code": "ECL",
+      "domain_id": "konnected",
+      "primary_surface": "KonnectED",
+      "title": "Voie de la Création, des sciences et de l’écologie",
+      "course_ids": [
+        "UCC-SCI-101",
+        "UCC-SCI-102",
+        "UCC-SCI-103",
+        "UCC-SCI-104",
+        "UCC-SCI-105",
+        "UCC-SCI-106",
+        "UCC-SCI-107",
+        "UCC-SCI-108",
+        "UCC-SCI-109",
+        "UCC-SCI-110"
+      ],
+      "corpus_readiness": {
+        "method": "UCC-COVERAGE-1.0",
+        "average_score": 75.3,
+        "minimum_score": 59,
+        "maximum_score": 97,
+        "course_levels": {
+          "strong": 5,
+          "developed": 5
+        }
+      }
+    },
+    {
+      "ucc_voie_id": "ucc:voie:economie-travail",
+      "ucc_code": "ECO",
+      "legacy_voie_id": "voie_economie",
+      "legacy_code": "EC",
+      "domain_id": "ethikos",
+      "primary_surface": "Ethikos",
+      "title": "Voie de l’Économie, du travail et de la justice sociale",
+      "course_ids": [
+        "UCC-ECO-101",
+        "UCC-ECO-102",
+        "UCC-ECO-103",
+        "UCC-ECO-104",
+        "UCC-ECO-105",
+        "UCC-ECO-106",
+        "UCC-ECO-107",
+        "UCC-ECO-108",
+        "UCC-ECO-109",
+        "UCC-ECO-110"
+      ],
+      "corpus_readiness": {
+        "method": "UCC-COVERAGE-1.0",
+        "average_score": 71.2,
+        "minimum_score": 62,
+        "maximum_score": 86,
+        "course_levels": {
+          "developed": 9,
+          "strong": 1
+        }
+      }
+    },
+    {
+      "ucc_voie_id": "ucc:voie:theologie-tradition",
+      "ucc_code": "THE",
+      "legacy_voie_id": "voie_ecosysteme_digital_koa",
+      "legacy_code": "KOA",
+      "domain_id": "konnected",
+      "primary_surface": "KonnectED",
+      "title": "Voie de la Théologie, de l’Écriture et de la Tradition",
+      "course_ids": [
+        "UCC-THE-101",
+        "UCC-THE-102",
+        "UCC-THE-103",
+        "UCC-THE-104",
+        "UCC-THE-105",
+        "UCC-THE-106",
+        "UCC-THE-107",
+        "UCC-THE-108",
+        "UCC-THE-109",
+        "UCC-THE-110"
+      ],
+      "corpus_readiness": {
+        "method": "UCC-COVERAGE-1.0",
+        "average_score": 74.2,
+        "minimum_score": 50,
+        "maximum_score": 84,
+        "course_levels": {
+          "developed": 3,
+          "strong": 6,
+          "partial": 1
+        }
+      }
+    },
+    {
+      "ucc_voie_id": "ucc:voie:arts-culture",
+      "ucc_code": "ART",
+      "legacy_voie_id": "voie_grand_jeu_social",
+      "legacy_code": "GJS",
+      "domain_id": "kreative",
+      "primary_surface": "Kreative",
+      "title": "Voie des Arts, de la beauté et de la culture",
+      "course_ids": [
+        "UCC-ART-101",
+        "UCC-ART-102",
+        "UCC-ART-103",
+        "UCC-ART-104",
+        "UCC-ART-105",
+        "UCC-ART-106",
+        "UCC-ART-107",
+        "UCC-ART-108",
+        "UCC-ART-109",
+        "UCC-ART-110"
+      ],
+      "corpus_readiness": {
+        "method": "UCC-COVERAGE-1.0",
+        "average_score": 71.2,
+        "minimum_score": 59,
+        "maximum_score": 85,
+        "course_levels": {
+          "strong": 4,
+          "developed": 6
+        }
+      }
+    },
+    {
+      "ucc_voie_id": "ucc:voie:education-universites",
+      "ucc_code": "EDU",
+      "legacy_voie_id": "voie_ia_gouvernable",
+      "legacy_code": "IA",
+      "domain_id": "keenkonnect",
+      "primary_surface": "KeenKonnect",
+      "title": "Voie de l’Éducation, des universités et de la transmission",
+      "course_ids": [
+        "UCC-EDU-101",
+        "UCC-EDU-102",
+        "UCC-EDU-103",
+        "UCC-EDU-104",
+        "UCC-EDU-105",
+        "UCC-EDU-106",
+        "UCC-EDU-107",
+        "UCC-EDU-108",
+        "UCC-EDU-109",
+        "UCC-EDU-110"
+      ],
+      "corpus_readiness": {
+        "method": "UCC-COVERAGE-1.0",
+        "average_score": 69.6,
+        "minimum_score": 54,
+        "maximum_score": 86,
+        "course_levels": {
+          "developed": 7,
+          "strong": 2,
+          "partial": 1
+        }
+      }
+    },
+    {
+      "ucc_voie_id": "ucc:voie:sante-soin",
+      "ucc_code": "SAN",
+      "legacy_voie_id": "voie_intervention_sociale_systemes_humains",
+      "legacy_code": "IS",
+      "domain_id": "keenkonnect",
+      "primary_surface": "KeenKonnect",
+      "title": "Voie de la Santé, du soin et de la dignité",
+      "course_ids": [
+        "UCC-SAN-101",
+        "UCC-SAN-102",
+        "UCC-SAN-103",
+        "UCC-SAN-104",
+        "UCC-SAN-105",
+        "UCC-SAN-106",
+        "UCC-SAN-107",
+        "UCC-SAN-108",
+        "UCC-SAN-109",
+        "UCC-SAN-110"
+      ],
+      "corpus_readiness": {
+        "method": "UCC-COVERAGE-1.0",
+        "average_score": 66.4,
+        "minimum_score": 54,
+        "maximum_score": 80,
+        "course_levels": {
+          "developed": 7,
+          "strong": 2,
+          "partial": 1
+        }
+      }
+    },
+    {
+      "ucc_voie_id": "ucc:voie:langage-lettres",
+      "ucc_code": "LET",
+      "legacy_voie_id": "voie_linguistique_architecture_du_sens",
+      "legacy_code": "LI",
+      "domain_id": "kreative",
+      "primary_surface": "Kreative",
+      "title": "Voie du Langage, des lettres et de la transmission",
+      "course_ids": [
+        "UCC-LET-101",
+        "UCC-LET-102",
+        "UCC-LET-103",
+        "UCC-LET-104",
+        "UCC-LET-105",
+        "UCC-LET-106",
+        "UCC-LET-107",
+        "UCC-LET-108",
+        "UCC-LET-109",
+        "UCC-LET-110"
+      ],
+      "corpus_readiness": {
+        "method": "UCC-COVERAGE-1.0",
+        "average_score": 69.0,
+        "minimum_score": 62,
+        "maximum_score": 82,
+        "course_levels": {
+          "developed": 8,
+          "strong": 2
+        }
+      }
+    },
+    {
+      "ucc_voie_id": "ucc:voie:philosophie-personne",
+      "ucc_code": "PHI",
+      "legacy_voie_id": "voie_metaphysique",
+      "legacy_code": "ME",
+      "domain_id": "konnected",
+      "primary_surface": "KonnectED",
+      "title": "Voie de la Philosophie, de la métaphysique et de la personne",
+      "course_ids": [
+        "UCC-PHI-101",
+        "UCC-PHI-102",
+        "UCC-PHI-103",
+        "UCC-PHI-104",
+        "UCC-PHI-105",
+        "UCC-PHI-106",
+        "UCC-PHI-107",
+        "UCC-PHI-108",
+        "UCC-PHI-109",
+        "UCC-PHI-110"
+      ],
+      "corpus_readiness": {
+        "method": "UCC-COVERAGE-1.0",
+        "average_score": 74.1,
+        "minimum_score": 51,
+        "maximum_score": 93,
+        "course_levels": {
+          "strong": 5,
+          "developed": 4,
+          "partial": 1
+        }
+      }
+    },
+    {
+      "ucc_voie_id": "ucc:voie:droit-politique-bien-commun",
+      "ucc_code": "GOV",
+      "legacy_voie_id": "voie_sciences_politiques",
+      "legacy_code": "SP",
+      "domain_id": "ethikos",
+      "primary_surface": "Ethikos",
+      "title": "Voie du Droit, de la politique et du bien commun",
+      "course_ids": [
+        "UCC-GOV-101",
+        "UCC-GOV-102",
+        "UCC-GOV-103",
+        "UCC-GOV-104",
+        "UCC-GOV-105",
+        "UCC-GOV-106",
+        "UCC-GOV-107",
+        "UCC-GOV-108",
+        "UCC-GOV-109",
+        "UCC-GOV-110"
+      ],
+      "corpus_readiness": {
+        "method": "UCC-COVERAGE-1.0",
+        "average_score": 74.6,
+        "minimum_score": 45,
+        "maximum_score": 84,
+        "course_levels": {
+          "strong": 8,
+          "developed": 1,
+          "partial": 1
+        }
+      }
+    }
+  ],
+  "courses": [
+    {
+      "ucc_course_id": "UCC-OEU-101",
+      "legacy_course_id": "AS101",
+      "voie_id": "ucc:voie:oeuvres-institutions",
+      "legacy_voie_id": "voie_architecture_sociotechnique",
+      "domain_id": "keenkonnect",
+      "title": "Œuvres catholiques : formes, missions et responsabilités",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:mission",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:autorite"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 75,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 10,
+          "argument_count": 4,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-102",
+      "legacy_course_id": "AS102",
+      "voie_id": "ucc:voie:oeuvres-institutions",
+      "legacy_voie_id": "voie_architecture_sociotechnique",
+      "domain_id": "keenkonnect",
+      "title": "Gouvernance, rôles et autorité",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:autorite",
+        "urn:theophile:theme:subsidiarite",
+        "urn:theophile:theme:prudence",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 78,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 10,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-103",
+      "legacy_course_id": "AS103",
+      "voie_id": "ucc:voie:oeuvres-institutions",
+      "legacy_voie_id": "voie_architecture_sociotechnique",
+      "domain_id": "keenkonnect",
+      "title": "Administration, procédures et continuité",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:travail",
+        "urn:theophile:theme:prudence",
+        "urn:theophile:theme:veracite"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 57,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 5,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-104",
+      "legacy_course_id": "AS104",
+      "voie_id": "ucc:voie:oeuvres-institutions",
+      "legacy_voie_id": "voie_architecture_sociotechnique",
+      "domain_id": "keenkonnect",
+      "title": "Propriété, ressources et viabilité",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:propriete",
+        "urn:theophile:theme:economie",
+        "urn:theophile:theme:travail",
+        "urn:theophile:theme:justice"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 64,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 7,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-105",
+      "legacy_course_id": "AS105",
+      "voie_id": "ucc:voie:oeuvres-institutions",
+      "legacy_voie_id": "voie_architecture_sociotechnique",
+      "domain_id": "keenkonnect",
+      "title": "Archives, données et provenance",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:veracite",
+        "urn:theophile:theme:connaissance",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:critique_des_preuves"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 86,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 23,
+          "source_count": 8,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-106",
+      "legacy_course_id": "AS106",
+      "voie_id": "ucc:voie:oeuvres-institutions",
+      "legacy_voie_id": "voie_architecture_sociotechnique",
+      "domain_id": "keenkonnect",
+      "title": "Travail, équipes et justice organisationnelle",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:travail",
+        "urn:theophile:theme:travail_et_justice",
+        "urn:theophile:theme:dignite",
+        "urn:theophile:theme:personne_et_communaute"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 67,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 15,
+          "source_count": 5,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-107",
+      "legacy_course_id": "AS107",
+      "voie_id": "ucc:voie:oeuvres-institutions",
+      "legacy_voie_id": "voie_architecture_sociotechnique",
+      "domain_id": "keenkonnect",
+      "title": "Infrastructures, technique et service",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:progres",
+        "urn:theophile:theme:science",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:travail"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 65,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 11,
+          "source_count": 6,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-108",
+      "legacy_course_id": "AS108",
+      "voie_id": "ucc:voie:oeuvres-institutions",
+      "legacy_voie_id": "voie_architecture_sociotechnique",
+      "domain_id": "keenkonnect",
+      "title": "Audit, qualité et reddition de comptes",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:veracite",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:justice",
+        "urn:theophile:theme:critique_des_preuves"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 69,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 6,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-109",
+      "legacy_course_id": "AS109",
+      "voie_id": "ucc:voie:oeuvres-institutions",
+      "legacy_voie_id": "voie_architecture_sociotechnique",
+      "domain_id": "keenkonnect",
+      "title": "Crise, résilience et protection des personnes",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:prudence",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:dignite",
+        "urn:theophile:theme:personne_et_communaute"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 65,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 4,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-OEU-110",
+      "legacy_course_id": "AS110",
+      "voie_id": "ucc:voie:oeuvres-institutions",
+      "legacy_voie_id": "voie_architecture_sociotechnique",
+      "domain_id": "keenkonnect",
+      "title": "Projet : concevoir une œuvre catholique de service",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:mission",
+        "urn:theophile:theme:subsidiarite",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:justice_sociale"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 67,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 13,
+          "source_count": 5,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-101",
+      "legacy_course_id": "ECL101",
+      "voie_id": "ucc:voie:creation-sciences-ecologie",
+      "legacy_voie_id": "voie_ecologie",
+      "domain_id": "konnected",
+      "title": "Création, nature et cosmos",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:creation",
+        "urn:theophile:theme:science",
+        "urn:theophile:theme:theologie_naturelle",
+        "urn:theophile:theme:raison_et_emerveillement"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 97,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 29,
+          "source_count": 9,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-102",
+      "legacy_course_id": "ECL102",
+      "voie_id": "ucc:voie:creation-sciences-ecologie",
+      "legacy_voie_id": "voie_ecologie",
+      "domain_id": "konnected",
+      "title": "Science et foi",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:science_et_foi",
+        "urn:theophile:theme:raison_et_foi",
+        "urn:theophile:theme:limites_de_la_connaissance",
+        "urn:theophile:theme:verite"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 80,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 6,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-103",
+      "legacy_course_id": "ECL103",
+      "voie_id": "ucc:voie:creation-sciences-ecologie",
+      "legacy_voie_id": "voie_ecologie",
+      "domain_id": "konnected",
+      "title": "Controverses scientifiques et réception historique",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:heliocentrisme",
+        "urn:theophile:theme:science_et_foi",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:histoire_des_doctrines"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 70,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 7,
+          "argument_count": 3,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-104",
+      "legacy_course_id": "ECL104",
+      "voie_id": "ucc:voie:creation-sciences-ecologie",
+      "legacy_voie_id": "voie_ecologie",
+      "domain_id": "konnected",
+      "title": "Évolution, humanité et création",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:evolution",
+        "urn:theophile:theme:creation",
+        "urn:theophile:theme:condition_humaine",
+        "urn:theophile:theme:science"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 78,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 7,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-105",
+      "legacy_course_id": "ECL105",
+      "voie_id": "ucc:voie:creation-sciences-ecologie",
+      "legacy_voie_id": "voie_ecologie",
+      "domain_id": "konnected",
+      "title": "Écologie et interdépendance du vivant",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:ecologie",
+        "urn:theophile:theme:creation",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:personne_et_communaute"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 75,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 15,
+          "source_count": 5,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-106",
+      "legacy_course_id": "ECL106",
+      "voie_id": "ucc:voie:creation-sciences-ecologie",
+      "legacy_voie_id": "voie_ecologie",
+      "domain_id": "konnected",
+      "title": "Ressources, pauvreté et justice environnementale",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:ecologie",
+        "urn:theophile:theme:pauvrete",
+        "urn:theophile:theme:justice_sociale",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 74,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 9,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-107",
+      "legacy_course_id": "ECL107",
+      "voie_id": "ucc:voie:creation-sciences-ecologie",
+      "legacy_voie_id": "voie_ecologie",
+      "domain_id": "konnected",
+      "title": "Progrès, technique et limites",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:progres",
+        "urn:theophile:theme:science",
+        "urn:theophile:theme:prudence",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 67,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 11,
+          "source_count": 5,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-108",
+      "legacy_course_id": "ECL108",
+      "voie_id": "ucc:voie:creation-sciences-ecologie",
+      "legacy_voie_id": "voie_ecologie",
+      "domain_id": "konnected",
+      "title": "Vie, corps et soin",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:vie_et_soin",
+        "urn:theophile:theme:corps_vecu",
+        "urn:theophile:theme:dignite",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 59,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 4,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-109",
+      "legacy_course_id": "ECL109",
+      "voie_id": "ucc:voie:creation-sciences-ecologie",
+      "legacy_voie_id": "voie_ecologie",
+      "domain_id": "konnected",
+      "title": "Communauté, territoire et responsabilité",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:ecologie",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:subsidiarite",
+        "urn:theophile:theme:justice"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 74,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 5,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SCI-110",
+      "legacy_course_id": "ECL110",
+      "voie_id": "ucc:voie:creation-sciences-ecologie",
+      "legacy_voie_id": "voie_ecologie",
+      "domain_id": "konnected",
+      "title": "Projet : dossier science-foi-écologie",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:science_et_foi",
+        "urn:theophile:theme:ecologie",
+        "urn:theophile:theme:critique_des_preuves",
+        "urn:theophile:theme:prudence"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 79,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 17,
+          "source_count": 7,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-101",
+      "legacy_course_id": "EC101",
+      "voie_id": "ucc:voie:economie-travail",
+      "legacy_voie_id": "voie_economie",
+      "domain_id": "ethikos",
+      "title": "Travail, dignité et vocation professionnelle",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:travail",
+        "urn:theophile:theme:travail_et_justice",
+        "urn:theophile:theme:dignite",
+        "urn:theophile:theme:personnalisme"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 62,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 15,
+          "source_count": 5,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-102",
+      "legacy_course_id": "EC102",
+      "voie_id": "ucc:voie:economie-travail",
+      "legacy_voie_id": "voie_economie",
+      "domain_id": "ethikos",
+      "title": "Propriété, usage et responsabilité",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:propriete",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:justice",
+        "urn:theophile:theme:loi_naturelle"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 71,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 5,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-103",
+      "legacy_course_id": "EC103",
+      "voie_id": "ucc:voie:economie-travail",
+      "legacy_voie_id": "voie_economie",
+      "domain_id": "ethikos",
+      "title": "Économie, don et réciprocité",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:economie_et_don",
+        "urn:theophile:theme:economie",
+        "urn:theophile:theme:amour",
+        "urn:theophile:theme:justice"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 86,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 20,
+          "source_count": 10,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-104",
+      "legacy_course_id": "EC104",
+      "voie_id": "ucc:voie:economie-travail",
+      "legacy_voie_id": "voie_economie",
+      "domain_id": "ethikos",
+      "title": "Marchés, échange et contrat",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:economie",
+        "urn:theophile:theme:propriete",
+        "urn:theophile:theme:loi",
+        "urn:theophile:theme:justice"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 69,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 6,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-105",
+      "legacy_course_id": "EC105",
+      "voie_id": "ucc:voie:economie-travail",
+      "legacy_voie_id": "voie_economie",
+      "domain_id": "ethikos",
+      "title": "Pauvreté, redistribution et justice sociale",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:pauvrete",
+        "urn:theophile:theme:justice_sociale",
+        "urn:theophile:theme:economie",
+        "urn:theophile:theme:dignite"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 74,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 19,
+          "source_count": 10,
+          "argument_count": 3,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-106",
+      "legacy_course_id": "EC106",
+      "voie_id": "ucc:voie:economie-travail",
+      "legacy_voie_id": "voie_economie",
+      "domain_id": "ethikos",
+      "title": "Entreprise, coopération et corps intermédiaires",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:travail",
+        "urn:theophile:theme:subsidiarite",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:economie"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 69,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 6,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-107",
+      "legacy_course_id": "EC107",
+      "voie_id": "ucc:voie:economie-travail",
+      "legacy_voie_id": "voie_economie",
+      "domain_id": "ethikos",
+      "title": "Finance, dette et responsabilité",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:economie",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:justice",
+        "urn:theophile:theme:prudence"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 69,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 6,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-108",
+      "legacy_course_id": "EC108",
+      "voie_id": "ucc:voie:economie-travail",
+      "legacy_voie_id": "voie_economie",
+      "domain_id": "ethikos",
+      "title": "Communs, philanthropie et œuvres",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:economie_et_don",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:mission",
+        "urn:theophile:theme:justice_sociale"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 74,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 5,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-109",
+      "legacy_course_id": "EC109",
+      "voie_id": "ucc:voie:economie-travail",
+      "legacy_voie_id": "voie_economie",
+      "domain_id": "ethikos",
+      "title": "Technique, plateformes et transformation du travail",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:travail",
+        "urn:theophile:theme:progres",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:economie"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 67,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 6,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ECO-110",
+      "legacy_course_id": "EC110",
+      "voie_id": "ucc:voie:economie-travail",
+      "legacy_voie_id": "voie_economie",
+      "domain_id": "ethikos",
+      "title": "Projet : dossier d’économie sociale catholique",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:economie",
+        "urn:theophile:theme:travail_et_justice",
+        "urn:theophile:theme:critique_des_preuves",
+        "urn:theophile:theme:prudence"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 71,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 17,
+          "source_count": 6,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-101",
+      "legacy_course_id": "KOA101",
+      "voie_id": "ucc:voie:theologie-tradition",
+      "legacy_voie_id": "voie_ecosysteme_digital_koa",
+      "domain_id": "konnected",
+      "title": "Lire l’Écriture : texte, canon et interprétation",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:ecriture",
+        "urn:theophile:theme:hermeneutique",
+        "urn:theophile:theme:tradition_et_raison",
+        "urn:theophile:theme:reception"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 62,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 6,
+          "argument_count": 2,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-102",
+      "legacy_course_id": "KOA102",
+      "voie_id": "ucc:voie:theologie-tradition",
+      "legacy_voie_id": "voie_ecosysteme_digital_koa",
+      "domain_id": "konnected",
+      "title": "Révélation, Tradition et développement doctrinal",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:dogme",
+        "urn:theophile:theme:histoire_des_doctrines",
+        "urn:theophile:theme:tradition_et_raison",
+        "urn:theophile:theme:developpement"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 84,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 19,
+          "source_count": 9,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-103",
+      "legacy_course_id": "KOA103",
+      "voie_id": "ucc:voie:theologie-tradition",
+      "legacy_voie_id": "voie_ecosysteme_digital_koa",
+      "domain_id": "konnected",
+      "title": "Trinité et langage sur Dieu",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:trinite",
+        "urn:theophile:theme:theologie_naturelle",
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:mystere_et_presence"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 82,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 21,
+          "source_count": 6,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-104",
+      "legacy_course_id": "KOA104",
+      "voie_id": "ucc:voie:theologie-tradition",
+      "legacy_voie_id": "voie_ecosysteme_digital_koa",
+      "domain_id": "konnected",
+      "title": "Christologie : personne, incarnation et salut",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:christologie",
+        "urn:theophile:theme:salut",
+        "urn:theophile:theme:grace",
+        "urn:theophile:theme:personnalisme"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 83,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 22,
+          "source_count": 13,
+          "argument_count": 3,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-105",
+      "legacy_course_id": "KOA105",
+      "voie_id": "ucc:voie:theologie-tradition",
+      "legacy_voie_id": "voie_ecosysteme_digital_koa",
+      "domain_id": "konnected",
+      "title": "Grâce, salut et résurrection",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:grace",
+        "urn:theophile:theme:salut",
+        "urn:theophile:theme:resurrection",
+        "urn:theophile:theme:esperance"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 84,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 24,
+          "source_count": 15,
+          "argument_count": 2,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-106",
+      "legacy_course_id": "KOA106",
+      "voie_id": "ucc:voie:theologie-tradition",
+      "legacy_voie_id": "voie_ecosysteme_digital_koa",
+      "domain_id": "konnected",
+      "title": "Eucharistie, liturgie et présence",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:eucharistie",
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:mystere_et_presence",
+        "urn:theophile:theme:foi"
+      ],
+      "corpus_readiness": {
+        "level": "partial",
+        "coverage_score": 50,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 9,
+          "source_count": 4,
+          "argument_count": 2,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-107",
+      "legacy_course_id": "KOA107",
+      "voie_id": "ucc:voie:theologie-tradition",
+      "legacy_voie_id": "voie_ecosysteme_digital_koa",
+      "domain_id": "konnected",
+      "title": "Marie et mariologie",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:mariologie",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:foi",
+        "urn:theophile:theme:esperance"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 67,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 10,
+          "argument_count": 3,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-108",
+      "legacy_course_id": "KOA108",
+      "voie_id": "ucc:voie:theologie-tradition",
+      "legacy_voie_id": "voie_ecosysteme_digital_koa",
+      "domain_id": "konnected",
+      "title": "Autorité, doctrine et réception",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:autorite",
+        "urn:theophile:theme:dogme",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:histoire_des_doctrines"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 76,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 11,
+          "argument_count": 3,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-109",
+      "legacy_course_id": "KOA109",
+      "voie_id": "ucc:voie:theologie-tradition",
+      "legacy_voie_id": "voie_ecosysteme_digital_koa",
+      "domain_id": "konnected",
+      "title": "Mystique, contemplation et vie intérieure",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:mystique",
+        "urn:theophile:theme:contemplation",
+        "urn:theophile:theme:interiorite",
+        "urn:theophile:theme:mystere_et_presence"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 82,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 21,
+          "source_count": 10,
+          "argument_count": 4,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-THE-110",
+      "legacy_course_id": "KOA110",
+      "voie_id": "ucc:voie:theologie-tradition",
+      "legacy_voie_id": "voie_ecosysteme_digital_koa",
+      "domain_id": "konnected",
+      "title": "Projet : dossier théologique sourcé",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:foi",
+        "urn:theophile:theme:raison_et_foi",
+        "urn:theophile:theme:critique_des_preuves",
+        "urn:theophile:theme:certitude"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 72,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 6,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-101",
+      "legacy_course_id": "GJS101",
+      "voie_id": "ucc:voie:arts-culture",
+      "legacy_voie_id": "voie_grand_jeu_social",
+      "domain_id": "kreative",
+      "title": "Beauté, création et contemplation",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:art_et_beaute",
+        "urn:theophile:theme:creation",
+        "urn:theophile:theme:contemplation",
+        "urn:theophile:theme:raison_et_emerveillement"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 79,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 19,
+          "source_count": 6,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-102",
+      "legacy_course_id": "GJS102",
+      "voie_id": "ucc:voie:arts-culture",
+      "legacy_voie_id": "voie_grand_jeu_social",
+      "domain_id": "kreative",
+      "title": "Image, icône et représentation",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:art_et_beaute",
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:mystere_et_presence",
+        "urn:theophile:theme:verite"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 59,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 4,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-103",
+      "legacy_course_id": "GJS103",
+      "voie_id": "ucc:voie:arts-culture",
+      "legacy_voie_id": "voie_grand_jeu_social",
+      "domain_id": "kreative",
+      "title": "Architecture, espace et sacré",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:creation",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:mystere_et_presence"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 80,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 6,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-104",
+      "legacy_course_id": "GJS104",
+      "voie_id": "ucc:voie:arts-culture",
+      "legacy_voie_id": "voie_grand_jeu_social",
+      "domain_id": "kreative",
+      "title": "Musique, chant et liturgie",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:contemplation",
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:mystique"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 85,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 21,
+          "source_count": 10,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-105",
+      "legacy_course_id": "GJS105",
+      "voie_id": "ucc:voie:arts-culture",
+      "legacy_voie_id": "voie_grand_jeu_social",
+      "domain_id": "kreative",
+      "title": "Littérature et imagination chrétienne",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:hermeneutique",
+        "urn:theophile:theme:esperance",
+        "urn:theophile:theme:condition_humaine"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 77,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 17,
+          "source_count": 7,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-106",
+      "legacy_course_id": "GJS106",
+      "voie_id": "ucc:voie:arts-culture",
+      "legacy_voie_id": "voie_grand_jeu_social",
+      "domain_id": "kreative",
+      "title": "Théâtre, cinéma et récit",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:action_et_sens",
+        "urn:theophile:theme:condition_humaine"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 73,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 4,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-107",
+      "legacy_course_id": "GJS107",
+      "voie_id": "ucc:voie:arts-culture",
+      "legacy_voie_id": "voie_grand_jeu_social",
+      "domain_id": "kreative",
+      "title": "Art populaire, dévotion et culture",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:mariologie",
+        "urn:theophile:theme:mystere_et_presence"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 69,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 13,
+          "source_count": 7,
+          "argument_count": 4,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-108",
+      "legacy_course_id": "GJS108",
+      "voie_id": "ucc:voie:arts-culture",
+      "legacy_voie_id": "voie_grand_jeu_social",
+      "domain_id": "kreative",
+      "title": "Modernité, rupture et création",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:art_et_beaute",
+        "urn:theophile:theme:progres",
+        "urn:theophile:theme:reception_des_auteurs",
+        "urn:theophile:theme:verite"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 65,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 10,
+          "source_count": 4,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-109",
+      "legacy_course_id": "GJS109",
+      "voie_id": "ucc:voie:arts-culture",
+      "legacy_voie_id": "voie_grand_jeu_social",
+      "domain_id": "kreative",
+      "title": "Artistes catholiques et trajectoires publiques",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:art_et_beaute",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:personnalisme",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 61,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 13,
+          "source_count": 4,
+          "argument_count": 3,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-ART-110",
+      "legacy_course_id": "GJS110",
+      "voie_id": "ucc:voie:arts-culture",
+      "legacy_voie_id": "voie_grand_jeu_social",
+      "domain_id": "kreative",
+      "title": "Projet : atlas culturel catholique",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:art_et_beaute",
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:histoire_des_doctrines",
+        "urn:theophile:theme:reception"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 64,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 15,
+          "source_count": 5,
+          "argument_count": 3,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-101",
+      "legacy_course_id": "IA101",
+      "voie_id": "ucc:voie:education-universites",
+      "legacy_voie_id": "voie_ia_gouvernable",
+      "domain_id": "keenkonnect",
+      "title": "Finalités de l’éducation et formation de la personne",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:personnalisme",
+        "urn:theophile:theme:devenir_humain",
+        "urn:theophile:theme:vertus"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 72,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 15,
+          "source_count": 5,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-102",
+      "legacy_course_id": "IA102",
+      "voie_id": "ucc:voie:education-universites",
+      "legacy_voie_id": "voie_ia_gouvernable",
+      "domain_id": "keenkonnect",
+      "title": "Histoire des écoles catholiques",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:histoire_des_doctrines",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:personne_et_communaute"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 71,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 5,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-103",
+      "legacy_course_id": "IA103",
+      "voie_id": "ucc:voie:education-universites",
+      "legacy_voie_id": "voie_ia_gouvernable",
+      "domain_id": "keenkonnect",
+      "title": "Universités catholiques, recherche et savoir",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:connaissance",
+        "urn:theophile:theme:science",
+        "urn:theophile:theme:raison_et_foi"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 86,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 23,
+          "source_count": 8,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-104",
+      "legacy_course_id": "IA104",
+      "voie_id": "ucc:voie:education-universites",
+      "legacy_voie_id": "voie_ia_gouvernable",
+      "domain_id": "keenkonnect",
+      "title": "Pédagogie, liberté et conscience",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:liberte",
+        "urn:theophile:theme:conscience",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 83,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 21,
+          "source_count": 11,
+          "argument_count": 4,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-105",
+      "legacy_course_id": "IA105",
+      "voie_id": "ucc:voie:education-universites",
+      "legacy_voie_id": "voie_ia_gouvernable",
+      "domain_id": "keenkonnect",
+      "title": "Enseigner les humanités et la théologie",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:tradition_et_raison",
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:hermeneutique"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 62,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 4,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-106",
+      "legacy_course_id": "IA106",
+      "voie_id": "ucc:voie:education-universites",
+      "legacy_voie_id": "voie_ia_gouvernable",
+      "domain_id": "keenkonnect",
+      "title": "Sciences et formation professionnelle",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:science",
+        "urn:theophile:theme:travail",
+        "urn:theophile:theme:progres"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 65,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 11,
+          "source_count": 6,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-107",
+      "legacy_course_id": "IA107",
+      "voie_id": "ucc:voie:education-universites",
+      "legacy_voie_id": "voie_ia_gouvernable",
+      "domain_id": "keenkonnect",
+      "title": "Langues, culture et transmission",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:reception"
+      ],
+      "corpus_readiness": {
+        "level": "partial",
+        "coverage_score": 54,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 4,
+          "argument_count": 2,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-108",
+      "legacy_course_id": "IA108",
+      "voie_id": "ucc:voie:education-universites",
+      "legacy_voie_id": "voie_ia_gouvernable",
+      "domain_id": "keenkonnect",
+      "title": "Pauvreté, accès et justice éducative",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:pauvrete",
+        "urn:theophile:theme:justice_sociale",
+        "urn:theophile:theme:dignite"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 70,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 17,
+          "source_count": 9,
+          "argument_count": 3,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-109",
+      "legacy_course_id": "IA109",
+      "voie_id": "ucc:voie:education-universites",
+      "legacy_voie_id": "voie_ia_gouvernable",
+      "domain_id": "keenkonnect",
+      "title": "Apprentissage numérique, IA et responsabilité",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:progres",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:limites_de_la_connaissance"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 69,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 11,
+          "source_count": 4,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-EDU-110",
+      "legacy_course_id": "IA110",
+      "voie_id": "ucc:voie:education-universites",
+      "legacy_voie_id": "voie_ia_gouvernable",
+      "domain_id": "keenkonnect",
+      "title": "Projet : cartographie mondiale des œuvres éducatives catholiques",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:education",
+        "urn:theophile:theme:mission",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 64,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 11,
+          "source_count": 4,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-101",
+      "legacy_course_id": "IS101",
+      "voie_id": "ucc:voie:sante-soin",
+      "legacy_voie_id": "voie_intervention_sociale_systemes_humains",
+      "domain_id": "keenkonnect",
+      "title": "Dignité de la personne et relation de soin",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:dignite",
+        "urn:theophile:theme:vie_et_soin",
+        "urn:theophile:theme:personnalisme",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 61,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 15,
+          "source_count": 4,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-102",
+      "legacy_course_id": "IS102",
+      "voie_id": "ucc:voie:sante-soin",
+      "legacy_voie_id": "voie_intervention_sociale_systemes_humains",
+      "domain_id": "keenkonnect",
+      "title": "Corps, vulnérabilité et souffrance",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:corps_vecu",
+        "urn:theophile:theme:condition_humaine",
+        "urn:theophile:theme:vie_et_soin",
+        "urn:theophile:theme:misericorde"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 59,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 4,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-103",
+      "legacy_course_id": "IS103",
+      "voie_id": "ucc:voie:sante-soin",
+      "legacy_voie_id": "voie_intervention_sociale_systemes_humains",
+      "domain_id": "keenkonnect",
+      "title": "Présence, empathie et accompagnement",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:autrui_et_empathie",
+        "urn:theophile:theme:amour",
+        "urn:theophile:theme:misericorde",
+        "urn:theophile:theme:prudence"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 75,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 15,
+          "source_count": 8,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-104",
+      "legacy_course_id": "IS104",
+      "voie_id": "ucc:voie:sante-soin",
+      "legacy_voie_id": "voie_intervention_sociale_systemes_humains",
+      "domain_id": "keenkonnect",
+      "title": "Vie, violence et décisions difficiles",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:vie_et_violence",
+        "urn:theophile:theme:vie_et_soin",
+        "urn:theophile:theme:morale",
+        "urn:theophile:theme:prudence"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 68,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 4,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-105",
+      "legacy_course_id": "IS105",
+      "voie_id": "ucc:voie:sante-soin",
+      "legacy_voie_id": "voie_intervention_sociale_systemes_humains",
+      "domain_id": "keenkonnect",
+      "title": "Pauvreté et déterminants sociaux du soin",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:pauvrete",
+        "urn:theophile:theme:justice_sociale",
+        "urn:theophile:theme:vie_et_soin",
+        "urn:theophile:theme:dignite"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 72,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 9,
+          "argument_count": 3,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-106",
+      "legacy_course_id": "IS106",
+      "voie_id": "ucc:voie:sante-soin",
+      "legacy_voie_id": "voie_intervention_sociale_systemes_humains",
+      "domain_id": "keenkonnect",
+      "title": "Crise, deuil et continuité de vie",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:condition_humaine",
+        "urn:theophile:theme:esperance",
+        "urn:theophile:theme:misericorde",
+        "urn:theophile:theme:personne_et_communaute"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 70,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 7,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-107",
+      "legacy_course_id": "IS107",
+      "voie_id": "ucc:voie:sante-soin",
+      "legacy_voie_id": "voie_intervention_sociale_systemes_humains",
+      "domain_id": "keenkonnect",
+      "title": "Vieillissement, handicap et inclusion",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:dignite",
+        "urn:theophile:theme:personnalisme",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:justice"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 64,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 17,
+          "source_count": 5,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-108",
+      "legacy_course_id": "IS108",
+      "voie_id": "ucc:voie:sante-soin",
+      "legacy_voie_id": "voie_intervention_sociale_systemes_humains",
+      "domain_id": "keenkonnect",
+      "title": "Hôpitaux, cliniques et gouvernance du soin",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:vie_et_soin",
+        "urn:theophile:theme:autorite",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:subsidiarite"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 80,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 19,
+          "source_count": 10,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-109",
+      "legacy_course_id": "IS109",
+      "voie_id": "ucc:voie:sante-soin",
+      "legacy_voie_id": "voie_intervention_sociale_systemes_humains",
+      "domain_id": "keenkonnect",
+      "title": "Œuvres catholiques de santé dans le monde",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:mission",
+        "urn:theophile:theme:vie_et_soin",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:reception"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 61,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 11,
+          "source_count": 4,
+          "argument_count": 3,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-SAN-110",
+      "legacy_course_id": "IS110",
+      "voie_id": "ucc:voie:sante-soin",
+      "legacy_voie_id": "voie_intervention_sociale_systemes_humains",
+      "domain_id": "keenkonnect",
+      "title": "Projet : atlas mondial des œuvres cliniques catholiques",
+      "primary_surface": "KeenKonnect",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:vie_et_soin",
+        "urn:theophile:theme:dignite",
+        "urn:theophile:theme:mission",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "corpus_readiness": {
+        "level": "partial",
+        "coverage_score": 54,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 4,
+          "argument_count": 2,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-101",
+      "legacy_course_id": "LI101",
+      "voie_id": "ucc:voie:langage-lettres",
+      "legacy_voie_id": "voie_linguistique_architecture_du_sens",
+      "domain_id": "kreative",
+      "title": "Langage, signe et parole",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:veracite",
+        "urn:theophile:theme:verite",
+        "urn:theophile:theme:action_et_sens"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 69,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 13,
+          "source_count": 4,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-102",
+      "legacy_course_id": "LI102",
+      "voie_id": "ucc:voie:langage-lettres",
+      "legacy_voie_id": "voie_linguistique_architecture_du_sens",
+      "domain_id": "kreative",
+      "title": "Écriture, texte et interprétation",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:ecriture",
+        "urn:theophile:theme:hermeneutique",
+        "urn:theophile:theme:tradition_et_raison",
+        "urn:theophile:theme:reception"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 62,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 6,
+          "argument_count": 2,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-103",
+      "legacy_course_id": "LI103",
+      "voie_id": "ucc:voie:langage-lettres",
+      "legacy_voie_id": "voie_linguistique_architecture_du_sens",
+      "domain_id": "kreative",
+      "title": "Langues de transmission : grec, latin et vernaculaires",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:ecriture",
+        "urn:theophile:theme:reception_des_auteurs",
+        "urn:theophile:theme:histoire_des_doctrines"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 70,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 7,
+          "argument_count": 4,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-104",
+      "legacy_course_id": "LI104",
+      "voie_id": "ucc:voie:langage-lettres",
+      "legacy_voie_id": "voie_linguistique_architecture_du_sens",
+      "domain_id": "kreative",
+      "title": "Traduction et fidélité du sens",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:hermeneutique",
+        "urn:theophile:theme:veracite",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 69,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 13,
+          "source_count": 4,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-105",
+      "legacy_course_id": "LI105",
+      "voie_id": "ucc:voie:langage-lettres",
+      "legacy_voie_id": "voie_linguistique_architecture_du_sens",
+      "domain_id": "kreative",
+      "title": "Rhétorique, prédication et argumentation",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:raison_et_foi",
+        "urn:theophile:theme:critique_des_preuves",
+        "urn:theophile:theme:veracite"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 66,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 5,
+          "argument_count": 4,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-106",
+      "legacy_course_id": "LI106",
+      "voie_id": "ucc:voie:langage-lettres",
+      "legacy_voie_id": "voie_linguistique_architecture_du_sens",
+      "domain_id": "kreative",
+      "title": "Littératures chrétiennes et mondes francophones",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:culture_et_liturgie",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:condition_humaine"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 62,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 4,
+          "argument_count": 3,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-107",
+      "legacy_course_id": "LI107",
+      "voie_id": "ucc:voie:langage-lettres",
+      "legacy_voie_id": "voie_linguistique_architecture_du_sens",
+      "domain_id": "kreative",
+      "title": "Langues, peuples et contextes culturels",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:politique_et_colonisation",
+        "urn:theophile:theme:reception"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 68,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 14,
+          "source_count": 4,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-108",
+      "legacy_course_id": "LI108",
+      "voie_id": "ucc:voie:langage-lettres",
+      "legacy_voie_id": "voie_linguistique_architecture_du_sens",
+      "domain_id": "kreative",
+      "title": "Terminologie théologique et distinctions doctrinales",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:dogme",
+        "urn:theophile:theme:histoire_des_doctrines",
+        "urn:theophile:theme:tradition_et_raison",
+        "urn:theophile:theme:certitude"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 77,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 15,
+          "source_count": 7,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-109",
+      "legacy_course_id": "LI109",
+      "voie_id": "ucc:voie:langage-lettres",
+      "legacy_voie_id": "voie_linguistique_architecture_du_sens",
+      "domain_id": "kreative",
+      "title": "Glossaires, ontologies et Kristal",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:connaissance",
+        "urn:theophile:theme:universaux",
+        "urn:theophile:theme:verite"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 82,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 21,
+          "source_count": 7,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-LET-110",
+      "legacy_course_id": "LI110",
+      "voie_id": "ucc:voie:langage-lettres",
+      "legacy_voie_id": "voie_linguistique_architecture_du_sens",
+      "domain_id": "kreative",
+      "title": "Projet : corpus linguistique catholique situé",
+      "primary_surface": "Kreative",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:langage",
+        "urn:theophile:theme:hermeneutique",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 65,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 12,
+          "source_count": 4,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-101",
+      "legacy_course_id": "ME101",
+      "voie_id": "ucc:voie:philosophie-personne",
+      "legacy_voie_id": "voie_metaphysique",
+      "domain_id": "konnected",
+      "title": "Être, réel et causalité",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:metaphysique",
+        "urn:theophile:theme:theologie_naturelle",
+        "urn:theophile:theme:universaux",
+        "urn:theophile:theme:creation"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 93,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 26,
+          "source_count": 8,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-102",
+      "legacy_course_id": "ME102",
+      "voie_id": "ucc:voie:philosophie-personne",
+      "legacy_voie_id": "voie_metaphysique",
+      "domain_id": "konnected",
+      "title": "Vérité, connaissance et certitude",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:verite",
+        "urn:theophile:theme:connaissance",
+        "urn:theophile:theme:certitude",
+        "urn:theophile:theme:limites_de_la_connaissance"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 91,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 25,
+          "source_count": 8,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-103",
+      "legacy_course_id": "ME103",
+      "voie_id": "ucc:voie:philosophie-personne",
+      "legacy_voie_id": "voie_metaphysique",
+      "domain_id": "konnected",
+      "title": "Personne, âme et corps",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:personnalisme",
+        "urn:theophile:theme:ame_et_corps",
+        "urn:theophile:theme:corps_vecu",
+        "urn:theophile:theme:condition_humaine"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 66,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 5,
+          "argument_count": 3,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-104",
+      "legacy_course_id": "ME104",
+      "voie_id": "ucc:voie:philosophie-personne",
+      "legacy_voie_id": "voie_metaphysique",
+      "domain_id": "konnected",
+      "title": "Conscience, liberté et responsabilité",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:conscience",
+        "urn:theophile:theme:liberte",
+        "urn:theophile:theme:responsabilite",
+        "urn:theophile:theme:discernement"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 80,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 21,
+          "source_count": 10,
+          "argument_count": 3,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-105",
+      "legacy_course_id": "ME105",
+      "voie_id": "ucc:voie:philosophie-personne",
+      "legacy_voie_id": "voie_metaphysique",
+      "domain_id": "konnected",
+      "title": "Bien, bonheur et vertus",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:bien",
+        "urn:theophile:theme:bonheur",
+        "urn:theophile:theme:vertus",
+        "urn:theophile:theme:prudence"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 81,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 19,
+          "source_count": 6,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-106",
+      "legacy_course_id": "ME106",
+      "voie_id": "ucc:voie:philosophie-personne",
+      "legacy_voie_id": "voie_metaphysique",
+      "domain_id": "konnected",
+      "title": "Mal, souffrance et providence",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:mal",
+        "urn:theophile:theme:providence",
+        "urn:theophile:theme:esperance",
+        "urn:theophile:theme:condition_humaine"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 82,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 20,
+          "source_count": 8,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-107",
+      "legacy_course_id": "ME107",
+      "voie_id": "ucc:voie:philosophie-personne",
+      "legacy_voie_id": "voie_metaphysique",
+      "domain_id": "konnected",
+      "title": "Temps, création et devenir",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:temps",
+        "urn:theophile:theme:creation",
+        "urn:theophile:theme:devenir_humain",
+        "urn:theophile:theme:progres"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 73,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 13,
+          "source_count": 6,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-108",
+      "legacy_course_id": "ME108",
+      "voie_id": "ucc:voie:philosophie-personne",
+      "legacy_voie_id": "voie_metaphysique",
+      "domain_id": "konnected",
+      "title": "Universaux, nature et loi naturelle",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:universaux",
+        "urn:theophile:theme:loi_naturelle",
+        "urn:theophile:theme:metaphysique",
+        "urn:theophile:theme:morale"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 62,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 10,
+          "source_count": 4,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-109",
+      "legacy_course_id": "ME109",
+      "voie_id": "ucc:voie:philosophie-personne",
+      "legacy_voie_id": "voie_metaphysique",
+      "domain_id": "konnected",
+      "title": "Philosophie chrétienne et pluralité des écoles",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:philosophie_chretienne",
+        "urn:theophile:theme:reception_des_auteurs",
+        "urn:theophile:theme:raison_et_foi",
+        "urn:theophile:theme:tradition_et_raison"
+      ],
+      "corpus_readiness": {
+        "level": "partial",
+        "coverage_score": 51,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 10,
+          "source_count": 4,
+          "argument_count": 2,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-PHI-110",
+      "legacy_course_id": "ME110",
+      "voie_id": "ucc:voie:philosophie-personne",
+      "legacy_voie_id": "voie_metaphysique",
+      "domain_id": "konnected",
+      "title": "Projet : dossier philosophique Kristal",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:metaphysique",
+        "urn:theophile:theme:critique_des_preuves",
+        "urn:theophile:theme:verite",
+        "urn:theophile:theme:reception"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 62,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 13,
+          "source_count": 5,
+          "argument_count": 3,
+          "evaluation_case_count": 4
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-101",
+      "legacy_course_id": "SP101",
+      "voie_id": "ucc:voie:droit-politique-bien-commun",
+      "legacy_voie_id": "voie_sciences_politiques",
+      "domain_id": "ethikos",
+      "title": "Autorité, légitimité et bien commun",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:autorite",
+        "urn:theophile:theme:politique",
+        "urn:theophile:theme:bien",
+        "urn:theophile:theme:personne_et_communaute"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 84,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 19,
+          "source_count": 12,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-102",
+      "legacy_course_id": "SP102",
+      "voie_id": "ucc:voie:droit-politique-bien-commun",
+      "legacy_voie_id": "voie_sciences_politiques",
+      "domain_id": "ethikos",
+      "title": "Loi, loi naturelle et institutions",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:loi",
+        "urn:theophile:theme:loi_naturelle",
+        "urn:theophile:theme:justice",
+        "urn:theophile:theme:autorite"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 80,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 19,
+          "source_count": 11,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-103",
+      "legacy_course_id": "SP103",
+      "voie_id": "ucc:voie:droit-politique-bien-commun",
+      "legacy_voie_id": "voie_sciences_politiques",
+      "domain_id": "ethikos",
+      "title": "Subsidiarité, solidarité et corps intermédiaires",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:subsidiarite",
+        "urn:theophile:theme:personne_et_communaute",
+        "urn:theophile:theme:justice_sociale",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 76,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 5,
+          "argument_count": 6,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-104",
+      "legacy_course_id": "SP104",
+      "voie_id": "ucc:voie:droit-politique-bien-commun",
+      "legacy_voie_id": "voie_sciences_politiques",
+      "domain_id": "ethikos",
+      "title": "Droits, liberté religieuse et pluralisme",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:droits_et_paix",
+        "urn:theophile:theme:liberte",
+        "urn:theophile:theme:religions",
+        "urn:theophile:theme:justice"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 79,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 8,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-105",
+      "legacy_course_id": "SP105",
+      "voie_id": "ucc:voie:droit-politique-bien-commun",
+      "legacy_voie_id": "voie_sciences_politiques",
+      "domain_id": "ethikos",
+      "title": "Représentation, participation et décision collective",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:politique",
+        "urn:theophile:theme:autorite",
+        "urn:theophile:theme:prudence",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 82,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 12,
+          "argument_count": 5,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-106",
+      "legacy_course_id": "SP106",
+      "voie_id": "ucc:voie:droit-politique-bien-commun",
+      "legacy_voie_id": "voie_sciences_politiques",
+      "domain_id": "ethikos",
+      "title": "Église, État et institutions publiques",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:politique",
+        "urn:theophile:theme:religions",
+        "urn:theophile:theme:autorite",
+        "urn:theophile:theme:loi"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 78,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 17,
+          "source_count": 12,
+          "argument_count": 4,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-107",
+      "legacy_course_id": "SP107",
+      "voie_id": "ucc:voie:droit-politique-bien-commun",
+      "legacy_voie_id": "voie_sciences_politiques",
+      "domain_id": "ethikos",
+      "title": "Colonisation, pouvoir et réception historique",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:politique_et_colonisation",
+        "urn:theophile:theme:reception",
+        "urn:theophile:theme:justice",
+        "urn:theophile:theme:dignite"
+      ],
+      "corpus_readiness": {
+        "level": "developed",
+        "coverage_score": 60,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 16,
+          "source_count": 5,
+          "argument_count": 2,
+          "evaluation_case_count": 3
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-108",
+      "legacy_course_id": "SP108",
+      "voie_id": "ucc:voie:droit-politique-bien-commun",
+      "legacy_voie_id": "voie_sciences_politiques",
+      "domain_id": "ethikos",
+      "title": "Guerre, paix et non-violence",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:guerre_et_paix",
+        "urn:theophile:theme:paix",
+        "urn:theophile:theme:non_violence",
+        "urn:theophile:theme:prudence"
+      ],
+      "corpus_readiness": {
+        "level": "partial",
+        "coverage_score": 45,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 8,
+          "source_count": 4,
+          "argument_count": 2,
+          "evaluation_case_count": 2
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-109",
+      "legacy_course_id": "SP109",
+      "voie_id": "ucc:voie:droit-politique-bien-commun",
+      "legacy_voie_id": "voie_sciences_politiques",
+      "domain_id": "ethikos",
+      "title": "Désaccord politique, prudence et conscience",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:prudence",
+        "urn:theophile:theme:conscience",
+        "urn:theophile:theme:liberte",
+        "urn:theophile:theme:responsabilite"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 83,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 21,
+          "source_count": 11,
+          "argument_count": 4,
+          "evaluation_case_count": 6
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-GOV-110",
+      "legacy_course_id": "SP110",
+      "voie_id": "ucc:voie:droit-politique-bien-commun",
+      "legacy_voie_id": "voie_sciences_politiques",
+      "domain_id": "ethikos",
+      "title": "Projet : dossier de gouvernance et bien commun",
+      "primary_surface": "Ethikos",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:politique",
+        "urn:theophile:theme:subsidiarite",
+        "urn:theophile:theme:justice",
+        "urn:theophile:theme:critique_des_preuves"
+      ],
+      "corpus_readiness": {
+        "level": "strong",
+        "coverage_score": 79,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {
+          "theme_count": 4,
+          "assertion_count": 18,
+          "source_count": 8,
+          "argument_count": 5,
+          "evaluation_case_count": 5
+        },
+        "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    }
+  ],
+  "compatibility": {
+    "policy": "Canonical UCC ids are authoritative. Existing UCKK voie_id/code/course_id/category idnumbers remain supported aliases for Moodle migration.",
+    "technical_component": "local_uckk"
+  }
+}

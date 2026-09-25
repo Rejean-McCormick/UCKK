@@ -1,0 +1,82 @@
+{
+  "schema_version": "WORLD-KONNAXION-UNIVERSE-1.0",
+  "universe_id": "ucc",
+  "name": "Univers-Cité Catho",
+  "technical_component": "local_uckk",
+  "identity": {
+    "canonical_namespace": "UCC",
+    "legacy_namespace": "UCKK",
+    "legacy_policy": "supported_alias"
+  },
+  "knowledge": {
+    "provider": "Kristal",
+    "corpus_id": "corpus-catholique-theophile-v0.2.1",
+    "state_id": "sha256:5b5f48af42f5644d4d8817138c08f4f228832b364decd18cd830d0ad99a6ed93",
+    "mode": "read_only_semantic_projection",
+    "glossary": "atlas/ucc_glossary_map.json"
+  },
+  "learning": {
+    "provider": "UCC on Moodle/local_uckk",
+    "curriculum_registry": "atlas/ucc_curriculum_registry.json",
+    "domains": "atlas/ucc_domains.json",
+    "voies": 10,
+    "courses": 100
+  },
+  "mediatheque": {
+    "provider": "UCC Médiathèque",
+    "authority": "resource manifest",
+    "semantic_binding": "Kristal theme refs per course/resource"
+  },
+  "certification": {
+    "provider": "CertifiKation",
+    "blueprint_version": "UCC-CERT-1.0",
+    "binding": "course assessment_blueprint -> pinned Kristal evidence refs"
+  },
+  "surfaces": [
+    {
+      "domain_id": "kreative",
+      "module": "Kreative",
+      "door": "Créer",
+      "ucc_voie_ids": [
+        "ucc:voie:arts-culture",
+        "ucc:voie:langage-lettres"
+      ]
+    },
+    {
+      "domain_id": "konnected",
+      "module": "KonnectED",
+      "door": "Comprendre",
+      "ucc_voie_ids": [
+        "ucc:voie:creation-sciences-ecologie",
+        "ucc:voie:theologie-tradition",
+        "ucc:voie:philosophie-personne"
+      ]
+    },
+    {
+      "domain_id": "keenkonnect",
+      "module": "KeenKonnect",
+      "door": "Servir",
+      "ucc_voie_ids": [
+        "ucc:voie:oeuvres-institutions",
+        "ucc:voie:education-universites",
+        "ucc:voie:sante-soin"
+      ]
+    },
+    {
+      "domain_id": "ethikos",
+      "module": "Ethikos",
+      "door": "Gouverner",
+      "ucc_voie_ids": [
+        "ucc:voie:economie-travail",
+        "ucc:voie:droit-politique-bien-commun"
+      ]
+    }
+  ],
+  "integration_invariants": [
+    "Kristal is epistemic/reference authority for semantic refs, not a shared transactional database.",
+    "UCC/UCKK owns curriculum structure and learning progression.",
+    "The Médiathèque manifest owns resource identity and publication state.",
+    "CertifiKation evaluates pinned course blueprints and must preserve source/provenance distinctions.",
+    "Legacy UCKK ids may be used technically but must not replace canonical UCC identities in new integrations."
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "UCC-DOMAINS-1.0",
+  "universe_id": "ucc",
+  "name": "Univers-Cité Catho",
+  "domains": [
+    {
+      "domain_id": "kreative",
+      "code": "KRE",
+      "surface": "Kreative",
+      "door": "Créer",
+      "question": "Comment le corpus s’exprime-t-il dans les arts, les lettres, les langues et la culture?",
+      "purpose": "Explorer et produire les formes symboliques, artistiques, littéraires et culturelles liées au corpus.",
+      "ucc_voie_ids": [
+        "ucc:voie:arts-culture",
+        "ucc:voie:langage-lettres"
+      ],
+      "legacy_voie_ids": [
+        "voie_grand_jeu_social",
+        "voie_linguistique_architecture_du_sens"
+      ]
+    },
+    {
+      "domain_id": "konnected",
+      "code": "KON",
+      "surface": "KonnectED",
+      "door": "Comprendre",
+      "question": "Que dit le corpus, quelles sont ses sources et comment les connaissances s’articulent-elles?",
+      "purpose": "Étudier les concepts, sources, positions, arguments et controverses du corpus.",
+      "ucc_voie_ids": [
+        "ucc:voie:creation-sciences-ecologie",
+        "ucc:voie:theologie-tradition",
+        "ucc:voie:philosophie-personne"
+      ],
+      "legacy_voie_ids": [
+        "voie_ecologie",
+        "voie_ecosysteme_digital_koa",
+        "voie_metaphysique"
+      ]
+    },
+    {
+      "domain_id": "keenkonnect",
+      "code": "KEE",
+      "surface": "KeenKonnect",
+      "door": "Servir",
+      "question": "Comment le savoir se matérialise-t-il dans l’éducation, la santé et les œuvres de service?",
+      "purpose": "Relier le corpus aux métiers, aux institutions, aux sciences appliquées et aux œuvres de service.",
+      "ucc_voie_ids": [
+        "ucc:voie:oeuvres-institutions",
+        "ucc:voie:education-universites",
+        "ucc:voie:sante-soin"
+      ],
+      "legacy_voie_ids": [
+        "voie_architecture_sociotechnique",
+        "voie_ia_gouvernable",
+        "voie_intervention_sociale_systemes_humains"
+      ]
+    },
+    {
+      "domain_id": "ethikos",
+      "code": "ETH",
+      "surface": "Ethikos",
+      "door": "Gouverner",
+      "question": "Comment analyser les responsabilités économiques, juridiques, politiques et institutionnelles?",
+      "purpose": "Former au jugement, à la délibération, au droit, à la gouvernance et au bien commun sans confondre doctrine, faits et choix politiques.",
+      "ucc_voie_ids": [
+        "ucc:voie:economie-travail",
+        "ucc:voie:droit-politique-bien-commun"
+      ],
+      "legacy_voie_ids": [
+        "voie_economie",
+        "voie_sciences_politiques"
+      ]
+    }
+  ]
+}

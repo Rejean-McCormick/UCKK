@@ -7,19 +7,19 @@
 // any later version.
 
 /**
- * Theme configuration for the Univers-Cité des mathématiques prototype.
+ * Theme configuration for Univers-Cité Catho.
  *
- * This is a direct Boost child theme. It deliberately does not inherit from
- * theme_uckk so the two public identities remain visually independent.
+ * UCC is a direct Boost child. It deliberately does not inherit theme_uckk:
+ * the two public identities share Moodle services and data, not presentation.
  *
- * @package    theme_ucmath
- * @copyright  2026 Univers-Cité King Klown
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package theme_ucc
+ * @copyright 2026 Univers-Cité Catho
+ * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$THEME->name = 'ucmath';
+$THEME->name = 'ucc';
 $THEME->parents = ['boost'];
 $THEME->sheets = [];
 $THEME->editor_sheets = [];
@@ -27,9 +27,9 @@ $THEME->usefallback = true;
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 
 $THEME->scss = function($theme) {
-    return theme_ucmath_get_main_scss_content($theme);
+    return theme_ucc_get_main_scss_content($theme);
 };
-$THEME->prescsscallback = 'theme_ucmath_get_pre_scss';
+$THEME->prescsscallback = 'theme_ucc_get_pre_scss';
 
 $drawers = [
     'theme' => 'boost',
@@ -57,7 +57,7 @@ $THEME->layouts = [
     'coursecategory' => $drawers,
     'incourse' => $drawers,
     'frontpage' => [
-        'theme' => 'ucmath',
+        'theme' => 'ucc',
         'file' => 'frontpage.php',
         'regions' => [],
         'options' => ['nonavbar' => true, 'langmenu' => true],

@@ -421,7 +421,13 @@ final class search_public_courses extends external_api {
         $summary = self::plain_summary($record);
 
         if ($summary === '') {
-            $summary = 'Cours public UCKK disponible en consultation dans le campus Moodle.';
+            if (\local_uckk\local\public_site_context::is_ucc()) {
+                $summary = 'Cours public UCC disponible en consultation dans Moodle.';
+            } else if (\local_uckk\local\public_site_context::is_math()) {
+                $summary = 'Cours public disponible en consultation dans Moodle.';
+            } else {
+                $summary = 'Cours public UCKK disponible en consultation dans le campus Moodle.';
+            }
         }
 
         return [
@@ -687,6 +693,25 @@ final class search_public_courses extends external_api {
      * @return string
      */
     private static function public_category_label(string $categoryname, string $categoryidnumber): string {
+        if (\local_uckk\local\public_site_context::is_ucc()) {
+            $code = self::voie_code_from_identifiers([$categoryidnumber, $categoryname]);
+            $labels = [
+                'GJS' => 'Arts, beauté et culture',
+                'ECL' => 'Création, sciences et écologie',
+                'EC' => 'Économie, travail et justice sociale',
+                'SP' => 'Droit, politique et bien commun',
+                'LI' => 'Langage, lettres et transmission',
+                'ME' => 'Philosophie, métaphysique et personne',
+                'IA' => 'Éducation, universités et transmission',
+                'IS' => 'Santé, soin et dignité',
+                'AS' => 'Œuvres, institutions et administration',
+                'KOA' => 'Théologie, Écriture et Tradition',
+            ];
+            if ($code !== '' && isset($labels[$code])) {
+                return self::safe_param_text($labels[$code]);
+            }
+        }
+
         $label = trim($categoryname !== '' ? $categoryname : $categoryidnumber);
 
         if ($label === '') {

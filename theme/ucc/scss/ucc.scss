@@ -1,0 +1,135 @@
+:root {
+    /*
+     * local_uckk owns the public-page structure.  theme_ucc only supplies
+     * the visual tokens consumed by that shared structural stylesheet.
+     */
+    --theme-uckk-ink: #2d2327;
+    --theme-uckk-ink-soft: #55494e;
+    --theme-uckk-ink-muted: #786c71;
+
+    --theme-uckk-petrol: #7b2434;
+    --theme-uckk-petrol-dark: #551725;
+    --theme-uckk-petrol-soft: #f1dfe3;
+    --theme-uckk-petrol-wash: rgba(123, 36, 52, .09);
+
+    --theme-uckk-parchment: #f7f2e8;
+    --theme-uckk-parchment-light: #fffdf8;
+    --theme-uckk-parchment-deep: #e8dfcf;
+
+    --theme-uckk-gold: #b08a47;
+    --theme-uckk-gold-dark: #765b2d;
+    --theme-uckk-gold-wash: rgba(176, 138, 71, .14);
+
+    --theme-uckk-bronze: #9a7143;
+    --theme-uckk-bluegrey: #75686e;
+
+    --theme-uckk-card: #fffdf8;
+    --theme-uckk-line: rgba(72, 49, 57, .18);
+    --theme-uckk-line-strong: rgba(72, 49, 57, .30);
+    --theme-uckk-shadow: 0 16px 36px rgba(65, 37, 45, .10);
+    --theme-uckk-shadow-soft: 0 7px 18px rgba(65, 37, 45, .07);
+
+    /* No UCKK heraldic side image on UCC. */
+    --theme-uckk-side-motif-url: none;
+}
+
+/* Moodle chrome: identity only, no geometry. */
+.navbar,
+.navbar.fixed-top {
+    background-color: #551725 !important;
+    border-color: #b08a47 !important;
+}
+
+.navbar .nav-link,
+.navbar a,
+.navbar button {
+    color: #fffdf8 !important;
+}
+
+/* Shared public surface: UCC palette only. */
+.local-uckk-public-page::before {
+    background:
+        radial-gradient(circle at 16% 18%, rgba(176, 138, 71, .18), transparent 28%),
+        radial-gradient(circle at 82% 8%, rgba(123, 36, 52, .14), transparent 30%),
+        linear-gradient(135deg, rgba(255, 253, 248, .98), rgba(241, 223, 227, .52));
+}
+
+.local-uckk-public-nav {
+    border-color: rgba(176, 138, 71, .34);
+    background:
+        linear-gradient(180deg, rgba(255, 253, 248, .98), rgba(247, 242, 232, .92));
+    box-shadow: 0 7px 18px rgba(65, 37, 45, .06);
+}
+
+.local-uckk .local-uckk-public-nav__link {
+    color: #6a1d2d !important;
+}
+
+.local-uckk .local-uckk-public-nav__link:hover,
+.local-uckk .local-uckk-public-nav__link:focus {
+    border-color: rgba(176, 138, 71, .58) !important;
+    background: rgba(176, 138, 71, .15) !important;
+    color: #2d2327 !important;
+}
+
+.local-uckk .local-uckk-public-nav__link.is-active,
+.local-uckk .local-uckk-public-nav__link[aria-current="page"],
+.local-uckk .local-uckk-public-nav__link.active,
+.local-uckk .local-uckk-public-nav__item.active > .local-uckk-public-nav__link {
+    border-color: #b08a47 !important;
+    background: #551725 !important;
+    color: #fffdf8 !important;
+    box-shadow: 0 7px 16px rgba(65, 37, 45, .22);
+}
+
+.local-uckk-site-switcher__items {
+    border-color: rgba(72, 49, 57, .22);
+    background: rgba(255, 253, 248, .92);
+}
+
+.local-uckk-site-switcher__link {
+    color: #55494e;
+}
+
+.local-uckk-site-switcher__link.is-active {
+    background: #7b2434;
+    color: #ffffff !important;
+}
+
+.local-uckk-public-hero {
+    border-color: rgba(176, 138, 71, .42);
+    background:
+        linear-gradient(120deg, rgba(255, 253, 248, .98), rgba(247, 242, 232, .95)),
+        radial-gradient(circle at top right, rgba(123, 36, 52, .10), transparent 40%);
+}
+
+.local-uckk-public-card,
+.local-uckk-public-quicklink,
+.local-uckk-public-section__item,
+.local-uckk-public-list__item {
+    border-color: rgba(72, 49, 57, .15);
+    background-color: rgba(255, 253, 248, .94);
+}
+
+.local-uckk-public-card {
+    background:
+        linear-gradient(180deg, rgba(255, 253, 248, .99), rgba(247, 242, 232, .94));
+}
+
+.local-uckk-public-card:hover,
+.local-uckk-public-quicklink:hover,
+.local-uckk-public-quicklink:focus {
+    border-color: rgba(176, 138, 71, .52);
+}
+
+.local-uckk-public-card__title,
+.local-uckk-public-quicklink__label,
+.local-uckk-public-subtitle {
+    color: #551725;
+}
+
+.local-uckk-public-cta,
+.local-uckk-public-meta {
+    border-color: rgba(72, 49, 57, .17);
+    background-color: rgba(255, 253, 248, .96);
+}
