@@ -7,13 +7,13 @@
 // any later version.
 //
 // UCKK-Moodle adapts Moodle as the technical foundation of the
-// Univers-Cité Catho.
+// Univers-Cité chrétienne.
 
 /**
  * Public registrar page definition for local_uckk.
  *
  * @package    local_uckk
- * @copyright  2026 Univers-Cité Catho
+ * @copyright  2026 Univers-Cité chrétienne
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

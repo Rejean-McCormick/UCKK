@@ -7,13 +7,13 @@
 // any later version.
 //
 // UCKK-Moodle provides the technical Moodle implementation for the
-// Univers-Cité Catho.
+// Univers-Cité chrétienne.
 
 /**
  * Public news page definition for UCC.
  *
  * @package    local_uckk
- * @copyright  2026 Univers-Cité Catho
+ * @copyright  2026 Univers-Cité chrétienne
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

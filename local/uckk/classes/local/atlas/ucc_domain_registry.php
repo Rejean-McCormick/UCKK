@@ -5,7 +5,7 @@
  * Canonical UCC domain registry.
  *
  * @package    local_uckk
- * @copyright  2026 Univers-Cité Catho
+ * @copyright  2026 Univers-Cité chrétienne
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

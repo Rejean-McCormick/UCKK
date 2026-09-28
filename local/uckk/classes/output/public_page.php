@@ -88,6 +88,11 @@ final class public_page implements renderable, templatable {
     /** Public page slugs. */
     public const KEY_HOME = 'home';
     public const KEY_ABOUT = 'about';
+    public const KEY_THINKERS = 'thinkers';
+    public const KEY_GLOSSARY = 'glossary';
+    public const KEY_CHRISTIAN = 'christian';
+    public const KEY_METHOD = 'method';
+    public const KEY_TRANSPARENCY = 'transparency';
     public const KEY_PROGRAMS = 'programs';
     public const KEY_COURSES = 'courses';
     public const KEY_CHALLENGES = 'challenges';
@@ -323,6 +328,11 @@ final class public_page implements renderable, templatable {
         $titles = [
             self::KEY_HOME => ['Accueil', 'Établissement virtuel de puissance opératoire'],
             self::KEY_ABOUT => ['À propos', 'Clarifier UCKK'],
+            self::KEY_THINKERS => ['Penseurs', 'Premier axe'],
+            self::KEY_GLOSSARY => ['Glossaire', 'Second axe'],
+            self::KEY_CHRISTIAN => ['Corpus chrétien', 'Point de départ du corpus'],
+            self::KEY_METHOD => ['Méthode éditoriale', 'Réviser et arbitrer'],
+            self::KEY_TRANSPARENCY => ['Transparence', 'Statut institutionnel'],
             self::KEY_PROGRAMS => ['Voies UCKK', 'Former par les Voies'],
             self::KEY_COURSES => ['Cours', 'Explorer les cours'],
             self::KEY_CHALLENGES => ['Défis', 'Mettre la lucidité à l’épreuve'],
@@ -383,6 +393,11 @@ final class public_page implements renderable, templatable {
         $headings = [
             self::KEY_HOME => 'Portes d’entrée',
             self::KEY_ABOUT => 'Repères institutionnels',
+            self::KEY_THINKERS => 'Repères de lecture',
+            self::KEY_GLOSSARY => 'Relier les mots',
+            self::KEY_CHRISTIAN => 'Explorer le corpus',
+            self::KEY_METHOD => 'Appliquer la méthode',
+            self::KEY_TRANSPARENCY => 'Distinguer les niveaux',
             self::KEY_PROGRAMS => 'Repères publics',
             self::KEY_COURSES => 'Accès aux cours',
             self::KEY_CHALLENGES => 'Repères pour les défis',
@@ -411,6 +426,11 @@ final class public_page implements renderable, templatable {
         $headings = [
             self::KEY_HOME => 'Repères publics',
             self::KEY_ABOUT => 'Repères institutionnels',
+            self::KEY_THINKERS => 'Repères du corpus humain',
+            self::KEY_GLOSSARY => 'Repères lexicaux',
+            self::KEY_CHRISTIAN => 'Repères du corpus chrétien',
+            self::KEY_METHOD => 'Repères éditoriaux',
+            self::KEY_TRANSPARENCY => 'Repères de statut',
             self::KEY_PROGRAMS => 'État du registre',
             self::KEY_COURSES => 'Repères des cours',
             self::KEY_CHALLENGES => 'Repères des défis',
@@ -1484,6 +1504,11 @@ final class public_page implements renderable, templatable {
         $allowed = [
             self::KEY_HOME,
             self::KEY_ABOUT,
+            self::KEY_THINKERS,
+            self::KEY_GLOSSARY,
+            self::KEY_CHRISTIAN,
+            self::KEY_METHOD,
+            self::KEY_TRANSPARENCY,
             self::KEY_PROGRAMS,
             self::KEY_COURSES,
             self::KEY_CHALLENGES,

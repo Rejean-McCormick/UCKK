@@ -123,7 +123,7 @@ function local_uckk_public_courses_enrich_definition(array $definition, array $s
             'body' => $ismath
                 ? 'Les cours ci-dessous sont ceux que Moodle rend actuellement publics selon leur visibilité et leurs permissions. Le site mathématique les présente sans maintenir une copie parallèle du catalogue.'
                 : ($isucc
-                    ? 'Les cours ci-dessous sont les espaces Moodle actuellement visibles. L’UCC les présente comme portes d’entrée vers les Voies et le corpus catholique, sans maintenir une copie parallèle du catalogue.'
+                    ? 'Les cours ci-dessous sont les espaces Moodle actuellement visibles. L’UCC les présente comme portes d’entrée vers les Voies et les corpus documentés, sans maintenir une copie parallèle du catalogue.'
                     : 'Les cours ci-dessous sont visibles publiquement et accessibles en consultation. Ils structurent les Voies, les preuves de progression et la puissance opératoire des Joueurs de l’UCKK.'),
             'type' => 'courses-intro',
         ],

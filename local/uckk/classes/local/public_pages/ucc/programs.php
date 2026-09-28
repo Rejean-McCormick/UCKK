@@ -7,7 +7,7 @@
 // any later version.
 //
 // UCKK-Moodle supports the technical Moodle implementation of the
-// Univers-Cité Catho.
+// Univers-Cité chrétienne.
 
 /**
  * Public programs page definition for local_uckk.
@@ -19,7 +19,7 @@
  * validate competencies, or make accreditation claims.
  *
  * @package    local_uckk
- * @copyright  2026 Univers-Cité Catho
+ * @copyright  2026 Univers-Cité chrétienne
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -46,7 +46,7 @@ final class programs {
             'typography' => 'institutional',
             'eyebrow' => 'Bibliothèque publique vivante',
             'title' => 'Voies UCC',
-            'subtitle' => 'Parcours ouverts pour explorer, relier et pratiquer les savoirs du corpus catholique.',
+            'subtitle' => 'Parcours ouverts pour explorer et relier les savoirs, auteurs, œuvres et concepts du corpus.',
             'summary' => 'Les Voies UCC organisent la diffusion du savoir en parcours lisibles : cours, repères, pratiques, archives, médiathèque, défis et assemblées. Elles offrent un cadre d’apprentissage familier, modernisé et ouvert pour comprendre, produire, vérifier et agir avec méthode.',
             'sections' => [
                 [
@@ -468,15 +468,15 @@ final class programs {
         $code = self::voie_code_from_identifiers($shortname, $fullname, $categoryname, $categoryidnumber);
 
         $identities = [
-            'GJS' => ['eyebrow' => 'Kreative · Créer', 'title' => 'Voie des Arts, de la beauté et de la culture', 'body' => 'Explorer les œuvres, images, récits et pratiques culturelles en les reliant au Kristal catholique, à leurs sources et à leurs contextes.', 'type' => 'kreative'],
-            'LI' => ['eyebrow' => 'Kreative · Créer', 'title' => 'Voie du Langage, des lettres et de la transmission', 'body' => 'Étudier les mots, textes, langues, traductions et traditions de lecture qui rendent le corpus catholique intelligible et transmissible.', 'type' => 'kreative'],
+            'GJS' => ['eyebrow' => 'Kreative · Créer', 'title' => 'Voie des Arts, de la beauté et de la culture', 'body' => 'Explorer les œuvres, images, récits et pratiques culturelles des traditions chrétiennes, notamment catholiques, en les reliant à leurs sources et à leurs contextes.', 'type' => 'kreative'],
+            'LI' => ['eyebrow' => 'Kreative · Créer', 'title' => 'Voie du Langage, des lettres et de la transmission', 'body' => 'Étudier les mots, textes, langues, traductions et traditions de lecture qui rendent les corpus chrétiens — dont les traditions catholiques — intelligibles et transmissibles.', 'type' => 'kreative'],
             'ME' => ['eyebrow' => 'KonnectED · Comprendre', 'title' => 'Voie de la Philosophie, de la métaphysique et de la personne', 'body' => 'Explorer être, vérité, connaissance, personne, liberté, bien, mal, temps et loi naturelle à partir de positions et sources documentées.', 'type' => 'konnected'],
             'KOA' => ['eyebrow' => 'KonnectED · Comprendre', 'title' => 'Voie de la Théologie, de l’Écriture et de la Tradition', 'body' => 'Lire les grands ensembles théologiques du corpus en distinguant sources, développement doctrinal, réception, statut épistémique et interprétation.', 'type' => 'konnected'],
             'ECL' => ['eyebrow' => 'KonnectED · Comprendre', 'title' => 'Voie de la Création, des sciences et de l’écologie', 'body' => 'Étudier les rapports entre création, sciences, évolution, progrès, écologie et responsabilité envers le vivant.', 'type' => 'konnected'],
             'IA' => ['eyebrow' => 'KeenKonnect · Servir', 'title' => 'Voie de l’Éducation, des universités et de la transmission', 'body' => 'Explorer écoles, universités, formation, recherche, accès au savoir et responsabilités institutionnelles.', 'type' => 'keenkonnect'],
             'IS' => ['eyebrow' => 'KeenKonnect · Servir', 'title' => 'Voie de la Santé, du soin et de la dignité', 'body' => 'Étudier le soin, la vulnérabilité, le corps, la dignité et les institutions cliniques catholiques.', 'type' => 'keenkonnect'],
             'AS' => ['eyebrow' => 'KeenKonnect · Servir', 'title' => 'Voie des Œuvres, des institutions et de l’administration', 'body' => 'Comprendre comment des œuvres catholiques sont administrées, financées, auditées, transmises et rendues responsables.', 'type' => 'keenkonnect'],
-            'EC' => ['eyebrow' => 'Ethikos · Gouverner', 'title' => 'Voie de l’Économie, du travail et de la justice sociale', 'body' => 'Explorer travail, propriété, pauvreté, échange, don, justice sociale et responsabilité économique dans le corpus catholique.', 'type' => 'ethikos'],
+            'EC' => ['eyebrow' => 'Ethikos · Gouverner', 'title' => 'Voie de l’Économie, du travail et de la justice sociale', 'body' => 'Explorer travail, propriété, pauvreté, échange, don, justice sociale et responsabilité économique dans les traditions sociales chrétiennes, notamment catholiques.', 'type' => 'ethikos'],
             'SP' => ['eyebrow' => 'Ethikos · Gouverner', 'title' => 'Voie du Droit, de la politique et du bien commun', 'body' => 'Étudier autorité, loi, droits, subsidiarité, institutions, guerre, paix et prudence politique avec une méthode documentaire et non partisane.', 'type' => 'ethikos'],
         ];
 

@@ -176,28 +176,12 @@ foreach ($items as $index => $item) {
         $label = (string)($item['uckkarchive_media']['title'] ?? ('item #' . ($index + 1)));
         echo sprintf("[%s] %s\n", strtoupper($mode), $label);
     } catch (Throwable $e) {
-        $message = $e->getMessage();
-        $debuginfo = '';
-        if (property_exists($e, 'debuginfo') && !empty($e->debuginfo)) {
-            $debuginfo = preg_replace('/\\s+/', ' ', trim((string)$e->debuginfo));
-        }
-        $errorcode = property_exists($e, 'errorcode') ? (string)$e->errorcode : '';
-
         $stats['errors'][] = [
             'index' => $index,
             'title' => (string)($item['uckkarchive_media']['title'] ?? ''),
-            'message' => $message,
-            'exception' => get_class($e),
-            'errorcode' => $errorcode,
-            'debuginfo' => $debuginfo,
+            'message' => $e->getMessage(),
         ];
-
-        $detail = $message;
-        if ($debuginfo !== '') {
-            $detail .= ' | ' . $debuginfo;
-        }
-        fwrite(STDERR, sprintf("[ERROR] #%d %s\n", $index + 1, $detail));
-
+        fwrite(STDERR, sprintf("[ERROR] #%d %s\n", $index + 1, $e->getMessage()));
         if ($mode === 'apply') {
             break;
         }
@@ -375,7 +359,6 @@ function process_item(
 
     $transaction = $DB->start_delegated_transaction();
 
-    try {
     if (!$existing) {
         $mediarecord = filter_record('uckkarchive_media', $mediarecord);
         $mediarecord->id = $DB->insert_record('uckkarchive_media', $mediarecord);
@@ -515,6 +498,7 @@ function process_item(
                 $contenttagrecord = (object)[
                     'uuid' => deterministic_uuid('uckkarchive-content-tag:' . $tagkey),
                     'tagkey' => $tagkey,
+                    'key' => $tagkey,
                     'name' => str_replace('_', ' ', $tagkey),
                     'label' => str_replace('_', ' ', $tagkey),
                     'category' => $iscultural ? 'cultural_protocol' : 'general',
@@ -685,11 +669,6 @@ function process_item(
 
     $transaction->allow_commit();
     return $result;
-    } catch (Throwable $e) {
-        // Never leave Moodle with an active delegated transaction.
-        // rollback() rethrows the original exception after rolling back.
-        $transaction->rollback($e);
-    }
 }
 
 /**

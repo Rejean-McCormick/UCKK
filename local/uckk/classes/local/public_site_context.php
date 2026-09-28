@@ -83,7 +83,7 @@ final class public_site_context {
         return self::current() === self::SITE_UCKK;
     }
 
-    /** Whether the Univers-Cité Catho public site is active. */
+    /** Whether the Univers-Cité chrétienne public site is active. */
     public static function is_ucc(): bool {
         return self::current() === self::SITE_UCC;
     }

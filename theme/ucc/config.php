@@ -7,13 +7,13 @@
 // any later version.
 
 /**
- * Theme configuration for Univers-Cité Catho.
+ * Theme configuration for Univers-Cité chrétienne.
  *
  * UCC is a direct Boost child. It deliberately does not inherit theme_uckk:
  * the two public identities share Moodle services and data, not presentation.
  *
  * @package theme_ucc
- * @copyright 2026 Univers-Cité Catho
+ * @copyright 2026 Univers-Cité chrétienne
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

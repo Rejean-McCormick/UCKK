@@ -1,7 +1,7 @@
 {
   "schema_version": "UCC-KRISTAL-GLOSSARY-MAP-1.0",
   "universe": "ucc",
-  "name": "Univers-Cité Catho",
+  "name": "Univers-Cité chrétienne",
   "source_corpus": {
     "artifact_type": "semantic_corpus",
     "state_id": "sha256:5b5f48af42f5644d4d8817138c08f4f228832b364decd18cd830d0ad99a6ed93",

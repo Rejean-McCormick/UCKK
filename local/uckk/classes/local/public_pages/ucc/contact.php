@@ -7,7 +7,7 @@
 // any later version.
 //
 // UCKK-Moodle supports the technical Moodle implementation of the
-// Univers-Cité Catho.
+// Univers-Cité chrétienne.
 
 namespace local_uckk\local\public_pages\ucc;
 
@@ -17,7 +17,7 @@ defined('MOODLE_INTERNAL') || die();
  * Public contact page definition.
  *
  * @package    local_uckk
- * @copyright  2026 Univers-Cité Catho
+ * @copyright  2026 Univers-Cité chrétienne
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 final class contact {
@@ -32,7 +32,7 @@ final class contact {
             'typography' => 'editorial',
             'eyebrow' => 'Entrer en relation',
             'title' => 'Contact',
-            'subtitle' => 'Trouver le bon point d’entrée dans l’Univers-Cité Catho.',
+            'subtitle' => 'Trouver le bon point d’entrée dans l’Univers-Cité chrétienne.',
             'summary' => 'Cette page aide à orienter les demandes vers les bons espaces : exploration publique, ressources ouvertes, questions sur les Voies, cours, archives, médias ou accès personnel.',
 
             'sections' => [
@@ -42,7 +42,7 @@ final class contact {
                 ],
                 [
                     'title' => 'Explorer avant de demander',
-                    'body' => 'L’UCC est d’abord une bibliothèque publique vivante. Plusieurs réponses se trouvent déjà dans les pages ouvertes : Voies, cours, médiathèque, archives, défis et assemblées donnent des repères pour entrer dans le corpus catholique.',
+                    'body' => 'L’UCC est d’abord une bibliothèque publique vivante. Plusieurs réponses se trouvent déjà dans les pages ouvertes : Voies, cours, médiathèque, archives, défis et assemblées donnent des repères pour entrer dans les corpus et leurs relations.',
                 ],
                 [
                     'title' => 'Demandes privées',

@@ -48,6 +48,11 @@ final class public_pages {
     /** Public page slugs. */
     private const KEY_HOME = 'home';
     private const KEY_ABOUT = 'about';
+    private const KEY_THINKERS = 'thinkers';
+    private const KEY_GLOSSARY = 'glossary';
+    private const KEY_CHRISTIAN = 'christian';
+    private const KEY_METHOD = 'method';
+    private const KEY_TRANSPARENCY = 'transparency';
     private const KEY_PROGRAMS = 'programs';
     private const KEY_COURSES = 'courses';
     private const KEY_CHALLENGES = 'challenges';
@@ -1508,6 +1513,11 @@ final class public_pages {
         $allowed = [
             self::KEY_HOME,
             self::KEY_ABOUT,
+            self::KEY_THINKERS,
+            self::KEY_GLOSSARY,
+            self::KEY_CHRISTIAN,
+            self::KEY_METHOD,
+            self::KEY_TRANSPARENCY,
             self::KEY_PROGRAMS,
             self::KEY_COURSES,
             self::KEY_CHALLENGES,

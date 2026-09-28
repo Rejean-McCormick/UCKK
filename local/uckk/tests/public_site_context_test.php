@@ -42,7 +42,7 @@ final class public_site_context_test extends \advanced_testcase {
 
     public function test_ucc_home_is_a_distinct_content_set(): void {
         $definition = \local_uckk\local\public_pages\ucc\home::definition();
-        $this->assertSame('Univers-Cité Catho', $definition['title']);
+        $this->assertSame('Univers-Cité chrétienne', $definition['title']);
         $this->assertNotEmpty($definition['sections']);
         $this->assertNotEmpty($definition['quicklinks']);
     }
@@ -53,5 +53,16 @@ final class public_site_context_test extends \advanced_testcase {
         $this->assertSame('mathematical-minimalism', $definition['visualstyle']);
         $this->assertNotEmpty($definition['navigation']);
         $this->assertNotEmpty($definition['sections']);
+    }
+
+    public function test_ucc_navigation_exposes_encyclopedic_entry_points(): void {
+        $navigation = \local_uckk\local\public_pages\ucc\site::navigation();
+        $keys = array_column($navigation, 'key');
+
+        $this->assertContains('thinkers', $keys);
+        $this->assertContains('glossary', $keys);
+        $this->assertContains('christian', $keys);
+        $this->assertContains('method', $keys);
+        $this->assertContains('transparency', $keys);
     }
 }

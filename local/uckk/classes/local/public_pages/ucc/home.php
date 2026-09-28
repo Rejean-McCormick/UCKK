@@ -5,15 +5,12 @@
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // any later version.
-//
-// UCKK-Moodle uses Moodle as a technical platform for the
-// Univers-Cité Catho.
 
 /**
- * Public home page definition for local_uckk.
+ * Public home page definition for Univers-Cité chrétienne.
  *
  * @package    local_uckk
- * @copyright  2026 Univers-Cité Catho
+ * @copyright  2026 Univers-Cité chrétienne
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -21,175 +18,142 @@ namespace local_uckk\local\public_pages\ucc;
 
 defined('MOODLE_INTERNAL') || die();
 
-/**
- * Public home page definition.
- *
- * @package local_uckk
- */
 final class home {
-    /**
-     * Return the public page definition.
-     *
-     * @return array<string, mixed>
-     */
+    /** @return array<string, mixed> */
     public static function definition(): array {
         return [
             'layout' => 'wide',
             'typography' => 'display',
-
-            'eyebrow' => 'Bibliothèque publique vivante',
-            'title' => 'Univers-Cité Catho',
-            'subtitle' => 'Créer. Comprendre. Servir. Gouverner.',
-            'summary' => 'L’Univers-Cité Catho est un univers pédagogique de World Konnaxion consacré à l’exploration structurée du corpus catholique. Le Kristal organise les concepts et les sources; UCC transforme ce corpus en voies, cours, ressources, pratiques et évaluations.',
+            'eyebrow' => 'Encyclopédie relationnelle de la pensée',
+            'title' => 'Univers-Cité chrétienne',
+            'subtitle' => 'Les humains, les œuvres, les idées et les mots qui traversent l’histoire.',
+            'summary' => 'Univers-Cité chrétienne construit progressivement un corpus encyclopédique reliant penseurs, auteurs, œuvres, concepts et expressions. Le projet commence par un riche héritage chrétien — notamment catholique — puis a vocation à s’élargir aux intellectuels marquants de l’histoire de l’humanité.',
 
             'quicklinks' => [
-                ['label' => 'Kreative · Créer', 'description' => 'Arts, beauté, culture, langage, lettres et transmission.', 'url' => '/local/uckk/programs.php'],
-                ['label' => 'KonnectED · Comprendre', 'description' => 'Philosophie, théologie, Écriture, sciences, création et écologie.', 'url' => '/local/uckk/programs.php'],
-                ['label' => 'KeenKonnect · Servir', 'description' => 'Éducation, universités, santé, soin, œuvres, institutions et administration.', 'url' => '/local/uckk/programs.php'],
-                ['label' => 'Ethikos · Gouverner', 'description' => 'Économie, travail, justice sociale, droit, politique, subsidiarité et bien commun.', 'url' => '/local/uckk/programs.php'],
-                ['label' => 'Glossaire Kristal', 'description' => 'Entrer dans le corpus par ses concepts, positions, sources et relations.', 'url' => '/local/uckk/courses.php'],
-                ['label' => 'Médiathèque UCC', 'description' => 'Explorer les documents, médias, œuvres et références reliés aux cours.', 'url' => '/local/uckk/mediatheque.php'],
+                ['label' => 'Penseurs', 'description' => 'Entrer dans le savoir par les personnes qui ont formulé, transmis, commenté ou contesté des idées.', 'url' => '/local/uckk/thinkers.php'],
+                ['label' => 'Glossaire', 'description' => 'Suivre les mots, expressions et concepts à travers les époques, les auteurs et les traditions.', 'url' => '/local/uckk/glossary.php'],
+                ['label' => 'Corpus chrétien', 'description' => 'Explorer le point de départ historique du projet : textes, œuvres, institutions, débats et penseurs chrétiens.', 'url' => '/local/uckk/christian.php'],
+                ['label' => 'Méthode éditoriale', 'description' => 'Comprendre le rôle de l’IA, la révision des arguments, les corrections et les limites du corpus.', 'url' => '/local/uckk/method.php'],
+                ['label' => 'Transparence', 'description' => 'Distinguer clairement l’initiative indépendante de toute reconnaissance ecclésiale officielle.', 'url' => '/local/uckk/transparency.php'],
+                ['label' => 'Médiathèque', 'description' => 'Parcourir les documents, médias, œuvres, références et traces reliés au corpus.', 'url' => '/local/uckk/mediatheque.php'],
             ],
 
             'sections' => [
                 [
                     'type' => 'positioning',
-                    'eyebrow' => 'Position',
-                    'title' => 'Explorer un même corpus par quatre portes',
-                    'body' => 'Créer avec Kreative, comprendre avec KonnectED, servir avec KeenKonnect et gouverner avec Ethikos : les quatre portes donnent accès au même corpus Kristal par des usages différents.',
+                    'eyebrow' => 'Premier axe',
+                    'title' => 'Le savoir passe par les humains',
+                    'body' => 'Tout savoir transmis jusqu’à nous a été formulé, conservé, traduit, commenté, enseigné, contesté ou transformé par des personnes. Univers-Cité prend ces trajectoires humaines comme premier fil conducteur.',
                     'items' => [
-                        'Relier directement cours, glossaire, sources et ressources au Kristal catholique.',
-                        'Permettre des parcours larges ou très précis sans réduire le corpus à une simple liste de mots-clés.',
-                        'Permettre d’entrer par une voie, un concept, un cours, une ressource, une institution, une œuvre ou une question.',
+                        'Relier un penseur à ses œuvres, ses sources, son époque, ses influences et sa réception.',
+                        'Juxtaposer des perspectives plutôt que réduire l’histoire à une seule interprétation.',
+                        'Conserver aussi les idées devenues discutables ou archaïques lorsqu’elles demeurent importantes pour comprendre une époque.',
                     ],
                 ],
                 [
                     'type' => 'architecture',
-                    'eyebrow' => 'Architecture',
-                    'title' => 'Un cadre d’apprentissage familier, modernisé',
-                    'body' => 'L’UCC reprend des formes connues — cours, parcours, ressources, activités, archives, discussions — et les modernise autour d’une logique plus ouverte : apprendre, relier, produire, vérifier, transmettre.',
+                    'eyebrow' => 'Second axe',
+                    'title' => 'Les mots forment une autre cartographie',
+                    'body' => 'Un mot change de sens selon les siècles, les auteurs et les traditions. Le glossaire permet de suivre ces déplacements et de relier les personnes, les œuvres et les débats au vocabulaire qu’ils emploient.',
                     'items' => [
-                        'Les Voies organisent les grands domaines de savoir et d’action.',
-                        'Les cours offrent des points d’entrée structurés dans chaque domaine.',
-                        'Les Défis transforment une question en exercice, production ou preuve.',
-                        'Les Assemblées donnent une forme collective à la discussion, à l’orientation et à la correction.',
-                        'Le Registraire conserve les traces, preuves, décisions, versions et leçons utiles.',
+                        'Entrer par un mot ou une expression plutôt que par une biographie.',
+                        'Comparer les définitions, usages, traductions et déplacements de sens.',
+                        'Relier chaque concept aux auteurs et aux œuvres qui l’ont porté ou transformé.',
                     ],
                 ],
                 [
                     'type' => 'method',
-                    'eyebrow' => 'Méthode',
-                    'title' => 'Corpus, cours, pratique et certification',
-                    'body' => 'L’UCC relie les thèmes Kristal aux cours de l’Atlas, aux ressources de la Médiathèque et aux examens CertifiKation. Les modules de Konnaxion prolongent ensuite l’apprentissage dans la culture, les œuvres et la gouvernance.',
+                    'eyebrow' => 'Lire sans réduire',
+                    'title' => 'Plusieurs niveaux de lecture peuvent coexister',
+                    'body' => 'Une œuvre ancienne peut être lue au premier degré, replacée dans son contexte historique, étudiée pour son influence, interrogée symboliquement ou confrontée aux connaissances contemporaines. Ces lectures ne sont pas confondues : elles sont distinguées et mises en relation.',
                     'items' => [
-                        'Kristal : concepts, positions, sources, provenance et relations.',
-                        'UCC : voies, cours conceptuels, artefacts de maîtrise et progression.',
-                        'Konnaxion : Kreative, KonnectED, KeenKonnect et Ethikos.',
-                        'CertifiKation : connaissance, explication, application et argumentation.',
+                        'Lecture littérale ou argumentative.',
+                        'Lecture historique et contextualisée.',
+                        'Lecture symbolique, philosophique ou théologique lorsque le texte s’y prête.',
+                        'Étude critique d’idées dépassées pour leur valeur documentaire et historique.',
                     ],
                 ],
                 [
-                    'type' => 'boundary',
-                    'eyebrow' => 'Note institutionnelle',
-                    'title' => 'Reconnaissance UCC',
-                    'body' => 'Les éventuelles reconnaissances UCC demeurent internes, sauf reconnaissance officielle future.',
+                    'type' => 'horizon',
+                    'eyebrow' => 'Horizon',
+                    'title' => 'Un corpus appelé à dépasser son point de départ',
+                    'body' => 'Le corpus chrétien constitue aujourd’hui une base importante du projet. Il n’en fixe pas la frontière ultime. L’ambition est d’ajouter progressivement d’autres auteurs, traditions et œuvres afin de construire une encyclopédie relationnelle de la pensée humaine.',
                 ],
             ],
 
-            'cardsheading' => 'Portes d’entrée publiques',
+            'cardsheading' => 'Deux axes, quatre repères',
             'cards' => [
                 [
-                    'title' => 'Voies',
-                    'body' => 'Les grands parcours de lecture du monde : domaines, notions, cours, défis, preuves, archives et pratiques.',
-                    'url' => '/local/uckk/programs.php',
-                    'actionlabel' => 'Voir les Voies',
-                    'type' => 'programs',
+                    'title' => 'Penseurs et auteurs',
+                    'body' => 'Le premier axe : suivre les humains qui ont produit, transmis ou transformé les idées.',
+                    'url' => '/local/uckk/thinkers.php',
+                    'actionlabel' => 'Explorer les penseurs',
+                    'type' => 'people',
                 ],
                 [
-                    'title' => 'Cours',
-                    'body' => 'Les espaces structurés pour explorer les notions, ressources, activités et repères de progression.',
-                    'url' => '/local/uckk/courses.php',
-                    'actionlabel' => 'Explorer les cours',
-                    'type' => 'courses',
+                    'title' => 'Glossaire',
+                    'body' => 'Le second axe : suivre les mots et expressions qui permettent de relier les œuvres et les époques.',
+                    'url' => '/local/uckk/glossary.php',
+                    'actionlabel' => 'Explorer les mots',
+                    'type' => 'glossary',
                 ],
                 [
-                    'title' => 'Défis',
-                    'body' => 'Les exercices publics ou internes qui transforment une question en action, production, preuve et apprentissage.',
-                    'url' => '/local/uckk/challenges.php',
-                    'actionlabel' => 'Voir les Défis',
-                    'type' => 'challenges',
+                    'title' => 'Corpus chrétien',
+                    'body' => 'Le point de départ actuel : héritages chrétiens et catholiques, arts, institutions, débats, œuvres et traditions intellectuelles.',
+                    'url' => '/local/uckk/christian.php',
+                    'actionlabel' => 'Comprendre le corpus',
+                    'type' => 'corpus',
                 ],
                 [
-                    'title' => 'Assemblées',
-                    'body' => 'Les lieux de discussion, d’orientation, de contestation, d’arbitrage et de légitimité collective.',
-                    'url' => '/local/uckk/assemblies.php',
-                    'actionlabel' => 'Voir les Assemblées',
-                    'type' => 'assemblies',
+                    'title' => 'Méthode éditoriale',
+                    'body' => 'L’IA arbitre par défaut les synthèses et les demandes de correction; ses propres erreurs restent révisables et doivent pouvoir être contestées par des arguments.',
+                    'url' => '/local/uckk/method.php',
+                    'actionlabel' => 'Lire la méthode',
+                    'type' => 'method',
                 ],
                 [
-                    'title' => 'Médiathèque',
-                    'body' => 'Les contenus publics, collections, références, médias et traces consultables.',
-                    'url' => '/local/uckk/mediatheque.php',
-                    'actionlabel' => 'Explorer la médiathèque',
-                    'type' => 'media',
-                ],
-                [
-                    'title' => 'Intégrité',
-                    'body' => 'Le cadre qui protège la vérité des faits, la dignité des personnes, la qualité des preuves et la clarté des règles.',
-                    'url' => '/local/uckk/integrity.php',
-                    'actionlabel' => 'Voir le cadre',
+                    'title' => 'Transparence',
+                    'body' => 'Statut indépendant, relation éventuelle avec des autorités ecclésiales et distinction entre corpus catholique et reconnaissance officielle.',
+                    'url' => '/local/uckk/transparency.php',
+                    'actionlabel' => 'Voir le statut',
                     'type' => 'integrity',
                 ],
                 [
-                    'title' => 'Registraire',
-                    'body' => 'La mémoire des traces publiques, décisions, versions, preuves, corrections et leçons utiles.',
-                    'url' => '/local/uckk/archives.php',
-                    'actionlabel' => 'Consulter le Registraire',
-                    'type' => 'archives',
+                    'title' => 'Médiathèque',
+                    'body' => 'Documents, médias, références et œuvres qui donnent au corpus ses sources et ses points d’appui.',
+                    'url' => '/local/uckk/mediatheque.php',
+                    'actionlabel' => 'Ouvrir la Médiathèque',
+                    'type' => 'media',
                 ],
             ],
 
             'notices' => [
                 [
-                    'title' => 'Bibliothèque ouverte',
-                    'body' => 'La connaissance doit circuler. L’UCC organise des ressources, parcours, archives et scènes d’apprentissage pour rendre le savoir plus accessible, plus relié et plus praticable.',
+                    'title' => 'Initiative chrétienne indépendante',
+                    'body' => 'Univers-Cité chrétienne ne se présente pas comme une institution officielle de l’Église catholique. Les corpus catholiques sont étudiés comme des traditions historiques, intellectuelles, spirituelles, artistiques et institutionnelles documentées.',
                     'type' => 'institutional',
                 ],
                 [
-                    'title' => 'Corpus documenté et responsabilité',
-                    'body' => 'Le Kristal et les cours doivent conserver la provenance, les niveaux de certitude et les limites de leurs sources. Une interprétation pédagogique ne devient pas automatiquement une vérité institutionnelle.',
+                    'title' => 'Corpus révisable',
+                    'body' => 'Le contenu peut comporter des simplifications, erreurs ou coquilles. Les objections argumentées peuvent conduire à une réévaluation, une nuance, une correction ou au maintien du passage concerné.',
                     'type' => 'light',
                 ],
             ],
 
+            'metadataheading' => 'Repères du projet',
             'metadata' => [
-                [
-                    'label' => 'Composant technique',
-                    'value' => 'local_uckk',
-                ],
-                [
-                    'label' => 'Type de page',
-                    'value' => 'Page publique institutionnelle',
-                ],
-                [
-                    'label' => 'Nature',
-                    'value' => 'Bibliothèque publique vivante et établissement virtuel de maîtrise progressive du corpus',
-                ],
-                [
-                    'label' => 'Domaine',
-                    'value' => 'corpus catholique',
-                ],
-                [
-                    'label' => 'Rôle',
-                    'value' => 'Branche éducative du mouvement kOA',
-                ],
+                ['label' => 'Nature', 'value' => 'Encyclopédie relationnelle en construction'],
+                ['label' => 'Premier axe', 'value' => 'Penseurs, auteurs et trajectoires humaines'],
+                ['label' => 'Second axe', 'value' => 'Glossaire de mots, expressions et concepts'],
+                ['label' => 'Point de départ', 'value' => 'Héritages chrétiens, dont un important corpus catholique'],
+                ['label' => 'Horizon', 'value' => 'Relier progressivement les intellectuels marquants de l’histoire humaine'],
             ],
 
             'cta' => [
-                'title' => 'Entrer dans la bibliothèque vivante',
-                'body' => 'Commencer par une Voie fondatrice, explorer les cours, consulter les traces publiques et relier les idées au corpus catholique.',
-                'url' => '/local/uckk/programs.php',
-                'label' => 'Explorer les quatre portes',
+                'title' => 'Commencer par les personnes ou par les mots',
+                'body' => 'Les deux axes se répondent : un penseur renvoie à des concepts; un concept renvoie à des auteurs, des œuvres et des contextes.',
+                'url' => '/local/uckk/thinkers.php',
+                'label' => 'Entrer par les penseurs',
             ],
         ];
     }

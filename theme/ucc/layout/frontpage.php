@@ -1,7 +1,7 @@
 <?php
 // This file is part of Moodle - http://moodle.org/
 
-/** Front page for Univers-Cité Catho. @package theme_ucc */
+/** Front page for Univers-Cité chrétienne. @package theme_ucc */
 defined('MOODLE_INTERNAL') || die();
 
 $slug = 'home';

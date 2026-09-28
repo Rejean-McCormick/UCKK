@@ -7,7 +7,7 @@
 // any later version.
 //
 // UCKK-Moodle adapts Moodle as the pedagogical campus of the
-// Univers-Cité Catho.
+// Univers-Cité chrétienne.
 
 /**
  * Public catalogue page definition for local_uckk.
@@ -26,7 +26,7 @@
  * - mutate Moodle data.
  *
  * @package    local_uckk
- * @copyright  2026 Univers-Cité Catho
+ * @copyright  2026 Univers-Cité chrétienne
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -62,7 +62,7 @@ final class mediatheque {
 
             'eyebrow' => 'Bibliothèque publique',
             'title' => 'Médiathèque UCC',
-            'subtitle' => 'Explorer les médias, collections, références et passages documentés de l’Univers-Cité Catho.',
+            'subtitle' => 'Explorer les œuvres, médias, collections, références et passages documentés de l’Univers-Cité chrétienne.',
             'summary' => 'La Médiathèque est une porte d’entrée publique vers les savoirs, traces, œuvres, documents, sons, images, vidéos et références qui nourrissent l’UCC. Elle rend les contenus consultables sans paywall, dans un cadre d’apprentissage familier, modernisé et ouvert.',
             'cardsheading' => 'Entrer dans la bibliothèque',
 

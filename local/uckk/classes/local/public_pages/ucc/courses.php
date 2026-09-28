@@ -7,7 +7,7 @@
 // any later version.
 //
 // UCKK-Moodle adapts Moodle as the pedagogical campus of the
-// Univers-Cité Catho.
+// Univers-Cité chrétienne.
 
 namespace local_uckk\local\public_pages\ucc;
 
@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die();
  * award recognitions, validate work, or make accreditation claims.
  *
  * @package    local_uckk
- * @copyright  2026 Univers-Cité Catho
+ * @copyright  2026 Univers-Cité chrétienne
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 final class courses {
@@ -41,12 +41,12 @@ final class courses {
             'typography' => 'institutional',
             'eyebrow' => 'Apprendre, pratiquer, produire',
             'title' => 'Cours publics UCC',
-            'subtitle' => 'Des portes d’entrée vers les Voies, les méthodes et les pratiques de l’Univers-Cité Catho.',
-            'summary' => 'Les cours publics UCC servent à comprendre le corpus catholique, à pratiquer des méthodes, à produire des artefacts et à relier les savoirs dans un cadre d’apprentissage ouvert, familier et modernisé.',
+            'subtitle' => 'Des portes d’entrée vers les auteurs, les concepts, les méthodes et les parcours de l’Univers-Cité chrétienne.',
+            'summary' => 'Les cours publics UCC servent à explorer les corpus documentés, à pratiquer des méthodes et à relier auteurs, œuvres, concepts et contextes dans un cadre d’apprentissage ouvert.',
             'sections' => [
                 [
                     'title' => 'Entrer dans une Voie',
-                    'body' => 'Chaque cours ouvre un accès concret à une Voie UCC. Il présente une question, une méthode, un concept ou un artefact à explorer pour mieux lire les règles, les systèmes et les possibilités d’action du corpus catholique.',
+                    'body' => 'Chaque cours ouvre un accès concret à une Voie UCC. Il présente une question, une méthode, un concept ou un artefact à explorer pour mieux relier les idées, les sources, les contextes et les interprétations du corpus.',
                 ],
                 [
                     'title' => 'Transformer le savoir en pratique',
