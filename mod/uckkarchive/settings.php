@@ -22,4 +22,11 @@ if ($ADMIN->fulltree) {
         get_string('pluginname', 'mod_uckkarchive'),
         ''
     ));
+
+    $libraryurl = new moodle_url('/mod/uckkarchive/library_admin.php');
+    $settings->add(new admin_setting_description(
+        'mod_uckkarchive/libraryadminlink',
+        get_string('libraryadmin', 'mod_uckkarchive'),
+        html_writer::link($libraryurl, get_string('libraryadminlink', 'mod_uckkarchive'))
+    ));
 }

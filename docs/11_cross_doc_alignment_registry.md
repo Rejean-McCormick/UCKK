@@ -670,3 +670,15 @@ Use this sentence consistently across the documentation set:
 ```text
 UCKK-Moodle is self-standing. Konnaxion is an optional connected-mode integration that can add Smart Vote readings, EkoH/advisory signals, and cross-module organization. Konnaxion never replaces Moodle permissions, UCKK academic authority, Assembly decisions, Archive provenance, Integrity review, or AI non-sovereignty rules.
 ```
+
+## 24. Univers-Cité knowledge projection registry
+
+| Variable | Canonical value | Owner | Rule |
+|---|---|---|---|
+| `UNIVERS_CITE_PROJECTION_CONTRACT` | `uckk.univers-cite-projection/1.0.0` | `local_uckk` / UCKK docs | Consumer/materialization contract; does not redefine Kristal authority. |
+| `UCC_PRIMARY_VIEW` | `people` | UCC projection | Domain-specific navigation choice, not universal ontology. |
+| `UCC_GLOSSARY_MODE` | `derived_index` | UCC projection | Secondary/transversal navigation; not a second epistemic canon. |
+| `UCC_CURRENT_SOURCE_MODE` | `legacy_semantic_projection` | Atlas UCC | Transitional working source; native Kristal v5 migration remains pending. |
+| `UCC_TARGET_KRISTAL_RELEASE` | `5.0.0-rc.3` | migration target | Must not be claimed as current source state until conversion is completed and pinned. |
+| `UCC_REFERENT_PROFILE` | `kristal.referent-registry/1.0.0` | migration target | External identifiers remain anchors and do not replace internal/domain refs. |
+

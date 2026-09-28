@@ -328,8 +328,8 @@ final class public_page implements renderable, templatable {
         $titles = [
             self::KEY_HOME => ['Accueil', 'Établissement virtuel de puissance opératoire'],
             self::KEY_ABOUT => ['À propos', 'Clarifier UCKK'],
-            self::KEY_THINKERS => ['Penseurs', 'Premier axe'],
-            self::KEY_GLOSSARY => ['Glossaire', 'Second axe'],
+            self::KEY_THINKERS => ['Penseurs', 'Vue principale du corpus'],
+            self::KEY_GLOSSARY => ['Glossaire', 'Index transversal'],
             self::KEY_CHRISTIAN => ['Corpus chrétien', 'Point de départ du corpus'],
             self::KEY_METHOD => ['Méthode éditoriale', 'Réviser et arbitrer'],
             self::KEY_TRANSPARENCY => ['Transparence', 'Statut institutionnel'],

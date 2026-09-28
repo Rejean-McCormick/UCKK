@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uckk.local/contracts/univers-cite-projection/1.0.0/schema.json",
+  "title": "UCKK Univers-Cité Projection Contract 1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract",
+    "projection_id",
+    "source",
+    "scope",
+    "views",
+    "materializations",
+    "migration"
+  ],
+  "properties": {
+    "contract": {
+      "const": "uckk.univers-cite-projection/1.0.0"
+    },
+    "projection_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "state_id",
+        "artifact_status",
+        "authority"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "kristal_state",
+            "legacy_semantic_projection"
+          ]
+        },
+        "state_id": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        },
+        "artifact_status": {
+          "enum": [
+            "working",
+            "reference",
+            "validated",
+            "recognized"
+          ]
+        },
+        "authority": {
+          "const": "external_epistemic_source"
+        },
+        "adapter_profile": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "universe_id",
+        "scope_key"
+      ],
+      "properties": {
+        "universe_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope_key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "include_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "bridge_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "views": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary",
+        "secondary",
+        "glossary"
+      ],
+      "properties": {
+        "primary": {
+          "enum": [
+            "people",
+            "collectives",
+            "works",
+            "places",
+            "installations",
+            "processes",
+            "events",
+            "concepts",
+            "custom"
+          ]
+        },
+        "secondary": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "glossary": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "mode",
+            "canonical_definition_required"
+          ],
+          "properties": {
+            "mode": {
+              "const": "derived_index"
+            },
+            "canonical_definition_required": {
+              "const": false
+            },
+            "source_units": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "materializations": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "public_pages",
+          "thinker_pages",
+          "collective_pages",
+          "work_pages",
+          "glossary",
+          "chronology",
+          "mediatheque_links",
+          "relations",
+          "courses"
+        ]
+      }
+    },
+    "library": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "migration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "target_kristal_release",
+        "referent_profile"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "native_kristal_v5",
+            "legacy_source_pending_kristal_v5_migration"
+          ]
+        },
+        "target_kristal_release": {
+          "const": "5.0.0-rc.3"
+        },
+        "referent_profile": {
+          "const": "kristal.referent-registry/1.0.0"
+        }
+      }
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

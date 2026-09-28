@@ -491,4 +491,19 @@ $capabilities = [
             'manager' => CAP_ALLOW,
         ],
     ],
+
+    /*
+     * Manage autonomous public media libraries, site mappings and bridges.
+     *
+     * This is deliberately system-level because a bridge can expose public
+     * content across otherwise independent Univers-Cité sites.
+     */
+    'mod/uckkarchive:managelibraries' => [
+        'riskbitmask' => RISK_DATALOSS | RISK_CONFIG,
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_SYSTEM,
+        'archetypes' => [
+            'manager' => CAP_ALLOW,
+        ],
+    ],
 ];

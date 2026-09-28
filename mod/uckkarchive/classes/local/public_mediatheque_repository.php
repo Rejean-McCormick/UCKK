@@ -55,6 +55,8 @@ final class public_mediatheque_repository {
     private const TABLE_COLLECTION = 'uckkarchive_media_collection';
     private const TABLE_COLLECTION_ITEM = 'uckkarchive_media_collection_item';
     private const TABLE_CONTENT_MARKER = 'uckkarchive_content_marker';
+    private const TABLE_LIBRARY = 'uckkarchive_library';
+    private const TABLE_LIBRARY_BRIDGE = 'uckkarchive_library_bridge';
 
     /** Public media constraints. */
     private const PUBLIC_STATUS = media_policy::STATUS_ACTIVE;
@@ -69,6 +71,12 @@ final class public_mediatheque_repository {
 
     /** Maximum public summary length. */
     private const SUMMARY_LENGTH = 240;
+
+    /** @var media_library_scope|null Library scope registry. */
+    private ?media_library_scope $libraryscope = null;
+
+    /** @var array<int,stdClass|null> Small per-request library cache. */
+    private array $librarycache = [];
 
     /**
      * Search public Médiathèque media.
@@ -107,13 +115,15 @@ final class public_mediatheque_repository {
         $records = $DB->get_records_sql($query->sql, $query->params, $offset, $perpage);
         $total = (int)$DB->count_records_sql($countquery->sql, $countquery->params);
 
+        $targetlibraryid = max(0, (int)($filters['libraryid'] ?? 0));
+
         $items = [];
         foreach ($records as $media) {
             if (!$this->is_public_media($media)) {
                 continue;
             }
 
-            $items[] = $this->export_media_card($context, $media);
+            $items[] = $this->export_media_card($context, $media, $targetlibraryid);
         }
 
         $result = new stdClass();
@@ -142,7 +152,12 @@ final class public_mediatheque_repository {
      * @param string $uuid Media UUID.
      * @return stdClass|null Public media card or null.
      */
-    public function get_media_by_uuid(int $archiveid = 0, ?context_module $context = null, string $uuid = ''): ?stdClass {
+    public function get_media_by_uuid(
+        int $archiveid = 0,
+        ?context_module $context = null,
+        string $uuid = '',
+        int $libraryid = 0
+    ): ?stdClass {
         global $DB;
 
         $this->require_media_table();
@@ -163,7 +178,11 @@ final class public_mediatheque_repository {
             return null;
         }
 
-        return $this->export_media_card($context, $media);
+        if ($libraryid > 0 && !$this->is_media_visible_in_library((int)$media->id, (int)($media->libraryid ?? 0), $libraryid)) {
+            return null;
+        }
+
+        return $this->export_media_card($context, $media, $libraryid);
     }
 
     /**
@@ -223,6 +242,8 @@ final class public_mediatheque_repository {
             $params['archiveid'] = $archiveid;
             $where[] = 'm.archiveid = :archiveid';
         }
+
+        $this->apply_library_scope($filters, $where, $params);
 
         $type = trim((string)($filters['type'] ?? 'all'));
         if ($type !== '' && $type !== 'all' && $type !== self::OBJECT_MEDIA) {
@@ -296,13 +317,14 @@ final class public_mediatheque_repository {
      * @param stdClass $media Media record.
      * @return stdClass Public flat card data.
      */
-    private function export_media_card(?context_module $context, stdClass $media): stdClass {
+    private function export_media_card(?context_module $context, stdClass $media, int $targetlibraryid = 0): stdClass {
         $markers = $this->get_public_marker_summary((int)$media->id);
         $thumbnailurl = $this->get_public_thumbnail_url($context, $media);
         $summary = $this->get_public_summary($media);
         $sourcevalue = (string)($media->source ?? $media->sourcetype ?? '');
         $externalsource = $this->get_public_external_source($media);
         $externalurl = (string)$externalsource->url;
+        $library = $this->get_library_exposure($media, $targetlibraryid);
 
         return (object)[
             'uuid' => (string)$media->uuid,
@@ -314,6 +336,12 @@ final class public_mediatheque_repository {
             'mimetype' => (string)($media->mimetype ?? ''),
             'language' => (string)($media->language ?? ''),
             'thumbnailurl' => $thumbnailurl,
+
+            'libraryslug' => $library->slug,
+            'libraryname' => $library->name,
+            'isbridged' => $library->isbridged,
+            'bridgescope' => $library->bridgescope,
+            'bridgelabel' => $library->bridgelabel,
 
             'sourcevalue' => $sourcevalue,
             'sourcelabel' => $this->label($sourcevalue),
@@ -348,6 +376,144 @@ final class public_mediatheque_repository {
             'candownload' => false,
             'canexport' => false,
         ];
+    }
+
+    /**
+     * Apply one target library plus its explicit incoming bridges.
+     *
+     * No library id means the low-level repository caller intentionally asked
+     * for the legacy/unscoped view (used by internal tests/tools). Public pages
+     * always pass a resolved library id through public_mediatheque_service.
+     *
+     * @param array<string,mixed> $filters Filters.
+     * @param string[] $where SQL where clauses.
+     * @param array<string,mixed> $params SQL params.
+     */
+    private function apply_library_scope(array $filters, array &$where, array &$params): void {
+        $targetlibraryid = max(0, (int)($filters['libraryid'] ?? 0));
+        $libraryrequired = !empty($filters['libraryrequired']);
+        if ($targetlibraryid <= 0) {
+            if ($libraryrequired) {
+                $where[] = '1 = 0';
+            }
+            return;
+        }
+
+        if (!media_library_scope::schema_ready()) {
+            // Fail closed rather than falling back to the formerly global view.
+            $where[] = '1 = 0';
+            return;
+        }
+
+        $params += [
+            'targetlibraryid' => $targetlibraryid,
+            'bridgetargetlibraryid' => $targetlibraryid,
+            'bridgestatus' => media_library_scope::STATUS_ACTIVE,
+            'bridgescopelibrary' => media_library_scope::SCOPE_LIBRARY,
+            'bridgescopecollection' => media_library_scope::SCOPE_COLLECTION,
+            'bridgescopemedia' => media_library_scope::SCOPE_MEDIA,
+        ];
+
+        $where[] = '(m.libraryid = :targetlibraryid OR EXISTS (
+            SELECT 1
+              FROM {' . self::TABLE_LIBRARY_BRIDGE . '} lb
+             WHERE lb.targetlibraryid = :bridgetargetlibraryid
+               AND lb.sourcelibraryid = m.libraryid
+               AND lb.status = :bridgestatus
+               AND (
+                    (lb.scopetype = :bridgescopelibrary AND lb.scopeid = 0)
+                 OR (lb.scopetype = :bridgescopemedia AND lb.scopeid = m.id)
+                 OR (lb.scopetype = :bridgescopecollection AND EXISTS (
+                        SELECT 1
+                          FROM {' . self::TABLE_COLLECTION_ITEM . '} lbci
+                         WHERE lbci.collectionid = lb.scopeid
+                           AND lbci.mediaid = m.id
+                    ))
+               )
+        ))';
+    }
+
+    /** Check one media row against a target library and its bridges. */
+    private function is_media_visible_in_library(int $mediaid, int $homelibraryid, int $targetlibraryid): bool {
+        global $DB;
+
+        if ($targetlibraryid <= 0) {
+            return true;
+        }
+        if ($homelibraryid > 0 && $homelibraryid === $targetlibraryid) {
+            return true;
+        }
+        if (!media_library_scope::schema_ready() || $homelibraryid <= 0 || $mediaid <= 0) {
+            return false;
+        }
+
+        $sql = 'SELECT 1
+                  FROM {' . self::TABLE_LIBRARY_BRIDGE . '} lb
+                 WHERE lb.targetlibraryid = :targetlibraryid
+                   AND lb.sourcelibraryid = :sourcelibraryid
+                   AND lb.status = :status
+                   AND (
+                        (lb.scopetype = :scopelibrary AND lb.scopeid = 0)
+                     OR (lb.scopetype = :scopemedia AND lb.scopeid = :mediaid)
+                     OR (lb.scopetype = :scopecollection AND EXISTS (
+                            SELECT 1
+                              FROM {' . self::TABLE_COLLECTION_ITEM . '} ci
+                             WHERE ci.collectionid = lb.scopeid
+                               AND ci.mediaid = :collectionmediaid
+                        ))
+                   )';
+
+        return $DB->record_exists_sql($sql, [
+            'targetlibraryid' => $targetlibraryid,
+            'sourcelibraryid' => $homelibraryid,
+            'status' => media_library_scope::STATUS_ACTIVE,
+            'scopelibrary' => media_library_scope::SCOPE_LIBRARY,
+            'scopemedia' => media_library_scope::SCOPE_MEDIA,
+            'mediaid' => $mediaid,
+            'scopecollection' => media_library_scope::SCOPE_COLLECTION,
+            'collectionmediaid' => $mediaid,
+        ]);
+    }
+
+    /** Build public origin/bridge metadata for one media card. */
+    private function get_library_exposure(stdClass $media, int $targetlibraryid): stdClass {
+        $homelibraryid = max(0, (int)($media->libraryid ?? 0));
+        $library = $this->get_library_by_id($homelibraryid);
+        $bridge = null;
+
+        if ($targetlibraryid > 0 && $homelibraryid > 0 && $homelibraryid !== $targetlibraryid) {
+            $bridge = $this->library_scope()->get_bridge_for_media(
+                $targetlibraryid,
+                (int)$media->id,
+                $homelibraryid
+            );
+        }
+
+        return (object)[
+            'slug' => $library ? (string)$library->slug : '',
+            'name' => $library ? format_string((string)$library->name) : '',
+            'isbridged' => $bridge !== null,
+            'bridgescope' => $bridge ? (string)$bridge->scopetype : '',
+            'bridgelabel' => $bridge ? format_string((string)($bridge->label ?? '')) : '',
+        ];
+    }
+
+    private function get_library_by_id(int $libraryid): ?stdClass {
+        if ($libraryid <= 0) {
+            return null;
+        }
+        if (array_key_exists($libraryid, $this->librarycache)) {
+            return $this->librarycache[$libraryid];
+        }
+        $this->librarycache[$libraryid] = $this->library_scope()->resolve_by_id($libraryid);
+        return $this->librarycache[$libraryid];
+    }
+
+    private function library_scope(): media_library_scope {
+        if ($this->libraryscope === null) {
+            $this->libraryscope = new media_library_scope();
+        }
+        return $this->libraryscope;
     }
 
     /**

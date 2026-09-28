@@ -3405,5 +3405,15 @@
         "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
       }
     }
-  ]
+  ],
+  "projection": {
+    "contract": "uckk.univers-cite-projection/1.0.0",
+    "mode": "derived_index",
+    "role": "secondary_navigation",
+    "primary_view": "people",
+    "source_units": "themes",
+    "canonical_definition_required": false,
+    "authority": "derived_from_source_corpus",
+    "migration_note": "Current theme map is a transitional derived projection; themes are concept candidates, not automatically canonical glossary concepts."
+  }
 }

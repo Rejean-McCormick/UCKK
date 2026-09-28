@@ -959,3 +959,4 @@ package structure
 ```text
 This documentation set defines the final target behavior for implementation. Code, tests, services, UI, public Médiathèque surfaces, backup/restore, privacy, content advisory governance, and packaging must conform to these specifications.
 ```
+- [27 — Médiathèques autonomes et bridges inter-Univers-Cités](27_media_library_partition_and_bridges.md)

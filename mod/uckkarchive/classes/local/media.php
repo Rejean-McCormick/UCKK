@@ -268,6 +268,17 @@ final class media {
         $now = time();
 
         $record = self::normalise_record(self::as_object($data), true);
+
+        // Every media item has exactly one home library once the partition schema is available.
+        // Root UCKK is the compatibility fallback for legacy callers that do not select a library.
+        if (empty($record->libraryid) && media_library_scope::schema_ready()) {
+            $libraryscope = new media_library_scope();
+            $rootlibrary = $libraryscope->resolve_by_slug(media_library_scope::LIBRARY_UCKK);
+            if ($rootlibrary) {
+                $record->libraryid = (int)$rootlibrary->id;
+            }
+        }
+
         $record->uuid = !empty($record->uuid) ? self::normalise_uuid((string)$record->uuid) : self::generate_uuid();
         $record->status = self::normalise_status((string)($record->status ?? self::STATUS_DRAFT));
         $record->visibility = self::normalise_visibility((string)($record->visibility ?? self::VISIBILITY_COURSE));
@@ -608,6 +619,7 @@ final class media {
         foreach ([
             'id',
             'archiveid',
+            'libraryid',
             'courseid',
             'cmid',
             'contextid',

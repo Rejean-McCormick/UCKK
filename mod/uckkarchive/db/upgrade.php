@@ -96,7 +96,163 @@ function xmldb_uckkarchive_upgrade($oldversion): bool {
         upgrade_mod_savepoint(true, 2026060401, 'uckkarchive');
     }
 
+    if ($oldversion < 2026092802) {
+        // Split the formerly site-wide public mediatheque into autonomous
+        // libraries. Existing media/collections become part of the canonical
+        // UCKK library; UCC and Math start isolated. Explicit directional
+        // bridges can then share a whole library, one collection, or one media
+        // object without duplicating media rows or UUIDs.
+        uckkarchive_upgrade_create_library_bridge_schema();
+
+        upgrade_mod_savepoint(true, 2026092802, 'uckkarchive');
+    }
+
     return true;
+}
+
+/**
+ * Create autonomous media-library scope and bridge schema.
+ *
+ * Existing public media are conservatively assigned to the UCKK root library.
+ * Alternate Univers-Cité sites therefore become separated by default and only
+ * see content explicitly assigned to their own library or exposed by a bridge.
+ *
+ * @return void
+ */
+function uckkarchive_upgrade_create_library_bridge_schema(): void {
+    global $DB;
+
+    uckkarchive_upgrade_create_table_if_missing('uckkarchive_library', [
+        uckkarchive_upgrade_field('id', XMLDB_TYPE_INTEGER, '10', true, true),
+        uckkarchive_upgrade_field('uuid', XMLDB_TYPE_CHAR, '36', true, false, ''),
+        uckkarchive_upgrade_field('slug', XMLDB_TYPE_CHAR, '100', true, false, ''),
+        uckkarchive_upgrade_field('name', XMLDB_TYPE_CHAR, '255', true, false, ''),
+        uckkarchive_upgrade_field('description', XMLDB_TYPE_TEXT),
+        uckkarchive_upgrade_field('status', XMLDB_TYPE_CHAR, '32', true, false, 'active'),
+        uckkarchive_upgrade_field('createdby', XMLDB_TYPE_INTEGER, '10'),
+        uckkarchive_upgrade_field('modifiedby', XMLDB_TYPE_INTEGER, '10'),
+        uckkarchive_upgrade_field('timecreated', XMLDB_TYPE_INTEGER, '10', true, false, 0),
+        uckkarchive_upgrade_field('timemodified', XMLDB_TYPE_INTEGER, '10', true, false, 0),
+        uckkarchive_upgrade_field('metadata', XMLDB_TYPE_TEXT),
+    ], [
+        new xmldb_key('primary', XMLDB_KEY_PRIMARY, ['id']),
+    ], [
+        new xmldb_index('uuid', XMLDB_INDEX_UNIQUE, ['uuid']),
+        new xmldb_index('slug', XMLDB_INDEX_UNIQUE, ['slug']),
+        new xmldb_index('status', XMLDB_INDEX_NOTUNIQUE, ['status']),
+    ]);
+
+    uckkarchive_upgrade_create_table_if_missing('uckkarchive_library_site', [
+        uckkarchive_upgrade_field('id', XMLDB_TYPE_INTEGER, '10', true, true),
+        uckkarchive_upgrade_field('libraryid', XMLDB_TYPE_INTEGER, '10', true, false, 0),
+        uckkarchive_upgrade_field('sitekey', XMLDB_TYPE_CHAR, '64', true, false, ''),
+        uckkarchive_upgrade_field('role', XMLDB_TYPE_CHAR, '32', true, false, 'primary'),
+        uckkarchive_upgrade_field('sortorder', XMLDB_TYPE_INTEGER, '10', true, false, 0),
+        uckkarchive_upgrade_field('status', XMLDB_TYPE_CHAR, '32', true, false, 'active'),
+        uckkarchive_upgrade_field('timecreated', XMLDB_TYPE_INTEGER, '10', true, false, 0),
+        uckkarchive_upgrade_field('timemodified', XMLDB_TYPE_INTEGER, '10', true, false, 0),
+    ], [
+        new xmldb_key('primary', XMLDB_KEY_PRIMARY, ['id']),
+    ], [
+        new xmldb_index('site-library', XMLDB_INDEX_UNIQUE, ['sitekey', 'libraryid']),
+        new xmldb_index('site-role', XMLDB_INDEX_NOTUNIQUE, ['sitekey', 'role']),
+        new xmldb_index('libraryid', XMLDB_INDEX_NOTUNIQUE, ['libraryid']),
+        new xmldb_index('status', XMLDB_INDEX_NOTUNIQUE, ['status']),
+    ]);
+
+    uckkarchive_upgrade_add_field_if_missing(
+        'uckkarchive_media',
+        uckkarchive_upgrade_field('libraryid', XMLDB_TYPE_INTEGER, '10')
+    );
+    uckkarchive_upgrade_add_field_if_missing(
+        'uckkarchive_media_collection',
+        uckkarchive_upgrade_field('libraryid', XMLDB_TYPE_INTEGER, '10')
+    );
+    uckkarchive_upgrade_add_index_if_possible(
+        'uckkarchive_media',
+        new xmldb_index('libraryid', XMLDB_INDEX_NOTUNIQUE, ['libraryid'])
+    );
+    uckkarchive_upgrade_add_index_if_possible(
+        'uckkarchive_media_collection',
+        new xmldb_index('libraryid', XMLDB_INDEX_NOTUNIQUE, ['libraryid'])
+    );
+
+    uckkarchive_upgrade_create_table_if_missing('uckkarchive_library_bridge', [
+        uckkarchive_upgrade_field('id', XMLDB_TYPE_INTEGER, '10', true, true),
+        uckkarchive_upgrade_field('uuid', XMLDB_TYPE_CHAR, '36', true, false, ''),
+        uckkarchive_upgrade_field('sourcelibraryid', XMLDB_TYPE_INTEGER, '10', true, false, 0),
+        uckkarchive_upgrade_field('targetlibraryid', XMLDB_TYPE_INTEGER, '10', true, false, 0),
+        uckkarchive_upgrade_field('scopetype', XMLDB_TYPE_CHAR, '32', true, false, 'library'),
+        uckkarchive_upgrade_field('scopeid', XMLDB_TYPE_INTEGER, '10', true, false, 0),
+        uckkarchive_upgrade_field('label', XMLDB_TYPE_CHAR, '255'),
+        uckkarchive_upgrade_field('status', XMLDB_TYPE_CHAR, '32', true, false, 'active'),
+        uckkarchive_upgrade_field('createdby', XMLDB_TYPE_INTEGER, '10'),
+        uckkarchive_upgrade_field('modifiedby', XMLDB_TYPE_INTEGER, '10'),
+        uckkarchive_upgrade_field('timecreated', XMLDB_TYPE_INTEGER, '10', true, false, 0),
+        uckkarchive_upgrade_field('timemodified', XMLDB_TYPE_INTEGER, '10', true, false, 0),
+        uckkarchive_upgrade_field('metadata', XMLDB_TYPE_TEXT),
+    ], [
+        new xmldb_key('primary', XMLDB_KEY_PRIMARY, ['id']),
+    ], [
+        new xmldb_index('uuid', XMLDB_INDEX_UNIQUE, ['uuid']),
+        new xmldb_index('bridge-scope', XMLDB_INDEX_UNIQUE, ['sourcelibraryid', 'targetlibraryid', 'scopetype', 'scopeid']),
+        new xmldb_index('target-status', XMLDB_INDEX_NOTUNIQUE, ['targetlibraryid', 'status']),
+        new xmldb_index('source-status', XMLDB_INDEX_NOTUNIQUE, ['sourcelibraryid', 'status']),
+    ]);
+
+    $now = time();
+    $defaults = [
+        'uckk' => ['uuid' => '00000000-0000-4000-8000-00000000a001', 'name' => 'Médiathèque UCKK'],
+        'ucc' => ['uuid' => '00000000-0000-4000-8000-00000000a002', 'name' => 'Médiathèque chrétienne'],
+        'math' => ['uuid' => '00000000-0000-4000-8000-00000000a003', 'name' => 'Bibliothèque mathématique'],
+    ];
+
+    $libraryids = [];
+    foreach ($defaults as $sitekey => $spec) {
+        $library = $DB->get_record('uckkarchive_library', ['slug' => $sitekey], '*', IGNORE_MISSING);
+        if (!$library) {
+            $library = (object)[
+                'uuid' => $spec['uuid'],
+                'slug' => $sitekey,
+                'name' => $spec['name'],
+                'description' => '',
+                'status' => 'active',
+                'timecreated' => $now,
+                'timemodified' => $now,
+                'metadata' => null,
+            ];
+            $library->id = (int)$DB->insert_record('uckkarchive_library', $library);
+        }
+        $libraryids[$sitekey] = (int)$library->id;
+
+        if (!$DB->record_exists('uckkarchive_library_site', [
+            'libraryid' => (int)$library->id,
+            'sitekey' => $sitekey,
+        ])) {
+            $DB->insert_record('uckkarchive_library_site', (object)[
+                'libraryid' => (int)$library->id,
+                'sitekey' => $sitekey,
+                'role' => 'primary',
+                'sortorder' => 0,
+                'status' => 'active',
+                'timecreated' => $now,
+                'timemodified' => $now,
+            ]);
+        }
+    }
+
+    // Legacy global media cannot reliably be attributed to an alternate site.
+    // Keep it in the root UCKK library instead of leaking it into every library.
+    if (!empty($libraryids['uckk'])) {
+        $DB->execute(
+            'UPDATE {uckkarchive_media} SET libraryid = :libraryid WHERE libraryid IS NULL OR libraryid = 0',
+            ['libraryid' => $libraryids['uckk']]
+        );
+        $DB->execute(
+            'UPDATE {uckkarchive_media_collection} SET libraryid = :libraryid WHERE libraryid IS NULL OR libraryid = 0',
+            ['libraryid' => $libraryids['uckk']]
+        );
+    }
 }
 
 /**

@@ -37,8 +37,9 @@ global $PAGE, $OUTPUT, $USER;
 $context = context_system::instance();
 $pagekey = 'mediatheque';
 
-// Site-wide public Médiathèque by default.
-// `cmid = 0` and `archiveid = 0` mean: search all public, policy-filtered media.
+// Public search spans all archive instances inside the current site's primary
+// media library. `cmid = 0` and `archiveid = 0` no longer mean a global
+// cross-University catalogue; library isolation is enforced server-side.
 $cmid = optional_param('cmid', 0, PARAM_INT);
 $archiveid = optional_param('archiveid', 0, PARAM_INT);
 
@@ -109,7 +110,7 @@ $currentsite = \local_uckk\local\public_site_context::current();
 if ($currentsite === \local_uckk\local\public_site_context::SITE_MATH) {
     $publiclibrarytitle = 'Bibliothèque mathématique';
 } else if ($currentsite === \local_uckk\local\public_site_context::SITE_UCC) {
-    $publiclibrarytitle = 'Médiathèque UCC';
+    $publiclibrarytitle = 'Médiathèque chrétienne';
 } else {
     $publiclibrarytitle = get_string('mediatheque_title', 'local_uckk');
 }
@@ -138,6 +139,7 @@ $initialstate = [
     'service' => 'mod_uckkarchive_search_mediatheque',
     'cmid' => max(0, $cmid),
     'archiveid' => max(0, $archiveid),
+    'sitekey' => $currentsite,
     'query' => $urlparams['q'],
     'filters' => $filters,
     'page' => $page,
@@ -178,6 +180,7 @@ if ($isitemrequest) {
                 $detailrequest = [
                     'cmid' => max(0, $cmid),
                     'archiveid' => max(0, $archiveid),
+                    'sitekey' => $currentsite,
                     'item' => $urlparams['item'],
                     'uuid' => $urlparams['item'],
                     'type' => $detailtype,

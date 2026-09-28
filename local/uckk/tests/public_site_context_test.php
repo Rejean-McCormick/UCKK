@@ -65,4 +65,25 @@ final class public_site_context_test extends \advanced_testcase {
         $this->assertContains('method', $keys);
         $this->assertContains('transparency', $keys);
     }
+
+    public function test_ucc_people_view_is_primary_and_glossary_is_transversal(): void {
+        $home = \local_uckk\local\public_pages\ucc\home::definition();
+        $thinkers = \local_uckk\local\public_pages\ucc\thinkers::definition();
+        $glossary = \local_uckk\local\public_pages\ucc\glossary::definition();
+
+        $this->assertSame('Vue principale du corpus', $thinkers['eyebrow']);
+        $this->assertSame('Index transversal', $glossary['eyebrow']);
+        $this->assertStringContainsString('vue principale', mb_strtolower($home['sections'][0]['eyebrow'] . ' ' . $home['sections'][0]['body']));
+        $this->assertStringContainsString('pas un second corpus', mb_strtolower($glossary['summary']));
+    }
+
+    public function test_ucc_atlas_declares_projection_contract_without_claiming_native_kristal_migration(): void {
+        $path = __DIR__ . '/../atlas/ucc_universe.json';
+        $data = json_decode((string)file_get_contents($path), true, 512, JSON_THROW_ON_ERROR);
+
+        $this->assertSame('uckk.univers-cite-projection/1.0.0', $data['knowledge']['projection_contract']);
+        $this->assertSame('people', $data['knowledge']['primary_view']);
+        $this->assertSame('derived_index', $data['knowledge']['glossary_mode']);
+        $this->assertSame('legacy_semantic_source_pending_kristal_v5_migration', $data['knowledge']['projection_status']);
+    }
 }

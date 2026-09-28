@@ -29,10 +29,9 @@ Nouvelles routes :
 
 ## Ligne éditoriale
 
-Le projet se présente comme une **encyclopédie relationnelle en construction** structurée autour de deux axes :
+Le projet se présente comme une **encyclopédie relationnelle en construction** dont la vue principale, pour ce corpus, part des humains — penseurs, auteurs et collectifs intellectuels.
 
-1. les humains — penseurs, auteurs et trajectoires intellectuelles;
-2. les mots — glossaire des termes, expressions et concepts.
+Le glossaire n’est pas un deuxième axe parallèle : il constitue un **index transversal dérivé** qui permet de repartir des mots et concepts pour retrouver les personnes, œuvres, sources et assertions auxquelles ils sont reliés. Cette hiérarchie est propre à l’Univers-Cité chrétienne; elle n’impose pas un modèle people-first aux autres Univers-Cités.
 
 Le corpus chrétien constitue un point de départ important, notamment par les traditions catholiques, mais l’architecture est destinée à accueillir progressivement les intellectuels, œuvres et traditions marquants de l’histoire humaine.
 

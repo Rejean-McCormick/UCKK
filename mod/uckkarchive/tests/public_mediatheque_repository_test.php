@@ -21,6 +21,7 @@ namespace mod_uckkarchive;
 
 use advanced_testcase;
 use context_module;
+use mod_uckkarchive\local\media_library_scope;
 use mod_uckkarchive\local\public_mediatheque_repository;
 use stdClass;
 
@@ -128,6 +129,96 @@ final class public_mediatheque_repository_test extends advanced_testcase {
         $this->assertNotContains('Draft public media', $titles);
         $this->assertNotContains('Course only media', $titles);
         $this->assertNotContains('Restricted public media', $titles);
+    }
+
+    /**
+     * Library partitions should be isolated by default and bridges directional.
+     *
+     * @return void
+     */
+    public function test_library_partition_and_directional_media_bridge(): void {
+        $this->require_tables([
+            self::TABLE_MEDIA,
+            media_library_scope::TABLE_LIBRARY,
+            media_library_scope::TABLE_LIBRARY_SITE,
+            media_library_scope::TABLE_LIBRARY_BRIDGE,
+        ]);
+
+        $course = $this->getDataGenerator()->create_course();
+        $user = $this->getDataGenerator()->create_user();
+        $this->setUser($user);
+
+        [$archive, $cm] = $this->create_archive_module($course);
+        $context = context_module::instance((int)$cm->id);
+
+        $scope = new media_library_scope();
+        $ucclibrary = $scope->resolve_by_slug(media_library_scope::LIBRARY_UCC)
+            ?? $scope->create_library(media_library_scope::LIBRARY_UCC, 'Médiathèque chrétienne');
+        $mathlibrary = $scope->resolve_by_slug(media_library_scope::LIBRARY_MATH)
+            ?? $scope->create_library(media_library_scope::LIBRARY_MATH, 'Bibliothèque mathématique');
+
+        $uccmedia = $this->insert_media($archive, $cm, $context, $user, [
+            'title' => 'UCC only media',
+            'libraryid' => (int)$ucclibrary->id,
+        ]);
+        $this->insert_media($archive, $cm, $context, $user, [
+            'title' => 'Math only media',
+            'libraryid' => (int)$mathlibrary->id,
+        ]);
+
+        $repository = new public_mediatheque_repository();
+        $uccresult = $repository->search((int)$archive->id, $context, [
+            'type' => 'media',
+            'libraryid' => (int)$ucclibrary->id,
+            'libraryrequired' => true,
+            'page' => 1,
+            'perpage' => 12,
+        ]);
+        $ucctitles = $this->extract_titles($this->extract_items($uccresult));
+        $this->assertContains('UCC only media', $ucctitles);
+        $this->assertNotContains('Math only media', $ucctitles);
+
+        $scope->create_bridge(
+            media_library_scope::LIBRARY_UCC,
+            media_library_scope::LIBRARY_MATH,
+            media_library_scope::SCOPE_MEDIA,
+            (int)$uccmedia->id,
+            'UCC vers math'
+        );
+
+        $mathresult = $repository->search((int)$archive->id, $context, [
+            'type' => 'media',
+            'libraryid' => (int)$mathlibrary->id,
+            'libraryrequired' => true,
+            'page' => 1,
+            'perpage' => 12,
+        ]);
+        $mathitems = $this->extract_items($mathresult);
+        $mathtitles = $this->extract_titles($mathitems);
+        $this->assertContains('Math only media', $mathtitles);
+        $this->assertContains('UCC only media', $mathtitles);
+
+        $bridged = null;
+        foreach ($mathitems as $item) {
+            $title = is_object($item) ? (string)($item->title ?? '') : (string)($item['title'] ?? '');
+            if ($title === 'UCC only media') {
+                $bridged = $item;
+                break;
+            }
+        }
+        $this->assertNotNull($bridged);
+        $this->assertTrue((bool)(is_object($bridged) ? $bridged->isbridged : $bridged['isbridged']));
+
+        // The bridge is UCC -> Math only. It must not expose Math content back into UCC.
+        $uccafterbridge = $repository->search((int)$archive->id, $context, [
+            'type' => 'media',
+            'libraryid' => (int)$ucclibrary->id,
+            'libraryrequired' => true,
+            'page' => 1,
+            'perpage' => 12,
+        ]);
+        $uccaftertitles = $this->extract_titles($this->extract_items($uccafterbridge));
+        $this->assertNotContains('Math only media', $uccaftertitles);
     }
 
     /**

@@ -1,0 +1,52 @@
+{
+  "contract": "uckk.univers-cite-projection/1.0.0",
+  "projection_id": "universcite:christian:current",
+  "source": {
+    "mode": "legacy_semantic_projection",
+    "state_id": "sha256:5b5f48af42f5644d4d8817138c08f4f228832b364decd18cd830d0ad99a6ed93",
+    "artifact_status": "working",
+    "authority": "external_epistemic_source",
+    "adapter_profile": "theophile.semantic-corpus.v1"
+  },
+  "scope": {
+    "universe_id": "ucc",
+    "scope_key": "christian-intellectual-corpus",
+    "include_refs": [],
+    "bridge_refs": []
+  },
+  "views": {
+    "primary": "people",
+    "secondary": [
+      "works",
+      "glossary",
+      "chronology"
+    ],
+    "glossary": {
+      "mode": "derived_index",
+      "canonical_definition_required": false,
+      "source_units": "themes-as-concept-candidates"
+    }
+  },
+  "materializations": [
+    "public_pages",
+    "thinker_pages",
+    "work_pages",
+    "glossary",
+    "chronology",
+    "mediatheque_links",
+    "relations",
+    "courses"
+  ],
+  "library": {
+    "policy": "autonomous_with_explicit_bridges",
+    "library_slug": "ucc"
+  },
+  "migration": {
+    "status": "legacy_source_pending_kristal_v5_migration",
+    "target_kristal_release": "5.0.0-rc.3",
+    "referent_profile": "kristal.referent-registry/1.0.0"
+  },
+  "extensions": {
+    "note": "Current UCC projection contract. Adoption does not assert that the legacy source has already been converted to a native Kristal v5 state."
+  }
+}

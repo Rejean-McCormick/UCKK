@@ -494,6 +494,7 @@ class restore_uckkarchive_activity_structure_step extends restore_activity_struc
         $this->map_archive_object_fields($data);
         $this->map_source_reference($data);
         $this->offset_common_dates($data);
+        $this->assign_restored_object_to_root_library($data);
 
         $newitemid = $DB->insert_record('uckkarchive_media', $this->filter_record_for_table('uckkarchive_media', $data));
 
@@ -624,6 +625,7 @@ class restore_uckkarchive_activity_structure_step extends restore_activity_struc
         $this->regenerate_uuid($data);
         $this->map_common_restore_fields($data);
         $this->offset_common_dates($data);
+        $this->assign_restored_object_to_root_library($data);
 
         $newitemid = $DB->insert_record(
             'uckkarchive_media_collection',
@@ -838,6 +840,29 @@ class restore_uckkarchive_activity_structure_step extends restore_activity_struc
         $this->add_related_files('mod_uckkarchive', 'content_marker_files', 'uckkarchive_content_marker');
         $this->add_related_files('mod_uckkarchive', 'content_review_files', 'uckkarchive_content_review');
         $this->add_related_files('mod_uckkarchive', 'cultural_protocol_files', 'uckkarchive_content_marker');
+    }
+
+    /**
+     * Put restored media/collections in the destination site's root UCKK fund.
+     *
+     * Media-library ownership and bridges are site-level configuration and are
+     * deliberately not transported by an activity backup. This avoids treating
+     * a numeric library id from another Moodle installation as authoritative.
+     * Administrators may reassign the restored objects afterwards.
+     *
+     * @param stdClass $data Restored record before insertion.
+     * @return void
+     */
+    private function assign_restored_object_to_root_library(stdClass $data): void {
+        if (!\mod_uckkarchive\local\media_library_scope::schema_ready()) {
+            return;
+        }
+
+        $scope = new \mod_uckkarchive\local\media_library_scope();
+        $library = $scope->resolve_by_slug(\mod_uckkarchive\local\media_library_scope::LIBRARY_UCKK);
+        if ($library) {
+            $data->libraryid = (int)$library->id;
+        }
     }
 
     /**

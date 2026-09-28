@@ -32,6 +32,7 @@ use external_single_structure;
 use external_value;
 use invalid_parameter_exception;
 use mod_uckkarchive\local\media;
+use mod_uckkarchive\local\media_library_scope;
 
 defined('MOODLE_INTERNAL') || die();
 
@@ -76,6 +77,12 @@ final class add_media extends external_api {
                 ),
                 'notes' => new external_value(PARAM_RAW, 'Internal notes.', VALUE_DEFAULT, ''),
             ], 'Optional media metadata.', VALUE_DEFAULT, []),
+            'libraryslug' => new external_value(
+                PARAM_ALPHANUMEXT,
+                'Home media-library slug. Defaults to the root UCKK library for backward compatibility.',
+                VALUE_DEFAULT,
+                media_library_scope::LIBRARY_UCKK
+            ),
         ]);
     }
 
@@ -94,6 +101,7 @@ final class add_media extends external_api {
      * @param int $draftitemid Draft file item id.
      * @param int $collectionid Optional collection id.
      * @param array $metadata Metadata.
+     * @param string $libraryslug Home media-library slug.
      * @return array Result.
      */
     public static function execute(
@@ -108,7 +116,8 @@ final class add_media extends external_api {
         string $audiencesuitability = 'guided',
         int $draftitemid = 0,
         int $collectionid = 0,
-        array $metadata = []
+        array $metadata = [],
+        string $libraryslug = media_library_scope::LIBRARY_UCKK
     ): array {
         global $DB, $USER;
 
@@ -125,6 +134,7 @@ final class add_media extends external_api {
             'draftitemid' => $draftitemid,
             'collectionid' => $collectionid,
             'metadata' => $metadata,
+            'libraryslug' => $libraryslug,
         ] = self::validate_parameters(self::execute_parameters(), [
             'cmid' => $cmid,
             'title' => $title,
@@ -138,6 +148,7 @@ final class add_media extends external_api {
             'draftitemid' => $draftitemid,
             'collectionid' => $collectionid,
             'metadata' => $metadata,
+            'libraryslug' => $libraryslug,
         ]);
 
         $cm = get_coursemodule_from_id('uckkarchive', $cmid, 0, false, MUST_EXIST);
@@ -156,7 +167,17 @@ final class add_media extends external_api {
         self::require_allowed_value($status, self::allowed_statuses(), 'Invalid media status.');
         self::require_allowed_value($audiencesuitability, self::allowed_audience_suitability(), 'Invalid audience suitability.');
 
+        $libraryscope = new media_library_scope();
+        $library = $libraryscope->resolve_by_slug($libraryslug);
+        if (!$library) {
+            throw new invalid_parameter_exception('Unknown media-library slug: ' . $libraryslug);
+        }
+        if ($libraryslug !== media_library_scope::LIBRARY_UCKK) {
+            require_capability('mod/uckkarchive:managelibraries', \context_system::instance());
+        }
+
         $record = [
+            'libraryid' => (int)$library->id,
             'archiveid' => (int)$archive->id,
             'courseid' => (int)$course->id,
             'cmid' => (int)$cm->id,

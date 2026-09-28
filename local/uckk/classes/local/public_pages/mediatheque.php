@@ -63,7 +63,7 @@ final class mediatheque {
             'eyebrow' => 'Bibliothèque publique',
             'title' => 'Médiathèque UCKK',
             'subtitle' => 'Explorer les médias, collections, références et passages documentés de l’Univers-Cité King Klown.',
-            'summary' => 'La Médiathèque est une porte d’entrée publique vers les savoirs, traces, œuvres, documents, sons, images, vidéos et références qui nourrissent l’UCKK. Elle rend les contenus consultables sans paywall, dans un cadre d’apprentissage familier, modernisé et ouvert.',
+            'summary' => 'La Médiathèque UCKK est le fonds public général. Les autres Univers-Cités disposent de leurs propres médiathèques par défaut. Des rattachements partagés et des bridges explicites permettent de créer des zones communes sans transformer l’ensemble en catalogue global.',
             'cardsheading' => 'Entrer dans la bibliothèque',
 
             'has_mediatheque_explorer' => true,
@@ -177,7 +177,7 @@ final class mediatheque {
                 ],
                 [
                     'label' => 'Portée par défaut',
-                    'value' => 'Contenus publics du site',
+                    'value' => 'Fonds UCKK + bridges entrants explicites',
                 ],
             ],
 

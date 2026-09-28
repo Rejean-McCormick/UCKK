@@ -164,6 +164,12 @@ final class search_mediatheque extends external_api {
                 VALUE_DEFAULT,
                 'relevance'
             ),
+            'sitekey' => new external_value(
+                PARAM_ALPHANUMEXT,
+                'Public Univers-Cité site key used to resolve its primary media library.',
+                VALUE_DEFAULT,
+                'uckk'
+            ),
         ]);
     }
 
@@ -188,7 +194,8 @@ final class search_mediatheque extends external_api {
         array $filters = [],
         int $page = 1,
         int $perpage = self::DEFAULT_PERPAGE,
-        string $sort = 'relevance'
+        string $sort = 'relevance',
+        string $sitekey = 'uckk'
     ): array {
         global $USER;
 
@@ -200,6 +207,7 @@ final class search_mediatheque extends external_api {
             'page' => $page,
             'perpage' => $perpage,
             'sort' => $sort,
+            'sitekey' => $sitekey,
         ]);
 
         $cmid = max(0, (int)$params['cmid']);
@@ -208,6 +216,10 @@ final class search_mediatheque extends external_api {
         $perpage = max(1, min(self::MAX_PERPAGE, (int)$params['perpage']));
         $query = trim((string)$params['query']);
         $sort = self::clean_sort((string)$params['sort']);
+        $sitekey = clean_param(strtolower(trim((string)$params['sitekey'])), PARAM_ALPHANUMEXT);
+        if ($sitekey === '') {
+            $sitekey = 'uckk';
+        }
         $filters = self::clean_filters((array)$params['filters']);
 
         $request = [
@@ -228,6 +240,7 @@ final class search_mediatheque extends external_api {
             'page' => $page,
             'perpage' => $perpage,
             'sort' => $sort,
+            'sitekey' => $sitekey,
         ];
 
         $service = new public_mediatheque_service();
@@ -250,8 +263,12 @@ final class search_mediatheque extends external_api {
                 'explorer' => new external_value(PARAM_ALPHANUMEXT, 'Explorer component key.'),
                 'anonymous' => new external_value(PARAM_BOOL, 'Whether the response was built for an anonymous/guest context.'),
                 'policyfiltered' => new external_value(PARAM_BOOL, 'Whether the response was policy-filtered.'),
+                'sitekey' => new external_value(PARAM_ALPHANUMEXT, 'Resolved public site key.', VALUE_DEFAULT, 'uckk'),
+                'libraryslug' => new external_value(PARAM_ALPHANUMEXT, 'Resolved primary library slug.', VALUE_DEFAULT, ''),
+                'libraryname' => new external_value(PARAM_TEXT, 'Resolved primary library name.', VALUE_DEFAULT, ''),
             ]),
             'filters' => new external_single_structure([
+                'sitekey' => new external_value(PARAM_ALPHANUMEXT, 'Applied public site key.', VALUE_DEFAULT, 'uckk'),
                 'q' => new external_value(PARAM_RAW, 'Applied query.'),
                 'query' => new external_value(PARAM_RAW, 'Applied query alias.'),
                 'type' => new external_value(PARAM_ALPHANUMEXT, 'Applied object type filter.'),
@@ -331,6 +348,13 @@ final class search_mediatheque extends external_api {
             'language' => new external_value(PARAM_LANG, 'Language code.', VALUE_DEFAULT, ''),
             'thumbnailurl' => new external_value(PARAM_URL, 'Authorised thumbnail URL.', VALUE_DEFAULT, ''),
             'detailurl' => new external_value(PARAM_LOCALURL, 'Public detail URL.', VALUE_DEFAULT, ''),
+            'library' => new external_single_structure([
+                'slug' => new external_value(PARAM_ALPHANUMEXT, 'Home library slug.', VALUE_DEFAULT, ''),
+                'name' => new external_value(PARAM_TEXT, 'Home library name.', VALUE_DEFAULT, ''),
+                'isbridged' => new external_value(PARAM_BOOL, 'Whether this item is visible through a bridge.'),
+                'bridgescope' => new external_value(PARAM_ALPHANUMEXT, 'Bridge scope: library, collection, media, or empty.', VALUE_DEFAULT, ''),
+                'bridgelabel' => new external_value(PARAM_TEXT, 'Optional bridge label.', VALUE_DEFAULT, ''),
+            ]),
             'source' => new external_single_structure([
                 'value' => new external_value(PARAM_ALPHANUMEXT, 'Source value.', VALUE_DEFAULT, ''),
                 'label' => new external_value(PARAM_TEXT, 'Source label.', VALUE_DEFAULT, ''),
@@ -504,6 +528,9 @@ final class search_mediatheque extends external_api {
             'explorer' => clean_param((string)($context['explorer'] ?? 'mediatheque_explorer'), PARAM_ALPHANUMEXT),
             'anonymous' => !empty($context['anonymous']),
             'policyfiltered' => array_key_exists('policyfiltered', $context) ? !empty($context['policyfiltered']) : true,
+            'sitekey' => clean_param((string)($context['sitekey'] ?? 'uckk'), PARAM_ALPHANUMEXT),
+            'libraryslug' => clean_param((string)($context['libraryslug'] ?? ''), PARAM_ALPHANUMEXT),
+            'libraryname' => (string)($context['libraryname'] ?? ''),
         ];
     }
 
@@ -520,6 +547,7 @@ final class search_mediatheque extends external_api {
         $q = (string)($filters['q'] ?? $filters['query'] ?? $request['q'] ?? '');
 
         return [
+            'sitekey' => clean_param((string)($filters['sitekey'] ?? $request['sitekey'] ?? 'uckk'), PARAM_ALPHANUMEXT),
             'q' => $q,
             'query' => $q,
             'type' => (string)($filters['type'] ?? $request['type'] ?? 'all'),

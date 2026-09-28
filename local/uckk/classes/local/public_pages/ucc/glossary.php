@@ -17,10 +17,10 @@ final class glossary {
         return [
             'layout' => 'wide',
             'typography' => 'editorial',
-            'eyebrow' => 'Second axe',
+            'eyebrow' => 'Index transversal',
             'title' => 'Glossaire des mots et expressions',
             'subtitle' => 'Suivre le sens des mots à travers les auteurs, les œuvres, les traductions et les époques.',
-            'summary' => 'Le glossaire n’est pas un dictionnaire figé. Il sert de carte relationnelle : un même terme peut porter plusieurs sens selon le contexte, changer de traduction, être disputé ou devenir le point de rencontre de traditions différentes.',
+            'summary' => 'Le glossaire est un index transversal dérivé du corpus, pas un second corpus parallèle. Il permet de repartir d’un mot ou d’un concept pour retrouver les personnes, œuvres, sources et assertions qui lui donnent des sens différents selon les contextes.',
             'sections' => [
                 [
                     'title' => 'Un mot n’a pas toujours un seul sens',
@@ -28,7 +28,7 @@ final class glossary {
                 ],
                 [
                     'title' => 'Les mots relient le corpus',
-                    'body' => 'Chaque entrée peut renvoyer à des personnes, œuvres, sources, cours, débats et notions voisines. Le glossaire devient ainsi un second chemin pour naviguer dans la même encyclopédie.',
+                    'body' => 'Chaque entrée peut renvoyer à des personnes, œuvres, sources, assertions, cours, débats et notions voisines. Le glossaire inverse ainsi la navigation principale : il permet de partir d’un terme pour retrouver les trajectoires humaines et documentaires auxquelles il est relié.',
                 ],
                 [
                     'title' => 'Traduction, nuance et anachronisme',
@@ -47,8 +47,8 @@ final class glossary {
             ],
             'notices' => [
                 [
-                    'title' => 'Définitions révisables',
-                    'body' => 'Une définition peut être corrigée ou nuancée lorsqu’une objection argumentée montre qu’elle simplifie trop un auteur, une époque, une traduction ou une tradition.',
+                    'title' => 'Pas de définition souveraine',
+                    'body' => 'Une entrée peut juxtaposer plusieurs sens situés. Elle est révisable lorsque de nouvelles sources ou une objection argumentée montrent qu’elle simplifie trop un auteur, une époque, une traduction ou une tradition.',
                     'type' => 'light',
                 ],
             ],

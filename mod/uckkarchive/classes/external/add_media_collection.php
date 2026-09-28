@@ -32,6 +32,7 @@ use external_single_structure;
 use external_value;
 use invalid_parameter_exception;
 use mod_uckkarchive\local\media_collection;
+use mod_uckkarchive\local\media_library_scope;
 
 defined('MOODLE_INTERNAL') || die();
 
@@ -72,6 +73,12 @@ final class add_media_collection extends external_api {
                     []
                 ),
             ], 'Optional collection metadata.', VALUE_DEFAULT, []),
+            'libraryslug' => new external_value(
+                PARAM_ALPHANUMEXT,
+                'Home media-library slug. Defaults to the root UCKK library for backward compatibility.',
+                VALUE_DEFAULT,
+                media_library_scope::LIBRARY_UCKK
+            ),
         ]);
     }
 
@@ -85,6 +92,7 @@ final class add_media_collection extends external_api {
      * @param string $visibility Visibility.
      * @param string $status Status.
      * @param array $metadata Metadata.
+     * @param string $libraryslug Home media-library slug.
      * @return array Result.
      */
     public static function execute(
@@ -94,7 +102,8 @@ final class add_media_collection extends external_api {
         string $purpose = '',
         string $visibility = 'course',
         string $status = 'draft',
-        array $metadata = []
+        array $metadata = [],
+        string $libraryslug = media_library_scope::LIBRARY_UCKK
     ): array {
         global $DB, $USER;
 
@@ -106,6 +115,7 @@ final class add_media_collection extends external_api {
             'visibility' => $visibility,
             'status' => $status,
             'metadata' => $metadata,
+            'libraryslug' => $libraryslug,
         ] = self::validate_parameters(self::execute_parameters(), [
             'cmid' => $cmid,
             'title' => $title,
@@ -114,6 +124,7 @@ final class add_media_collection extends external_api {
             'visibility' => $visibility,
             'status' => $status,
             'metadata' => $metadata,
+            'libraryslug' => $libraryslug,
         ]);
 
         $cm = get_coursemodule_from_id('uckkarchive', $cmid, 0, false, MUST_EXIST);
@@ -129,6 +140,15 @@ final class add_media_collection extends external_api {
         $visibility = self::normalize_visibility($visibility);
         $status = self::normalize_status($status);
 
+        $libraryscope = new media_library_scope();
+        $library = $libraryscope->resolve_by_slug($libraryslug);
+        if (!$library) {
+            throw new invalid_parameter_exception('Unknown media-library slug: ' . $libraryslug);
+        }
+        if ($libraryslug !== media_library_scope::LIBRARY_UCKK) {
+            require_capability('mod/uckkarchive:managelibraries', \context_system::instance());
+        }
+
         if (!class_exists(media_collection::class) || !method_exists(media_collection::class, 'create')) {
             throw new \coding_exception(
                 'The media collection domain service must implement mod_uckkarchive\\local\\media_collection::create().'
@@ -137,6 +157,7 @@ final class add_media_collection extends external_api {
 
         $record = [
             'archiveid' => (int)$archive->id,
+            'libraryid' => (int)$library->id,
             'courseid' => (int)$course->id,
             'cmid' => (int)$cm->id,
             'contextid' => (int)$context->id,

@@ -102,6 +102,19 @@ final class media_collection {
         $record = new \stdClass();
         $record->uuid = self::generate_uuid();
         $record->archiveid = self::required_int($data, 'archiveid');
+
+        // Collections are owned by one library. Legacy callers fall back to UCKK,
+        // while modern callers can pass an explicit libraryid.
+        $record->libraryid = self::optional_int($data, 'libraryid');
+        if ($record->libraryid <= 0 && media_library_scope::schema_ready()) {
+            $libraryscope = new media_library_scope();
+            $rootlibrary = $libraryscope->resolve_by_slug(media_library_scope::LIBRARY_UCKK);
+            if ($rootlibrary) {
+                $record->libraryid = (int)$rootlibrary->id;
+            } else {
+                unset($record->libraryid);
+            }
+        }
         $record->courseid = self::optional_int($data, 'courseid');
         $record->cmid = self::optional_int($data, 'cmid');
         $record->contextid = self::optional_int($data, 'contextid');

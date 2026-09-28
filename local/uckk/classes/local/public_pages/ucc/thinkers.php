@@ -17,10 +17,10 @@ final class thinkers {
         return [
             'layout' => 'wide',
             'typography' => 'editorial',
-            'eyebrow' => 'Premier axe',
+            'eyebrow' => 'Vue principale du corpus',
             'title' => 'Penseurs et auteurs',
             'subtitle' => 'Entrer dans le savoir par les humains qui ont formulé, transmis, commenté ou contesté des idées.',
-            'summary' => 'Chaque personne devient un nœud : œuvres, concepts, influences, critiques, traductions, héritages et transformations. Le but n’est pas de dresser un panthéon, mais de rendre visibles les relations qui structurent l’histoire intellectuelle.',
+            'summary' => 'Chaque personne — et, lorsque le corpus l’exige, certains collectifs intellectuels — devient un nœud relié à des œuvres, concepts, influences, critiques, traductions, héritages et transformations. Le but n’est pas de dresser un panthéon, mais de rendre visibles les relations qui structurent l’histoire intellectuelle.',
             'sections' => [
                 [
                     'title' => 'Une personne, plusieurs contextes',

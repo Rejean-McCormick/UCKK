@@ -61,9 +61,9 @@ final class mediatheque {
             'typography' => 'institutional',
 
             'eyebrow' => 'Bibliothèque publique',
-            'title' => 'Médiathèque UCC',
+            'title' => 'Médiathèque chrétienne',
             'subtitle' => 'Explorer les œuvres, médias, collections, références et passages documentés de l’Univers-Cité chrétienne.',
-            'summary' => 'La Médiathèque est une porte d’entrée publique vers les savoirs, traces, œuvres, documents, sons, images, vidéos et références qui nourrissent l’UCC. Elle rend les contenus consultables sans paywall, dans un cadre d’apprentissage familier, modernisé et ouvert.',
+            'summary' => 'La Médiathèque chrétienne constitue un fonds autonome. Elle rassemble les œuvres, documents, sons, images, vidéos et références rattachés à l’Univers-Cité chrétienne. Des bridges explicites peuvent rendre visibles certaines ressources d’autres médiathèques sans les copier ni changer leur fonds d’origine.',
             'cardsheading' => 'Entrer dans la bibliothèque',
 
             'has_mediatheque_explorer' => true,
@@ -116,7 +116,7 @@ final class mediatheque {
                     'type' => 'orientation',
                     'eyebrow' => 'Exploration',
                     'title' => 'Une bibliothèque vivante de savoirs publics',
-                    'body' => 'L’explorateur permet de chercher, filtrer et parcourir les contenus rendus publics par l’UCC : médias, documents, références, collections et fragments contextualisés. La Médiathèque soutient la diffusion immédiate du savoir et l’apprentissage autonome.',
+                    'body' => 'L’explorateur cherche d’abord dans le fonds propre de l’Univers-Cité chrétienne. Les contenus reçus par bridge restent identifiés à leur médiathèque d’origine, afin de permettre les croisements entre corpus sans fusionner les fonds.',
                     'items' => [
                         'Recherche par texte, format, source, collection, langue et mot-clé.',
                         'Parcours libre dans les contenus publics accessibles.',
@@ -152,7 +152,7 @@ final class mediatheque {
             'notices' => [
                 [
                     'title' => 'Bibliothèque ouverte',
-                    'body' => 'La Médiathèque participe à la mission publique de l’UCC : rendre les savoirs accessibles, partageables et praticables dans un environnement d’apprentissage ouvert.',
+                    'body' => 'Le fonds chrétien est séparé par défaut des autres médiathèques. Le partage avec une autre Univers-Cité doit être explicite : médiathèque commune ou bridge vers une collection, un média ou un fonds complet.',
                     'type' => 'institutional',
                 ],
                 [
@@ -169,7 +169,7 @@ final class mediatheque {
                 ],
                 [
                     'label' => 'Bibliothèque',
-                    'value' => 'Médiathèque UCC',
+                    'value' => 'Médiathèque chrétienne',
                 ],
                 [
                     'label' => 'Service',
@@ -177,7 +177,7 @@ final class mediatheque {
                 ],
                 [
                     'label' => 'Portée par défaut',
-                    'value' => 'Contenus publics du site',
+                    'value' => 'Fonds chrétien + bridges entrants explicites',
                 ],
             ],
 

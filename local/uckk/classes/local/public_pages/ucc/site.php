@@ -52,7 +52,7 @@ final class site {
             'assemblies' => 'Assemblées UCC',
             'integrity' => 'Intégrité UCC',
             'archives' => 'Registraire UCC',
-            'mediatheque' => 'Médiathèque UCC',
+            'mediatheque' => 'Médiathèque chrétienne — Univers-Cité chrétienne',
             'news' => 'Actualités UCC',
             'contact' => 'Contact — Univers-Cité chrétienne',
         ];

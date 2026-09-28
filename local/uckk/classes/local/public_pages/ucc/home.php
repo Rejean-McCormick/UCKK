@@ -41,9 +41,9 @@ final class home {
             'sections' => [
                 [
                     'type' => 'positioning',
-                    'eyebrow' => 'Premier axe',
+                    'eyebrow' => 'Vue principale',
                     'title' => 'Le savoir passe par les humains',
-                    'body' => 'Tout savoir transmis jusqu’à nous a été formulé, conservé, traduit, commenté, enseigné, contesté ou transformé par des personnes. Univers-Cité prend ces trajectoires humaines comme premier fil conducteur.',
+                    'body' => 'Tout savoir transmis jusqu’à nous a été formulé, conservé, traduit, commenté, enseigné, contesté ou transformé par des personnes et des collectifs. Dans ce corpus, Univers-Cité prend ces trajectoires humaines comme vue principale, sans en faire une règle universelle pour toutes les Univers-Cités.',
                     'items' => [
                         'Relier un penseur à ses œuvres, ses sources, son époque, ses influences et sa réception.',
                         'Juxtaposer des perspectives plutôt que réduire l’histoire à une seule interprétation.',
@@ -52,9 +52,9 @@ final class home {
                 ],
                 [
                     'type' => 'architecture',
-                    'eyebrow' => 'Second axe',
-                    'title' => 'Les mots forment une autre cartographie',
-                    'body' => 'Un mot change de sens selon les siècles, les auteurs et les traditions. Le glossaire permet de suivre ces déplacements et de relier les personnes, les œuvres et les débats au vocabulaire qu’ils emploient.',
+                    'eyebrow' => 'Index transversal',
+                    'title' => 'Les mots relient les trajectoires',
+                    'body' => 'Un mot change de sens selon les siècles, les auteurs et les traditions. Le glossaire n’est pas un second corpus ni un axe parallèle : il inverse la navigation afin de relier les personnes, les œuvres, les sources et les assertions par les concepts et expressions qu’ils mobilisent.',
                     'items' => [
                         'Entrer par un mot ou une expression plutôt que par une biographie.',
                         'Comparer les définitions, usages, traductions et déplacements de sens.',
@@ -81,18 +81,18 @@ final class home {
                 ],
             ],
 
-            'cardsheading' => 'Deux axes, quatre repères',
+            'cardsheading' => 'Une vue principale, plusieurs chemins',
             'cards' => [
                 [
                     'title' => 'Penseurs et auteurs',
-                    'body' => 'Le premier axe : suivre les humains qui ont produit, transmis ou transformé les idées.',
+                    'body' => 'La vue principale du corpus : suivre les humains et collectifs qui ont produit, transmis ou transformé les idées.',
                     'url' => '/local/uckk/thinkers.php',
                     'actionlabel' => 'Explorer les penseurs',
                     'type' => 'people',
                 ],
                 [
                     'title' => 'Glossaire',
-                    'body' => 'Le second axe : suivre les mots et expressions qui permettent de relier les œuvres et les époques.',
+                    'body' => 'Un index transversal dérivé : partir des mots et concepts pour retrouver les personnes, œuvres, sources et contextes qui les portent.',
                     'url' => '/local/uckk/glossary.php',
                     'actionlabel' => 'Explorer les mots',
                     'type' => 'glossary',
@@ -143,15 +143,15 @@ final class home {
             'metadataheading' => 'Repères du projet',
             'metadata' => [
                 ['label' => 'Nature', 'value' => 'Encyclopédie relationnelle en construction'],
-                ['label' => 'Premier axe', 'value' => 'Penseurs, auteurs et trajectoires humaines'],
-                ['label' => 'Second axe', 'value' => 'Glossaire de mots, expressions et concepts'],
+                ['label' => 'Vue principale', 'value' => 'Personnes, auteurs, penseurs et collectifs intellectuels'],
+                ['label' => 'Index transversal', 'value' => 'Glossaire dérivé des concepts reliés aux personnes, œuvres, sources et assertions'],
                 ['label' => 'Point de départ', 'value' => 'Héritages chrétiens, dont un important corpus catholique'],
                 ['label' => 'Horizon', 'value' => 'Relier progressivement les intellectuels marquants de l’histoire humaine'],
             ],
 
             'cta' => [
-                'title' => 'Commencer par les personnes ou par les mots',
-                'body' => 'Les deux axes se répondent : un penseur renvoie à des concepts; un concept renvoie à des auteurs, des œuvres et des contextes.',
+                'title' => 'Entrer par les personnes, traverser par les concepts',
+                'body' => 'La navigation principale part des personnes; le glossaire permet ensuite de retraverser le même corpus par les mots et concepts qui relient leurs œuvres, leurs sources et leurs positions.',
                 'url' => '/local/uckk/thinkers.php',
                 'label' => 'Entrer par les penseurs',
             ],

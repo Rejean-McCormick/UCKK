@@ -45,8 +45,8 @@ final class method {
             ],
             'cardsheading' => 'Appliquer la méthode',
             'cards' => [
-                ['title' => 'Penseurs', 'body' => 'Présenter les auteurs dans leur contexte et distinguer leurs propres positions de leur réception.', 'url' => '/local/uckk/thinkers.php', 'actionlabel' => 'Voir le premier axe', 'type' => 'people'],
-                ['title' => 'Glossaire', 'body' => 'Conserver les sens concurrents d’un terme lorsqu’ils dépendent de l’époque ou de l’auteur.', 'url' => '/local/uckk/glossary.php', 'actionlabel' => 'Voir le second axe', 'type' => 'glossary'],
+                ['title' => 'Penseurs', 'body' => 'Présenter les auteurs dans leur contexte et distinguer leurs propres positions de leur réception.', 'url' => '/local/uckk/thinkers.php', 'actionlabel' => 'Voir la vue principale', 'type' => 'people'],
+                ['title' => 'Glossaire', 'body' => 'Conserver les sens concurrents d’un terme lorsqu’ils dépendent de l’époque ou de l’auteur.', 'url' => '/local/uckk/glossary.php', 'actionlabel' => 'Voir l’index transversal', 'type' => 'glossary'],
                 ['title' => 'Transparence', 'body' => 'Séparer la méthode éditoriale du statut institutionnel et de toute reconnaissance ecclésiale.', 'url' => '/local/uckk/transparency.php', 'actionlabel' => 'Voir le statut', 'type' => 'integrity'],
             ],
             'notices' => [

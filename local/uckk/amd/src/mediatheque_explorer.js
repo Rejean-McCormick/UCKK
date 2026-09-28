@@ -46,6 +46,7 @@ const SELECTORS = {
 const DEFAULT_STATE = {
     cmid: 0,
     archiveid: 0,
+    sitekey: 'uckk',
     q: '',
     type: 'all',
     mediatype: 'all',
@@ -358,6 +359,7 @@ const buildFilters = state => {
 const buildServiceArgs = state => ({
     cmid: toNonNegativeInt(state.cmid, 0),
     archiveid: toNonNegativeInt(state.archiveid, 0),
+    sitekey: state.sitekey || DEFAULT_STATE.sitekey,
     query: state.q || '',
     filters: buildFilters(state),
     page: toPositiveInt(state.page, DEFAULT_STATE.page),
@@ -480,11 +482,15 @@ const renderFallbackCard = item => {
     const summary = item.summary || '';
     const type = item.objecttype || item.mediatype || '';
     const detailUrl = item.detailurl || '#';
+    const library = item.library && typeof item.library === 'object' ? item.library : {};
+    const libraryName = library.name || '';
+    const bridge = library.isbridged ? (library.bridgelabel || library.bridgescope || 'bridge') : '';
+    const provenance = [type, libraryName, bridge ? `pont: ${bridge}` : ''].filter(Boolean).join(' · ');
 
     return [
         '<article class="local-uckk-mediatheque-card">',
         '<div class="local-uckk-mediatheque-card__body">',
-        type ? `<p class="local-uckk-mediatheque-card__eyebrow">${escapeHtml(type)}</p>` : '',
+        provenance ? `<p class="local-uckk-mediatheque-card__eyebrow">${escapeHtml(provenance)}</p>` : '',
         `<h3 class="local-uckk-mediatheque-card__title"><a href="${escapeHtml(detailUrl)}">${escapeHtml(title)}</a></h3>`,
         summary ? `<p class="local-uckk-mediatheque-card__summary">${escapeHtml(summary)}</p>` : '',
         '</div>',

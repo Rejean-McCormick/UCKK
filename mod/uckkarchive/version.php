@@ -17,10 +17,10 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'mod_uckkarchive';
-$plugin->version = 2026060401;
+$plugin->version = 2026092802;
 $plugin->requires = 2025041400;
 $plugin->maturity = MATURITY_BETA;
-$plugin->release = '1.1.5-beta';
+$plugin->release = '1.2.0-beta';
 
 $plugin->dependencies = [
     'local_uckk' => 2026051200,

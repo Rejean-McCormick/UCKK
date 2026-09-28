@@ -13,7 +13,20 @@
     "corpus_id": "corpus-catholique-theophile-v0.2.1",
     "state_id": "sha256:5b5f48af42f5644d4d8817138c08f4f228832b364decd18cd830d0ad99a6ed93",
     "mode": "read_only_semantic_projection",
-    "glossary": "atlas/ucc_glossary_map.json"
+    "glossary": "atlas/ucc_glossary_map.json",
+    "projection_contract": "uckk.univers-cite-projection/1.0.0",
+    "projection_status": "legacy_semantic_source_pending_kristal_v5_migration",
+    "primary_view": "people",
+    "secondary_views": [
+      "works",
+      "glossary",
+      "chronology"
+    ],
+    "glossary_mode": "derived_index",
+    "target_kristal": {
+      "release": "5.0.0-rc.3",
+      "referent_profile": "kristal.referent-registry/1.0.0"
+    }
   },
   "learning": {
     "provider": "UCC on Moodle/local_uckk",
@@ -77,6 +90,9 @@
     "UCC/UCKK owns curriculum structure and learning progression.",
     "The Médiathèque manifest owns resource identity and publication state.",
     "CertifiKation evaluates pinned course blueprints and must preserve source/provenance distinctions.",
-    "Legacy UCKK ids may be used technically but must not replace canonical UCC identities in new integrations."
+    "Legacy UCKK ids may be used technically but must not replace canonical UCC identities in new integrations.",
+    "The primary view is a UCC consumer-navigation choice, not a universal Kristal ontology rule.",
+    "The glossary is a derived transversal index over the corpus and does not become a second epistemic canon.",
+    "The current Theophile semantic state remains a transitional working source until an explicit Kristal v5 migration is completed."
   ]
 }

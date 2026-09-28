@@ -84,13 +84,20 @@ final class public_mediatheque_service {
     /** @var public_mediatheque_repository Repository. */
     private public_mediatheque_repository $repository;
 
+    /** @var media_library_scope Library/site scope resolver. */
+    private media_library_scope $libraryscope;
+
     /**
      * Constructor.
      *
      * @param public_mediatheque_repository|null $repository Optional repository for tests.
      */
-    public function __construct(?public_mediatheque_repository $repository = null) {
+    public function __construct(
+        ?public_mediatheque_repository $repository = null,
+        ?media_library_scope $libraryscope = null
+    ) {
         $this->repository = $repository ?? new public_mediatheque_repository();
+        $this->libraryscope = $libraryscope ?? new media_library_scope();
     }
 
     /**
@@ -125,8 +132,12 @@ final class public_mediatheque_service {
     public function search(array $request = [], ?context_module $context = null, ?stdClass $user = null): array {
         [$archiveid, $context] = $this->resolve_scope($request, $context);
         $filters = $this->normalise_request($request);
+        $library = $this->resolve_library_for_site((string)$filters['sitekey']);
+        $repositoryfilters = $filters;
+        $repositoryfilters['libraryrequired'] = true;
+        $repositoryfilters['libraryid'] = $library ? (int)$library->id : 0;
 
-        $result = $this->repository->search($archiveid, $context, $filters);
+        $result = $this->repository->search($archiveid, $context, $repositoryfilters);
 
         $items = $this->normalise_items($this->get_array_value($result, 'items'));
         $total = max(0, $this->get_int_value($result, 'total', count($items)));
@@ -141,6 +152,9 @@ final class public_mediatheque_service {
                 'explorer' => self::EXPLORER_KEY,
                 'anonymous' => empty($user) || empty($user->id),
                 'policyfiltered' => true,
+                'sitekey' => (string)$filters['sitekey'],
+                'libraryslug' => $library ? (string)$library->slug : '',
+                'libraryname' => $library ? format_string((string)$library->name) : '',
             ],
             'filters' => $filters,
             'facets' => $this->normalise_facets($this->get_array_value($result, 'facets')),
@@ -185,6 +199,12 @@ final class public_mediatheque_service {
      */
     public function get_item(array $request = [], ?context_module $context = null, ?stdClass $user = null): array {
         [$archiveid, $context] = $this->resolve_scope($request, $context);
+        $sitekey = media_library_scope::clean_site_key((string)($request['sitekey'] ?? media_library_scope::SITE_UCKK));
+        if ($sitekey === '') {
+            $sitekey = media_library_scope::SITE_UCKK;
+        }
+        $library = $this->resolve_library_for_site($sitekey);
+        $libraryid = $library ? (int)$library->id : 0;
 
         $type = $this->allow(
             $request['type'] ?? self::OBJECT_MEDIA,
@@ -212,7 +232,9 @@ final class public_mediatheque_service {
                 'message' => 'This public item type is not yet available for detail rendering.',
             ];
         } else {
-            $record = $this->repository->get_media_by_uuid($archiveid, $context, $uuid);
+            $record = $library
+                ? $this->repository->get_media_by_uuid($archiveid, $context, $uuid, $libraryid)
+                : null;
 
             if ($record) {
                 $item = $this->normalise_item($record);
@@ -227,6 +249,9 @@ final class public_mediatheque_service {
                 'explorer' => self::EXPLORER_KEY,
                 'anonymous' => empty($user) || empty($user->id),
                 'policyfiltered' => true,
+                'sitekey' => $sitekey,
+                'libraryslug' => $library ? (string)$library->slug : '',
+                'libraryname' => $library ? format_string((string)$library->name) : '',
             ],
             'request' => [
                 'cmid' => max(0, (int)($request['cmid'] ?? 0)),
@@ -234,6 +259,7 @@ final class public_mediatheque_service {
                 'item' => $uuid,
                 'uuid' => $uuid,
                 'type' => $type,
+                'sitekey' => $sitekey,
             ],
             'item' => $item,
             'notices' => $this->build_notices([]),
@@ -245,6 +271,11 @@ final class public_mediatheque_service {
                     : '',
             ],
         ];
+    }
+
+    /** Resolve the primary autonomous media library for one public site. */
+    private function resolve_library_for_site(string $sitekey): ?stdClass {
+        return $this->libraryscope->resolve_primary_for_site($sitekey);
     }
 
     /**
@@ -312,9 +343,15 @@ final class public_mediatheque_service {
         $perpage = (int)($request['perpage'] ?? self::DEFAULT_PERPAGE);
         $perpage = min(self::MAX_PERPAGE, max(1, $perpage));
 
+        $sitekey = media_library_scope::clean_site_key((string)($request['sitekey'] ?? media_library_scope::SITE_UCKK));
+        if ($sitekey === '') {
+            $sitekey = media_library_scope::SITE_UCKK;
+        }
+
         return [
             'cmid' => max(0, (int)($request['cmid'] ?? 0)),
             'archiveid' => max(0, (int)($request['archiveid'] ?? 0)),
+            'sitekey' => $sitekey,
             'q' => $this->clean_text($request['q'] ?? $request['query'] ?? ''),
             'type' => $this->allow(
                 $request['type'] ?? self::OBJECT_ALL,
@@ -417,6 +454,25 @@ final class public_mediatheque_service {
         $culturalprotocol = $this->get_array_or_object_value($item, 'culturalprotocol');
         $relations = $this->get_array_or_object_value($item, 'relations');
         $actions = $this->get_array_or_object_value($item, 'actions');
+        $libraryraw = $this->get_array_or_object_value($item, 'library');
+
+        $libraryslug = $this->get_string_value($item, 'libraryslug');
+        if ($libraryslug === '') {
+            $libraryslug = $this->get_string_value($libraryraw, 'slug');
+        }
+        $libraryname = $this->get_string_value($item, 'libraryname');
+        if ($libraryname === '') {
+            $libraryname = $this->get_string_value($libraryraw, 'name');
+        }
+        $isbridged = $this->get_bool_value($item, 'isbridged') || $this->get_bool_value($libraryraw, 'isbridged');
+        $bridgescope = $this->get_string_value($item, 'bridgescope');
+        if ($bridgescope === '') {
+            $bridgescope = $this->get_string_value($libraryraw, 'bridgescope');
+        }
+        $bridgelabel = $this->get_string_value($item, 'bridgelabel');
+        if ($bridgelabel === '') {
+            $bridgelabel = $this->get_string_value($libraryraw, 'bridgelabel');
+        }
 
         $sourcevalue = $this->get_string_value($item, 'sourcevalue');
         if ($sourcevalue === '') {
@@ -487,6 +543,13 @@ final class public_mediatheque_service {
             'language' => $this->get_string_value($item, 'language'),
             'thumbnailurl' => $this->get_string_value($item, 'thumbnailurl'),
             'detailurl' => $this->detail_url($uuid, $objecttype),
+            'library' => [
+                'slug' => $libraryslug,
+                'name' => $libraryname,
+                'isbridged' => $isbridged,
+                'bridgescope' => $bridgescope,
+                'bridgelabel' => $bridgelabel,
+            ],
             'externalurl' => $externalurl,
             'hasexternalurl' => $hasexternalurl,
             'externalactionlabel' => $this->external_action_label(),

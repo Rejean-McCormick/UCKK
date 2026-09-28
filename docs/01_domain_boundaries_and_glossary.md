@@ -133,7 +133,7 @@ Archives preserve both readings and decisions when connected mode is used.
 | Défi | Dedicated activity instance: `mod_uckkchallenge` |
 | Assemblée | Dedicated activity instance: `mod_uckkassembly` |
 | Archive | Dedicated activity instance: `mod_uckkarchive` plus cross-plugin evidence store |
-| Kristal pédagogique | Structured knowledge item stored in archive, glossary, or local UCKK registry |
+| Kristal pédagogique | Projection ou référence Moodle vers un artefact de connaissance Kristal/source piné; la copie locale ne devient pas l’autorité épistémique |
 | Preuve | File, text, link, observation, decision, grade, or archive item supporting competence |
 | Portfolio | Aggregated evidence map attached to a Joueur |
 | Tronc commun | Mandatory course set seeded by `tool_uckkseed` |
@@ -385,3 +385,21 @@ The domain layer is done when:
 [ ] Every major standalone workflow has PHPUnit and/or Behat coverage before core release.
 [ ] Every enabled Konnaxion-connected workflow has PHPUnit and/or Behat coverage before connected-mode release.
 ```
+
+
+## 8. Univers-Cité knowledge projection boundary
+
+UCKK/Moodle is a consumer and interaction surface over pinned knowledge artifacts. A Univers-Cité owns its scope, primary navigation view, derived indexes, learning materializations and media presentation; it does not redefine Kristal referent/assertion authority.
+
+For the current Univers-Cité chrétienne:
+
+```text
+primary view     = people
+glossary         = derived_index
+media library    = autonomous_with_explicit_bridges
+current source   = legacy working semantic corpus
+target contract  = uckk.univers-cite-projection/1.0.0
+Kristal target   = 5.0.0-rc.3 + kristal.referent-registry/1.0.0
+```
+
+The primary view is domain-specific consumer configuration. Other Univers-Cités may be process-first, place-first, installation-first or use another view without changing the UCKK/Kristal boundary.
