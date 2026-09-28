@@ -14,15 +14,16 @@ final class programs {
                 'body' => $pathway['description'],
                 'metadata' => [
                     ['label' => 'ID canonique', 'value' => $pathway['pathway_id']],
+                    ['label' => 'Cours', 'value' => (string)count($pathway['course_ids'] ?? [])],
                 ],
             ];
         }
 
         return site::base_definition() + [
             'eyebrow' => 'Parcours',
-            'title' => 'Cartographier les mathématiques',
-            'subtitle' => 'Des domaines reliés plutôt qu’une simple liste de matières.',
-            'summary' => 'Les parcours organisent les domaines autour de grandes familles de questions plutôt que d’une simple succession de matières. Les identifiants math.path.* constituent désormais la taxonomie canonique de l’Univers-Cité des mathématiques.',
+            'title' => 'Huit parcours autour d’un même noyau conceptuel',
+            'subtitle' => 'De e, π et i vers Euler, l’information, la calculabilité et les mathématiques expérimentales.',
+            'summary' => 'Les parcours sont dérivés des concepts portés par les documents d’ancrage : intelligibilité mathématique; continuité et exponentielle; cyclicité et π; nombres complexes et phase; synthèse d’Euler; information et calculabilité; normalité et expérimentation sur π; proportion et auto-similarité comme axe exploratoire. Les identifiants math.path.* restent la taxonomie canonique.',
             'sections' => $sections,
             'cardsheading' => 'Explorer',
             'cards' => [

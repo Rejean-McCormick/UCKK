@@ -1,0 +1,162 @@
+{
+  "schema_version": "MATH-MEDIATHEQUE-REFERENCES-1.0",
+  "universe_id": "math",
+  "policy": {
+    "source_grounding": "Only references explicit in the supplied documents are included in this initial registry. URLs are not invented; external access may be added after verification."
+  },
+  "items": [
+    {
+      "media_id": "math.media.anchor.e-pi-i",
+      "title": "Continuous Change, Cyclicity, and Phase: A Structural Reading of e, π, and i",
+      "creator": "Réjean McCormick",
+      "kind": "anchor_document",
+      "source_document_ref": "math.source.e-pi-i",
+      "local_files": [
+        "local/uckk/reference/math/anchors/continuous-change-cyclicity-phase.pdf",
+        "local/uckk/reference/math/anchors/continuous-change-cyclicity-phase.docx"
+      ],
+      "concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.scientific-representation",
+        "math.concept.structural-realism",
+        "math.concept.patterns",
+        "math.concept.continuity",
+        "math.concept.derivative",
+        "math.concept.exponential-e",
+        "math.concept.differential-equations",
+        "math.concept.cyclicity",
+        "math.concept.pi",
+        "math.concept.radians",
+        "math.concept.periodicity",
+        "math.concept.trigonometry",
+        "math.concept.fourier",
+        "math.concept.complex-numbers",
+        "math.concept.imaginary-unit",
+        "math.concept.rotation",
+        "math.concept.phase",
+        "math.concept.euler-formula",
+        "math.concept.euler-identity",
+        "math.concept.golden-ratio",
+        "math.concept.self-similarity",
+        "math.concept.recursion"
+      ]
+    },
+    {
+      "media_id": "math.media.anchor.modern-notes",
+      "title": "Références math / physique modernes",
+      "creator": "non spécifié dans le document",
+      "kind": "research_orientation_note",
+      "source_document_ref": "math.source.modern-notes",
+      "local_files": [
+        "local/uckk/reference/math/anchors/modern-math-physics-reference-notes.docx"
+      ],
+      "concept_refs": [
+        "math.concept.pi",
+        "math.concept.information",
+        "math.concept.computability",
+        "math.concept.algorithmic-complexity",
+        "math.concept.mdl",
+        "math.concept.mathematical-universe",
+        "math.concept.digital-physics",
+        "math.concept.normal-numbers",
+        "math.concept.algorithmic-randomness",
+        "math.concept.bbp",
+        "math.concept.statistical-testing",
+        "math.concept.monte-carlo",
+        "math.concept.base-robustness"
+      ]
+    },
+    {
+      "media_id": "math.media.ref.galilei-assayer",
+      "title": "The Assayer",
+      "creator": "Galileo Galilei",
+      "kind": "bibliographic_reference",
+      "publication_note": "1957 edition cited in anchor document",
+      "source_document_ref": "math.source.e-pi-i",
+      "concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.scientific-representation"
+      ],
+      "access_status": "bibliographic_only_no_url_in_source"
+    },
+    {
+      "media_id": "math.media.ref.ladyman-structural-realism",
+      "title": "What Is Structural Realism?",
+      "creator": "James Ladyman",
+      "kind": "bibliographic_reference",
+      "publication_note": "1998",
+      "source_document_ref": "math.source.e-pi-i",
+      "concept_refs": [
+        "math.concept.structural-realism"
+      ],
+      "access_status": "bibliographic_only_no_url_in_source"
+    },
+    {
+      "media_id": "math.media.ref.resnik-patterns",
+      "title": "Mathematics as a Science of Patterns",
+      "creator": "Michael D. Resnik",
+      "kind": "bibliographic_reference",
+      "publication_note": "1997",
+      "source_document_ref": "math.source.e-pi-i",
+      "concept_refs": [
+        "math.concept.patterns",
+        "math.concept.mathematical-intelligibility"
+      ],
+      "access_status": "bibliographic_only_no_url_in_source"
+    },
+    {
+      "media_id": "math.media.ref.shapiro-thinking-mathematics",
+      "title": "Thinking about Mathematics: The Philosophy of Mathematics",
+      "creator": "Stewart Shapiro",
+      "kind": "bibliographic_reference",
+      "publication_note": "2000",
+      "source_document_ref": "math.source.e-pi-i",
+      "concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.patterns"
+      ],
+      "access_status": "bibliographic_only_no_url_in_source"
+    },
+    {
+      "media_id": "math.media.ref.stewart-calculus",
+      "title": "Calculus: Early Transcendentals",
+      "creator": "James Stewart",
+      "kind": "bibliographic_reference",
+      "publication_note": "2016 edition cited",
+      "source_document_ref": "math.source.e-pi-i",
+      "concept_refs": [
+        "math.concept.continuity",
+        "math.concept.derivative",
+        "math.concept.exponential-e",
+        "math.concept.differential-equations"
+      ],
+      "access_status": "bibliographic_only_no_url_in_source"
+    },
+    {
+      "media_id": "math.media.ref.tegmark-mathematical-universe",
+      "title": "The Mathematical Universe",
+      "creator": "Max Tegmark",
+      "kind": "bibliographic_reference",
+      "publication_note": "2008",
+      "source_document_ref": "math.source.e-pi-i",
+      "concept_refs": [
+        "math.concept.mathematical-universe",
+        "math.concept.structural-realism"
+      ],
+      "access_status": "bibliographic_only_no_url_in_source"
+    },
+    {
+      "media_id": "math.media.ref.wigner-effectiveness",
+      "title": "The Unreasonable Effectiveness of Mathematics in the Natural Sciences",
+      "creator": "Eugene P. Wigner",
+      "kind": "bibliographic_reference",
+      "publication_note": "1960",
+      "source_document_ref": "math.source.e-pi-i",
+      "concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.scientific-representation"
+      ],
+      "access_status": "bibliographic_only_no_url_in_source"
+    }
+  ]
+}

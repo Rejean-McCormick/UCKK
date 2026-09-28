@@ -1,60 +1,1271 @@
 {
-  "schema_version": "MATH-CURRICULUM-1.0",
+  "schema_version": "MATH-CURRICULUM-2.0",
   "universe_id": "math",
   "name": "Univers-Cité des mathématiques",
   "technical_component": "local_uckk",
   "policy": {
     "canonical_namespace": "math.path",
-    "legacy_mode": "none_declared",
-    "write_rule": "Only canonical math.path.* identifiers may be written by new integrations.",
-    "course_authority": "Moodle runtime; this registry currently defines pathway taxonomy only."
+    "course_namespace": "MATH",
+    "legacy_mode": "read_only_migration",
+    "write_rule": "Only canonical math.path.* pathway identifiers and MATH-* course identifiers may be written by new integrations.",
+    "course_authority": "This registry defines the canonical conceptual curriculum; Moodle runtime materializes course spaces.",
+    "curriculum_focus": "Concepts explicitly supported by the anchor documents and their cited research directions.",
+    "epistemic_boundary": "Structural and mathematical claims are kept distinct from stronger metaphysical or ontological interpretations."
   },
+  "source_documents": [
+    {
+      "source_document_id": "math.source.e-pi-i",
+      "title": "Continuous Change, Cyclicity, and Phase: A Structural Reading of e, π, and i",
+      "author": "Réjean McCormick",
+      "role": "conceptual_anchor",
+      "local_files": [
+        "local/uckk/reference/math/anchors/continuous-change-cyclicity-phase.pdf",
+        "local/uckk/reference/math/anchors/continuous-change-cyclicity-phase.docx"
+      ]
+    },
+    {
+      "source_document_id": "math.source.modern-notes",
+      "title": "Références math / physique modernes",
+      "role": "research_orientation_note",
+      "local_files": [
+        "local/uckk/reference/math/anchors/modern-math-physics-reference-notes.docx"
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "concept_id": "math.concept.mathematical-intelligibility",
+      "title": "Intelligibilité mathématique",
+      "description": "Pourquoi certaines structures mathématiques rendent-elles le réel intelligible ?",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.scientific-representation",
+      "title": "Représentation scientifique",
+      "description": "Rapport entre structure formelle, modèle et phénomène représenté.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.structural-realism",
+      "title": "Réalisme structural",
+      "description": "Lecture où la structure mathématique est philosophiquement significative sans être confondue avec une ontologie démontrée.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.patterns",
+      "title": "Structures et motifs",
+      "description": "Mathématiques comme étude de structures, relations et motifs récurrents.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.continuity",
+      "title": "Continuité",
+      "description": "Variation sans saut et cadre de base pour l’analyse du changement.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.derivative",
+      "title": "Dérivée",
+      "description": "Mesure locale du changement et relation entre état et taux de variation.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.exponential-e",
+      "title": "Constante e et exponentielle",
+      "description": "Forme canonique de variation auto-proportionnelle.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.differential-equations",
+      "title": "Équations différentielles",
+      "description": "Formalisation des lois de changement, notamment y’=y.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.cyclicity",
+      "title": "Cyclicité",
+      "description": "Changement continu qui se referme et revient.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.pi",
+      "title": "Constante π",
+      "description": "Constante canonique de la mesure circulaire et pivot de la périodicité.",
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "concept_id": "math.concept.radians",
+      "title": "Radians et mesure angulaire",
+      "description": "Mesure géométriquement naturelle de la rotation.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.periodicity",
+      "title": "Périodicité",
+      "description": "Répétition structurée, fonctions périodiques et oscillations.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.trigonometry",
+      "title": "Trigonométrie",
+      "description": "Langage des angles, cycles, sinus et cosinus.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.fourier",
+      "title": "Fourier et décomposition harmonique",
+      "description": "Lien entre périodicité, fréquences, ondes et représentations trigonométriques.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.complex-numbers",
+      "title": "Nombres complexes",
+      "description": "Extension algébrique permettant une géométrie de la rotation et de la phase.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.imaginary-unit",
+      "title": "Unité imaginaire i",
+      "description": "Élément algébrique dont la multiplication correspond à une rotation d’un quart de tour.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.rotation",
+      "title": "Rotation",
+      "description": "Transformation géométrique et algébrique dans le plan complexe.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.phase",
+      "title": "Phase",
+      "description": "Position interne au sein d’un cycle ou d’une oscillation.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.euler-formula",
+      "title": "Formule d’Euler",
+      "description": "Convergence analytique de l’exponentielle, de la trigonométrie et des nombres complexes.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.euler-identity",
+      "title": "Identité d’Euler",
+      "description": "Cas e^{iπ}+1=0, concentration de plusieurs structures fondamentales.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.information",
+      "title": "Information",
+      "description": "Lecture mathématique et physique de l’information.",
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "concept_id": "math.concept.computability",
+      "title": "Calculabilité",
+      "description": "Ce qui peut être produit ou décrit par une procédure effective.",
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "concept_id": "math.concept.algorithmic-complexity",
+      "title": "Complexité algorithmique",
+      "description": "Mesure de simplicité/descriptibilité utilisée pour évaluer motifs et modèles.",
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "concept_id": "math.concept.mdl",
+      "title": "MDL et pénalisation de complexité",
+      "description": "Comparer des modèles en tenant compte de leur coût descriptif.",
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "concept_id": "math.concept.mathematical-universe",
+      "title": "Univers mathématique",
+      "description": "Hypothèses où la structure mathématique joue un rôle ontologique ou fondamental.",
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "concept_id": "math.concept.digital-physics",
+      "title": "Physique informationnelle et numérique",
+      "description": "Famille d’idées où calcul, information et lois physiques sont rapprochés.",
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "concept_id": "math.concept.normal-numbers",
+      "title": "Normalité des nombres",
+      "description": "Distribution asymptotique des chiffres et blocs dans une base donnée.",
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "concept_id": "math.concept.algorithmic-randomness",
+      "title": "Aléatoire algorithmique",
+      "description": "Distinction entre apparence statistique de hasard et incompressibilité algorithmique.",
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "concept_id": "math.concept.bbp",
+      "title": "Formule BBP et extraction de chiffres",
+      "description": "Accès à certains chiffres de π sans calculer tous les précédents, notamment en base 16.",
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "concept_id": "math.concept.statistical-testing",
+      "title": "Tests statistiques",
+      "description": "Hypothèses nulles, seuils et tests falsifiables appliqués aux chiffres de π.",
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "concept_id": "math.concept.monte-carlo",
+      "title": "Monte-Carlo",
+      "description": "Échantillonnage et procédures numériques pour explorer des hypothèses statistiques.",
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "concept_id": "math.concept.base-robustness",
+      "title": "Robustesse aux bases",
+      "description": "Vérifier qu’un motif ne dépend pas artificiellement de la base ou du codage choisi.",
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "concept_id": "math.concept.golden-ratio",
+      "title": "Nombre d’or φ",
+      "description": "Axe exploratoire de proportion et organisation géométrique.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.self-similarity",
+      "title": "Auto-similarité",
+      "description": "Répétition structurale à plusieurs échelles.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "concept_id": "math.concept.recursion",
+      "title": "Récursion et croissance récursive",
+      "description": "Structures définies par récurrence et dynamiques de construction.",
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    }
+  ],
   "pathways": [
     {
-      "pathway_id": "math.path.structures",
-      "code": "STR",
-      "title": "Structures",
-      "description": "Algèbre, logique, combinatoire, théorie des nombres et structures discrètes.",
-      "public_queries": [
-        "algèbre",
-        "logique",
-        "combinatoire",
-        "théorie des nombres"
+      "pathway_id": "math.path.intelligibility-structure",
+      "code": "INT",
+      "title": "Intelligibilité, structures et modèles",
+      "description": "Étudier pourquoi les mathématiques décrivent si efficacement les phénomènes, en distinguant représentation, structure, preuve et interprétation.",
+      "course_ids": [
+        "MATH-INT-101",
+        "MATH-INT-102",
+        "MATH-INT-103",
+        "MATH-INT-104",
+        "MATH-INT-105",
+        "MATH-INT-106",
+        "MATH-INT-107",
+        "MATH-INT-108"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
       ]
     },
     {
-      "pathway_id": "math.path.spaces",
-      "code": "SPA",
-      "title": "Espaces",
-      "description": "Géométrie, topologie, mesure et représentations.",
-      "public_queries": [
-        "géométrie",
-        "topologie",
-        "mesure"
+      "pathway_id": "math.path.continuity-exponential",
+      "code": "EXP",
+      "title": "Continuité, changement et exponentielle",
+      "description": "De la variation continue à la constante e : dérivée, croissance, décroissance et équations différentielles.",
+      "course_ids": [
+        "MATH-EXP-101",
+        "MATH-EXP-102",
+        "MATH-EXP-103",
+        "MATH-EXP-104",
+        "MATH-EXP-105",
+        "MATH-EXP-106",
+        "MATH-EXP-107",
+        "MATH-EXP-108"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
       ]
     },
     {
-      "pathway_id": "math.path.change",
-      "code": "CHA",
-      "title": "Changements",
-      "description": "Analyse, équations différentielles, systèmes dynamiques et optimisation.",
-      "public_queries": [
-        "analyse",
-        "équations différentielles",
-        "systèmes dynamiques",
-        "optimisation"
+      "pathway_id": "math.path.cyclicity-pi",
+      "code": "CYC",
+      "title": "π, cercle et cyclicité",
+      "description": "Comprendre π comme constante de mesure circulaire et comme pivot des structures périodiques.",
+      "course_ids": [
+        "MATH-CYC-101",
+        "MATH-CYC-102",
+        "MATH-CYC-103",
+        "MATH-CYC-104",
+        "MATH-CYC-105",
+        "MATH-CYC-106",
+        "MATH-CYC-107",
+        "MATH-CYC-108"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
       ]
     },
     {
-      "pathway_id": "math.path.uncertainty",
-      "code": "UNC",
-      "title": "Incertitude",
-      "description": "Probabilités, statistique, information et processus aléatoires.",
-      "public_queries": [
-        "probabilités",
-        "statistique",
-        "information",
-        "processus aléatoires"
+      "pathway_id": "math.path.complex-phase",
+      "code": "PHA",
+      "title": "Nombres complexes, rotation et phase",
+      "description": "Passer des nombres complexes à une géométrie algébrique de la rotation, de l’argument et de la phase.",
+      "course_ids": [
+        "MATH-PHA-101",
+        "MATH-PHA-102",
+        "MATH-PHA-103",
+        "MATH-PHA-104",
+        "MATH-PHA-105",
+        "MATH-PHA-106",
+        "MATH-PHA-107",
+        "MATH-PHA-108"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "pathway_id": "math.path.euler-synthesis",
+      "code": "EUL",
+      "title": "Formule d’Euler et synthèse des structures",
+      "description": "Faire converger changement continu, mesure circulaire et rotation complexe autour de la formule d’Euler.",
+      "course_ids": [
+        "MATH-EUL-101",
+        "MATH-EUL-102",
+        "MATH-EUL-103",
+        "MATH-EUL-104",
+        "MATH-EUL-105",
+        "MATH-EUL-106",
+        "MATH-EUL-107",
+        "MATH-EUL-108"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "pathway_id": "math.path.information-computation-universe",
+      "code": "INF",
+      "title": "Information, calculabilité et univers mathématique",
+      "description": "Explorer les liens entre information, calcul, complexité et hypothèses d’univers mathématique ou numérique.",
+      "course_ids": [
+        "MATH-INF-101",
+        "MATH-INF-102",
+        "MATH-INF-103",
+        "MATH-INF-104",
+        "MATH-INF-105",
+        "MATH-INF-106",
+        "MATH-INF-107",
+        "MATH-INF-108"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "pathway_id": "math.path.pi-randomness-experiment",
+      "code": "RND",
+      "title": "π, normalité et mathématiques expérimentales",
+      "description": "Étudier les chiffres de π comme terrain d’expérimentation sur normalité, hasard, complexité et protocoles falsifiables.",
+      "course_ids": [
+        "MATH-RND-101",
+        "MATH-RND-102",
+        "MATH-RND-103",
+        "MATH-RND-104",
+        "MATH-RND-105",
+        "MATH-RND-106",
+        "MATH-RND-107",
+        "MATH-RND-108"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "pathway_id": "math.path.proportion-self-similarity",
+      "code": "PHI",
+      "title": "φ, proportion, récursion et auto-similarité",
+      "description": "Axe exploratoire ouvert par le papier : proportion, croissance récursive, auto-similarité et organisation géométrique.",
+      "course_ids": [
+        "MATH-PHI-101",
+        "MATH-PHI-102",
+        "MATH-PHI-103",
+        "MATH-PHI-104",
+        "MATH-PHI-105",
+        "MATH-PHI-106",
+        "MATH-PHI-107",
+        "MATH-PHI-108"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "math_course_id": "MATH-INT-101",
+      "pathway_id": "math.path.intelligibility-structure",
+      "title": "Pourquoi les mathématiques décrivent-elles le monde ?",
+      "concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.scientific-representation"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-102",
+      "pathway_id": "math.path.intelligibility-structure",
+      "title": "Objets, structures et motifs",
+      "concept_refs": [
+        "math.concept.patterns",
+        "math.concept.scientific-representation"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-103",
+      "pathway_id": "math.path.intelligibility-structure",
+      "title": "Modèles : hypothèses, portée et perte",
+      "concept_refs": [
+        "math.concept.scientific-representation",
+        "math.concept.mathematical-intelligibility"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-104",
+      "pathway_id": "math.path.intelligibility-structure",
+      "title": "Preuve, calcul et interprétation",
+      "concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.patterns"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-105",
+      "pathway_id": "math.path.intelligibility-structure",
+      "title": "Réalisme structural : thèse et limites",
+      "concept_refs": [
+        "math.concept.structural-realism",
+        "math.concept.scientific-representation"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-106",
+      "pathway_id": "math.path.intelligibility-structure",
+      "title": "Constantes comme marqueurs de structure",
+      "concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.patterns",
+        "math.concept.pi",
+        "math.concept.exponential-e",
+        "math.concept.imaginary-unit"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-107",
+      "pathway_id": "math.path.intelligibility-structure",
+      "title": "Niveaux d’explication : mathématique, physique, métaphysique",
+      "concept_refs": [
+        "math.concept.structural-realism",
+        "math.concept.mathematical-intelligibility"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-108",
+      "pathway_id": "math.path.intelligibility-structure",
+      "title": "Atelier de cartographie conceptuelle",
+      "concept_refs": [
+        "math.concept.patterns",
+        "math.concept.scientific-representation",
+        "math.concept.structural-realism"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-101",
+      "pathway_id": "math.path.continuity-exponential",
+      "title": "Continuité et variation",
+      "concept_refs": [
+        "math.concept.continuity"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-102",
+      "pathway_id": "math.path.continuity-exponential",
+      "title": "La dérivée comme taux local de changement",
+      "concept_refs": [
+        "math.concept.derivative",
+        "math.concept.continuity"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-103",
+      "pathway_id": "math.path.continuity-exponential",
+      "title": "L’exponentielle naturelle et la constante e",
+      "concept_refs": [
+        "math.concept.exponential-e",
+        "math.concept.derivative"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-104",
+      "pathway_id": "math.path.continuity-exponential",
+      "title": "L’équation y’ = y",
+      "concept_refs": [
+        "math.concept.differential-equations",
+        "math.concept.exponential-e"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-105",
+      "pathway_id": "math.path.continuity-exponential",
+      "title": "Croissance et décroissance exponentielles",
+      "concept_refs": [
+        "math.concept.exponential-e",
+        "math.concept.differential-equations"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-106",
+      "pathway_id": "math.path.continuity-exponential",
+      "title": "Changement auto-proportionnel et modèles",
+      "concept_refs": [
+        "math.concept.exponential-e",
+        "math.concept.scientific-representation"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-107",
+      "pathway_id": "math.path.continuity-exponential",
+      "title": "Exponentielle, probabilité et physique statistique",
+      "concept_refs": [
+        "math.concept.exponential-e",
+        "math.concept.scientific-representation"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-108",
+      "pathway_id": "math.path.continuity-exponential",
+      "title": "Limites des modèles continus",
+      "concept_refs": [
+        "math.concept.continuity",
+        "math.concept.scientific-representation"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-101",
+      "pathway_id": "math.path.cyclicity-pi",
+      "title": "π : du cercle à la structure",
+      "concept_refs": [
+        "math.concept.pi"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-102",
+      "pathway_id": "math.path.cyclicity-pi",
+      "title": "Radians et mesure angulaire",
+      "concept_refs": [
+        "math.concept.radians",
+        "math.concept.pi"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-103",
+      "pathway_id": "math.path.cyclicity-pi",
+      "title": "Sinus, cosinus et cercle unité",
+      "concept_refs": [
+        "math.concept.trigonometry",
+        "math.concept.radians",
+        "math.concept.pi"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-104",
+      "pathway_id": "math.path.cyclicity-pi",
+      "title": "Fonctions périodiques",
+      "concept_refs": [
+        "math.concept.periodicity",
+        "math.concept.trigonometry"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-105",
+      "pathway_id": "math.path.cyclicity-pi",
+      "title": "Oscillations et cycles",
+      "concept_refs": [
+        "math.concept.cyclicity",
+        "math.concept.periodicity"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-106",
+      "pathway_id": "math.path.cyclicity-pi",
+      "title": "Ondes et fréquences",
+      "concept_refs": [
+        "math.concept.periodicity",
+        "math.concept.fourier"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-107",
+      "pathway_id": "math.path.cyclicity-pi",
+      "title": "Décomposition de Fourier",
+      "concept_refs": [
+        "math.concept.fourier",
+        "math.concept.trigonometry",
+        "math.concept.periodicity"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-108",
+      "pathway_id": "math.path.cyclicity-pi",
+      "title": "π au-delà de la géométrie élémentaire",
+      "concept_refs": [
+        "math.concept.pi",
+        "math.concept.periodicity",
+        "math.concept.fourier"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-101",
+      "pathway_id": "math.path.complex-phase",
+      "title": "Pourquoi les nombres complexes ?",
+      "concept_refs": [
+        "math.concept.complex-numbers"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-102",
+      "pathway_id": "math.path.complex-phase",
+      "title": "Le plan complexe",
+      "concept_refs": [
+        "math.concept.complex-numbers",
+        "math.concept.rotation"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-103",
+      "pathway_id": "math.path.complex-phase",
+      "title": "Multiplier par i : rotation d’un quart de tour",
+      "concept_refs": [
+        "math.concept.imaginary-unit",
+        "math.concept.rotation"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-104",
+      "pathway_id": "math.path.complex-phase",
+      "title": "Module, argument et forme polaire",
+      "concept_refs": [
+        "math.concept.complex-numbers",
+        "math.concept.phase"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-105",
+      "pathway_id": "math.path.complex-phase",
+      "title": "Phase et position dans un cycle",
+      "concept_refs": [
+        "math.concept.phase",
+        "math.concept.cyclicity"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-106",
+      "pathway_id": "math.path.complex-phase",
+      "title": "Oscillations déphasées",
+      "concept_refs": [
+        "math.concept.phase",
+        "math.concept.periodicity"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-107",
+      "pathway_id": "math.path.complex-phase",
+      "title": "Exponentielle complexe",
+      "concept_refs": [
+        "math.concept.complex-numbers",
+        "math.concept.exponential-e",
+        "math.concept.phase"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-108",
+      "pathway_id": "math.path.complex-phase",
+      "title": "Applications : ondes, signaux et mécanique quantique",
+      "concept_refs": [
+        "math.concept.phase",
+        "math.concept.complex-numbers",
+        "math.concept.scientific-representation"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-101",
+      "pathway_id": "math.path.euler-synthesis",
+      "title": "De l’exponentielle réelle à l’exponentielle complexe",
+      "concept_refs": [
+        "math.concept.euler-formula",
+        "math.concept.exponential-e",
+        "math.concept.complex-numbers"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-102",
+      "pathway_id": "math.path.euler-synthesis",
+      "title": "Dériver la formule d’Euler",
+      "concept_refs": [
+        "math.concept.euler-formula",
+        "math.concept.trigonometry"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-103",
+      "pathway_id": "math.path.euler-synthesis",
+      "title": "e^{iθ} et le cercle unité",
+      "concept_refs": [
+        "math.concept.euler-formula",
+        "math.concept.rotation",
+        "math.concept.radians"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-104",
+      "pathway_id": "math.path.euler-synthesis",
+      "title": "L’identité e^{iπ}+1=0",
+      "concept_refs": [
+        "math.concept.euler-identity",
+        "math.concept.euler-formula",
+        "math.concept.pi"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-105",
+      "pathway_id": "math.path.euler-synthesis",
+      "title": "Équations différentielles oscillatoires",
+      "concept_refs": [
+        "math.concept.differential-equations",
+        "math.concept.euler-formula",
+        "math.concept.periodicity"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-106",
+      "pathway_id": "math.path.euler-synthesis",
+      "title": "Fourier par l’exponentielle complexe",
+      "concept_refs": [
+        "math.concept.fourier",
+        "math.concept.euler-formula",
+        "math.concept.complex-numbers"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-107",
+      "pathway_id": "math.path.euler-synthesis",
+      "title": "Continuité → cyclicité → phase",
+      "concept_refs": [
+        "math.concept.continuity",
+        "math.concept.cyclicity",
+        "math.concept.phase"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-108",
+      "pathway_id": "math.path.euler-synthesis",
+      "title": "Projet de synthèse : une identité, plusieurs structures",
+      "concept_refs": [
+        "math.concept.euler-formula",
+        "math.concept.mathematical-intelligibility",
+        "math.concept.scientific-representation"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-101",
+      "pathway_id": "math.path.information-computation-universe",
+      "title": "Information comme objet mathématique",
+      "concept_refs": [
+        "math.concept.information"
+      ],
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-102",
+      "pathway_id": "math.path.information-computation-universe",
+      "title": "Calculabilité et procédures effectives",
+      "concept_refs": [
+        "math.concept.computability"
+      ],
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-103",
+      "pathway_id": "math.path.information-computation-universe",
+      "title": "Complexité algorithmique",
+      "concept_refs": [
+        "math.concept.algorithmic-complexity",
+        "math.concept.computability"
+      ],
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-104",
+      "pathway_id": "math.path.information-computation-universe",
+      "title": "MDL : simplicité, compression et modèles",
+      "concept_refs": [
+        "math.concept.mdl",
+        "math.concept.algorithmic-complexity"
+      ],
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-105",
+      "pathway_id": "math.path.information-computation-universe",
+      "title": "A priori universels et description",
+      "concept_refs": [
+        "math.concept.algorithmic-complexity",
+        "math.concept.computability"
+      ],
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-106",
+      "pathway_id": "math.path.information-computation-universe",
+      "title": "Physique numérique et univers-computation",
+      "concept_refs": [
+        "math.concept.digital-physics",
+        "math.concept.information",
+        "math.concept.computability"
+      ],
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-107",
+      "pathway_id": "math.path.information-computation-universe",
+      "title": "Hypothèse d’univers mathématique",
+      "concept_refs": [
+        "math.concept.mathematical-universe",
+        "math.concept.structural-realism"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-108",
+      "pathway_id": "math.path.information-computation-universe",
+      "title": "Testabilité et limites des interprétations ontologiques",
+      "concept_refs": [
+        "math.concept.mathematical-universe",
+        "math.concept.structural-realism",
+        "math.concept.scientific-representation"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-101",
+      "pathway_id": "math.path.pi-randomness-experiment",
+      "title": "Chiffres, bases et représentation de π",
+      "concept_refs": [
+        "math.concept.pi",
+        "math.concept.base-robustness"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-102",
+      "pathway_id": "math.path.pi-randomness-experiment",
+      "title": "Nombres normaux",
+      "concept_refs": [
+        "math.concept.normal-numbers"
+      ],
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-103",
+      "pathway_id": "math.path.pi-randomness-experiment",
+      "title": "Nombres absolument normaux",
+      "concept_refs": [
+        "math.concept.normal-numbers",
+        "math.concept.base-robustness"
+      ],
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-104",
+      "pathway_id": "math.path.pi-randomness-experiment",
+      "title": "Formule BBP et extraction de chiffres",
+      "concept_refs": [
+        "math.concept.bbp",
+        "math.concept.pi"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-105",
+      "pathway_id": "math.path.pi-randomness-experiment",
+      "title": "Hasard statistique et hasard algorithmique",
+      "concept_refs": [
+        "math.concept.algorithmic-randomness",
+        "math.concept.normal-numbers"
+      ],
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-106",
+      "pathway_id": "math.path.pi-randomness-experiment",
+      "title": "Construire un test falsifiable sur les chiffres de π",
+      "concept_refs": [
+        "math.concept.statistical-testing",
+        "math.concept.pi"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-107",
+      "pathway_id": "math.path.pi-randomness-experiment",
+      "title": "Monte-Carlo, grands préfixes et contrôle des biais",
+      "concept_refs": [
+        "math.concept.monte-carlo",
+        "math.concept.statistical-testing"
+      ],
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-108",
+      "pathway_id": "math.path.pi-randomness-experiment",
+      "title": "MDL, pénalités et robustesse aux bases",
+      "concept_refs": [
+        "math.concept.mdl",
+        "math.concept.base-robustness",
+        "math.concept.algorithmic-complexity"
+      ],
+      "source_document_refs": [
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-101",
+      "pathway_id": "math.path.proportion-self-similarity",
+      "title": "Le nombre d’or φ",
+      "concept_refs": [
+        "math.concept.golden-ratio"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-102",
+      "pathway_id": "math.path.proportion-self-similarity",
+      "title": "Proportion et constructions géométriques",
+      "concept_refs": [
+        "math.concept.golden-ratio"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-103",
+      "pathway_id": "math.path.proportion-self-similarity",
+      "title": "Suites récurrentes et Fibonacci",
+      "concept_refs": [
+        "math.concept.recursion",
+        "math.concept.golden-ratio"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-104",
+      "pathway_id": "math.path.proportion-self-similarity",
+      "title": "Croissance récursive",
+      "concept_refs": [
+        "math.concept.recursion"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-105",
+      "pathway_id": "math.path.proportion-self-similarity",
+      "title": "Auto-similarité et échelles",
+      "concept_refs": [
+        "math.concept.self-similarity"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-106",
+      "pathway_id": "math.path.proportion-self-similarity",
+      "title": "Proportion, forme et organisation",
+      "concept_refs": [
+        "math.concept.golden-ratio",
+        "math.concept.self-similarity"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-107",
+      "pathway_id": "math.path.proportion-self-similarity",
+      "title": "Comparer φ avec e, π et i",
+      "concept_refs": [
+        "math.concept.golden-ratio",
+        "math.concept.exponential-e",
+        "math.concept.pi",
+        "math.concept.imaginary-unit"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i",
+        "math.source.modern-notes"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-108",
+      "pathway_id": "math.path.proportion-self-similarity",
+      "title": "Projet exploratoire : un second axe d’intelligibilité ?",
+      "concept_refs": [
+        "math.concept.golden-ratio",
+        "math.concept.self-similarity",
+        "math.concept.mathematical-intelligibility"
+      ],
+      "source_document_refs": [
+        "math.source.e-pi-i"
       ]
     }
   ]

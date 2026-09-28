@@ -129,6 +129,13 @@ function local_uckk_public_courses_enrich_definition(array $definition, array $s
         ],
     ];
 
+    if ($isucc) {
+        $definition['quicklinks'][] = [
+            'label' => 'Plans des 110 cours UCC',
+            'description' => 'Lectures, objectifs, séances et évaluations proposées ; distincts des espaces Moodle ouverts.',
+            'url' => '/local/uckk/ucc_study.php',
+        ];
+    }
     $definition['cards'] = [];
     $definition['cardsheading'] = $ismath ? 'Cours disponibles' : ($isucc ? 'Cours publics UCC' : 'Cours publics');
 

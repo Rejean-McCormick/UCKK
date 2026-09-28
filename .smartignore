@@ -1,0 +1,13 @@
+# UCKK Moodle - SmartSnap ignore
+# Fichiers qui peuvent rester versionnés dans Git,
+# mais qui ne sont pas utiles dans le snapshot de code principal.
+
+.smartignore
+
+# Inventaire généré des chaînes Moodle : utile comme artefact QA dans Git,
+# mais volumineux et régénérable pour le snapshot.
+string_inventory/**
+
+# Métadonnées de snapshots précédents : le nouveau snapshot les remplace.
+SNAPSHOT_INDEX.txt
+CODE_SNAPSHOT_MANIFEST.md

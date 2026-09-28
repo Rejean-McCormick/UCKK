@@ -1,0 +1,36 @@
+{
+  "modified": [
+    "local/uckk/atlas/ucc_curriculum_registry.json",
+    "local/uckk/atlas/ucc_mediatheque_course_links.json",
+    "local/uckk/atlas/ucc_mediatheque_reference_registry.json",
+    "local/uckk/classes/external/get_ucc_course.php",
+    "local/uckk/classes/local/atlas/ucc_mediatheque_registry.php",
+    "local/uckk/classes/local/public_pages/ucc/home.php",
+    "local/uckk/classes/local/public_pages/ucc/mediatheque.php",
+    "local/uckk/classes/local/public_pages/ucc/site.php",
+    "local/uckk/courses.php",
+    "UCC_MEDIATHEQUE_COURSE_LINK_AUDIT.md"
+  ],
+  "added": [
+    "docs/Mettre ++├в jour le texte d+├Ы+├Ф+├╜une page publique UCKK-Moodle.txt",
+    "docs/Mettre +├Я jour le texte d├И├Г├Нune page publique UCKK-Moodle.txt",
+    "docs/Mettre ├а jour le texte dтАЩune page publique UCKK-Moodle.txt",
+    "docs/ucc/CATALOGUE_UCC.html",
+    "docs/ucc/INSTALLATION_ET_VALIDATION.md",
+    "docs/ucc/PLANS_110_COURS.md",
+    "docs/ucc/RAPPORT_REFONTE.md",
+    "docs/ucc/VALIDATION.md",
+    "local/uckk/atlas/ucc_course_syllabi.json",
+    "local/uckk/classes/local/atlas/ucc_syllabus_registry.php",
+    "local/uckk/tests/ucc_syllabus_registry_test.php",
+    "local/uckk/ucc_study.php",
+    "tools/ucc_editorial/build.py",
+    "tools/ucc_editorial/course_design.tsv",
+    "tools/ucc_editorial/export_html.py",
+    "tools/ucc_editorial/integrate.py",
+    "tools/ucc_editorial/new_sources.tsv",
+    "tools/ucc_editorial/validate.py"
+  ],
+  "deleted": [],
+  "unrelated_files": "Byte comparison against original ZIP; no changes in Math or academic_registry_json."
+}

@@ -11,6 +11,8 @@ use core_external\external_multiple_structure;
 use core_external\external_single_structure;
 use core_external\external_value;
 use local_uckk\local\atlas\ucc_curriculum_registry;
+use local_uckk\local\atlas\ucc_mediatheque_registry;
+use local_uckk\local\atlas\ucc_syllabus_registry;
 
 defined('MOODLE_INTERNAL') || die();
 
@@ -36,6 +38,8 @@ final class get_ucc_course extends external_api {
         self::validate_context($context);
         require_capability('local/uckk:viewcampus', $context);
         $course = ucc_curriculum_registry::get_course($params['ucccourseid']);
+        $media = ucc_mediatheque_registry::media_for_course($course['ucc_course_id']);
+        $plan = ucc_syllabus_registry::get_course($course['ucc_course_id']);
         return [
             'ucccourseid' => $course['ucc_course_id'],
             'pathwayid' => $course['pathway_id'],
@@ -45,6 +49,35 @@ final class get_ucc_course extends external_api {
             'themerefs' => array_values($course['kristal_theme_refs']),
             'coveragelevel' => $course['corpus_readiness']['level'],
             'coveragescore' => (int)$course['corpus_readiness']['coverage_score'],
+            'syllabus' => [
+                'question' => $plan['central_question'],
+                'status' => $plan['status'],
+                'estimatedhours' => $plan['estimated_hours'],
+                'objectives' => $plan['objectives'],
+                'prerequisites' => $plan['prerequisites'],
+                'languagesupport' => $plan['language_support'],
+                'sessions' => $plan['sessions'],
+                'assessmenttask' => $plan['assessment']['task'],
+                'deliverable' => $plan['assessment']['deliverable'],
+                'rubric' => $plan['assessment']['rubric'],
+                'cautions' => $plan['contextual_cautions'],
+            ],
+            'mediarefs' => array_map(static function(array $item): array {
+                return [
+                    'mediaref' => $item['media_ref'],
+                    'role' => $item['role'],
+                    'title' => $item['title'],
+                    'creator' => $item['creator'],
+                    'sourceurl' => $item['sourceurl'],
+                    'rightsstatus' => $item['rightsstatus'],
+                    'passage' => $item['passage'],
+                    'rationale' => $item['rationale'],
+                    'language' => $item['language'],
+                    'teachingnote' => $item['teachingnote'],
+                    'reviewnotice' => $item['reviewnotice'],
+                    'matchedthemerefs' => array_values($item['matched_theme_refs']),
+                ];
+            }, $media),
         ];
     }
 
@@ -58,6 +91,41 @@ final class get_ucc_course extends external_api {
             'themerefs' => new external_multiple_structure(new external_value(PARAM_RAW_TRIMMED, 'Kristal theme ref')),
             'coveragelevel' => new external_value(PARAM_ALPHANUMEXT, 'Corpus coverage level'),
             'coveragescore' => new external_value(PARAM_INT, 'Corpus coverage score'),
+            'syllabus' => new external_single_structure([
+                'question' => new external_value(PARAM_TEXT, 'Central question'),
+                'status' => new external_value(PARAM_ALPHANUMEXT, 'Editorial status, not accreditation'),
+                'estimatedhours' => new external_value(PARAM_INT, 'Indicative hours, not credits'),
+                'objectives' => new external_multiple_structure(new external_value(PARAM_TEXT, 'Objective')),
+                'prerequisites' => new external_multiple_structure(new external_value(PARAM_RAW_TRIMMED, 'Recommended course')),
+                'languagesupport' => new external_value(PARAM_TEXT, 'Source language support'),
+                'sessions' => new external_multiple_structure(new external_single_structure([
+                    'sequence' => new external_value(PARAM_INT, 'Session order'),
+                    'title' => new external_value(PARAM_TEXT, 'Session title'),
+                    'activity' => new external_value(PARAM_TEXT, 'Activity'),
+                    'output' => new external_value(PARAM_TEXT, 'Expected output'),
+                ])),
+                'assessmenttask' => new external_value(PARAM_TEXT, 'Assessment task'),
+                'deliverable' => new external_value(PARAM_TEXT, 'Deliverable'),
+                'rubric' => new external_multiple_structure(new external_single_structure([
+                    'criterion' => new external_value(PARAM_TEXT, 'Criterion'),
+                    'weight' => new external_value(PARAM_INT, 'Percentage weight'),
+                ])),
+                'cautions' => new external_multiple_structure(new external_value(PARAM_TEXT, 'Contextual caution')),
+            ]),
+            'mediarefs' => new external_multiple_structure(new external_single_structure([
+                'mediaref' => new external_value(PARAM_RAW_TRIMMED, 'Canonical UCC media reference'),
+                'role' => new external_value(PARAM_ALPHANUMEXT, 'Course-media link role'),
+                'title' => new external_value(PARAM_TEXT, 'Media title'),
+                'creator' => new external_value(PARAM_TEXT, 'Creator', VALUE_DEFAULT, ''),
+                'sourceurl' => new external_value(PARAM_RAW_TRIMMED, 'External legal/source URL', VALUE_DEFAULT, ''),
+                'rightsstatus' => new external_value(PARAM_ALPHANUMEXT, 'Rights status'),
+                'passage' => new external_value(PARAM_TEXT, 'Proposed reading locator'),
+                'rationale' => new external_value(PARAM_TEXT, 'Course-specific selection rationale'),
+                'language' => new external_value(PARAM_TEXT, 'Source language'),
+                'teachingnote' => new external_value(PARAM_TEXT, 'Source context'),
+                'reviewnotice' => new external_value(PARAM_TEXT, 'Remaining verification'),
+                'matchedthemerefs' => new external_multiple_structure(new external_value(PARAM_RAW_TRIMMED, 'Matched Kristal theme ref')),
+            ])),
         ]);
     }
 }

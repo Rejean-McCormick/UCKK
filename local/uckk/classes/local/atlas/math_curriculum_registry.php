@@ -10,7 +10,7 @@ namespace local_uckk\local\atlas;
 defined('MOODLE_INTERNAL') || die();
 
 final class math_curriculum_registry {
-    public const SCHEMA_VERSION = 'MATH-CURRICULUM-1.0';
+    public const SCHEMA_VERSION = 'MATH-CURRICULUM-2.0';
     public const RELATIVE_PATH = 'local/uckk/atlas/math_curriculum_registry.json';
 
     /** @var array<string, mixed>|null */
@@ -27,6 +27,16 @@ final class math_curriculum_registry {
     /** @return array<int, array<string, mixed>> */
     public static function pathways(): array {
         return self::get()['pathways'];
+    }
+
+    /** @return array<int, array<string, mixed>> */
+    public static function courses(): array {
+        return self::get()['courses'];
+    }
+
+    /** @return array<int, array<string, mixed>> */
+    public static function concepts(): array {
+        return self::get()['concepts'];
     }
 
     /** @return array<string, mixed> */
@@ -59,8 +69,14 @@ final class math_curriculum_registry {
         if (!is_array($doc) || ($doc['schema_version'] ?? '') !== self::SCHEMA_VERSION || ($doc['universe_id'] ?? '') !== 'math') {
             throw new \coding_exception('Invalid Math curriculum registry contract.');
         }
-        if (!isset($doc['pathways']) || !is_array($doc['pathways']) || count($doc['pathways']) !== 4) {
-            throw new \coding_exception('Math curriculum registry must contain exactly four canonical pathways.');
+        if (!isset($doc['pathways']) || !is_array($doc['pathways']) || count($doc['pathways']) !== 8) {
+            throw new \coding_exception('Math curriculum registry must contain exactly eight canonical pathways.');
+        }
+        if (!isset($doc['courses']) || !is_array($doc['courses']) || count($doc['courses']) !== 64) {
+            throw new \coding_exception('Math curriculum registry must contain exactly 64 canonical courses.');
+        }
+        if (!isset($doc['concepts']) || !is_array($doc['concepts']) || count($doc['concepts']) < 30) {
+            throw new \coding_exception('Math curriculum registry must contain the document-anchored concept map.');
         }
         $seen = [];
         foreach ($doc['pathways'] as $pathway) {
@@ -74,6 +90,17 @@ final class math_curriculum_registry {
                 }
             }
             $seen[$id] = true;
+        }
+        $seencourses = [];
+        foreach ($doc['courses'] as $course) {
+            $id = (string)($course['math_course_id'] ?? '');
+            if (!preg_match('/^MATH-[A-Z]{3}-1[0-9]{2}$/', $id) || isset($seencourses[$id])) {
+                throw new \coding_exception('Invalid or duplicate Math course id: ' . $id);
+            }
+            if (!isset($seen[(string)($course['pathway_id'] ?? '')])) {
+                throw new \coding_exception('Math course references unknown pathway: ' . $id);
+            }
+            $seencourses[$id] = true;
         }
         return $doc;
     }

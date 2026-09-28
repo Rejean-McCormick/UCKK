@@ -26,6 +26,7 @@ final class site {
     /** @return array<int, array<string, mixed>> */
     public static function navigation(): array {
         return [
+            ['key' => 'uccstudy', 'label' => 'Plans et lectures', 'url' => '/local/uckk/ucc_study.php'],
             ['key' => 'home', 'label' => 'Accueil', 'url' => '/local/uckk/index.php'],
             ['key' => 'thinkers', 'label' => 'Penseurs', 'url' => '/local/uckk/thinkers.php'],
             ['key' => 'glossary', 'label' => 'Glossaire', 'url' => '/local/uckk/glossary.php'],

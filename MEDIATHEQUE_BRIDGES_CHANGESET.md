@@ -47,3 +47,24 @@ Cette version part du snapshot « Univers-Cité chrétienne » et ajoute la sép
 - tests PHPUnit ajoutés pour l'isolation, les bridges directionnels et le partage d'un même fonds.
 
 Le snapshot ne contient pas une installation Moodle complète ni un exécutable PHPUnit, donc les tests PHPUnit n'ont pas été exécutés dans cet environnement.
+
+## Extension UCC — maillage Médiathèque ↔ cours
+
+La Médiathèque UCC dispose maintenant d'un manifeste sémantique explicite reliant les ressources historiques aux 110 cours canoniques.
+
+### Ajouts
+
+- `local/uckk/atlas/ucc_mediatheque_course_links.json` — autorité des liens cours–média;
+- `local/uckk/classes/local/atlas/ucc_mediatheque_registry.php` — lecture et validation des deux registres;
+- `local/uckk/tests/ucc_mediatheque_registry_test.php` — invariants de couverture;
+- `UCC_MEDIATHEQUE_COURSE_LINK_AUDIT.md` — audit humain de la couverture.
+
+### Contrat
+
+- 110/110 cours reliés;
+- 105/105 références de Médiathèque reliées à au moins un cours;
+- 3 à 6 références par cours;
+- liens `primary`, `supporting`, `anchor` ou `editorial_complement`;
+- les liens sémantiques reposent sur l'intersection des `kristal_theme_refs`;
+- les compléments non équivalents sémantiquement sont explicitement étiquetés;
+- `get_ucc_course` projette maintenant les références Médiathèque du cours.

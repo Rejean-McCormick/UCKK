@@ -66,7 +66,15 @@
         }
       ]
     },
-    "reference_registry": "atlas/ucc_mediatheque_reference_registry.json"
+    "reference_registry": "atlas/ucc_mediatheque_reference_registry.json",
+    "course_link_registry": "atlas/ucc_mediatheque_course_links.json",
+    "link_authority": "course-media semantic linkage manifest",
+    "link_coverage": {
+      "courses_linked": 110,
+      "courses_total": 110,
+      "minimum_media_per_course": 3,
+      "average_media_per_course": 4.08
+    }
   },
   "certification": {
     "provider": "CertifiKation",

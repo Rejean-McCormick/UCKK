@@ -1,10 +1,10 @@
 {
-  "schema_version": "MATH-PATHWAY-MIGRATIONS-1.0",
+  "schema_version": "MATH-PATHWAY-MIGRATIONS-2.0",
   "universe_id": "math",
   "policy": {
     "canonical_authority": "local/uckk/atlas/math_curriculum_registry.json",
-    "legacy_mode": "none_declared",
-    "write_rule": "Legacy identifiers are readable, never writable. No historical Math pathway identifiers are declared in this snapshot.",
+    "legacy_mode": "read_only_migration",
+    "write_rule": "Legacy identifiers are readable, never writable. New writes must use MATH-CURRICULUM-2.0 identifiers.",
     "allowed_relations": [
       "renamed_to",
       "absorbed_into",
@@ -13,6 +13,49 @@
       "retired"
     ]
   },
-  "pathways": [],
+  "pathways": [
+    {
+      "legacy_id": "math.path.structures",
+      "legacy_label": "Structures",
+      "relation": "split_into",
+      "canonical_ids": [
+        "math.path.intelligibility-structure",
+        "math.path.information-computation-universe",
+        "math.path.pi-randomness-experiment"
+      ],
+      "status": "retired"
+    },
+    {
+      "legacy_id": "math.path.spaces",
+      "legacy_label": "Espaces",
+      "relation": "split_into",
+      "canonical_ids": [
+        "math.path.cyclicity-pi",
+        "math.path.complex-phase",
+        "math.path.proportion-self-similarity"
+      ],
+      "status": "retired"
+    },
+    {
+      "legacy_id": "math.path.change",
+      "legacy_label": "Changements",
+      "relation": "split_into",
+      "canonical_ids": [
+        "math.path.continuity-exponential",
+        "math.path.euler-synthesis"
+      ],
+      "status": "retired"
+    },
+    {
+      "legacy_id": "math.path.uncertainty",
+      "legacy_label": "Incertitude",
+      "relation": "split_into",
+      "canonical_ids": [
+        "math.path.information-computation-universe",
+        "math.path.pi-randomness-experiment"
+      ],
+      "status": "retired"
+    }
+  ],
   "courses": []
 }

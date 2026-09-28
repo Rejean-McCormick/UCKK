@@ -104,6 +104,8 @@ final class mediatheque {
             ],
 
             'quicklinks' => [
+                ['label' => 'Plans et lectures', 'description' => '110 plans de séminaire : passages, objectifs, activités, évaluations et limites documentaires.', 'url' => '/local/uckk/ucc_study.php'],
+                ['label' => 'Références par cours', 'description' => 'Consulter les sources externes sélectionnées et retrouver leurs cours.', 'url' => '/local/uckk/ucc_study.php?view=references'],
                 [
                     'label' => 'Rechercher',
                     'description' => 'Trouver des médias publics, collections ouvertes, références externes et passages documentés.',
@@ -112,6 +114,11 @@ final class mediatheque {
             ],
 
             'sections' => [
+                [
+                    'title' => 'Lire les sources, comparer, argumenter',
+                    'body' => 'Les 11 Voies disposent de 110 plans de séminaire. Chaque plan propose une question, des passages à lire, cinq séances, une production et un barème. Un socle conseillé relie Écriture, théologie, histoire, vie spirituelle et méthode critique. Les plans restent soumis à relecture ; les espaces Moodle ouverts sont indiqués séparément.',
+                    'items' => ['Œuvres jusqu’en 1926 inclusivement ; exceptions : Teilhard de Chardin, Fratelli tutti et Le Dieu cosmique.', 'Distinguer source biblique, définition conciliaire, théologien, témoignage historique et interprétation éditoriale.', 'Les langues, éditions, passages et droits encore à vérifier sont signalés.'],
+                ],
                 [
                     'type' => 'orientation',
                     'eyebrow' => 'Exploration',
@@ -132,6 +139,17 @@ final class mediatheque {
                         'ISBN papier : 978-2-89044-764-6.',
                         'L’ouvrage demeure sous droit d’auteur : UCC référence les accès légaux et les métadonnées, sans republier le PDF ou l’EPUB.',
                         'La Voie du Dieu cosmique distingue les références attestées de l’ouvrage des lectures complémentaires ajoutées par UCC.',
+                    ],
+                ],
+                [
+                    'type' => 'orientation',
+                    'eyebrow' => 'Maillage pédagogique',
+                    'title' => 'Chaque cours ouvre sur des sources pertinentes',
+                    'body' => 'Les 110 plans proposent des lectures choisies individuellement, avec passages et raisons pédagogiques. Le catalogue des références externes est accessible depuis Plans et lectures ; l’explorateur ci-dessous conserve les médias effectivement publiés dans Moodle.',
+                    'items' => [
+                        '110 cours sur 110 possèdent des liens documentaires.',
+                        'Chaque lecture possède une justification propre au cours ; une proximité de mots-clés ne suffit pas.',
+                        'Les références restent rattachées à leurs droits, à leur source externe et à leur provenance.',
                     ],
                 ],
                 [

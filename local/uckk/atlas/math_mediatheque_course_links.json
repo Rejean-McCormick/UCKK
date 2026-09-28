@@ -1,0 +1,1228 @@
+{
+  "schema_version": "MATH-MEDIATHEQUE-COURSE-LINKS-1.0",
+  "universe_id": "math",
+  "policy": {
+    "method": "explicit concept-ref intersection",
+    "max_media_per_course": 5
+  },
+  "links": [
+    {
+      "math_course_id": "MATH-INT-101",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-101",
+      "media_id": "math.media.ref.galilei-assayer",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-101",
+      "media_id": "math.media.ref.resnik-patterns",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-101",
+      "media_id": "math.media.ref.shapiro-thinking-mathematics",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-101",
+      "media_id": "math.media.ref.wigner-effectiveness",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-102",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.patterns",
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-102",
+      "media_id": "math.media.ref.resnik-patterns",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.patterns"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-102",
+      "media_id": "math.media.ref.shapiro-thinking-mathematics",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.patterns"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-102",
+      "media_id": "math.media.ref.galilei-assayer",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-102",
+      "media_id": "math.media.ref.wigner-effectiveness",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-103",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-103",
+      "media_id": "math.media.ref.galilei-assayer",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-103",
+      "media_id": "math.media.ref.wigner-effectiveness",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-103",
+      "media_id": "math.media.ref.resnik-patterns",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-103",
+      "media_id": "math.media.ref.shapiro-thinking-mathematics",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-104",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.patterns"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-104",
+      "media_id": "math.media.ref.galilei-assayer",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-104",
+      "media_id": "math.media.ref.resnik-patterns",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.patterns"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-104",
+      "media_id": "math.media.ref.shapiro-thinking-mathematics",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.patterns"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-104",
+      "media_id": "math.media.ref.wigner-effectiveness",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-105",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.scientific-representation",
+        "math.concept.structural-realism"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-105",
+      "media_id": "math.media.ref.ladyman-structural-realism",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.structural-realism"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-105",
+      "media_id": "math.media.ref.tegmark-mathematical-universe",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.structural-realism"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-105",
+      "media_id": "math.media.ref.galilei-assayer",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-105",
+      "media_id": "math.media.ref.wigner-effectiveness",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-106",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.exponential-e",
+        "math.concept.imaginary-unit",
+        "math.concept.mathematical-intelligibility",
+        "math.concept.patterns",
+        "math.concept.pi"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-106",
+      "media_id": "math.media.ref.galilei-assayer",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-106",
+      "media_id": "math.media.ref.resnik-patterns",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.patterns"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-106",
+      "media_id": "math.media.ref.shapiro-thinking-mathematics",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.patterns"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-106",
+      "media_id": "math.media.ref.wigner-effectiveness",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-107",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.structural-realism"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-107",
+      "media_id": "math.media.ref.ladyman-structural-realism",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.structural-realism"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-107",
+      "media_id": "math.media.ref.tegmark-mathematical-universe",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.structural-realism"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-107",
+      "media_id": "math.media.ref.galilei-assayer",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-107",
+      "media_id": "math.media.ref.resnik-patterns",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-108",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.patterns",
+        "math.concept.scientific-representation",
+        "math.concept.structural-realism"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-108",
+      "media_id": "math.media.ref.resnik-patterns",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.patterns"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-108",
+      "media_id": "math.media.ref.shapiro-thinking-mathematics",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.patterns"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-108",
+      "media_id": "math.media.ref.galilei-assayer",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INT-108",
+      "media_id": "math.media.ref.wigner-effectiveness",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-101",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.continuity"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-101",
+      "media_id": "math.media.ref.stewart-calculus",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.continuity"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-102",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.continuity",
+        "math.concept.derivative"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-102",
+      "media_id": "math.media.ref.stewart-calculus",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.continuity",
+        "math.concept.derivative"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-103",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.derivative",
+        "math.concept.exponential-e"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-103",
+      "media_id": "math.media.ref.stewart-calculus",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.derivative",
+        "math.concept.exponential-e"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-104",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.differential-equations",
+        "math.concept.exponential-e"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-104",
+      "media_id": "math.media.ref.stewart-calculus",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.differential-equations",
+        "math.concept.exponential-e"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-105",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.differential-equations",
+        "math.concept.exponential-e"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-105",
+      "media_id": "math.media.ref.stewart-calculus",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.differential-equations",
+        "math.concept.exponential-e"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-106",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.exponential-e",
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-106",
+      "media_id": "math.media.ref.stewart-calculus",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.exponential-e"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-106",
+      "media_id": "math.media.ref.galilei-assayer",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-106",
+      "media_id": "math.media.ref.wigner-effectiveness",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-107",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.exponential-e",
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-107",
+      "media_id": "math.media.ref.stewart-calculus",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.exponential-e"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-107",
+      "media_id": "math.media.ref.galilei-assayer",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-107",
+      "media_id": "math.media.ref.wigner-effectiveness",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-108",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.continuity",
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-108",
+      "media_id": "math.media.ref.stewart-calculus",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.continuity"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-108",
+      "media_id": "math.media.ref.galilei-assayer",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EXP-108",
+      "media_id": "math.media.ref.wigner-effectiveness",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-101",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.pi"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-101",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.pi"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-102",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.pi",
+        "math.concept.radians"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-102",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.pi"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-103",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.pi",
+        "math.concept.radians",
+        "math.concept.trigonometry"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-103",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.pi"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-104",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.periodicity",
+        "math.concept.trigonometry"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-105",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.cyclicity",
+        "math.concept.periodicity"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-106",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.fourier",
+        "math.concept.periodicity"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-107",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.fourier",
+        "math.concept.periodicity",
+        "math.concept.trigonometry"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-108",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.fourier",
+        "math.concept.periodicity",
+        "math.concept.pi"
+      ]
+    },
+    {
+      "math_course_id": "MATH-CYC-108",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.pi"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-101",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.complex-numbers"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-102",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.complex-numbers",
+        "math.concept.rotation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-103",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.imaginary-unit",
+        "math.concept.rotation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-104",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.complex-numbers",
+        "math.concept.phase"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-105",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.cyclicity",
+        "math.concept.phase"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-106",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.periodicity",
+        "math.concept.phase"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-107",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.complex-numbers",
+        "math.concept.exponential-e",
+        "math.concept.phase"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-107",
+      "media_id": "math.media.ref.stewart-calculus",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.exponential-e"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-108",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.complex-numbers",
+        "math.concept.phase",
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-108",
+      "media_id": "math.media.ref.galilei-assayer",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHA-108",
+      "media_id": "math.media.ref.wigner-effectiveness",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-101",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.complex-numbers",
+        "math.concept.euler-formula",
+        "math.concept.exponential-e"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-101",
+      "media_id": "math.media.ref.stewart-calculus",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.exponential-e"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-102",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.euler-formula",
+        "math.concept.trigonometry"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-103",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.euler-formula",
+        "math.concept.radians",
+        "math.concept.rotation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-104",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.euler-formula",
+        "math.concept.euler-identity",
+        "math.concept.pi"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-104",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.pi"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-105",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.differential-equations",
+        "math.concept.euler-formula",
+        "math.concept.periodicity"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-105",
+      "media_id": "math.media.ref.stewart-calculus",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.differential-equations"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-106",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.complex-numbers",
+        "math.concept.euler-formula",
+        "math.concept.fourier"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-107",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.continuity",
+        "math.concept.cyclicity",
+        "math.concept.phase"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-107",
+      "media_id": "math.media.ref.stewart-calculus",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.continuity"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-108",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.euler-formula",
+        "math.concept.mathematical-intelligibility",
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-108",
+      "media_id": "math.media.ref.galilei-assayer",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-108",
+      "media_id": "math.media.ref.resnik-patterns",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-108",
+      "media_id": "math.media.ref.shapiro-thinking-mathematics",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility"
+      ]
+    },
+    {
+      "math_course_id": "MATH-EUL-108",
+      "media_id": "math.media.ref.wigner-effectiveness",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility",
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-101",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.information"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-102",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.computability"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-103",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.algorithmic-complexity",
+        "math.concept.computability"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-104",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.algorithmic-complexity",
+        "math.concept.mdl"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-105",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.algorithmic-complexity",
+        "math.concept.computability"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-106",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.computability",
+        "math.concept.digital-physics",
+        "math.concept.information"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-107",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.structural-realism"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-107",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-universe"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-107",
+      "media_id": "math.media.ref.tegmark-mathematical-universe",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-universe",
+        "math.concept.structural-realism"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-107",
+      "media_id": "math.media.ref.ladyman-structural-realism",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.structural-realism"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-108",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.scientific-representation",
+        "math.concept.structural-realism"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-108",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-universe"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-108",
+      "media_id": "math.media.ref.tegmark-mathematical-universe",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-universe",
+        "math.concept.structural-realism"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-108",
+      "media_id": "math.media.ref.ladyman-structural-realism",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.structural-realism"
+      ]
+    },
+    {
+      "math_course_id": "MATH-INF-108",
+      "media_id": "math.media.ref.galilei-assayer",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.scientific-representation"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-101",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.pi"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-101",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.base-robustness",
+        "math.concept.pi"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-102",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.normal-numbers"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-103",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.base-robustness",
+        "math.concept.normal-numbers"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-104",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.pi"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-104",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.bbp",
+        "math.concept.pi"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-105",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.algorithmic-randomness",
+        "math.concept.normal-numbers"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-106",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.pi"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-106",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.pi",
+        "math.concept.statistical-testing"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-107",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.monte-carlo",
+        "math.concept.statistical-testing"
+      ]
+    },
+    {
+      "math_course_id": "MATH-RND-108",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.algorithmic-complexity",
+        "math.concept.base-robustness",
+        "math.concept.mdl"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-101",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.golden-ratio"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-102",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.golden-ratio"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-103",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.golden-ratio",
+        "math.concept.recursion"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-104",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.recursion"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-105",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.self-similarity"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-106",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.golden-ratio",
+        "math.concept.self-similarity"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-107",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.exponential-e",
+        "math.concept.golden-ratio",
+        "math.concept.imaginary-unit",
+        "math.concept.pi"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-107",
+      "media_id": "math.media.ref.stewart-calculus",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.exponential-e"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-107",
+      "media_id": "math.media.anchor.modern-notes",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.pi"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-108",
+      "media_id": "math.media.anchor.e-pi-i",
+      "role": "anchor",
+      "shared_concept_refs": [
+        "math.concept.golden-ratio",
+        "math.concept.mathematical-intelligibility",
+        "math.concept.self-similarity"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-108",
+      "media_id": "math.media.ref.galilei-assayer",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-108",
+      "media_id": "math.media.ref.resnik-patterns",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-108",
+      "media_id": "math.media.ref.shapiro-thinking-mathematics",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility"
+      ]
+    },
+    {
+      "math_course_id": "MATH-PHI-108",
+      "media_id": "math.media.ref.wigner-effectiveness",
+      "role": "supporting",
+      "shared_concept_refs": [
+        "math.concept.mathematical-intelligibility"
+      ]
+    }
+  ]
+}

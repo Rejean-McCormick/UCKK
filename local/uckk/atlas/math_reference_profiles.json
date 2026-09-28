@@ -1,0 +1,90 @@
+{
+  "schema_version": "MATH-REFERENCE-PROFILES-1.0",
+  "universe_id": "math",
+  "source_document_ref": "math.source.modern-notes",
+  "policy": {
+    "status": "orientation_only",
+    "note": "Profiles preserve the uploaded research-orientation note; current affiliations or claims require independent verification before publication."
+  },
+  "profiles": [
+    {
+      "name": "Anthony Aguirre",
+      "concept_refs": [
+        "math.concept.mathematical-universe",
+        "math.concept.digital-physics"
+      ],
+      "role": "orientation_profile"
+    },
+    {
+      "name": "Seth Lloyd",
+      "concept_refs": [
+        "math.concept.digital-physics",
+        "math.concept.information",
+        "math.concept.computability"
+      ],
+      "role": "orientation_profile"
+    },
+    {
+      "name": "Jürgen Schmidhuber",
+      "concept_refs": [
+        "math.concept.computability",
+        "math.concept.algorithmic-complexity",
+        "math.concept.mathematical-universe"
+      ],
+      "role": "orientation_profile"
+    },
+    {
+      "name": "Marcus Hutter",
+      "concept_refs": [
+        "math.concept.algorithmic-complexity",
+        "math.concept.mdl",
+        "math.concept.computability"
+      ],
+      "role": "orientation_profile"
+    },
+    {
+      "name": "Hector Zenil",
+      "concept_refs": [
+        "math.concept.algorithmic-complexity",
+        "math.concept.information",
+        "math.concept.computability"
+      ],
+      "role": "orientation_profile"
+    },
+    {
+      "name": "David H. Bailey",
+      "concept_refs": [
+        "math.concept.pi",
+        "math.concept.bbp",
+        "math.concept.statistical-testing"
+      ],
+      "role": "orientation_profile"
+    },
+    {
+      "name": "Cristian S. Calude",
+      "concept_refs": [
+        "math.concept.algorithmic-randomness",
+        "math.concept.normal-numbers",
+        "math.concept.statistical-testing"
+      ],
+      "role": "orientation_profile"
+    },
+    {
+      "name": "Verónica Becher",
+      "concept_refs": [
+        "math.concept.normal-numbers",
+        "math.concept.base-robustness"
+      ],
+      "role": "orientation_profile"
+    },
+    {
+      "name": "Theodore A. Slaman",
+      "concept_refs": [
+        "math.concept.normal-numbers",
+        "math.concept.computability",
+        "math.concept.algorithmic-complexity"
+      ],
+      "role": "orientation_profile"
+    }
+  ]
+}

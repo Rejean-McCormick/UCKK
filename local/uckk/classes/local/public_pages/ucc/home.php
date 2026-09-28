@@ -30,6 +30,8 @@ final class home {
             'summary' => 'Univers-Cité chrétienne construit progressivement un corpus encyclopédique reliant penseurs, auteurs, œuvres, concepts et expressions. Le projet commence par un riche héritage chrétien — notamment catholique — puis a vocation à s’élargir aux intellectuels marquants de l’histoire de l’humanité.',
 
             'quicklinks' => [
+                ['label' => 'Plans et lectures', 'description' => '110 plans de séminaire : passages, objectifs, activités, évaluations et limites documentaires.', 'url' => '/local/uckk/ucc_study.php'],
+                ['label' => 'Références par cours', 'description' => 'Consulter les sources externes sélectionnées et retrouver leurs cours.', 'url' => '/local/uckk/ucc_study.php?view=references'],
                 ['label' => 'Penseurs', 'description' => 'Entrer dans le savoir par les personnes qui ont formulé, transmis, commenté ou contesté des idées.', 'url' => '/local/uckk/thinkers.php'],
                 ['label' => 'Glossaire', 'description' => 'Suivre les mots, expressions et concepts à travers les époques, les auteurs et les traditions.', 'url' => '/local/uckk/glossary.php'],
                 ['label' => 'Corpus chrétien', 'description' => 'Explorer le point de départ historique du projet : textes, œuvres, institutions, débats et penseurs chrétiens.', 'url' => '/local/uckk/christian.php'],
@@ -40,6 +42,11 @@ final class home {
             ],
 
             'sections' => [
+                [
+                    'title' => 'Lire les sources, comparer, argumenter',
+                    'body' => 'Les 11 Voies disposent de 110 plans de séminaire. Chaque plan propose une question, des passages à lire, cinq séances, une production et un barème. Un socle conseillé relie Écriture, théologie, histoire, vie spirituelle et méthode critique. Les plans restent soumis à relecture ; les espaces Moodle ouverts sont indiqués séparément.',
+                    'items' => ['Œuvres jusqu’en 1926 inclusivement ; exceptions : Teilhard de Chardin, Fratelli tutti et Le Dieu cosmique.', 'Distinguer source biblique, définition conciliaire, théologien, témoignage historique et interprétation éditoriale.', 'Les langues, éditions, passages et droits encore à vérifier sont signalés.'],
+                ],
                 [
                     'type' => 'positioning',
                     'eyebrow' => 'Vue principale',
