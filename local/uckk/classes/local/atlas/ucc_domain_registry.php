@@ -15,21 +15,15 @@ namespace local_uckk\local\atlas;
 
 defined('MOODLE_INTERNAL') || die();
 
-/**
- * Reads and validates the four canonical UCC / Konnaxion domains.
- */
+/** Reads and validates the four canonical UCC / Konnaxion domains. */
 final class ucc_domain_registry {
-    public const SCHEMA_VERSION = 'UCC-DOMAINS-1.0';
+    public const SCHEMA_VERSION = 'UCC-DOMAINS-2.0';
     public const RELATIVE_PATH = 'local/uckk/atlas/ucc_domains.json';
 
     /** @var array<string, mixed>|null */
     private static ?array $cache = null;
 
-    /**
-     * Return the complete registry document.
-     *
-     * @return array<string, mixed>
-     */
+    /** @return array<string, mixed> */
     public static function get(): array {
         if (self::$cache === null) {
             self::$cache = self::load();
@@ -37,21 +31,12 @@ final class ucc_domain_registry {
         return self::$cache;
     }
 
-    /**
-     * Return all four domains in stable order.
-     *
-     * @return array<int, array<string, mixed>>
-     */
+    /** @return array<int, array<string, mixed>> */
     public static function all(): array {
         return self::get()['domains'];
     }
 
-    /**
-     * Get one domain by canonical id.
-     *
-     * @param string $domainid Domain id.
-     * @return array<string, mixed>
-     */
+    /** @return array<string, mixed> */
     public static function get_by_id(string $domainid): array {
         $domainid = trim($domainid);
         foreach (self::all() as $domain) {
@@ -62,34 +47,22 @@ final class ucc_domain_registry {
         throw new \coding_exception('Unknown UCC domain: ' . $domainid);
     }
 
-    /**
-     * Resolve one canonical UCC Voie to its domain.
-     *
-     * @param string $uccvoieid Canonical UCC Voie id.
-     * @return array<string, mixed>
-     */
-    public static function for_voie(string $uccvoieid): array {
-        $uccvoieid = trim($uccvoieid);
+    /** @return array<string, mixed> */
+    public static function for_pathway(string $pathwayid): array {
+        $pathwayid = trim($pathwayid);
         foreach (self::all() as $domain) {
-            if (in_array($uccvoieid, $domain['ucc_voie_ids'], true)) {
+            if (in_array($pathwayid, $domain['pathway_ids'], true)) {
                 return $domain;
             }
         }
-        throw new \coding_exception('No UCC domain for Voie: ' . $uccvoieid);
+        throw new \coding_exception('No UCC domain for pathway: ' . $pathwayid);
     }
 
-    /**
-     * Reset in-request cache.
-     */
     public static function reset_cache(): void {
         self::$cache = null;
     }
 
-    /**
-     * Load and validate the registry.
-     *
-     * @return array<string, mixed>
-     */
+    /** @return array<string, mixed> */
     private static function load(): array {
         global $CFG;
         $path = $CFG->dirroot . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, self::RELATIVE_PATH);
@@ -112,7 +85,7 @@ final class ucc_domain_registry {
             if (!is_array($domain)) {
                 throw new \coding_exception('UCC domain entry must be an object.');
             }
-            foreach (['domain_id', 'code', 'surface', 'door', 'question', 'purpose', 'ucc_voie_ids', 'legacy_voie_ids'] as $field) {
+            foreach (['domain_id', 'code', 'surface', 'door', 'question', 'purpose', 'pathway_ids'] as $field) {
                 if (!array_key_exists($field, $domain)) {
                     throw new \coding_exception('UCC domain missing field: ' . $field);
                 }
@@ -122,8 +95,13 @@ final class ucc_domain_registry {
                 throw new \coding_exception('Duplicate UCC domain: ' . $id);
             }
             $seen[$id] = true;
-            if (!is_array($domain['ucc_voie_ids']) || !is_array($domain['legacy_voie_ids'])) {
-                throw new \coding_exception('UCC domain Voie lists must be arrays: ' . $id);
+            if (!is_array($domain['pathway_ids'])) {
+                throw new \coding_exception('UCC domain pathway list must be an array: ' . $id);
+            }
+            foreach ($domain['pathway_ids'] as $pathwayid) {
+                if (!is_string($pathwayid) || !preg_match('/^ucc\.path\.[a-z0-9-]+$/', $pathwayid)) {
+                    throw new \coding_exception('Invalid canonical UCC pathway id in domain ' . $id . ': ' . (string)$pathwayid);
+                }
             }
         }
         return $doc;

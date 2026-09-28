@@ -26,6 +26,8 @@
 namespace local_uckk\local\public_pages\ucc;
 
 use moodle_url;
+use local_uckk\local\atlas\ucc_curriculum_registry;
+use local_uckk\local\atlas\ucc_legacy_resolver;
 
 defined('MOODLE_INTERNAL') || die();
 
@@ -268,54 +270,24 @@ final class programs {
      * The values are intentionally CSS-oriented only: they do not grant permissions,
      * change faculty pages, or mutate Atlas / Moodle records.
      */
-    private const VOIE_VISUAL_SIGNATURES = [
-        'GJS' => [
-            'slug' => 'grand-jeu-social',
-            'voie_id' => 'voie_grand_jeu_social',
-        ],
-        'EC' => [
-            'slug' => 'economie',
-            'voie_id' => 'voie_economie',
-        ],
-        'ECL' => [
-            'slug' => 'ecologie',
-            'voie_id' => 'voie_ecologie',
-        ],
-        'SP' => [
-            'slug' => 'sciences-politiques',
-            'voie_id' => 'voie_sciences_politiques',
-        ],
-        'LI' => [
-            'slug' => 'linguistique-architecture-du-sens',
-            'voie_id' => 'voie_linguistique_architecture_du_sens',
-        ],
-        'ME' => [
-            'slug' => 'metaphysique',
-            'voie_id' => 'voie_metaphysique',
-        ],
-        'IA' => [
-            'slug' => 'ia-gouvernable',
-            'voie_id' => 'voie_ia_gouvernable',
-        ],
-        'IS' => [
-            'slug' => 'intervention-sociale-systemes-humains',
-            'voie_id' => 'voie_intervention_sociale_systemes_humains',
-        ],
-        'AS' => [
-            'slug' => 'architecture-sociotechnique',
-            'voie_id' => 'voie_architecture_sociotechnique',
-        ],
-        'KOA' => [
-            'slug' => 'ecosysteme-digital-koa',
-            'voie_id' => 'voie_ecosysteme_digital_koa',
-        ],
+    private const PATHWAY_VISUAL_SIGNATURES = [
+        'ucc.path.arts-beauty-culture' => ['slug' => 'arts-beauty-culture'],
+        'ucc.path.language-letters-transmission' => ['slug' => 'language-letters-transmission'],
+        'ucc.path.creation-sciences-ecology' => ['slug' => 'creation-sciences-ecology'],
+        'ucc.path.theology-scripture-tradition' => ['slug' => 'theology-scripture-tradition'],
+        'ucc.path.philosophy-metaphysics-person' => ['slug' => 'philosophy-metaphysics-person'],
+        'ucc.path.works-institutions-administration' => ['slug' => 'works-institutions-administration'],
+        'ucc.path.education-universities-transmission' => ['slug' => 'education-universities-transmission'],
+        'ucc.path.health-care-dignity' => ['slug' => 'health-care-dignity'],
+        'ucc.path.economy-work-social-justice' => ['slug' => 'economy-work-social-justice'],
+        'ucc.path.law-politics-common-good' => ['slug' => 'law-politics-common-good'],
     ];
 
     /**
      * Build the CSS class list for a public program / faculty-link card.
      *
      * @param string $type Public card type.
-     * @param array{slug:string,voie_id:string,code:string} $signature Visual signature.
+     * @param array{slug:string,pathway_id:string,code:string} $signature Visual signature.
      * @return string
      */
     private static function program_card_classes(string $type, array $signature): string {
@@ -344,103 +316,35 @@ final class programs {
     }
 
     /**
-     * Resolve a public Voie visual signature from stable existing identifiers.
+     * Resolve a canonical pathway from stable Moodle identifiers.
      *
-     * @param string $shortname Program short name.
-     * @param string $fullname Program full name.
-     * @param string $categoryname Linked Moodle category name.
-     * @param string $categoryidnumber Linked Moodle category idnumber.
-     * @return array{slug:string,voie_id:string,code:string}
+     * Historical identifiers are accepted only at this compatibility boundary;
+     * the returned identity is always a canonical ucc.path.* id.
+     *
+     * @return string Canonical pathway id, or an empty string when unresolved.
      */
-    private static function voie_visual_signature(
+    private static function canonical_pathway_id_from_identifiers(
         string $shortname,
-        string $fullname,
-        string $categoryname,
-        string $categoryidnumber
-    ): array {
-        $code = self::voie_code_from_identifiers($shortname, $fullname, $categoryname, $categoryidnumber);
-
-        if ($code !== '' && isset(self::VOIE_VISUAL_SIGNATURES[$code])) {
-            return self::VOIE_VISUAL_SIGNATURES[$code] + ['code' => $code];
-        }
-
-        return [
-            'slug' => '',
-            'voie_id' => '',
-            'code' => '',
-        ];
-    }
-
-    /**
-     * Resolve a Voie code from program/category identifiers.
-     *
-     * ECL must be checked before EC to avoid classifying Écologie as Économie.
-     *
-     * @param string $shortname Program short name.
-     * @param string $fullname Program full name.
-     * @param string $categoryname Linked Moodle category name.
-     * @param string $categoryidnumber Linked Moodle category idnumber.
-     * @return string
-     */
-    private static function voie_code_from_identifiers(
-        string $shortname,
-        string $fullname,
-        string $categoryname,
         string $categoryidnumber
     ): string {
-        $categoryidnumber = strtoupper(trim($categoryidnumber));
-        if (preg_match('/^UCKK-(GJS|ECL|EC|SP|LI|ME|IA|IS|AS|KOA)$/', $categoryidnumber, $matches)) {
-            return $matches[1];
-        }
+        $candidates = array_values(array_filter([
+            trim($categoryidnumber),
+            trim($shortname),
+        ], static fn(string $value): bool => $value !== ''));
 
-        $shortname = strtoupper(trim($shortname));
-        if (isset(self::VOIE_VISUAL_SIGNATURES[$shortname])) {
-            return $shortname;
-        }
-
-        $haystack = strtolower($shortname . ' ' . $fullname . ' ' . $categoryname . ' ' . $categoryidnumber);
-
-        $needles = [
-            'GJS' => ['voie_grand_jeu_social', 'grand-jeu-social', 'grand jeu social', 'uckk-gjs'],
-            'ECL' => ['voie_ecologie', 'ecologie', 'écologie', 'uckk-ecl'],
-            'EC' => ['voie_economie', 'economie', 'économie', 'uckk-ec'],
-            'SP' => ['voie_sciences_politiques', 'sciences-politiques', 'sciences politiques', 'uckk-sp'],
-            'LI' => [
-                'voie_linguistique_architecture_du_sens',
-                'linguistique-architecture-du-sens',
-                'linguistique architecture du sens',
-                'uckk-li',
-            ],
-            'ME' => ['voie_metaphysique', 'metaphysique', 'métaphysique', 'uckk-me'],
-            'IA' => ['voie_ia_gouvernable', 'ia-gouvernable', 'production augment', 'production ia', 'uckk-ia'],
-            'IS' => [
-                'voie_intervention_sociale_systemes_humains',
-                'intervention-sociale-systemes-humains',
-                'intervention sociale',
-                'systèmes humains',
-                'systemes humains',
-                'uckk-is',
-            ],
-            'AS' => [
-                'voie_architecture_sociotechnique',
-                'architecture-sociotechnique',
-                'architecture sociotechnique',
-                'uckk-as',
-            ],
-            'KOA' => [
-                'voie_ecosysteme_digital_koa',
-                'ecosysteme-digital-koa',
-                'écosystème digital koa',
-                'ecosysteme digital koa',
-                'uckk-koa',
-            ],
-        ];
-
-        foreach ($needles as $code => $values) {
-            foreach ($values as $needle) {
-                if (strpos($haystack, $needle) !== false) {
-                    return $code;
+        foreach ($candidates as $candidate) {
+            foreach (ucc_curriculum_registry::pathways() as $pathway) {
+                $code = strtoupper((string)$pathway['code']);
+                if (strcasecmp($candidate, $pathway['pathway_id']) === 0
+                    || strcasecmp($candidate, $code) === 0
+                    || strcasecmp($candidate, 'UCC-' . $code) === 0) {
+                    return (string)$pathway['pathway_id'];
                 }
+            }
+            try {
+                return ucc_legacy_resolver::resolve_pathway($candidate);
+            } catch (\coding_exception $exception) {
+                // Try the next exact stable identifier. Free-text legacy labels are not canonical keys.
             }
         }
 
@@ -448,15 +352,33 @@ final class programs {
     }
 
     /**
-     * Public editorial overrides for program cards.
+     * Resolve a public pathway visual signature from canonical identity.
      *
-     * This protects public pages from legacy technical labels while keeping
-     * existing Moodle, Atlas and database identifiers stable.
+     * @return array{slug:string,pathway_id:string,code:string}
+     */
+    private static function voie_visual_signature(
+        string $shortname,
+        string $fullname,
+        string $categoryname,
+        string $categoryidnumber
+    ): array {
+        unset($fullname, $categoryname); // Labels are presentation only, never identity keys.
+        $pathwayid = self::canonical_pathway_id_from_identifiers($shortname, $categoryidnumber);
+
+        if ($pathwayid !== '' && isset(self::PATHWAY_VISUAL_SIGNATURES[$pathwayid])) {
+            $pathway = ucc_curriculum_registry::get_pathway($pathwayid);
+            return self::PATHWAY_VISUAL_SIGNATURES[$pathwayid] + [
+                'pathway_id' => $pathwayid,
+                'code' => (string)$pathway['code'],
+            ];
+        }
+
+        return ['slug' => '', 'pathway_id' => '', 'code' => ''];
+    }
+
+    /**
+     * Public editorial overrides for program cards, keyed only by canonical pathways.
      *
-     * @param string $shortname Program short name.
-     * @param string $fullname Program full name.
-     * @param string $categoryname Linked Moodle category name.
-     * @param string $categoryidnumber Linked Moodle category idnumber.
      * @return array{eyebrow:string,title:string,body:string,type:string}|null
      */
     private static function public_program_identity(
@@ -465,22 +387,27 @@ final class programs {
         string $categoryname,
         string $categoryidnumber
     ): ?array {
-        $code = self::voie_code_from_identifiers($shortname, $fullname, $categoryname, $categoryidnumber);
+        unset($fullname, $categoryname);
+        $pathwayid = self::canonical_pathway_id_from_identifiers($shortname, $categoryidnumber);
 
         $identities = [
-            'GJS' => ['eyebrow' => 'Kreative · Créer', 'title' => 'Voie des Arts, de la beauté et de la culture', 'body' => 'Explorer les œuvres, images, récits et pratiques culturelles des traditions chrétiennes, notamment catholiques, en les reliant à leurs sources et à leurs contextes.', 'type' => 'kreative'],
-            'LI' => ['eyebrow' => 'Kreative · Créer', 'title' => 'Voie du Langage, des lettres et de la transmission', 'body' => 'Étudier les mots, textes, langues, traductions et traditions de lecture qui rendent les corpus chrétiens — dont les traditions catholiques — intelligibles et transmissibles.', 'type' => 'kreative'],
-            'ME' => ['eyebrow' => 'KonnectED · Comprendre', 'title' => 'Voie de la Philosophie, de la métaphysique et de la personne', 'body' => 'Explorer être, vérité, connaissance, personne, liberté, bien, mal, temps et loi naturelle à partir de positions et sources documentées.', 'type' => 'konnected'],
-            'KOA' => ['eyebrow' => 'KonnectED · Comprendre', 'title' => 'Voie de la Théologie, de l’Écriture et de la Tradition', 'body' => 'Lire les grands ensembles théologiques du corpus en distinguant sources, développement doctrinal, réception, statut épistémique et interprétation.', 'type' => 'konnected'],
-            'ECL' => ['eyebrow' => 'KonnectED · Comprendre', 'title' => 'Voie de la Création, des sciences et de l’écologie', 'body' => 'Étudier les rapports entre création, sciences, évolution, progrès, écologie et responsabilité envers le vivant.', 'type' => 'konnected'],
-            'IA' => ['eyebrow' => 'KeenKonnect · Servir', 'title' => 'Voie de l’Éducation, des universités et de la transmission', 'body' => 'Explorer écoles, universités, formation, recherche, accès au savoir et responsabilités institutionnelles.', 'type' => 'keenkonnect'],
-            'IS' => ['eyebrow' => 'KeenKonnect · Servir', 'title' => 'Voie de la Santé, du soin et de la dignité', 'body' => 'Étudier le soin, la vulnérabilité, le corps, la dignité et les institutions cliniques catholiques.', 'type' => 'keenkonnect'],
-            'AS' => ['eyebrow' => 'KeenKonnect · Servir', 'title' => 'Voie des Œuvres, des institutions et de l’administration', 'body' => 'Comprendre comment des œuvres catholiques sont administrées, financées, auditées, transmises et rendues responsables.', 'type' => 'keenkonnect'],
-            'EC' => ['eyebrow' => 'Ethikos · Gouverner', 'title' => 'Voie de l’Économie, du travail et de la justice sociale', 'body' => 'Explorer travail, propriété, pauvreté, échange, don, justice sociale et responsabilité économique dans les traditions sociales chrétiennes, notamment catholiques.', 'type' => 'ethikos'],
-            'SP' => ['eyebrow' => 'Ethikos · Gouverner', 'title' => 'Voie du Droit, de la politique et du bien commun', 'body' => 'Étudier autorité, loi, droits, subsidiarité, institutions, guerre, paix et prudence politique avec une méthode documentaire et non partisane.', 'type' => 'ethikos'],
+            'ucc.path.arts-beauty-culture' => ['eyebrow' => 'Kreative · Créer', 'body' => 'Explorer les œuvres, images, récits et pratiques culturelles des traditions chrétiennes, notamment catholiques, en les reliant à leurs sources et à leurs contextes.', 'type' => 'kreative'],
+            'ucc.path.language-letters-transmission' => ['eyebrow' => 'Kreative · Créer', 'body' => 'Étudier les mots, textes, langues, traductions et traditions de lecture qui rendent les corpus chrétiens — dont les traditions catholiques — intelligibles et transmissibles.', 'type' => 'kreative'],
+            'ucc.path.philosophy-metaphysics-person' => ['eyebrow' => 'KonnectED · Comprendre', 'body' => 'Explorer être, vérité, connaissance, personne, liberté, bien, mal, temps et loi naturelle à partir de positions et sources documentées.', 'type' => 'konnected'],
+            'ucc.path.theology-scripture-tradition' => ['eyebrow' => 'KonnectED · Comprendre', 'body' => 'Lire les grands ensembles théologiques du corpus en distinguant sources, développement doctrinal, réception, statut épistémique et interprétation.', 'type' => 'konnected'],
+            'ucc.path.creation-sciences-ecology' => ['eyebrow' => 'KonnectED · Comprendre', 'body' => 'Étudier les rapports entre création, sciences, évolution, progrès, écologie et responsabilité envers le vivant.', 'type' => 'konnected'],
+            'ucc.path.education-universities-transmission' => ['eyebrow' => 'KeenKonnect · Servir', 'body' => 'Explorer écoles, universités, formation, recherche, accès au savoir et responsabilités institutionnelles.', 'type' => 'keenkonnect'],
+            'ucc.path.health-care-dignity' => ['eyebrow' => 'KeenKonnect · Servir', 'body' => 'Étudier le soin, la vulnérabilité, le corps, la dignité et les institutions cliniques catholiques.', 'type' => 'keenkonnect'],
+            'ucc.path.works-institutions-administration' => ['eyebrow' => 'KeenKonnect · Servir', 'body' => 'Comprendre comment des œuvres catholiques sont administrées, financées, auditées, transmises et rendues responsables.', 'type' => 'keenkonnect'],
+            'ucc.path.economy-work-social-justice' => ['eyebrow' => 'Ethikos · Gouverner', 'body' => 'Explorer travail, propriété, pauvreté, échange, don, justice sociale et responsabilité économique dans les traditions sociales chrétiennes, notamment catholiques.', 'type' => 'ethikos'],
+            'ucc.path.law-politics-common-good' => ['eyebrow' => 'Ethikos · Gouverner', 'body' => 'Étudier autorité, loi, droits, subsidiarité, institutions, guerre, paix et prudence politique avec une méthode documentaire et non partisane.', 'type' => 'ethikos'],
         ];
 
-        return $identities[$code] ?? null;
+        if ($pathwayid === '' || !isset($identities[$pathwayid])) {
+            return null;
+        }
+        $pathway = ucc_curriculum_registry::get_pathway($pathwayid);
+        return $identities[$pathwayid] + ['title' => (string)$pathway['title']];
     }
 
     /**

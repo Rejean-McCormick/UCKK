@@ -38,7 +38,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_uckk';
-$plugin->version = 2026092803;
+$plugin->version = 2026092804;
 $plugin->requires = 2025041400;
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = '1.2.3';
+$plugin->release = '1.2.4';

@@ -38,9 +38,7 @@ final class get_ucc_course extends external_api {
         $course = ucc_curriculum_registry::get_course($params['ucccourseid']);
         return [
             'ucccourseid' => $course['ucc_course_id'],
-            'legacycourseid' => $course['legacy_course_id'],
-            'uccvoieid' => $course['voie_id'],
-            'legacyvoieid' => $course['legacy_voie_id'],
+            'pathwayid' => $course['pathway_id'],
             'domainid' => $course['domain_id'],
             'title' => $course['title'],
             'primarysurface' => $course['primary_surface'],
@@ -53,9 +51,7 @@ final class get_ucc_course extends external_api {
     public static function execute_returns(): external_single_structure {
         return new external_single_structure([
             'ucccourseid' => new external_value(PARAM_RAW_TRIMMED, 'Canonical UCC course id'),
-            'legacycourseid' => new external_value(PARAM_ALPHANUMEXT, 'Legacy technical course id'),
-            'uccvoieid' => new external_value(PARAM_RAW_TRIMMED, 'Canonical UCC Voie id'),
-            'legacyvoieid' => new external_value(PARAM_ALPHANUMEXT, 'Legacy technical Voie id'),
+            'pathwayid' => new external_value(PARAM_RAW_TRIMMED, 'Canonical UCC pathway id'),
             'domainid' => new external_value(PARAM_ALPHANUMEXT, 'UCC domain id'),
             'title' => new external_value(PARAM_TEXT, 'Course title'),
             'primarysurface' => new external_value(PARAM_TEXT, 'Primary Konnaxion surface'),

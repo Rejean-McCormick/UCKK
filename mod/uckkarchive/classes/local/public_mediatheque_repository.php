@@ -898,7 +898,7 @@ final class public_mediatheque_repository {
 
         return (object)[
             'url' => $url,
-            'title' => (string)($source->title ?? ''),
+            'title' => (string)($source->sourceauthor ?? ''),
             'citation' => (string)($source->citation ?? ''),
             'sourcetype' => (string)($source->sourcetype ?? ''),
         ];
@@ -921,7 +921,7 @@ final class public_mediatheque_repository {
         $source = $DB->get_record(
             self::TABLE_MEDIA_SOURCE,
             ['id' => $sourceid],
-            'id, mediaid, sourcetype, sourceurl, title, citation, rightsstatus',
+            'id, mediaid, sourcetype, sourceurl, sourceauthor, citation, rightsstatus',
             IGNORE_MISSING
         );
 
@@ -950,7 +950,7 @@ final class public_mediatheque_repository {
             "mediaid = :mediaid AND sourceurl IS NOT NULL AND sourceurl <> ''",
             ['mediaid' => $mediaid],
             'timemodified DESC, id DESC',
-            'id, mediaid, sourcetype, sourceurl, title, citation, rightsstatus',
+            'id, mediaid, sourcetype, sourceurl, sourceauthor, citation, rightsstatus',
             0,
             1
         );

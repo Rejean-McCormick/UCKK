@@ -1,0 +1,61 @@
+{
+  "schema_version": "MATH-CURRICULUM-1.0",
+  "universe_id": "math",
+  "name": "Univers-Cité des mathématiques",
+  "technical_component": "local_uckk",
+  "policy": {
+    "canonical_namespace": "math.path",
+    "legacy_mode": "none_declared",
+    "write_rule": "Only canonical math.path.* identifiers may be written by new integrations.",
+    "course_authority": "Moodle runtime; this registry currently defines pathway taxonomy only."
+  },
+  "pathways": [
+    {
+      "pathway_id": "math.path.structures",
+      "code": "STR",
+      "title": "Structures",
+      "description": "Algèbre, logique, combinatoire, théorie des nombres et structures discrètes.",
+      "public_queries": [
+        "algèbre",
+        "logique",
+        "combinatoire",
+        "théorie des nombres"
+      ]
+    },
+    {
+      "pathway_id": "math.path.spaces",
+      "code": "SPA",
+      "title": "Espaces",
+      "description": "Géométrie, topologie, mesure et représentations.",
+      "public_queries": [
+        "géométrie",
+        "topologie",
+        "mesure"
+      ]
+    },
+    {
+      "pathway_id": "math.path.change",
+      "code": "CHA",
+      "title": "Changements",
+      "description": "Analyse, équations différentielles, systèmes dynamiques et optimisation.",
+      "public_queries": [
+        "analyse",
+        "équations différentielles",
+        "systèmes dynamiques",
+        "optimisation"
+      ]
+    },
+    {
+      "pathway_id": "math.path.uncertainty",
+      "code": "UNC",
+      "title": "Incertitude",
+      "description": "Probabilités, statistique, information et processus aléatoires.",
+      "public_queries": [
+        "probabilités",
+        "statistique",
+        "information",
+        "processus aléatoires"
+      ]
+    }
+  ]
+}

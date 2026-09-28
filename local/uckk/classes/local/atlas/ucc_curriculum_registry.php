@@ -16,10 +16,13 @@ namespace local_uckk\local\atlas;
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * Read-only canonical index for UCC domains, Voies, courses and Kristal bindings.
+ * Read-only canonical index for UCC domains, pathways, courses and Kristal bindings.
+ *
+ * Historical UCKK/UCC-v1 identifiers are deliberately excluded from this registry.
+ * Use ucc_legacy_resolver for read-only migration compatibility.
  */
 final class ucc_curriculum_registry {
-    public const SCHEMA_VERSION = 'UCC-CURRICULUM-1.0';
+    public const SCHEMA_VERSION = 'UCC-CURRICULUM-2.0';
     public const RELATIVE_PATH = 'local/uckk/atlas/ucc_curriculum_registry.json';
 
     /** @var array<string, mixed>|null */
@@ -39,8 +42,19 @@ final class ucc_curriculum_registry {
     }
 
     /** @return array<int, array<string, mixed>> */
-    public static function voies(): array {
-        return self::get()['voies'];
+    public static function pathways(): array {
+        return self::get()['pathways'];
+    }
+
+    /** @return array<string, mixed> */
+    public static function get_pathway(string $pathwayid): array {
+        $pathwayid = trim($pathwayid);
+        foreach (self::pathways() as $pathway) {
+            if ($pathway['pathway_id'] === $pathwayid) {
+                return $pathway;
+            }
+        }
+        throw new \coding_exception('Unknown canonical UCC pathway: ' . $pathwayid);
     }
 
     /**
@@ -55,22 +69,6 @@ final class ucc_curriculum_registry {
             }
         }
         throw new \coding_exception('Unknown UCC course: ' . $courseid);
-    }
-
-    /**
-     * Resolve a legacy UCKK course id to its canonical UCC course.
-     *
-     * @param string $legacyid Legacy course id such as ME101.
-     * @return array<string, mixed>
-     */
-    public static function get_course_by_legacy_id(string $legacyid): array {
-        $legacyid = strtoupper(trim($legacyid));
-        foreach (self::courses() as $course) {
-            if ($course['legacy_course_id'] === $legacyid) {
-                return $course;
-            }
-        }
-        throw new \coding_exception('Unknown legacy UCC course alias: ' . $legacyid);
     }
 
     /**
@@ -116,17 +114,41 @@ final class ucc_curriculum_registry {
         if (!is_array($doc) || ($doc['schema_version'] ?? '') !== self::SCHEMA_VERSION || ($doc['universe_id'] ?? '') !== 'ucc') {
             throw new \coding_exception('Invalid UCC curriculum registry contract.');
         }
-        if (!isset($doc['courses'], $doc['voies']) || !is_array($doc['courses']) || !is_array($doc['voies'])) {
-            throw new \coding_exception('UCC curriculum registry missing courses or Voies.');
+        if (!isset($doc['courses'], $doc['pathways']) || !is_array($doc['courses']) || !is_array($doc['pathways'])) {
+            throw new \coding_exception('UCC curriculum registry missing courses or pathways.');
         }
-        if (count($doc['courses']) !== 100 || count($doc['voies']) !== 10) {
-            throw new \coding_exception('UCC curriculum registry must contain 10 Voies and 100 courses.');
+        if (count($doc['courses']) !== 100 || count($doc['pathways']) !== 10) {
+            throw new \coding_exception('UCC curriculum registry must contain 10 pathways and 100 courses.');
         }
+
+        $seenpathways = [];
+        foreach ($doc['pathways'] as $pathway) {
+            $id = (string)($pathway['pathway_id'] ?? '');
+            if (!preg_match('/^ucc\.path\.[a-z0-9-]+$/', $id) || isset($seenpathways[$id])) {
+                throw new \coding_exception('Invalid or duplicate canonical UCC pathway id: ' . $id);
+            }
+            foreach (array_keys($pathway) as $field) {
+                if (str_starts_with((string)$field, 'legacy_')) {
+                    throw new \coding_exception('Legacy field leaked into canonical UCC pathway: ' . $field);
+                }
+            }
+            $seenpathways[$id] = true;
+        }
+
         $seen = [];
         foreach ($doc['courses'] as $course) {
             $id = (string)($course['ucc_course_id'] ?? '');
+            $pathwayid = (string)($course['pathway_id'] ?? '');
             if (!preg_match('/^UCC-[A-Z]{3}-[0-9]{3}$/', $id) || isset($seen[$id])) {
                 throw new \coding_exception('Invalid or duplicate canonical UCC course id: ' . $id);
+            }
+            if (!isset($seenpathways[$pathwayid])) {
+                throw new \coding_exception('UCC course references unknown canonical pathway: ' . $pathwayid);
+            }
+            foreach (array_keys($course) as $field) {
+                if (str_starts_with((string)$field, 'legacy_')) {
+                    throw new \coding_exception('Legacy field leaked into canonical UCC course: ' . $field);
+                }
             }
             $seen[$id] = true;
         }

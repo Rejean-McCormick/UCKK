@@ -1,0 +1,30 @@
+{
+  "schema_version": "WORLD-KONNAXION-UNIVERSE-1.1",
+  "universe_id": "math",
+  "name": "Univers-Cité des mathématiques",
+  "technical_component": "local_uckk",
+  "identity": {
+    "canonical_namespace": "MATH",
+    "canonical_pathway_namespace": "math.path",
+    "legacy_resolution": "atlas/math_pathway_migrations.json",
+    "legacy_mode": "none_declared"
+  },
+  "learning": {
+    "provider": "Univers-Cité des mathématiques on Moodle/local_uckk",
+    "curriculum_registry": "atlas/math_curriculum_registry.json",
+    "pathways": 4,
+    "course_authority": "Moodle runtime catalogue"
+  },
+  "mediatheque": {
+    "provider": "Bibliothèque mathématique",
+    "mode": "autonomous_fund_with_explicit_bridges",
+    "public_surface": "/local/uckk/mediatheque.php"
+  },
+  "integration_invariants": [
+    "Canonical Math pathway identifiers use the math.path.* namespace.",
+    "No historical Math pathway identifiers are declared in this snapshot; none are invented for compatibility.",
+    "New integrations must write canonical Math identifiers only.",
+    "Live course, media, permission and user state remain owned by Moodle and their existing plugins.",
+    "The mathematical library remains an autonomous fund; cross-library visibility requires explicit bridges."
+  ]
+}

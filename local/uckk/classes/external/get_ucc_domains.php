@@ -39,8 +39,7 @@ final class get_ucc_domains extends external_api {
                 'door' => $domain['door'],
                 'question' => $domain['question'],
                 'purpose' => $domain['purpose'],
-                'uccvoieids' => array_values($domain['ucc_voie_ids']),
-                'legacyvoieids' => array_values($domain['legacy_voie_ids']),
+                'pathwayids' => array_values($domain['pathway_ids']),
             ];
         }, ucc_domain_registry::all());
     }
@@ -53,8 +52,7 @@ final class get_ucc_domains extends external_api {
             'door' => new external_value(PARAM_TEXT, 'Human door label'),
             'question' => new external_value(PARAM_TEXT, 'Domain guiding question'),
             'purpose' => new external_value(PARAM_TEXT, 'Domain purpose'),
-            'uccvoieids' => new external_multiple_structure(new external_value(PARAM_RAW_TRIMMED, 'Canonical UCC Voie id')),
-            'legacyvoieids' => new external_multiple_structure(new external_value(PARAM_ALPHANUMEXT, 'Legacy technical Voie id')),
+            'pathwayids' => new external_multiple_structure(new external_value(PARAM_RAW_TRIMMED, 'Canonical UCC pathway id')),
         ]));
     }
 }

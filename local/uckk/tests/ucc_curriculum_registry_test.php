@@ -7,22 +7,45 @@ namespace local_uckk;
 
 use advanced_testcase;
 use local_uckk\local\atlas\ucc_curriculum_registry;
+use local_uckk\local\atlas\ucc_legacy_resolver;
 
 defined('MOODLE_INTERNAL') || die();
 
 /**
  * @covers \local_uckk\local\atlas\ucc_curriculum_registry
+ * @covers \local_uckk\local\atlas\ucc_legacy_resolver
  */
 final class ucc_curriculum_registry_test extends advanced_testcase {
-    public function test_registry_exposes_ten_voies_and_one_hundred_courses(): void {
-        $this->assertCount(10, ucc_curriculum_registry::voies());
+    public function test_registry_exposes_ten_pathways_and_one_hundred_courses(): void {
+        $this->assertCount(10, ucc_curriculum_registry::pathways());
         $this->assertCount(100, ucc_curriculum_registry::courses());
     }
 
-    public function test_canonical_and_legacy_course_ids_resolve_to_same_course(): void {
-        $canonical = ucc_curriculum_registry::get_course('UCC-ART-101');
-        $legacy = ucc_curriculum_registry::get_course_by_legacy_id($canonical['legacy_course_id']);
-        $this->assertSame($canonical['ucc_course_id'], $legacy['ucc_course_id']);
+    public function test_canonical_registry_contains_no_legacy_fields(): void {
+        foreach (ucc_curriculum_registry::pathways() as $pathway) {
+            foreach (array_keys($pathway) as $field) {
+                $this->assertFalse(str_starts_with((string)$field, 'legacy_'));
+            }
+        }
+        foreach (ucc_curriculum_registry::courses() as $course) {
+            foreach (array_keys($course) as $field) {
+                $this->assertFalse(str_starts_with((string)$field, 'legacy_'));
+            }
+        }
+    }
+
+    public function test_legacy_course_resolution_is_external_to_canonical_registry(): void {
+        $canonicalid = ucc_legacy_resolver::resolve_course('AS101');
+        $this->assertSame('UCC-OEU-101', $canonicalid);
+        $this->assertSame($canonicalid, ucc_legacy_resolver::course('AS101')['ucc_course_id']);
+    }
+
+    public function test_legacy_pathway_resolution_accepts_uckk_and_ucc_v1_ids(): void {
+        $expected = 'ucc.path.philosophy-metaphysics-person';
+        $this->assertSame($expected, ucc_legacy_resolver::resolve_pathway('voie_metaphysique'));
+        $this->assertSame($expected, ucc_legacy_resolver::resolve_pathway('ME'));
+        $this->assertSame($expected, ucc_legacy_resolver::resolve_pathway('UCKK-ME'));
+        $this->assertSame($expected, ucc_legacy_resolver::resolve_pathway('ucc:voie:philosophie-personne'));
     }
 
     public function test_courses_can_be_queried_by_domain_and_kristal_theme(): void {

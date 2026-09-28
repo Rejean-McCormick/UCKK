@@ -1107,7 +1107,6 @@
   "course_alignments": [
     {
       "ucc_course_id": "UCC-OEU-101",
-      "legacy_course_id": "AS101",
       "theme_refs": [
         "urn:theophile:theme:mission",
         "urn:theophile:theme:personne_et_communaute",
@@ -1130,7 +1129,6 @@
     },
     {
       "ucc_course_id": "UCC-OEU-102",
-      "legacy_course_id": "AS102",
       "theme_refs": [
         "urn:theophile:theme:autorite",
         "urn:theophile:theme:subsidiarite",
@@ -1153,7 +1151,6 @@
     },
     {
       "ucc_course_id": "UCC-OEU-103",
-      "legacy_course_id": "AS103",
       "theme_refs": [
         "urn:theophile:theme:responsabilite",
         "urn:theophile:theme:travail",
@@ -1176,7 +1173,6 @@
     },
     {
       "ucc_course_id": "UCC-OEU-104",
-      "legacy_course_id": "AS104",
       "theme_refs": [
         "urn:theophile:theme:propriete",
         "urn:theophile:theme:economie",
@@ -1199,7 +1195,6 @@
     },
     {
       "ucc_course_id": "UCC-OEU-105",
-      "legacy_course_id": "AS105",
       "theme_refs": [
         "urn:theophile:theme:veracite",
         "urn:theophile:theme:connaissance",
@@ -1222,7 +1217,6 @@
     },
     {
       "ucc_course_id": "UCC-OEU-106",
-      "legacy_course_id": "AS106",
       "theme_refs": [
         "urn:theophile:theme:travail",
         "urn:theophile:theme:travail_et_justice",
@@ -1245,7 +1239,6 @@
     },
     {
       "ucc_course_id": "UCC-OEU-107",
-      "legacy_course_id": "AS107",
       "theme_refs": [
         "urn:theophile:theme:progres",
         "urn:theophile:theme:science",
@@ -1268,7 +1261,6 @@
     },
     {
       "ucc_course_id": "UCC-OEU-108",
-      "legacy_course_id": "AS108",
       "theme_refs": [
         "urn:theophile:theme:veracite",
         "urn:theophile:theme:responsabilite",
@@ -1291,7 +1283,6 @@
     },
     {
       "ucc_course_id": "UCC-OEU-109",
-      "legacy_course_id": "AS109",
       "theme_refs": [
         "urn:theophile:theme:prudence",
         "urn:theophile:theme:responsabilite",
@@ -1314,7 +1305,6 @@
     },
     {
       "ucc_course_id": "UCC-OEU-110",
-      "legacy_course_id": "AS110",
       "theme_refs": [
         "urn:theophile:theme:mission",
         "urn:theophile:theme:subsidiarite",
@@ -1337,7 +1327,6 @@
     },
     {
       "ucc_course_id": "UCC-SCI-101",
-      "legacy_course_id": "ECL101",
       "theme_refs": [
         "urn:theophile:theme:creation",
         "urn:theophile:theme:science",
@@ -1360,7 +1349,6 @@
     },
     {
       "ucc_course_id": "UCC-SCI-102",
-      "legacy_course_id": "ECL102",
       "theme_refs": [
         "urn:theophile:theme:science_et_foi",
         "urn:theophile:theme:raison_et_foi",
@@ -1383,7 +1371,6 @@
     },
     {
       "ucc_course_id": "UCC-SCI-103",
-      "legacy_course_id": "ECL103",
       "theme_refs": [
         "urn:theophile:theme:heliocentrisme",
         "urn:theophile:theme:science_et_foi",
@@ -1406,7 +1393,6 @@
     },
     {
       "ucc_course_id": "UCC-SCI-104",
-      "legacy_course_id": "ECL104",
       "theme_refs": [
         "urn:theophile:theme:evolution",
         "urn:theophile:theme:creation",
@@ -1429,7 +1415,6 @@
     },
     {
       "ucc_course_id": "UCC-SCI-105",
-      "legacy_course_id": "ECL105",
       "theme_refs": [
         "urn:theophile:theme:ecologie",
         "urn:theophile:theme:creation",
@@ -1452,7 +1437,6 @@
     },
     {
       "ucc_course_id": "UCC-SCI-106",
-      "legacy_course_id": "ECL106",
       "theme_refs": [
         "urn:theophile:theme:ecologie",
         "urn:theophile:theme:pauvrete",
@@ -1475,7 +1459,6 @@
     },
     {
       "ucc_course_id": "UCC-SCI-107",
-      "legacy_course_id": "ECL107",
       "theme_refs": [
         "urn:theophile:theme:progres",
         "urn:theophile:theme:science",
@@ -1498,7 +1481,6 @@
     },
     {
       "ucc_course_id": "UCC-SCI-108",
-      "legacy_course_id": "ECL108",
       "theme_refs": [
         "urn:theophile:theme:vie_et_soin",
         "urn:theophile:theme:corps_vecu",
@@ -1521,7 +1503,6 @@
     },
     {
       "ucc_course_id": "UCC-SCI-109",
-      "legacy_course_id": "ECL109",
       "theme_refs": [
         "urn:theophile:theme:ecologie",
         "urn:theophile:theme:personne_et_communaute",
@@ -1544,7 +1525,6 @@
     },
     {
       "ucc_course_id": "UCC-SCI-110",
-      "legacy_course_id": "ECL110",
       "theme_refs": [
         "urn:theophile:theme:science_et_foi",
         "urn:theophile:theme:ecologie",
@@ -1567,7 +1547,6 @@
     },
     {
       "ucc_course_id": "UCC-ECO-101",
-      "legacy_course_id": "EC101",
       "theme_refs": [
         "urn:theophile:theme:travail",
         "urn:theophile:theme:travail_et_justice",
@@ -1590,7 +1569,6 @@
     },
     {
       "ucc_course_id": "UCC-ECO-102",
-      "legacy_course_id": "EC102",
       "theme_refs": [
         "urn:theophile:theme:propriete",
         "urn:theophile:theme:responsabilite",
@@ -1613,7 +1591,6 @@
     },
     {
       "ucc_course_id": "UCC-ECO-103",
-      "legacy_course_id": "EC103",
       "theme_refs": [
         "urn:theophile:theme:economie_et_don",
         "urn:theophile:theme:economie",
@@ -1636,7 +1613,6 @@
     },
     {
       "ucc_course_id": "UCC-ECO-104",
-      "legacy_course_id": "EC104",
       "theme_refs": [
         "urn:theophile:theme:economie",
         "urn:theophile:theme:propriete",
@@ -1659,7 +1635,6 @@
     },
     {
       "ucc_course_id": "UCC-ECO-105",
-      "legacy_course_id": "EC105",
       "theme_refs": [
         "urn:theophile:theme:pauvrete",
         "urn:theophile:theme:justice_sociale",
@@ -1682,7 +1657,6 @@
     },
     {
       "ucc_course_id": "UCC-ECO-106",
-      "legacy_course_id": "EC106",
       "theme_refs": [
         "urn:theophile:theme:travail",
         "urn:theophile:theme:subsidiarite",
@@ -1705,7 +1679,6 @@
     },
     {
       "ucc_course_id": "UCC-ECO-107",
-      "legacy_course_id": "EC107",
       "theme_refs": [
         "urn:theophile:theme:economie",
         "urn:theophile:theme:responsabilite",
@@ -1728,7 +1701,6 @@
     },
     {
       "ucc_course_id": "UCC-ECO-108",
-      "legacy_course_id": "EC108",
       "theme_refs": [
         "urn:theophile:theme:economie_et_don",
         "urn:theophile:theme:personne_et_communaute",
@@ -1751,7 +1723,6 @@
     },
     {
       "ucc_course_id": "UCC-ECO-109",
-      "legacy_course_id": "EC109",
       "theme_refs": [
         "urn:theophile:theme:travail",
         "urn:theophile:theme:progres",
@@ -1774,7 +1745,6 @@
     },
     {
       "ucc_course_id": "UCC-ECO-110",
-      "legacy_course_id": "EC110",
       "theme_refs": [
         "urn:theophile:theme:economie",
         "urn:theophile:theme:travail_et_justice",
@@ -1797,7 +1767,6 @@
     },
     {
       "ucc_course_id": "UCC-THE-101",
-      "legacy_course_id": "KOA101",
       "theme_refs": [
         "urn:theophile:theme:ecriture",
         "urn:theophile:theme:hermeneutique",
@@ -1820,7 +1789,6 @@
     },
     {
       "ucc_course_id": "UCC-THE-102",
-      "legacy_course_id": "KOA102",
       "theme_refs": [
         "urn:theophile:theme:dogme",
         "urn:theophile:theme:histoire_des_doctrines",
@@ -1843,7 +1811,6 @@
     },
     {
       "ucc_course_id": "UCC-THE-103",
-      "legacy_course_id": "KOA103",
       "theme_refs": [
         "urn:theophile:theme:trinite",
         "urn:theophile:theme:theologie_naturelle",
@@ -1866,7 +1833,6 @@
     },
     {
       "ucc_course_id": "UCC-THE-104",
-      "legacy_course_id": "KOA104",
       "theme_refs": [
         "urn:theophile:theme:christologie",
         "urn:theophile:theme:salut",
@@ -1889,7 +1855,6 @@
     },
     {
       "ucc_course_id": "UCC-THE-105",
-      "legacy_course_id": "KOA105",
       "theme_refs": [
         "urn:theophile:theme:grace",
         "urn:theophile:theme:salut",
@@ -1912,7 +1877,6 @@
     },
     {
       "ucc_course_id": "UCC-THE-106",
-      "legacy_course_id": "KOA106",
       "theme_refs": [
         "urn:theophile:theme:eucharistie",
         "urn:theophile:theme:culture_et_liturgie",
@@ -1935,7 +1899,6 @@
     },
     {
       "ucc_course_id": "UCC-THE-107",
-      "legacy_course_id": "KOA107",
       "theme_refs": [
         "urn:theophile:theme:mariologie",
         "urn:theophile:theme:reception",
@@ -1958,7 +1921,6 @@
     },
     {
       "ucc_course_id": "UCC-THE-108",
-      "legacy_course_id": "KOA108",
       "theme_refs": [
         "urn:theophile:theme:autorite",
         "urn:theophile:theme:dogme",
@@ -1981,7 +1943,6 @@
     },
     {
       "ucc_course_id": "UCC-THE-109",
-      "legacy_course_id": "KOA109",
       "theme_refs": [
         "urn:theophile:theme:mystique",
         "urn:theophile:theme:contemplation",
@@ -2004,7 +1965,6 @@
     },
     {
       "ucc_course_id": "UCC-THE-110",
-      "legacy_course_id": "KOA110",
       "theme_refs": [
         "urn:theophile:theme:foi",
         "urn:theophile:theme:raison_et_foi",
@@ -2027,7 +1987,6 @@
     },
     {
       "ucc_course_id": "UCC-ART-101",
-      "legacy_course_id": "GJS101",
       "theme_refs": [
         "urn:theophile:theme:art_et_beaute",
         "urn:theophile:theme:creation",
@@ -2050,7 +2009,6 @@
     },
     {
       "ucc_course_id": "UCC-ART-102",
-      "legacy_course_id": "GJS102",
       "theme_refs": [
         "urn:theophile:theme:art_et_beaute",
         "urn:theophile:theme:culture_et_liturgie",
@@ -2073,7 +2031,6 @@
     },
     {
       "ucc_course_id": "UCC-ART-103",
-      "legacy_course_id": "GJS103",
       "theme_refs": [
         "urn:theophile:theme:culture_et_liturgie",
         "urn:theophile:theme:creation",
@@ -2096,7 +2053,6 @@
     },
     {
       "ucc_course_id": "UCC-ART-104",
-      "legacy_course_id": "GJS104",
       "theme_refs": [
         "urn:theophile:theme:culture_et_liturgie",
         "urn:theophile:theme:contemplation",
@@ -2119,7 +2075,6 @@
     },
     {
       "ucc_course_id": "UCC-ART-105",
-      "legacy_course_id": "GJS105",
       "theme_refs": [
         "urn:theophile:theme:langage",
         "urn:theophile:theme:hermeneutique",
@@ -2142,7 +2097,6 @@
     },
     {
       "ucc_course_id": "UCC-ART-106",
-      "legacy_course_id": "GJS106",
       "theme_refs": [
         "urn:theophile:theme:langage",
         "urn:theophile:theme:culture_et_liturgie",
@@ -2165,7 +2119,6 @@
     },
     {
       "ucc_course_id": "UCC-ART-107",
-      "legacy_course_id": "GJS107",
       "theme_refs": [
         "urn:theophile:theme:culture_et_liturgie",
         "urn:theophile:theme:reception",
@@ -2188,7 +2141,6 @@
     },
     {
       "ucc_course_id": "UCC-ART-108",
-      "legacy_course_id": "GJS108",
       "theme_refs": [
         "urn:theophile:theme:art_et_beaute",
         "urn:theophile:theme:progres",
@@ -2211,7 +2163,6 @@
     },
     {
       "ucc_course_id": "UCC-ART-109",
-      "legacy_course_id": "GJS109",
       "theme_refs": [
         "urn:theophile:theme:art_et_beaute",
         "urn:theophile:theme:reception",
@@ -2234,7 +2185,6 @@
     },
     {
       "ucc_course_id": "UCC-ART-110",
-      "legacy_course_id": "GJS110",
       "theme_refs": [
         "urn:theophile:theme:art_et_beaute",
         "urn:theophile:theme:culture_et_liturgie",
@@ -2257,7 +2207,6 @@
     },
     {
       "ucc_course_id": "UCC-EDU-101",
-      "legacy_course_id": "IA101",
       "theme_refs": [
         "urn:theophile:theme:education",
         "urn:theophile:theme:personnalisme",
@@ -2280,7 +2229,6 @@
     },
     {
       "ucc_course_id": "UCC-EDU-102",
-      "legacy_course_id": "IA102",
       "theme_refs": [
         "urn:theophile:theme:education",
         "urn:theophile:theme:histoire_des_doctrines",
@@ -2303,7 +2251,6 @@
     },
     {
       "ucc_course_id": "UCC-EDU-103",
-      "legacy_course_id": "IA103",
       "theme_refs": [
         "urn:theophile:theme:education",
         "urn:theophile:theme:connaissance",
@@ -2326,7 +2273,6 @@
     },
     {
       "ucc_course_id": "UCC-EDU-104",
-      "legacy_course_id": "IA104",
       "theme_refs": [
         "urn:theophile:theme:education",
         "urn:theophile:theme:liberte",
@@ -2349,7 +2295,6 @@
     },
     {
       "ucc_course_id": "UCC-EDU-105",
-      "legacy_course_id": "IA105",
       "theme_refs": [
         "urn:theophile:theme:education",
         "urn:theophile:theme:tradition_et_raison",
@@ -2372,7 +2317,6 @@
     },
     {
       "ucc_course_id": "UCC-EDU-106",
-      "legacy_course_id": "IA106",
       "theme_refs": [
         "urn:theophile:theme:education",
         "urn:theophile:theme:science",
@@ -2395,7 +2339,6 @@
     },
     {
       "ucc_course_id": "UCC-EDU-107",
-      "legacy_course_id": "IA107",
       "theme_refs": [
         "urn:theophile:theme:education",
         "urn:theophile:theme:langage",
@@ -2418,7 +2361,6 @@
     },
     {
       "ucc_course_id": "UCC-EDU-108",
-      "legacy_course_id": "IA108",
       "theme_refs": [
         "urn:theophile:theme:education",
         "urn:theophile:theme:pauvrete",
@@ -2441,7 +2383,6 @@
     },
     {
       "ucc_course_id": "UCC-EDU-109",
-      "legacy_course_id": "IA109",
       "theme_refs": [
         "urn:theophile:theme:education",
         "urn:theophile:theme:progres",
@@ -2464,7 +2405,6 @@
     },
     {
       "ucc_course_id": "UCC-EDU-110",
-      "legacy_course_id": "IA110",
       "theme_refs": [
         "urn:theophile:theme:education",
         "urn:theophile:theme:mission",
@@ -2487,7 +2427,6 @@
     },
     {
       "ucc_course_id": "UCC-SAN-101",
-      "legacy_course_id": "IS101",
       "theme_refs": [
         "urn:theophile:theme:dignite",
         "urn:theophile:theme:vie_et_soin",
@@ -2510,7 +2449,6 @@
     },
     {
       "ucc_course_id": "UCC-SAN-102",
-      "legacy_course_id": "IS102",
       "theme_refs": [
         "urn:theophile:theme:corps_vecu",
         "urn:theophile:theme:condition_humaine",
@@ -2533,7 +2471,6 @@
     },
     {
       "ucc_course_id": "UCC-SAN-103",
-      "legacy_course_id": "IS103",
       "theme_refs": [
         "urn:theophile:theme:autrui_et_empathie",
         "urn:theophile:theme:amour",
@@ -2556,7 +2493,6 @@
     },
     {
       "ucc_course_id": "UCC-SAN-104",
-      "legacy_course_id": "IS104",
       "theme_refs": [
         "urn:theophile:theme:vie_et_violence",
         "urn:theophile:theme:vie_et_soin",
@@ -2579,7 +2515,6 @@
     },
     {
       "ucc_course_id": "UCC-SAN-105",
-      "legacy_course_id": "IS105",
       "theme_refs": [
         "urn:theophile:theme:pauvrete",
         "urn:theophile:theme:justice_sociale",
@@ -2602,7 +2537,6 @@
     },
     {
       "ucc_course_id": "UCC-SAN-106",
-      "legacy_course_id": "IS106",
       "theme_refs": [
         "urn:theophile:theme:condition_humaine",
         "urn:theophile:theme:esperance",
@@ -2625,7 +2559,6 @@
     },
     {
       "ucc_course_id": "UCC-SAN-107",
-      "legacy_course_id": "IS107",
       "theme_refs": [
         "urn:theophile:theme:dignite",
         "urn:theophile:theme:personnalisme",
@@ -2648,7 +2581,6 @@
     },
     {
       "ucc_course_id": "UCC-SAN-108",
-      "legacy_course_id": "IS108",
       "theme_refs": [
         "urn:theophile:theme:vie_et_soin",
         "urn:theophile:theme:autorite",
@@ -2671,7 +2603,6 @@
     },
     {
       "ucc_course_id": "UCC-SAN-109",
-      "legacy_course_id": "IS109",
       "theme_refs": [
         "urn:theophile:theme:mission",
         "urn:theophile:theme:vie_et_soin",
@@ -2694,7 +2625,6 @@
     },
     {
       "ucc_course_id": "UCC-SAN-110",
-      "legacy_course_id": "IS110",
       "theme_refs": [
         "urn:theophile:theme:vie_et_soin",
         "urn:theophile:theme:dignite",
@@ -2717,7 +2647,6 @@
     },
     {
       "ucc_course_id": "UCC-LET-101",
-      "legacy_course_id": "LI101",
       "theme_refs": [
         "urn:theophile:theme:langage",
         "urn:theophile:theme:veracite",
@@ -2740,7 +2669,6 @@
     },
     {
       "ucc_course_id": "UCC-LET-102",
-      "legacy_course_id": "LI102",
       "theme_refs": [
         "urn:theophile:theme:ecriture",
         "urn:theophile:theme:hermeneutique",
@@ -2763,7 +2691,6 @@
     },
     {
       "ucc_course_id": "UCC-LET-103",
-      "legacy_course_id": "LI103",
       "theme_refs": [
         "urn:theophile:theme:langage",
         "urn:theophile:theme:ecriture",
@@ -2786,7 +2713,6 @@
     },
     {
       "ucc_course_id": "UCC-LET-104",
-      "legacy_course_id": "LI104",
       "theme_refs": [
         "urn:theophile:theme:langage",
         "urn:theophile:theme:hermeneutique",
@@ -2809,7 +2735,6 @@
     },
     {
       "ucc_course_id": "UCC-LET-105",
-      "legacy_course_id": "LI105",
       "theme_refs": [
         "urn:theophile:theme:langage",
         "urn:theophile:theme:raison_et_foi",
@@ -2832,7 +2757,6 @@
     },
     {
       "ucc_course_id": "UCC-LET-106",
-      "legacy_course_id": "LI106",
       "theme_refs": [
         "urn:theophile:theme:langage",
         "urn:theophile:theme:culture_et_liturgie",
@@ -2855,7 +2779,6 @@
     },
     {
       "ucc_course_id": "UCC-LET-107",
-      "legacy_course_id": "LI107",
       "theme_refs": [
         "urn:theophile:theme:langage",
         "urn:theophile:theme:personne_et_communaute",
@@ -2878,7 +2801,6 @@
     },
     {
       "ucc_course_id": "UCC-LET-108",
-      "legacy_course_id": "LI108",
       "theme_refs": [
         "urn:theophile:theme:dogme",
         "urn:theophile:theme:histoire_des_doctrines",
@@ -2901,7 +2823,6 @@
     },
     {
       "ucc_course_id": "UCC-LET-109",
-      "legacy_course_id": "LI109",
       "theme_refs": [
         "urn:theophile:theme:langage",
         "urn:theophile:theme:connaissance",
@@ -2924,7 +2845,6 @@
     },
     {
       "ucc_course_id": "UCC-LET-110",
-      "legacy_course_id": "LI110",
       "theme_refs": [
         "urn:theophile:theme:langage",
         "urn:theophile:theme:hermeneutique",
@@ -2947,7 +2867,6 @@
     },
     {
       "ucc_course_id": "UCC-PHI-101",
-      "legacy_course_id": "ME101",
       "theme_refs": [
         "urn:theophile:theme:metaphysique",
         "urn:theophile:theme:theologie_naturelle",
@@ -2970,7 +2889,6 @@
     },
     {
       "ucc_course_id": "UCC-PHI-102",
-      "legacy_course_id": "ME102",
       "theme_refs": [
         "urn:theophile:theme:verite",
         "urn:theophile:theme:connaissance",
@@ -2993,7 +2911,6 @@
     },
     {
       "ucc_course_id": "UCC-PHI-103",
-      "legacy_course_id": "ME103",
       "theme_refs": [
         "urn:theophile:theme:personnalisme",
         "urn:theophile:theme:ame_et_corps",
@@ -3016,7 +2933,6 @@
     },
     {
       "ucc_course_id": "UCC-PHI-104",
-      "legacy_course_id": "ME104",
       "theme_refs": [
         "urn:theophile:theme:conscience",
         "urn:theophile:theme:liberte",
@@ -3039,7 +2955,6 @@
     },
     {
       "ucc_course_id": "UCC-PHI-105",
-      "legacy_course_id": "ME105",
       "theme_refs": [
         "urn:theophile:theme:bien",
         "urn:theophile:theme:bonheur",
@@ -3062,7 +2977,6 @@
     },
     {
       "ucc_course_id": "UCC-PHI-106",
-      "legacy_course_id": "ME106",
       "theme_refs": [
         "urn:theophile:theme:mal",
         "urn:theophile:theme:providence",
@@ -3085,7 +2999,6 @@
     },
     {
       "ucc_course_id": "UCC-PHI-107",
-      "legacy_course_id": "ME107",
       "theme_refs": [
         "urn:theophile:theme:temps",
         "urn:theophile:theme:creation",
@@ -3108,7 +3021,6 @@
     },
     {
       "ucc_course_id": "UCC-PHI-108",
-      "legacy_course_id": "ME108",
       "theme_refs": [
         "urn:theophile:theme:universaux",
         "urn:theophile:theme:loi_naturelle",
@@ -3131,7 +3043,6 @@
     },
     {
       "ucc_course_id": "UCC-PHI-109",
-      "legacy_course_id": "ME109",
       "theme_refs": [
         "urn:theophile:theme:philosophie_chretienne",
         "urn:theophile:theme:reception_des_auteurs",
@@ -3154,7 +3065,6 @@
     },
     {
       "ucc_course_id": "UCC-PHI-110",
-      "legacy_course_id": "ME110",
       "theme_refs": [
         "urn:theophile:theme:metaphysique",
         "urn:theophile:theme:critique_des_preuves",
@@ -3177,7 +3087,6 @@
     },
     {
       "ucc_course_id": "UCC-GOV-101",
-      "legacy_course_id": "SP101",
       "theme_refs": [
         "urn:theophile:theme:autorite",
         "urn:theophile:theme:politique",
@@ -3200,7 +3109,6 @@
     },
     {
       "ucc_course_id": "UCC-GOV-102",
-      "legacy_course_id": "SP102",
       "theme_refs": [
         "urn:theophile:theme:loi",
         "urn:theophile:theme:loi_naturelle",
@@ -3223,7 +3131,6 @@
     },
     {
       "ucc_course_id": "UCC-GOV-103",
-      "legacy_course_id": "SP103",
       "theme_refs": [
         "urn:theophile:theme:subsidiarite",
         "urn:theophile:theme:personne_et_communaute",
@@ -3246,7 +3153,6 @@
     },
     {
       "ucc_course_id": "UCC-GOV-104",
-      "legacy_course_id": "SP104",
       "theme_refs": [
         "urn:theophile:theme:droits_et_paix",
         "urn:theophile:theme:liberte",
@@ -3269,7 +3175,6 @@
     },
     {
       "ucc_course_id": "UCC-GOV-105",
-      "legacy_course_id": "SP105",
       "theme_refs": [
         "urn:theophile:theme:politique",
         "urn:theophile:theme:autorite",
@@ -3292,7 +3197,6 @@
     },
     {
       "ucc_course_id": "UCC-GOV-106",
-      "legacy_course_id": "SP106",
       "theme_refs": [
         "urn:theophile:theme:politique",
         "urn:theophile:theme:religions",
@@ -3315,7 +3219,6 @@
     },
     {
       "ucc_course_id": "UCC-GOV-107",
-      "legacy_course_id": "SP107",
       "theme_refs": [
         "urn:theophile:theme:politique_et_colonisation",
         "urn:theophile:theme:reception",
@@ -3338,7 +3241,6 @@
     },
     {
       "ucc_course_id": "UCC-GOV-108",
-      "legacy_course_id": "SP108",
       "theme_refs": [
         "urn:theophile:theme:guerre_et_paix",
         "urn:theophile:theme:paix",
@@ -3361,7 +3263,6 @@
     },
     {
       "ucc_course_id": "UCC-GOV-109",
-      "legacy_course_id": "SP109",
       "theme_refs": [
         "urn:theophile:theme:prudence",
         "urn:theophile:theme:conscience",
@@ -3384,7 +3285,6 @@
     },
     {
       "ucc_course_id": "UCC-GOV-110",
-      "legacy_course_id": "SP110",
       "theme_refs": [
         "urn:theophile:theme:politique",
         "urn:theophile:theme:subsidiarite",
@@ -3414,6 +3314,10 @@
     "source_units": "themes",
     "canonical_definition_required": false,
     "authority": "derived_from_source_corpus",
-    "migration_note": "Current theme map is a transitional derived projection; themes are concept candidates, not automatically canonical glossary concepts."
+    "migration_note": "Current theme map is a transitional derived projection; themes are concept candidates, not automatically canonical glossary concepts.",
+    "compatibility": {
+      "legacy_resolution": "atlas/ucc_pathway_migrations.json",
+      "legacy_write_policy": "forbidden"
+    }
   }
 }

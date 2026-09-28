@@ -1,0 +1,18 @@
+{
+  "schema_version": "MATH-PATHWAY-MIGRATIONS-1.0",
+  "universe_id": "math",
+  "policy": {
+    "canonical_authority": "local/uckk/atlas/math_curriculum_registry.json",
+    "legacy_mode": "none_declared",
+    "write_rule": "Legacy identifiers are readable, never writable. No historical Math pathway identifiers are declared in this snapshot.",
+    "allowed_relations": [
+      "renamed_to",
+      "absorbed_into",
+      "split_into",
+      "merged_into",
+      "retired"
+    ]
+  },
+  "pathways": [],
+  "courses": []
+}

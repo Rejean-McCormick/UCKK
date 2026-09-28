@@ -1,0 +1,880 @@
+{
+  "schema_version": "UCC-PATHWAY-MIGRATIONS-1.0",
+  "universe_id": "ucc",
+  "policy": {
+    "canonical_authority": "local/uckk/atlas/ucc_curriculum_registry.json",
+    "legacy_mode": "read_only_resolution",
+    "write_rule": "Legacy identifiers are readable, never writable.",
+    "allowed_relations": [
+      "renamed_to",
+      "absorbed_into",
+      "split_into",
+      "merged_into",
+      "retired"
+    ]
+  },
+  "pathways": [
+    {
+      "source_system": "ucc-curriculum-v1",
+      "legacy_id": "ucc:voie:oeuvres-institutions",
+      "relation": "renamed_to",
+      "canonical_id": "ucc.path.works-institutions-administration",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "voie_architecture_sociotechnique",
+      "legacy_code": "AS",
+      "legacy_category_idnumber": "UCKK-AS",
+      "relation": "absorbed_into",
+      "canonical_id": "ucc.path.works-institutions-administration",
+      "status": "retired"
+    },
+    {
+      "source_system": "ucc-curriculum-v1",
+      "legacy_id": "ucc:voie:creation-sciences-ecologie",
+      "relation": "renamed_to",
+      "canonical_id": "ucc.path.creation-sciences-ecology",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "voie_ecologie",
+      "legacy_code": "ECL",
+      "legacy_category_idnumber": "UCKK-ECL",
+      "relation": "absorbed_into",
+      "canonical_id": "ucc.path.creation-sciences-ecology",
+      "status": "retired"
+    },
+    {
+      "source_system": "ucc-curriculum-v1",
+      "legacy_id": "ucc:voie:economie-travail",
+      "relation": "renamed_to",
+      "canonical_id": "ucc.path.economy-work-social-justice",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "voie_economie",
+      "legacy_code": "EC",
+      "legacy_category_idnumber": "UCKK-EC",
+      "relation": "absorbed_into",
+      "canonical_id": "ucc.path.economy-work-social-justice",
+      "status": "retired"
+    },
+    {
+      "source_system": "ucc-curriculum-v1",
+      "legacy_id": "ucc:voie:theologie-tradition",
+      "relation": "renamed_to",
+      "canonical_id": "ucc.path.theology-scripture-tradition",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "voie_ecosysteme_digital_koa",
+      "legacy_code": "KOA",
+      "legacy_category_idnumber": "UCKK-KOA",
+      "relation": "absorbed_into",
+      "canonical_id": "ucc.path.theology-scripture-tradition",
+      "status": "retired"
+    },
+    {
+      "source_system": "ucc-curriculum-v1",
+      "legacy_id": "ucc:voie:arts-culture",
+      "relation": "renamed_to",
+      "canonical_id": "ucc.path.arts-beauty-culture",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "voie_grand_jeu_social",
+      "legacy_code": "GJS",
+      "legacy_category_idnumber": "UCKK-GJS",
+      "relation": "absorbed_into",
+      "canonical_id": "ucc.path.arts-beauty-culture",
+      "status": "retired"
+    },
+    {
+      "source_system": "ucc-curriculum-v1",
+      "legacy_id": "ucc:voie:education-universites",
+      "relation": "renamed_to",
+      "canonical_id": "ucc.path.education-universities-transmission",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "voie_ia_gouvernable",
+      "legacy_code": "IA",
+      "legacy_category_idnumber": "UCKK-IA",
+      "relation": "absorbed_into",
+      "canonical_id": "ucc.path.education-universities-transmission",
+      "status": "retired"
+    },
+    {
+      "source_system": "ucc-curriculum-v1",
+      "legacy_id": "ucc:voie:sante-soin",
+      "relation": "renamed_to",
+      "canonical_id": "ucc.path.health-care-dignity",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "voie_intervention_sociale_systemes_humains",
+      "legacy_code": "IS",
+      "legacy_category_idnumber": "UCKK-IS",
+      "relation": "absorbed_into",
+      "canonical_id": "ucc.path.health-care-dignity",
+      "status": "retired"
+    },
+    {
+      "source_system": "ucc-curriculum-v1",
+      "legacy_id": "ucc:voie:langage-lettres",
+      "relation": "renamed_to",
+      "canonical_id": "ucc.path.language-letters-transmission",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "voie_linguistique_architecture_du_sens",
+      "legacy_code": "LI",
+      "legacy_category_idnumber": "UCKK-LI",
+      "relation": "absorbed_into",
+      "canonical_id": "ucc.path.language-letters-transmission",
+      "status": "retired"
+    },
+    {
+      "source_system": "ucc-curriculum-v1",
+      "legacy_id": "ucc:voie:philosophie-personne",
+      "relation": "renamed_to",
+      "canonical_id": "ucc.path.philosophy-metaphysics-person",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "voie_metaphysique",
+      "legacy_code": "ME",
+      "legacy_category_idnumber": "UCKK-ME",
+      "relation": "absorbed_into",
+      "canonical_id": "ucc.path.philosophy-metaphysics-person",
+      "status": "retired"
+    },
+    {
+      "source_system": "ucc-curriculum-v1",
+      "legacy_id": "ucc:voie:droit-politique-bien-commun",
+      "relation": "renamed_to",
+      "canonical_id": "ucc.path.law-politics-common-good",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "voie_sciences_politiques",
+      "legacy_code": "SP",
+      "legacy_category_idnumber": "UCKK-SP",
+      "relation": "absorbed_into",
+      "canonical_id": "ucc.path.law-politics-common-good",
+      "status": "retired"
+    }
+  ],
+  "courses": [
+    {
+      "source_system": "uckk",
+      "legacy_id": "AS101",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-OEU-101",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "AS102",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-OEU-102",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "AS103",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-OEU-103",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "AS104",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-OEU-104",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "AS105",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-OEU-105",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "AS106",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-OEU-106",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "AS107",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-OEU-107",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "AS108",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-OEU-108",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "AS109",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-OEU-109",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "AS110",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-OEU-110",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ECL101",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SCI-101",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ECL102",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SCI-102",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ECL103",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SCI-103",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ECL104",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SCI-104",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ECL105",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SCI-105",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ECL106",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SCI-106",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ECL107",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SCI-107",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ECL108",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SCI-108",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ECL109",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SCI-109",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ECL110",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SCI-110",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "EC101",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ECO-101",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "EC102",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ECO-102",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "EC103",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ECO-103",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "EC104",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ECO-104",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "EC105",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ECO-105",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "EC106",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ECO-106",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "EC107",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ECO-107",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "EC108",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ECO-108",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "EC109",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ECO-109",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "EC110",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ECO-110",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "KOA101",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-THE-101",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "KOA102",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-THE-102",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "KOA103",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-THE-103",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "KOA104",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-THE-104",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "KOA105",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-THE-105",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "KOA106",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-THE-106",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "KOA107",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-THE-107",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "KOA108",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-THE-108",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "KOA109",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-THE-109",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "KOA110",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-THE-110",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "GJS101",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ART-101",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "GJS102",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ART-102",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "GJS103",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ART-103",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "GJS104",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ART-104",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "GJS105",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ART-105",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "GJS106",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ART-106",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "GJS107",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ART-107",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "GJS108",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ART-108",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "GJS109",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ART-109",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "GJS110",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-ART-110",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IA101",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-EDU-101",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IA102",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-EDU-102",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IA103",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-EDU-103",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IA104",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-EDU-104",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IA105",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-EDU-105",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IA106",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-EDU-106",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IA107",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-EDU-107",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IA108",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-EDU-108",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IA109",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-EDU-109",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IA110",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-EDU-110",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IS101",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SAN-101",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IS102",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SAN-102",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IS103",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SAN-103",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IS104",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SAN-104",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IS105",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SAN-105",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IS106",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SAN-106",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IS107",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SAN-107",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IS108",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SAN-108",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IS109",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SAN-109",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "IS110",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-SAN-110",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "LI101",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-LET-101",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "LI102",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-LET-102",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "LI103",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-LET-103",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "LI104",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-LET-104",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "LI105",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-LET-105",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "LI106",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-LET-106",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "LI107",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-LET-107",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "LI108",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-LET-108",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "LI109",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-LET-109",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "LI110",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-LET-110",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ME101",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-PHI-101",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ME102",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-PHI-102",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ME103",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-PHI-103",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ME104",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-PHI-104",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ME105",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-PHI-105",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ME106",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-PHI-106",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ME107",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-PHI-107",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ME108",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-PHI-108",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ME109",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-PHI-109",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "ME110",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-PHI-110",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "SP101",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-GOV-101",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "SP102",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-GOV-102",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "SP103",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-GOV-103",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "SP104",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-GOV-104",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "SP105",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-GOV-105",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "SP106",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-GOV-106",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "SP107",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-GOV-107",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "SP108",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-GOV-108",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "SP109",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-GOV-109",
+      "status": "retired"
+    },
+    {
+      "source_system": "uckk",
+      "legacy_id": "SP110",
+      "relation": "renamed_to",
+      "canonical_id": "UCC-GOV-110",
+      "status": "retired"
+    }
+  ]
+}
