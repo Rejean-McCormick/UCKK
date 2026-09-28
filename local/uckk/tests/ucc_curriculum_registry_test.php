@@ -16,9 +16,9 @@ defined('MOODLE_INTERNAL') || die();
  * @covers \local_uckk\local\atlas\ucc_legacy_resolver
  */
 final class ucc_curriculum_registry_test extends advanced_testcase {
-    public function test_registry_exposes_ten_pathways_and_one_hundred_courses(): void {
-        $this->assertCount(10, ucc_curriculum_registry::pathways());
-        $this->assertCount(100, ucc_curriculum_registry::courses());
+    public function test_registry_exposes_eleven_pathways_and_one_hundred_ten_courses(): void {
+        $this->assertCount(11, ucc_curriculum_registry::pathways());
+        $this->assertCount(110, ucc_curriculum_registry::courses());
     }
 
     public function test_canonical_registry_contains_no_legacy_fields(): void {
@@ -50,7 +50,7 @@ final class ucc_curriculum_registry_test extends advanced_testcase {
 
     public function test_courses_can_be_queried_by_domain_and_kristal_theme(): void {
         $this->assertCount(20, ucc_curriculum_registry::courses_by_domain('kreative'));
-        $this->assertCount(30, ucc_curriculum_registry::courses_by_domain('konnected'));
+        $this->assertCount(40, ucc_curriculum_registry::courses_by_domain('konnected'));
         $this->assertCount(30, ucc_curriculum_registry::courses_by_domain('keenkonnect'));
         $this->assertCount(20, ucc_curriculum_registry::courses_by_domain('ethikos'));
         $this->assertNotEmpty(ucc_curriculum_registry::courses_by_theme('urn:theophile:theme:justice'));

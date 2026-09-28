@@ -36,6 +36,7 @@ final class home {
                 ['label' => 'Méthode éditoriale', 'description' => 'Comprendre le rôle de l’IA, la révision des arguments, les corrections et les limites du corpus.', 'url' => '/local/uckk/method.php'],
                 ['label' => 'Transparence', 'description' => 'Distinguer clairement l’initiative indépendante de toute reconnaissance ecclésiale officielle.', 'url' => '/local/uckk/transparency.php'],
                 ['label' => 'Médiathèque', 'description' => 'Parcourir les documents, médias, œuvres, références et traces reliés au corpus.', 'url' => '/local/uckk/mediatheque.php'],
+                ['label' => 'Le Dieu cosmique', 'description' => 'Ouvrage-charnière de Jacques Languirand et Jean Proulx : une carte comparative pour parcourir plusieurs réflexions sur le divin, la nature, la raison et le cosmos.', 'url' => '/local/uckk/programs.php'],
             ],
 
             'sections' => [
@@ -71,6 +72,17 @@ final class home {
                         'Lecture historique et contextualisée.',
                         'Lecture symbolique, philosophique ou théologique lorsque le texte s’y prête.',
                         'Étude critique d’idées dépassées pour leur valeur documentaire et historique.',
+                    ],
+                ],
+                [
+                    'type' => 'orientation',
+                    'eyebrow' => 'Ouvrage-charnière',
+                    'title' => 'Le Dieu cosmique comme continuum de navigation',
+                    'body' => 'Le Dieu cosmique : À la recherche du Dieu d’Einstein, de Jacques Languirand et Jean Proulx, est référencé explicitement comme ouvrage-charnière. UCC l’utilise moins comme interprétation à adopter que comme carte de passage entre plusieurs manières de penser le divin : raison et émerveillement, immanence et transcendance, nature et création, science et métaphysique, expérience religieuse et évolution.',
+                    'items' => [
+                        'L’ouvrage est nommé et cité comme source d’orientation, sans être présenté comme doctrine UCC.',
+                        'Une Voie dédiée permet de suivre les auteurs, concepts et textes historiques auxquels cette cartographie conduit.',
+                        'La table des matières exacte n’est pas reconstruite sans source vérifiable; le parcours UCC est une architecture éditoriale distincte.',
                     ],
                 ],
                 [
@@ -120,7 +132,7 @@ final class home {
                 ],
                 [
                     'title' => 'Médiathèque',
-                    'body' => 'Documents, médias, références et œuvres qui donnent au corpus ses sources et ses points d’appui.',
+                    'body' => 'Documents, médias, références et œuvres qui donnent au corpus ses sources et ses points d’appui, dont Le Dieu cosmique comme ouvrage-charnière explicitement référencé.',
                     'url' => '/local/uckk/mediatheque.php',
                     'actionlabel' => 'Ouvrir la Médiathèque',
                     'type' => 'media',

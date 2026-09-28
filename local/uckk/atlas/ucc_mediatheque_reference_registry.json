@@ -1,0 +1,188 @@
+{
+  "schema_version": "UCC-MEDIATHEQUE-REFS-1.0",
+  "universe_id": "ucc",
+  "policy": {
+    "default_cutoff_year": 1926,
+    "exceptions": [
+      "Pierre Teilhard de Chardin",
+      "Fratelli tutti (2020)",
+      "Le Dieu cosmique : À la recherche du Dieu d’Einstein (2008)"
+    ],
+    "provenance_rule": "book-derived references must be explicitly evidenced from the book or a reliable preview; complementary pathway references are labelled editorial_complement."
+  },
+  "works": [
+    {
+      "work_ref": "ucc.work.le-dieu-cosmique-2008",
+      "worktype": "book",
+      "status": "active",
+      "visibility": "public",
+      "audiencesuitability": "guided",
+      "rightsstatus": "third_party_copyright",
+      "title": "Le Dieu cosmique",
+      "subtitle": "À la recherche du Dieu d’Einstein",
+      "creator": "Jacques Languirand; Jean Proulx",
+      "publisher": "Le Jour",
+      "publicationyear": 2008,
+      "language": "fr",
+      "identifier": "9782890447646",
+      "identifiertype": "ISBN-13",
+      "citation": "Jacques Languirand et Jean Proulx, Le Dieu cosmique : À la recherche du Dieu d’Einstein, Montréal, Le Jour, 2008.",
+      "sourceurl": "https://emprunt.bibliothequedesameriques.com/resources/550ad46fcdd23087a9787007",
+      "alternate_urls": [
+        {
+          "role": "bibliographic_record",
+          "url": "https://www.litterature.org/recherche/ecrivains/languirand-jacques-281/"
+        },
+        {
+          "role": "publisher_description_retail",
+          "url": "https://books.apple.com/ca/book/le-dieu-cosmique/id715948629"
+        }
+      ],
+      "rightsstatement": "Copyrighted work. UCC stores metadata and legal access links only; no local PDF/EPUB mirror without permission.",
+      "teachingnote": "Ouvrage-charnière de la Voie ucc.path.cosmic-divine-continuum. Utilisé comme cartographie comparative des vues sur le divin, non comme position doctrinale UCC.",
+      "metadata": {
+        "pathway_refs": [
+          "ucc.path.cosmic-divine-continuum"
+        ],
+        "course_refs": [
+          "UCC-COS-101",
+          "UCC-COS-102",
+          "UCC-COS-103",
+          "UCC-COS-104",
+          "UCC-COS-105",
+          "UCC-COS-106",
+          "UCC-COS-107",
+          "UCC-COS-108",
+          "UCC-COS-109",
+          "UCC-COS-110"
+        ],
+        "toc_status": "not_available_in_verified_open_sources",
+        "known_back_matter": "Bibliographie pp. 265–275; index",
+        "exception_to_cutoff": true
+      }
+    },
+    {
+      "work_ref": "ucc.work.spinoza-ethique-appuhn-1913",
+      "worktype": "book",
+      "status": "active",
+      "visibility": "public",
+      "rightsstatus": "public_domain",
+      "title": "Éthique",
+      "creator": "Baruch Spinoza; trad. Charles Appuhn",
+      "publisher": "Garnier Frères",
+      "publicationyear": 1913,
+      "language": "fr",
+      "sourceurl": "https://fr.wikisource.org/wiki/%C3%89thique_%28Appuhn%2C_1913%29",
+      "citation": "Baruch Spinoza, Éthique, trad. Charles Appuhn, Garnier Frères, 1913.",
+      "metadata": {
+        "provenance": "editorial_complement",
+        "course_refs": [
+          "UCC-COS-103",
+          "UCC-COS-109",
+          "UCC-COS-110"
+        ]
+      }
+    },
+    {
+      "work_ref": "ucc.work.james-varieties-1902",
+      "worktype": "book",
+      "status": "active",
+      "visibility": "public",
+      "rightsstatus": "public_domain",
+      "title": "The Varieties of Religious Experience",
+      "creator": "William James",
+      "publicationyear": 1902,
+      "language": "en",
+      "sourceurl": "https://www.gutenberg.org/ebooks/621",
+      "citation": "William James, The Varieties of Religious Experience, 1902.",
+      "metadata": {
+        "provenance": "editorial_complement",
+        "course_refs": [
+          "UCC-COS-105",
+          "UCC-COS-109",
+          "UCC-COS-110"
+        ]
+      }
+    },
+    {
+      "work_ref": "ucc.work.bergson-creative-evolution-1907",
+      "worktype": "book",
+      "status": "active",
+      "visibility": "public",
+      "rightsstatus": "public_domain",
+      "title": "Creative Evolution",
+      "creator": "Henri Bergson; trans. Arthur Mitchell",
+      "publicationyear": 1907,
+      "language": "en",
+      "sourceurl": "https://www.gutenberg.org/ebooks/26163",
+      "citation": "Henri Bergson, L’Évolution créatrice, 1907; English translation by Arthur Mitchell.",
+      "metadata": {
+        "provenance": "editorial_complement",
+        "course_refs": [
+          "UCC-COS-107",
+          "UCC-COS-110"
+        ]
+      }
+    },
+    {
+      "work_ref": "ucc.work.pascal-pensees-brunschvicg",
+      "worktype": "book",
+      "status": "active",
+      "visibility": "public",
+      "rightsstatus": "public_domain",
+      "title": "Pensées",
+      "creator": "Blaise Pascal; éd. Léon Brunschvicg",
+      "publicationyear": 1925,
+      "language": "fr",
+      "sourceurl": "https://fr.wikisource.org/wiki/Pens%C3%A9es_%28Pascal%2C_%C3%A9d._Brunschvicg%29",
+      "citation": "Blaise Pascal, Pensées, éd. Léon Brunschvicg, Hachette, 1904–1925.",
+      "metadata": {
+        "provenance": "editorial_complement",
+        "course_refs": [
+          "UCC-COS-102",
+          "UCC-COS-106",
+          "UCC-COS-109",
+          "UCC-COS-110"
+        ]
+      }
+    },
+    {
+      "work_ref": "ucc.work.teilhard-vie-cosmique",
+      "worktype": "article",
+      "status": "active",
+      "visibility": "public",
+      "rightsstatus": "third_party_copyright",
+      "title": "La Vie cosmique",
+      "creator": "Pierre Teilhard de Chardin",
+      "publicationyear": 1916,
+      "language": "fr",
+      "sourceurl": "https://amis-de-teilhard.org/wp-content/uploads/2016/05/vie_cosmique_francais-anglais-espagnol.pdf",
+      "citation": "Pierre Teilhard de Chardin, La Vie cosmique, 1916.",
+      "rightsstatement": "Hosted by Association des Amis de Pierre Teilhard de Chardin; link only unless redistribution rights are separately confirmed.",
+      "metadata": {
+        "provenance": "editorial_complement",
+        "course_refs": [
+          "UCC-COS-108"
+        ],
+        "exception_author": true
+      }
+    }
+  ],
+  "anchor_work_research": {
+    "work_ref": "ucc.work.le-dieu-cosmique-2008",
+    "table_of_contents": {
+      "status": "not_verified_from_open_access_source",
+      "note": "No complete table of contents was found in the openly accessible sources checked on 2026-09-28. The UCC pathway is therefore editorial and must not be presented as the book chapter structure."
+    },
+    "bibliography": {
+      "status": "not_extracted",
+      "known_location": "pp. 265–275 according to bibliographic retailer metadata",
+      "next_step": "Extract and reconcile only from a lawful copy/preview or user-supplied scans/pages."
+    },
+    "evidence_urls": [
+      "https://www.romansquebecois.com/livre/jacques-languirand/le-dieu-cosmique--a-la-recherche-du-dieu-deinstein-jacques-languirand",
+      "https://www.chasse-aux-livres.fr/prix/2890447642/le-dieu-cosmique-jacques-languirand-9782890447646",
+      "https://secure.sogides.com/medias/2/3/ext_9782890447929.pdf"
+    ]
+  }
+}

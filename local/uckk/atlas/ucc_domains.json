@@ -20,12 +20,13 @@
       "code": "KON",
       "surface": "KonnectED",
       "door": "Comprendre",
-      "question": "Que dit le corpus, quelles sont ses sources et comment les connaissances s’articulent-elles?",
+      "question": "Que dit le corpus, quelles sont ses sources et comment les connaissances, visions du divin et interprétations du monde s’articulent-elles?",
       "purpose": "Étudier les concepts, sources, positions, arguments et controverses du corpus.",
       "pathway_ids": [
         "ucc.path.creation-sciences-ecology",
         "ucc.path.theology-scripture-tradition",
-        "ucc.path.philosophy-metaphysics-person"
+        "ucc.path.philosophy-metaphysics-person",
+        "ucc.path.cosmic-divine-continuum"
       ]
     },
     {

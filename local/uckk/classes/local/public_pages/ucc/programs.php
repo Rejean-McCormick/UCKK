@@ -166,98 +166,67 @@ final class programs {
     private static function program_cards(string $status): array {
         global $CFG, $DB;
 
-        if (!isset($CFG) || !isset($DB)) {
-            return [];
-        }
+        // Canonical Atlas pathways are the public source of truth. Moodle program
+        // records are used only to discover an optional visible course-category URL.
+        $categoryurls = [];
 
-        if (!class_exists('xmldb_table')) {
-            require_once($CFG->libdir . '/xmldb/xmldb_object.php');
-        }
-
-        if (!$DB->get_manager()->table_exists(new \xmldb_table('local_uckk_program'))) {
-            return [];
-        }
-
-        $records = $DB->get_records_sql("
-            SELECT
-                p.id,
-                p.shortname,
-                p.fullname,
-                p.programtype,
-                p.status,
-                p.visibility,
-                p.sortorder,
-                p.categoryid,
-                c.name AS categoryname,
-                c.idnumber AS categoryidnumber,
-                c.visible AS categoryvisible
-              FROM {local_uckk_program} p
-         LEFT JOIN {course_categories} c ON c.id = p.categoryid
-             WHERE p.status = :status
-          ORDER BY p.programtype, p.sortorder, p.fullname
-        ", [
-            'status' => $status,
-        ]);
-
-        $cards = [];
-
-        foreach ($records as $record) {
-            $shortname = trim((string)($record->shortname ?? ''));
-            $fullname = trim((string)($record->fullname ?? ''));
-            $programtype = trim((string)($record->programtype ?? ''));
-            $categoryname = trim((string)($record->categoryname ?? ''));
-            $categoryidnumber = trim((string)($record->categoryidnumber ?? ''));
-            $categoryvisible = (int)($record->categoryvisible ?? 0);
-            $categoryid = (int)($record->categoryid ?? 0);
-
-            $typelabel = self::program_type_label($programtype);
-            $publicidentity = self::public_program_identity($shortname, $fullname, $categoryname, $categoryidnumber);
-
-            if ($publicidentity !== null) {
-                $title = $publicidentity['title'];
-            } else {
-                $title = $fullname !== '' ? $fullname : $shortname;
+        if (isset($CFG) && isset($DB)) {
+            if (!class_exists('xmldb_table')) {
+                require_once($CFG->libdir . '/xmldb/xmldb_object.php');
             }
 
-            if ($title === '') {
+            if ($DB->get_manager()->table_exists(new \xmldb_table('local_uckk_program'))) {
+                $records = $DB->get_records_sql("
+                    SELECT p.shortname, p.fullname, p.status, p.categoryid,
+                           c.name AS categoryname, c.idnumber AS categoryidnumber, c.visible AS categoryvisible
+                      FROM {local_uckk_program} p
+                 LEFT JOIN {course_categories} c ON c.id = p.categoryid
+                     WHERE p.status = :status
+                ", ['status' => $status]);
+
+                foreach ($records as $record) {
+                    $pathwayid = self::canonical_pathway_id_from_identifiers(
+                        trim((string)($record->shortname ?? '')),
+                        trim((string)($record->categoryidnumber ?? ''))
+                    );
+                    if ($pathwayid === '') {
+                        continue;
+                    }
+                    $categoryid = (int)($record->categoryid ?? 0);
+                    $categoryvisible = (int)($record->categoryvisible ?? 0);
+                    if ($categoryid > 0 && $categoryvisible === 1) {
+                        $categoryurls[$pathwayid] = (new moodle_url('/course/index.php', [
+                            'categoryid' => $categoryid,
+                        ]))->out(false);
+                    }
+                }
+            }
+        }
+
+        $cards = [];
+        foreach (ucc_curriculum_registry::pathways() as $pathway) {
+            $pathwayid = (string)$pathway['pathway_id'];
+            $publicidentity = self::public_program_identity($pathwayid, '', '', $pathwayid);
+            if ($publicidentity === null) {
                 continue;
             }
 
-            $bodyparts = [];
-
-            if ($publicidentity !== null && $publicidentity['body'] !== '') {
-                $bodyparts[] = $publicidentity['body'];
-            } else {
-                if ($typelabel !== '') {
-                    $bodyparts[] = 'Parcours : ' . $typelabel . '.';
-                }
-
-                if ($categoryname !== '') {
-                    $bodyparts[] = 'Cours et espaces d’apprentissage : ' . $categoryname . '.';
-                } else {
-                    $bodyparts[] = 'Les cours de cette voie seront reliés ici lorsqu’ils seront disponibles.';
-                }
+            $signature = self::voie_visual_signature($pathwayid, '', '', $pathwayid);
+            $coursecount = count($pathway['course_ids'] ?? []);
+            $body = $publicidentity['body'];
+            if ($coursecount > 0) {
+                $body .= ' ' . $coursecount . ' cours canoniques sont rattachés à cette Voie.';
             }
 
-            $url = '';
-            $actionlabel = '';
-
-            if ($categoryid > 0 && $categoryvisible === 1) {
-                $url = (new moodle_url('/course/index.php', ['categoryid' => $categoryid]))->out(false);
-                $actionlabel = 'Accéder aux cours';
-            }
-
-            $type = $publicidentity['type'] ?? self::clean_modifier($programtype);
-            $signature = self::voie_visual_signature($shortname, $fullname, $categoryname, $categoryidnumber);
-
+            $url = $categoryurls[$pathwayid] ?? (new moodle_url('/local/uckk/courses.php'))->out(false);
             $cards[] = [
-                'eyebrow' => $publicidentity['eyebrow'] ?? '',
-                'title' => $title,
-                'body' => implode(' ', $bodyparts),
+                'eyebrow' => $publicidentity['eyebrow'],
+                'title' => $publicidentity['title'],
+                'body' => $body,
                 'url' => $url,
-                'actionlabel' => $actionlabel,
-                'type' => $type,
-                'classes' => self::program_card_classes($type, $signature),
+                'actionlabel' => isset($categoryurls[$pathwayid]) ? 'Accéder aux cours' : 'Explorer les cours',
+                'type' => $publicidentity['type'],
+                'classes' => self::program_card_classes($publicidentity['type'], $signature),
             ];
         }
 
@@ -276,6 +245,7 @@ final class programs {
         'ucc.path.creation-sciences-ecology' => ['slug' => 'creation-sciences-ecology'],
         'ucc.path.theology-scripture-tradition' => ['slug' => 'theology-scripture-tradition'],
         'ucc.path.philosophy-metaphysics-person' => ['slug' => 'philosophy-metaphysics-person'],
+        'ucc.path.cosmic-divine-continuum' => ['slug' => 'cosmic-divine-continuum'],
         'ucc.path.works-institutions-administration' => ['slug' => 'works-institutions-administration'],
         'ucc.path.education-universities-transmission' => ['slug' => 'education-universities-transmission'],
         'ucc.path.health-care-dignity' => ['slug' => 'health-care-dignity'],
@@ -394,6 +364,7 @@ final class programs {
             'ucc.path.arts-beauty-culture' => ['eyebrow' => 'Kreative · Créer', 'body' => 'Explorer les œuvres, images, récits et pratiques culturelles des traditions chrétiennes, notamment catholiques, en les reliant à leurs sources et à leurs contextes.', 'type' => 'kreative'],
             'ucc.path.language-letters-transmission' => ['eyebrow' => 'Kreative · Créer', 'body' => 'Étudier les mots, textes, langues, traductions et traditions de lecture qui rendent les corpus chrétiens — dont les traditions catholiques — intelligibles et transmissibles.', 'type' => 'kreative'],
             'ucc.path.philosophy-metaphysics-person' => ['eyebrow' => 'KonnectED · Comprendre', 'body' => 'Explorer être, vérité, connaissance, personne, liberté, bien, mal, temps et loi naturelle à partir de positions et sources documentées.', 'type' => 'konnected'],
+            'ucc.path.cosmic-divine-continuum' => ['eyebrow' => 'KonnectED · Comprendre', 'body' => 'Parcourir un continuum de réflexions sur le divin, la nature, le cosmos, la science et l’expérience religieuse à partir de l’ouvrage-charnière Le Dieu cosmique de Jacques Languirand et Jean Proulx, sans transformer cette synthèse en doctrine UCC.', 'type' => 'konnected'],
             'ucc.path.theology-scripture-tradition' => ['eyebrow' => 'KonnectED · Comprendre', 'body' => 'Lire les grands ensembles théologiques du corpus en distinguant sources, développement doctrinal, réception, statut épistémique et interprétation.', 'type' => 'konnected'],
             'ucc.path.creation-sciences-ecology' => ['eyebrow' => 'KonnectED · Comprendre', 'body' => 'Étudier les rapports entre création, sciences, évolution, progrès, écologie et responsabilité envers le vivant.', 'type' => 'konnected'],
             'ucc.path.education-universities-transmission' => ['eyebrow' => 'KeenKonnect · Servir', 'body' => 'Explorer écoles, universités, formation, recherche, accès au savoir et responsabilités institutionnelles.', 'type' => 'keenkonnect'],

@@ -22,7 +22,7 @@ defined('MOODLE_INTERNAL') || die();
  * Use ucc_legacy_resolver for read-only migration compatibility.
  */
 final class ucc_curriculum_registry {
-    public const SCHEMA_VERSION = 'UCC-CURRICULUM-2.0';
+    public const SCHEMA_VERSION = 'UCC-CURRICULUM-2.1';
     public const RELATIVE_PATH = 'local/uckk/atlas/ucc_curriculum_registry.json';
 
     /** @var array<string, mixed>|null */
@@ -117,8 +117,8 @@ final class ucc_curriculum_registry {
         if (!isset($doc['courses'], $doc['pathways']) || !is_array($doc['courses']) || !is_array($doc['pathways'])) {
             throw new \coding_exception('UCC curriculum registry missing courses or pathways.');
         }
-        if (count($doc['courses']) !== 100 || count($doc['pathways']) !== 10) {
-            throw new \coding_exception('UCC curriculum registry must contain 10 pathways and 100 courses.');
+        if (count($doc['courses']) !== 110 || count($doc['pathways']) !== 11) {
+            throw new \coding_exception('UCC curriculum registry must contain 11 pathways and 110 courses.');
         }
 
         $seenpathways = [];

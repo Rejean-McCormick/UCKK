@@ -1,5 +1,5 @@
 {
-  "schema_version": "UCC-CURRICULUM-2.0",
+  "schema_version": "UCC-CURRICULUM-2.1",
   "universe_id": "ucc",
   "name": "Univers-Cité chrétienne",
   "technical_component": "local_uckk",
@@ -2661,6 +2661,146 @@
         "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
       },
       "pathway_id": "ucc.path.law-politics-common-good"
+    },
+    {
+      "ucc_course_id": "UCC-COS-101",
+      "domain_id": "konnected",
+      "title": "Le Dieu cosmique comme carte : lire une synthèse sans en faire une doctrine",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:raison_et_emerveillement",
+        "urn:theophile:theme:science_et_foi",
+        "urn:theophile:theme:limites_de_la_connaissance"
+      ],
+      "pathway_id": "ucc.path.cosmic-divine-continuum",
+      "anchor_work_ref": "ucc.work.le-dieu-cosmique-2008",
+      "editorial_basis": "UCC-designed pathway around the anchor work; not asserted to reproduce the book table of contents."
+    },
+    {
+      "ucc_course_id": "UCC-COS-102",
+      "domain_id": "konnected",
+      "title": "Einstein et le sentiment religieux cosmique : raison, ordre et émerveillement",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:theologie_naturelle",
+        "urn:theophile:theme:raison_et_foi",
+        "urn:theophile:theme:metaphysique"
+      ],
+      "pathway_id": "ucc.path.cosmic-divine-continuum",
+      "anchor_work_ref": "ucc.work.le-dieu-cosmique-2008",
+      "editorial_basis": "UCC-designed pathway around the anchor work; not asserted to reproduce the book table of contents."
+    },
+    {
+      "ucc_course_id": "UCC-COS-103",
+      "domain_id": "konnected",
+      "title": "Spinoza : Dieu, nature et immanence",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:metaphysique",
+        "urn:theophile:theme:connaissance",
+        "urn:theophile:theme:science"
+      ],
+      "pathway_id": "ucc.path.cosmic-divine-continuum",
+      "anchor_work_ref": "ucc.work.le-dieu-cosmique-2008",
+      "editorial_basis": "UCC-designed pathway around the anchor work; not asserted to reproduce the book table of contents."
+    },
+    {
+      "ucc_course_id": "UCC-COS-104",
+      "domain_id": "konnected",
+      "title": "Du cosmos au divin : création, ordre et intelligibilité du monde",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:creation",
+        "urn:theophile:theme:science",
+        "urn:theophile:theme:raison_et_emerveillement"
+      ],
+      "pathway_id": "ucc.path.cosmic-divine-continuum",
+      "anchor_work_ref": "ucc.work.le-dieu-cosmique-2008",
+      "editorial_basis": "UCC-designed pathway around the anchor work; not asserted to reproduce the book table of contents."
+    },
+    {
+      "ucc_course_id": "UCC-COS-105",
+      "domain_id": "konnected",
+      "title": "Expérience religieuse, mystique et contemplation du cosmos",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:mystique",
+        "urn:theophile:theme:contemplation",
+        "urn:theophile:theme:mystere_et_presence"
+      ],
+      "pathway_id": "ucc.path.cosmic-divine-continuum",
+      "anchor_work_ref": "ucc.work.le-dieu-cosmique-2008",
+      "editorial_basis": "UCC-designed pathway around the anchor work; not asserted to reproduce the book table of contents."
+    },
+    {
+      "ucc_course_id": "UCC-COS-106",
+      "domain_id": "konnected",
+      "title": "Science et métaphysique : frontières, langages et niveaux d’explication",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:limites_de_la_connaissance",
+        "urn:theophile:theme:tradition_et_raison",
+        "urn:theophile:theme:science_et_foi"
+      ],
+      "pathway_id": "ucc.path.cosmic-divine-continuum",
+      "anchor_work_ref": "ucc.work.le-dieu-cosmique-2008",
+      "editorial_basis": "UCC-designed pathway around the anchor work; not asserted to reproduce the book table of contents."
+    },
+    {
+      "ucc_course_id": "UCC-COS-107",
+      "domain_id": "konnected",
+      "title": "Bergson : évolution créatrice, vie et devenir",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:evolution",
+        "urn:theophile:theme:creation",
+        "urn:theophile:theme:science"
+      ],
+      "pathway_id": "ucc.path.cosmic-divine-continuum",
+      "anchor_work_ref": "ucc.work.le-dieu-cosmique-2008",
+      "editorial_basis": "UCC-designed pathway around the anchor work; not asserted to reproduce the book table of contents."
+    },
+    {
+      "ucc_course_id": "UCC-COS-108",
+      "domain_id": "konnected",
+      "title": "Teilhard de Chardin : évolution, noosphère et Christ cosmique",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:noosphere",
+        "urn:theophile:theme:evolution",
+        "urn:theophile:theme:creation"
+      ],
+      "pathway_id": "ucc.path.cosmic-divine-continuum",
+      "anchor_work_ref": "ucc.work.le-dieu-cosmique-2008",
+      "editorial_basis": "UCC-designed pathway around the anchor work; not asserted to reproduce the book table of contents."
+    },
+    {
+      "ucc_course_id": "UCC-COS-109",
+      "domain_id": "konnected",
+      "title": "Dieu personnel, Dieu cosmique, transcendance et immanence",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:foi",
+        "urn:theophile:theme:theologie_naturelle",
+        "urn:theophile:theme:mystere_et_presence"
+      ],
+      "pathway_id": "ucc.path.cosmic-divine-continuum",
+      "anchor_work_ref": "ucc.work.le-dieu-cosmique-2008",
+      "editorial_basis": "UCC-designed pathway around the anchor work; not asserted to reproduce the book table of contents."
+    },
+    {
+      "ucc_course_id": "UCC-COS-110",
+      "domain_id": "konnected",
+      "title": "Cartographier le continuum : comparer les vues sur le divin sans les confondre",
+      "primary_surface": "KonnectED",
+      "kristal_theme_refs": [
+        "urn:theophile:theme:critique_des_preuves",
+        "urn:theophile:theme:connaissance",
+        "urn:theophile:theme:limites_de_la_connaissance"
+      ],
+      "pathway_id": "ucc.path.cosmic-divine-continuum",
+      "anchor_work_ref": "ucc.work.le-dieu-cosmique-2008",
+      "editorial_basis": "UCC-designed pathway around the anchor work; not asserted to reproduce the book table of contents."
     }
   ],
   "compatibility": {
@@ -2964,6 +3104,28 @@
       },
       "pathway_id": "ucc.path.law-politics-common-good",
       "code": "GOV"
+    },
+    {
+      "domain_id": "konnected",
+      "primary_surface": "KonnectED",
+      "title": "Voie du Dieu cosmique — science, philosophie et expérience du divin",
+      "course_ids": [
+        "UCC-COS-101",
+        "UCC-COS-102",
+        "UCC-COS-103",
+        "UCC-COS-104",
+        "UCC-COS-105",
+        "UCC-COS-106",
+        "UCC-COS-107",
+        "UCC-COS-108",
+        "UCC-COS-109",
+        "UCC-COS-110"
+      ],
+      "pathway_id": "ucc.path.cosmic-divine-continuum",
+      "code": "COS",
+      "anchor_work_ref": "ucc.work.le-dieu-cosmique-2008",
+      "editorial_role": "Parcours-charnière explicitement articulé autour de Le Dieu cosmique : À la recherche du Dieu d’Einstein de Jacques Languirand et Jean Proulx. L’ouvrage sert de cartographie comparative et de point de départ; la Voie ne présente pas ses positions comme doctrine UCC.",
+      "toc_status": "unverified_not_used_as_course_structure"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Code snapshot
 
-- generated_at: 2026-09-27T19:41:44.164826
+- generated_at: 2026-09-28T16:45:00-04:00
 - repository: uckk-moodle
 - archive_layout: repository-relative paths
 
@@ -229,11 +229,11 @@
 - `local/uckk/assemblies.php` (1304 bytes)
 - `local/uckk/atlas/atlas_manifest.json` (2891 bytes)
 - `local/uckk/atlas/atlas_schema.json` (13997 bytes)
-- `local/uckk/atlas/ucc_curriculum_registry.json` (113707 bytes)
-- `local/uckk/atlas/ucc_domains.json` (2597 bytes)
-- `local/uckk/atlas/ucc_glossary_map.json` (103071 bytes)
+- `local/uckk/atlas/ucc_curriculum_registry.json` (112104 bytes)
+- `local/uckk/atlas/ucc_domains.json` (2266 bytes)
+- `local/uckk/atlas/ucc_glossary_map.json` (106335 bytes)
 - `local/uckk/atlas/ucc_legacy_aliases.json` (26464 bytes)
-- `local/uckk/atlas/ucc_universe.json` (2554 bytes)
+- `local/uckk/atlas/ucc_universe.json` (4371 bytes)
 - `local/uckk/atlas/voies/voie_architecture_sociotechnique.json` (46550 bytes)
 - `local/uckk/atlas/voies/voie_ecologie.json` (56019 bytes)
 - `local/uckk/atlas/voies/voie_economie.json` (62740 bytes)
@@ -299,7 +299,7 @@
 - `local/uckk/classes/hook_listener.php` (825 bytes)
 - `local/uckk/classes/local/atlas/atlas_cache.php` (14386 bytes)
 - `local/uckk/classes/local/atlas/atlas_manifest.php` (15721 bytes)
-- `local/uckk/classes/local/atlas/ucc_curriculum_registry.php` (4933 bytes)
+- `local/uckk/classes/local/atlas/ucc_curriculum_registry.php` (6105 bytes)
 - `local/uckk/classes/local/atlas/ucc_domain_registry.php` (4335 bytes)
 - `local/uckk/classes/local/atlas/voie_moodle_mapper.php` (32904 bytes)
 - `local/uckk/classes/local/atlas/voie_normalizer.php` (20234 bytes)
@@ -363,11 +363,11 @@
 - `local/uckk/classes/local/public_pages/ucc/challenges.php` (4359 bytes)
 - `local/uckk/classes/local/public_pages/ucc/contact.php` (4379 bytes)
 - `local/uckk/classes/local/public_pages/ucc/courses.php` (3002 bytes)
-- `local/uckk/classes/local/public_pages/ucc/home.php` (10487 bytes)
+- `local/uckk/classes/local/public_pages/ucc/home.php` (12127 bytes)
 - `local/uckk/classes/local/public_pages/ucc/integrity.php` (3984 bytes)
-- `local/uckk/classes/local/public_pages/ucc/mediatheque.php` (7845 bytes)
+- `local/uckk/classes/local/public_pages/ucc/mediatheque.php` (9854 bytes)
 - `local/uckk/classes/local/public_pages/ucc/news.php` (3898 bytes)
-- `local/uckk/classes/local/public_pages/ucc/programs.php` (21868 bytes)
+- `local/uckk/classes/local/public_pages/ucc/programs.php` (19757 bytes)
 - `local/uckk/classes/local/public_pages/ucc/site.php` (3293 bytes)
 - `local/uckk/classes/local/public_site_context.php` (3349 bytes)
 - `local/uckk/classes/local/status.php` (29234 bytes)
@@ -506,7 +506,7 @@
 - `local/uckk/tests/player_profile_test.php` (16858 bytes)
 - `local/uckk/tests/program_api_test.php` (20048 bytes)
 - `local/uckk/tests/public_site_context_test.php` (2419 bytes)
-- `local/uckk/tests/ucc_curriculum_registry_test.php` (1493 bytes)
+- `local/uckk/tests/ucc_curriculum_registry_test.php` (2650 bytes)
 - `local/uckk/tests/ucc_domain_registry_test.php` (1145 bytes)
 - `local/uckk/tests/voie_normalizer_test.php` (23737 bytes)
 - `local/uckk/tests/voie_repository_test.php` (16234 bytes)
@@ -1021,3 +1021,5 @@
 - `uckk-tools/release.sh` (3082 bytes)
 - `uckk-tools/validate.sh` (2553 bytes)
 - `UCKK_Ops_Console_Runbook.md` (3421 bytes)
+- `docs/status/2026-09-28_ucc_cosmic_divine_pathway.md` (2150 bytes)
+- `local/uckk/atlas/ucc_mediatheque_reference_registry.json` (7112 bytes)

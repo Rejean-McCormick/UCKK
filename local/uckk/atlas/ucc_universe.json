@@ -33,13 +33,40 @@
     "provider": "UCC on Moodle/local_uckk",
     "curriculum_registry": "atlas/ucc_curriculum_registry.json",
     "domains": "atlas/ucc_domains.json",
-    "courses": 100,
-    "pathways": 10
+    "courses": 110,
+    "pathways": 11
   },
   "mediatheque": {
     "provider": "UCC Médiathèque",
     "authority": "resource manifest",
-    "semantic_binding": "Kristal theme refs per course/resource"
+    "semantic_binding": "Kristal theme refs per course/resource",
+    "historical_collection_policy": {
+      "original_work_cutoff_year": 1926,
+      "cutoff_inclusive": true,
+      "modern_host_allowed": true,
+      "exceptions": [
+        {
+          "type": "author",
+          "name": "Pierre Teilhard de Chardin",
+          "reason": "explicit_ucc_exception"
+        },
+        {
+          "type": "work",
+          "title": "Fratelli tutti",
+          "author": "Pape François",
+          "year": 2020,
+          "reason": "explicit_ucc_exception"
+        },
+        {
+          "type": "work",
+          "title": "Le Dieu cosmique : À la recherche du Dieu d’Einstein",
+          "author": "Jacques Languirand; Jean Proulx",
+          "year": 2008,
+          "reason": "anchor_work_for_cosmic_divine_continuum_pathway"
+        }
+      ]
+    },
+    "reference_registry": "atlas/ucc_mediatheque_reference_registry.json"
   },
   "certification": {
     "provider": "CertifiKation",

@@ -63,7 +63,7 @@ final class mediatheque {
             'eyebrow' => 'Bibliothèque publique',
             'title' => 'Médiathèque chrétienne',
             'subtitle' => 'Explorer les œuvres, médias, collections, références et passages documentés de l’Univers-Cité chrétienne.',
-            'summary' => 'La Médiathèque chrétienne constitue un fonds autonome. Elle rassemble les œuvres, documents, sons, images, vidéos et références rattachés à l’Univers-Cité chrétienne. Des bridges explicites peuvent rendre visibles certaines ressources d’autres médiathèques sans les copier ni changer leur fonds d’origine.',
+            'summary' => 'La Médiathèque chrétienne constitue un fonds autonome. Elle rassemble les œuvres, documents, sons, images, vidéos et références rattachés à l’Univers-Cité chrétienne. Le fonds privilégie les œuvres publiées jusqu’en 1926 inclusivement, avec des exceptions déclarées. Le Dieu cosmique de Jacques Languirand et Jean Proulx est l’une de ces exceptions et sert d’ouvrage-charnière à une Voie dédiée.',
             'cardsheading' => 'Entrer dans la bibliothèque',
 
             'has_mediatheque_explorer' => true,
@@ -124,6 +124,17 @@ final class mediatheque {
                     ],
                 ],
                 [
+                    'type' => 'orientation',
+                    'eyebrow' => 'Ouvrage-charnière',
+                    'title' => 'Le Dieu cosmique : une carte, pas une doctrine',
+                    'body' => 'Le Dieu cosmique : À la recherche du Dieu d’Einstein (Jacques Languirand et Jean Proulx, Le Jour, 2008) est conservé comme référence explicite malgré la règle historique de 1926. La Médiathèque le traite comme une synthèse permettant de circuler entre différentes conceptions du divin et de rejoindre leurs sources primaires.',
+                    'items' => [
+                        'ISBN papier : 978-2-89044-764-6.',
+                        'L’ouvrage demeure sous droit d’auteur : UCC référence les accès légaux et les métadonnées, sans republier le PDF ou l’EPUB.',
+                        'La Voie du Dieu cosmique distingue les références attestées de l’ouvrage des lectures complémentaires ajoutées par UCC.',
+                    ],
+                ],
+                [
                     'type' => 'boundary',
                     'eyebrow' => 'Cadre de consultation',
                     'title' => 'Un accès ouvert, avec respect des droits',
@@ -141,6 +152,13 @@ final class mediatheque {
                     'title' => 'Collections',
                     'body' => 'Explorer des regroupements de contenus liés aux cours, voies, thèmes, archives et recherches UCC.',
                     'type' => 'collection',
+                ],
+                [
+                    'title' => 'Le Dieu cosmique',
+                    'body' => 'Ouvrage-charnière de Jacques Languirand et Jean Proulx, relié à une Voie comparative sur science, philosophie, expérience religieuse et conceptions du divin.',
+                    'url' => 'https://emprunt.bibliothequedesameriques.com/resources/550ad46fcdd23087a9787007',
+                    'actionlabel' => 'Voir la notice et l’accès légal',
+                    'type' => 'book',
                 ],
                 [
                     'title' => 'Passages documentés',
@@ -178,6 +196,10 @@ final class mediatheque {
                 [
                     'label' => 'Portée par défaut',
                     'value' => 'Fonds chrétien + bridges entrants explicites',
+                ],
+                [
+                    'label' => 'Politique historique',
+                    'value' => 'Œuvres originales ≤ 1926; exceptions déclarées : Teilhard de Chardin, Fratelli tutti et Le Dieu cosmique',
                 ],
             ],
 

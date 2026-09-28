@@ -163,7 +163,9 @@
         "UCC-EDU-103",
         "UCC-LET-109",
         "UCC-OEU-105",
-        "UCC-PHI-102"
+        "UCC-PHI-102",
+        "UCC-COS-103",
+        "UCC-COS-110"
       ]
     },
     {
@@ -183,7 +185,8 @@
       "course_refs": [
         "UCC-ART-101",
         "UCC-ART-104",
-        "UCC-THE-109"
+        "UCC-THE-109",
+        "UCC-COS-105"
       ]
     },
     {
@@ -207,7 +210,10 @@
         "UCC-PHI-107",
         "UCC-SCI-101",
         "UCC-SCI-104",
-        "UCC-SCI-105"
+        "UCC-SCI-105",
+        "UCC-COS-104",
+        "UCC-COS-107",
+        "UCC-COS-108"
       ]
     },
     {
@@ -222,7 +228,8 @@
         "UCC-OEU-108",
         "UCC-PHI-110",
         "UCC-SCI-110",
-        "UCC-THE-110"
+        "UCC-THE-110",
+        "UCC-COS-110"
       ]
     },
     {
@@ -407,7 +414,9 @@
       "label": "evolution",
       "assertion_count": 2,
       "course_refs": [
-        "UCC-SCI-104"
+        "UCC-SCI-104",
+        "UCC-COS-107",
+        "UCC-COS-108"
       ]
     },
     {
@@ -417,7 +426,8 @@
       "course_refs": [
         "UCC-THE-106",
         "UCC-THE-107",
-        "UCC-THE-110"
+        "UCC-THE-110",
+        "UCC-COS-109"
       ]
     },
     {
@@ -552,7 +562,10 @@
       "course_refs": [
         "UCC-EDU-109",
         "UCC-PHI-102",
-        "UCC-SCI-102"
+        "UCC-SCI-102",
+        "UCC-COS-101",
+        "UCC-COS-106",
+        "UCC-COS-110"
       ]
     },
     {
@@ -599,7 +612,9 @@
       "course_refs": [
         "UCC-PHI-101",
         "UCC-PHI-108",
-        "UCC-PHI-110"
+        "UCC-PHI-110",
+        "UCC-COS-102",
+        "UCC-COS-103"
       ]
     },
     {
@@ -644,7 +659,9 @@
         "UCC-ART-107",
         "UCC-THE-103",
         "UCC-THE-106",
-        "UCC-THE-109"
+        "UCC-THE-109",
+        "UCC-COS-105",
+        "UCC-COS-109"
       ]
     },
     {
@@ -653,7 +670,8 @@
       "assertion_count": 10,
       "course_refs": [
         "UCC-ART-104",
-        "UCC-THE-109"
+        "UCC-THE-109",
+        "UCC-COS-105"
       ]
     },
     {
@@ -668,7 +686,9 @@
       "theme_id": "urn:theophile:theme:noosphere",
       "label": "noosphere",
       "assertion_count": 4,
-      "course_refs": []
+      "course_refs": [
+        "UCC-COS-108"
+      ]
     },
     {
       "theme_id": "urn:theophile:theme:paix",
@@ -818,7 +838,9 @@
       "assertion_count": 4,
       "course_refs": [
         "UCC-ART-101",
-        "UCC-SCI-101"
+        "UCC-SCI-101",
+        "UCC-COS-101",
+        "UCC-COS-104"
       ]
     },
     {
@@ -830,7 +852,8 @@
         "UCC-LET-105",
         "UCC-PHI-109",
         "UCC-SCI-102",
-        "UCC-THE-110"
+        "UCC-THE-110",
+        "UCC-COS-102"
       ]
     },
     {
@@ -937,7 +960,10 @@
         "UCC-OEU-107",
         "UCC-SCI-101",
         "UCC-SCI-104",
-        "UCC-SCI-107"
+        "UCC-SCI-107",
+        "UCC-COS-103",
+        "UCC-COS-104",
+        "UCC-COS-107"
       ]
     },
     {
@@ -947,7 +973,9 @@
       "course_refs": [
         "UCC-SCI-102",
         "UCC-SCI-103",
-        "UCC-SCI-110"
+        "UCC-SCI-110",
+        "UCC-COS-101",
+        "UCC-COS-106"
       ]
     },
     {
@@ -979,7 +1007,9 @@
       "course_refs": [
         "UCC-PHI-101",
         "UCC-SCI-101",
-        "UCC-THE-103"
+        "UCC-THE-103",
+        "UCC-COS-102",
+        "UCC-COS-109"
       ]
     },
     {
@@ -992,7 +1022,8 @@
         "UCC-LET-108",
         "UCC-PHI-109",
         "UCC-THE-101",
-        "UCC-THE-102"
+        "UCC-THE-102",
+        "UCC-COS-106"
       ]
     },
     {
@@ -3303,6 +3334,156 @@
           "evaluation_case_count": 5
         },
         "interpretation": "Mesure de couverture documentaire du cours dans ce state Kristal; ne mesure ni vérité, ni qualité doctrinale, ni reconnaissance ecclésiale."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-COS-101",
+      "theme_refs": [
+        "urn:theophile:theme:raison_et_emerveillement",
+        "urn:theophile:theme:science_et_foi",
+        "urn:theophile:theme:limites_de_la_connaissance"
+      ],
+      "coverage": {
+        "level": "unscored",
+        "coverage_score": null,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {},
+        "interpretation": "Nouvelle Voie éditoriale articulée autour d’un ouvrage-charnière; couverture Kristal à recalculer après ingestion et validation des références."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-COS-102",
+      "theme_refs": [
+        "urn:theophile:theme:theologie_naturelle",
+        "urn:theophile:theme:raison_et_foi",
+        "urn:theophile:theme:metaphysique"
+      ],
+      "coverage": {
+        "level": "unscored",
+        "coverage_score": null,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {},
+        "interpretation": "Nouvelle Voie éditoriale articulée autour d’un ouvrage-charnière; couverture Kristal à recalculer après ingestion et validation des références."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-COS-103",
+      "theme_refs": [
+        "urn:theophile:theme:metaphysique",
+        "urn:theophile:theme:connaissance",
+        "urn:theophile:theme:science"
+      ],
+      "coverage": {
+        "level": "unscored",
+        "coverage_score": null,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {},
+        "interpretation": "Nouvelle Voie éditoriale articulée autour d’un ouvrage-charnière; couverture Kristal à recalculer après ingestion et validation des références."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-COS-104",
+      "theme_refs": [
+        "urn:theophile:theme:creation",
+        "urn:theophile:theme:science",
+        "urn:theophile:theme:raison_et_emerveillement"
+      ],
+      "coverage": {
+        "level": "unscored",
+        "coverage_score": null,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {},
+        "interpretation": "Nouvelle Voie éditoriale articulée autour d’un ouvrage-charnière; couverture Kristal à recalculer après ingestion et validation des références."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-COS-105",
+      "theme_refs": [
+        "urn:theophile:theme:mystique",
+        "urn:theophile:theme:contemplation",
+        "urn:theophile:theme:mystere_et_presence"
+      ],
+      "coverage": {
+        "level": "unscored",
+        "coverage_score": null,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {},
+        "interpretation": "Nouvelle Voie éditoriale articulée autour d’un ouvrage-charnière; couverture Kristal à recalculer après ingestion et validation des références."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-COS-106",
+      "theme_refs": [
+        "urn:theophile:theme:limites_de_la_connaissance",
+        "urn:theophile:theme:tradition_et_raison",
+        "urn:theophile:theme:science_et_foi"
+      ],
+      "coverage": {
+        "level": "unscored",
+        "coverage_score": null,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {},
+        "interpretation": "Nouvelle Voie éditoriale articulée autour d’un ouvrage-charnière; couverture Kristal à recalculer après ingestion et validation des références."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-COS-107",
+      "theme_refs": [
+        "urn:theophile:theme:evolution",
+        "urn:theophile:theme:creation",
+        "urn:theophile:theme:science"
+      ],
+      "coverage": {
+        "level": "unscored",
+        "coverage_score": null,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {},
+        "interpretation": "Nouvelle Voie éditoriale articulée autour d’un ouvrage-charnière; couverture Kristal à recalculer après ingestion et validation des références."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-COS-108",
+      "theme_refs": [
+        "urn:theophile:theme:noosphere",
+        "urn:theophile:theme:evolution",
+        "urn:theophile:theme:creation"
+      ],
+      "coverage": {
+        "level": "unscored",
+        "coverage_score": null,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {},
+        "interpretation": "Nouvelle Voie éditoriale articulée autour d’un ouvrage-charnière; couverture Kristal à recalculer après ingestion et validation des références."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-COS-109",
+      "theme_refs": [
+        "urn:theophile:theme:foi",
+        "urn:theophile:theme:theologie_naturelle",
+        "urn:theophile:theme:mystere_et_presence"
+      ],
+      "coverage": {
+        "level": "unscored",
+        "coverage_score": null,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {},
+        "interpretation": "Nouvelle Voie éditoriale articulée autour d’un ouvrage-charnière; couverture Kristal à recalculer après ingestion et validation des références."
+      }
+    },
+    {
+      "ucc_course_id": "UCC-COS-110",
+      "theme_refs": [
+        "urn:theophile:theme:critique_des_preuves",
+        "urn:theophile:theme:connaissance",
+        "urn:theophile:theme:limites_de_la_connaissance"
+      ],
+      "coverage": {
+        "level": "unscored",
+        "coverage_score": null,
+        "method": "UCC-COVERAGE-1.0",
+        "metrics": {},
+        "interpretation": "Nouvelle Voie éditoriale articulée autour d’un ouvrage-charnière; couverture Kristal à recalculer après ingestion et validation des références."
       }
     }
   ],
