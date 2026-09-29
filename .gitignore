@@ -23,3 +23,25 @@ desktop.ini
 *.temp
 GitSink.bat
 /SmartSnap.pyw
+
+# SecurityDiag evidence and local security state
+.securitydiag/
+securitydiag.config.local.json
+
+# Secrets / private key material
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.ppk
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+
+# Local credentials / host pinning
+known_hosts.local
+*.secrets.json

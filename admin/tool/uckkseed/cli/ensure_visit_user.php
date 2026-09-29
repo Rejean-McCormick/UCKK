@@ -9,18 +9,16 @@
 /**
  * Ensure the UCKK read-only visit account exists.
  *
- * This script creates or updates a local manual account intended for guided
- * demonstrations. It assigns only the UCKK public guest role at system context
- * and can remove any other role assignment from that account.
- *
- * Default credentials are intentionally local/demo oriented:
- * - username: visite
- * - password: visite
+ * No password is embedded in source code. For production/recovery use an
+ * environment variable or a mode-0600 password file. A generated password is
+ * only printed when the operator explicitly requests --generate-password.
  *
  * @package    tool_uckkseed
  * @copyright  2026 Univers-Cité King Klown
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
+declare(strict_types=1);
 
 define('CLI_SCRIPT', true);
 
@@ -32,7 +30,10 @@ require_once($CFG->dirroot . '/user/lib.php');
     [
         'help' => false,
         'username' => 'visite',
-        'password' => 'visite',
+        'password-env' => 'UCKK_VISIT_PASSWORD',
+        'password-file' => false,
+        'generate-password' => false,
+        'keep-password' => false,
         'firstname' => 'Compte',
         'lastname' => 'Visite',
         'email' => 'visite@example.invalid',
@@ -44,7 +45,6 @@ require_once($CFG->dirroot . '/user/lib.php');
     [
         'h' => 'help',
         'u' => 'username',
-        'p' => 'password',
         'r' => 'role',
     ]
 );
@@ -58,21 +58,34 @@ if (!empty($options['help'])) {
     $help = <<<HELP
 Ensure the UCKK read-only visit account exists.
 
+The script has deliberately NO default password and NO --password command-line
+option, so credentials do not land in Git, shell history, or process listings.
+
 Options:
   -h, --help              Show this help.
   -u, --username          Username to create/update. Default: visite
-  -p, --password          Password to set. Default: visite
   -r, --role              Role shortname to assign. Default: uckkpublicguest
+      --password-env      Environment variable containing the password.
+                          Default: UCKK_VISIT_PASSWORD
+      --password-file     Read password from a local protected file.
+      --generate-password Generate a strong password and display it once.
+      --keep-password     Do not rotate an existing account password.
+                          Refused when creating a new account.
       --firstname         First name. Default: Compte
       --lastname          Last name. Default: Visite
       --email             Email address. Default: visite@example.invalid
-      --clean-roles       Remove all existing role assignments for the account before assigning the visit role. Default: 1
+      --clean-roles       Remove all existing role assignments before assigning
+                          the visit role. Default: 1
       --dry-run           Report intended changes without writing.
-      --json              Print JSON output.
+      --json              Print JSON output. Password values are never included.
 
-Examples:
-  php admin/tool/uckkseed/cli/ensure_visit_user.php
-  php admin/tool/uckkseed/cli/ensure_visit_user.php --username=visite --password=visite --clean-roles=1
+Recommended PowerShell usage:
+  $env:UCKK_VISIT_PASSWORD = '<strong-random-secret>'
+  php admin/tool/uckkseed/cli/ensure_visit_user.php --clean-roles=1
+  Remove-Item Env:UCKK_VISIT_PASSWORD
+
+Alternative one-time generation:
+  php admin/tool/uckkseed/cli/ensure_visit_user.php --generate-password=1
 
 Required before running:
   php admin/tool/uckkseed/cli/seed.php --mode=apply --preset=roles,capabilities --force
@@ -83,7 +96,6 @@ HELP;
 }
 
 $username = clean_param((string)$options['username'], PARAM_USERNAME);
-$password = (string)$options['password'];
 $firstname = trim(clean_param((string)$options['firstname'], PARAM_TEXT));
 $lastname = trim(clean_param((string)$options['lastname'], PARAM_TEXT));
 $email = clean_param((string)$options['email'], PARAM_EMAIL);
@@ -91,35 +103,91 @@ $roleshortname = clean_param((string)$options['role'], PARAM_ALPHANUMEXT);
 $cleanroles = !empty($options['clean-roles']);
 $dryrun = !empty($options['dry-run']);
 $json = !empty($options['json']);
+$keepPassword = !empty($options['keep-password']);
+$generatePassword = !empty($options['generate-password']);
+$passwordFile = trim((string)($options['password-file'] ?? ''));
+$passwordEnv = trim((string)($options['password-env'] ?? 'UCKK_VISIT_PASSWORD'));
 
 if ($username === '') {
     cli_error('Username cannot be empty.');
 }
-
-if ($password === '') {
-    cli_error('Password cannot be empty.');
-}
-
 if ($firstname === '') {
     $firstname = 'Compte';
 }
-
 if ($lastname === '') {
     $lastname = 'Visite';
 }
-
 if ($email === '') {
     $email = $username . '@example.invalid';
 }
 
+$password = null;
+$passwordSource = 'none';
+$generatedPassword = false;
+
+$sourceCount = (int)$generatePassword + (int)($passwordFile !== '');
+$envValue = false;
+if ($passwordEnv !== '') {
+    $envValue = getenv($passwordEnv);
+    if ($envValue !== false && $envValue !== '') {
+        $sourceCount++;
+    }
+}
+if ($keepPassword) {
+    $sourceCount++;
+}
+if ($sourceCount > 1) {
+    cli_error('Choose exactly one password mode: environment, --password-file, --generate-password, or --keep-password.');
+}
+
+if ($keepPassword) {
+    $passwordSource = 'keep-existing';
+} else if ($generatePassword) {
+    $password = rtrim(strtr(base64_encode(random_bytes(32)), '+/', '-_'), '=');
+    $passwordSource = 'generated';
+    $generatedPassword = true;
+} else if ($passwordFile !== '') {
+    if (!is_file($passwordFile) || !is_readable($passwordFile)) {
+        cli_error('Password file is missing or unreadable.');
+    }
+    if (PHP_OS_FAMILY !== 'Windows') {
+        $perms = @fileperms($passwordFile);
+        if ($perms !== false && (($perms & 0077) !== 0)) {
+            cli_error('Password file must not be group/world accessible (use chmod 600).');
+        }
+    }
+    $password = rtrim((string)file_get_contents($passwordFile), "\r\n");
+    $passwordSource = 'file';
+} else if ($envValue !== false && $envValue !== '') {
+    $password = (string)$envValue;
+    $passwordSource = 'environment';
+}
+
 $systemcontext = context_system::instance();
-
 $role = $DB->get_record('role', ['shortname' => $roleshortname], '*', IGNORE_MISSING);
-
 if (!$role) {
     cli_error(
         "Role '{$roleshortname}' was not found. Run: php admin/tool/uckkseed/cli/seed.php --mode=apply --preset=roles,capabilities --force"
     );
+}
+
+$user = $DB->get_record('user', ['username' => $username, 'mnethostid' => $CFG->mnet_localhost_id], '*', IGNORE_MISSING);
+if ($user && is_siteadmin((int)$user->id)) {
+    cli_error("Refusing to modify '{$username}' because it is a site administrator.");
+}
+if (!$user && $keepPassword) {
+    cli_error('--keep-password cannot be used when creating a new account.');
+}
+if (!$dryrun && !$keepPassword && ($password === null || $password === '')) {
+    cli_error(
+        "No password supplied. Set {$passwordEnv}, use --password-file, or explicitly request --generate-password=1."
+    );
+}
+if (!$dryrun && $password !== null) {
+    $policyError = '';
+    if (!check_password_policy($password, $policyError)) {
+        cli_error('Password does not satisfy the Moodle password policy: ' . $policyError);
+    }
 }
 
 $result = [
@@ -127,18 +195,12 @@ $result = [
     'dryrun' => $dryrun,
     'username' => $username,
     'role' => $roleshortname,
+    'passwordsource' => $passwordSource,
     'actions' => [],
 ];
 
-$user = $DB->get_record('user', ['username' => $username, 'mnethostid' => $CFG->mnet_localhost_id], '*', IGNORE_MISSING);
-
-if ($user && is_siteadmin((int)$user->id)) {
-    cli_error("Refusing to modify '{$username}' because it is a site administrator.");
-}
-
 if (!$user) {
     $result['actions'][] = 'create_user';
-
     if (!$dryrun) {
         $newuser = (object)[
             'auth' => 'manual',
@@ -148,7 +210,7 @@ if (!$user) {
             'suspended' => 0,
             'mnethostid' => $CFG->mnet_localhost_id,
             'username' => $username,
-            'password' => hash_internal_user_password($password),
+            'password' => hash_internal_user_password((string)$password),
             'firstname' => $firstname,
             'lastname' => $lastname,
             'email' => $email,
@@ -162,13 +224,11 @@ if (!$user) {
             'descriptionformat' => FORMAT_PLAIN,
             'idnumber' => 'tool_uckkseed:visit_account',
         ];
-
         $userid = user_create_user($newuser, false, false);
         $user = $DB->get_record('user', ['id' => $userid], '*', MUST_EXIST);
     }
 } else {
     $result['actions'][] = 'update_user';
-
     if (!$dryrun) {
         $user->auth = 'manual';
         $user->confirmed = 1;
@@ -180,9 +240,11 @@ if (!$user) {
         $user->idnumber = 'tool_uckkseed:visit_account';
         $user->description = 'Compte de visite UCKK en lecture seule.';
         $user->descriptionformat = FORMAT_PLAIN;
-
         $DB->update_record('user', $user);
-        update_internal_user_password($user, $password);
+        if (!$keepPassword) {
+            update_internal_user_password($user, (string)$password);
+            $result['actions'][] = 'rotate_password';
+        }
         $user = $DB->get_record('user', ['id' => $user->id], '*', MUST_EXIST);
     }
 }
@@ -190,15 +252,12 @@ if (!$user) {
 if (!$dryrun && !$user) {
     cli_error('User creation/update failed.');
 }
-
 $userid = $dryrun && !$user ? 0 : (int)$user->id;
 
 if ($cleanroles) {
     $result['actions'][] = 'clean_role_assignments';
-
     if (!$dryrun && $userid > 0) {
         $assignments = $DB->get_records('role_assignments', ['userid' => $userid]);
-
         foreach ($assignments as $assignment) {
             role_unassign(
                 (int)$assignment->roleid,
@@ -212,12 +271,8 @@ if ($cleanroles) {
 }
 
 $result['actions'][] = 'assign_visit_role';
-
 if (!$dryrun && $userid > 0) {
     role_assign((int)$role->id, $userid, $systemcontext->id, 'tool_uckkseed', 0);
-}
-
-if (!$dryrun && $userid > 0) {
     $DB->delete_records('user_preferences', ['userid' => $userid, 'name' => 'auth_forcepasswordchange']);
 }
 
@@ -230,10 +285,14 @@ if ($json) {
 } else {
     cli_writeln('UCKK visit account ensured.');
     cli_writeln('Username: ' . $username);
-    cli_writeln('Password: ' . str_repeat('*', strlen($password)));
+    cli_writeln('Password source: ' . $passwordSource);
     cli_writeln('Role: ' . $roleshortname);
     cli_writeln('Clean roles: ' . ($cleanroles ? 'yes' : 'no'));
     cli_writeln('Dry run: ' . ($dryrun ? 'yes' : 'no'));
+    if ($generatedPassword && !$dryrun) {
+        cli_writeln('Generated password (shown once; store it securely now): ' . $password);
+    }
 }
 
+$password = null;
 exit(0);
