@@ -12,6 +12,7 @@ defined('MOODLE_INTERNAL') || die();
  * @covers \local_uckk\local\public_pages\ucc\home
  * @covers \local_uckk\local\public_pages\math\site
  * @covers \local_uckk\local\public_pages\math\home
+ * @covers \local_uckk\local\public_login
  */
 final class public_site_context_test extends \advanced_testcase {
     public function test_theme_name_is_the_only_site_selector(): void {
@@ -59,6 +60,8 @@ final class public_site_context_test extends \advanced_testcase {
         $navigation = \local_uckk\local\public_pages\ucc\site::navigation();
         $keys = array_column($navigation, 'key');
 
+        $this->assertContains('programs', $keys);
+        $this->assertContains('courses', $keys);
         $this->assertContains('thinkers', $keys);
         $this->assertContains('glossary', $keys);
         $this->assertContains('christian', $keys);
@@ -85,5 +88,15 @@ final class public_site_context_test extends \advanced_testcase {
         $this->assertSame('people', $data['knowledge']['primary_view']);
         $this->assertSame('derived_index', $data['knowledge']['glossary_mode']);
         $this->assertSame('legacy_semantic_source_pending_kristal_v5_migration', $data['knowledge']['projection_status']);
+    }
+
+    public function test_public_login_contract_keeps_explorer_available_for_each_univers_cite(): void {
+        $sites = \local_uckk\local\public_site_context::sites();
+        $this->assertSame(['uckk', 'ucc', 'ucmath'], array_column($sites, 'theme'));
+
+        $source = file_get_contents(__DIR__ . '/../classes/local/public_login.php');
+        $this->assertStringContainsString("'Explorer sans connexion'", $source);
+        $this->assertStringContainsString("THEME_UCC", $source);
+        $this->assertStringContainsString("THEME_MATH", $source);
     }
 }

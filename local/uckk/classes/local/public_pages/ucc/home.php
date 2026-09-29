@@ -35,7 +35,7 @@ final class home {
                 ['label' => 'Penseurs', 'description' => 'Entrer dans le savoir par les personnes qui ont formulé, transmis, commenté ou contesté des idées.', 'url' => '/local/uckk/thinkers.php'],
                 ['label' => 'Glossaire', 'description' => 'Suivre les mots, expressions et concepts à travers les époques, les auteurs et les traditions.', 'url' => '/local/uckk/glossary.php'],
                 ['label' => 'Corpus chrétien', 'description' => 'Explorer le point de départ historique du projet : textes, œuvres, institutions, débats et penseurs chrétiens.', 'url' => '/local/uckk/christian.php'],
-                ['label' => 'Méthode éditoriale', 'description' => 'Comprendre le rôle de l’IA, la révision des arguments, les corrections et les limites du corpus.', 'url' => '/local/uckk/method.php'],
+                ['label' => 'Méthode éditoriale', 'description' => 'Comprendre la provenance de la sélection par IA, la révision des arguments, les ajouts déclarés et les limites du corpus.', 'url' => '/local/uckk/method.php'],
                 ['label' => 'Transparence', 'description' => 'Distinguer clairement l’initiative indépendante de toute reconnaissance ecclésiale officielle.', 'url' => '/local/uckk/transparency.php'],
                 ['label' => 'Médiathèque', 'description' => 'Parcourir les documents, médias, œuvres, références et traces reliés au corpus.', 'url' => '/local/uckk/mediatheque.php'],
                 ['label' => 'Le Dieu cosmique', 'description' => 'Ouvrage-charnière de Jacques Languirand et Jean Proulx : une carte comparative pour parcourir plusieurs réflexions sur le divin, la nature, la raison et le cosmos.', 'url' => '/local/uckk/programs.php'],
@@ -46,6 +46,17 @@ final class home {
                     'title' => 'Lire les sources, comparer, argumenter',
                     'body' => 'Les 11 Voies disposent de 110 plans de séminaire. Chaque plan propose une question, des passages à lire, cinq séances, une production et un barème. Un socle conseillé relie Écriture, théologie, histoire, vie spirituelle et méthode critique. Les plans restent soumis à relecture ; les espaces Moodle ouverts sont indiqués séparément.',
                     'items' => ['Œuvres jusqu’en 1926 inclusivement ; exceptions : Teilhard de Chardin, Fratelli tutti et Le Dieu cosmique.', 'Distinguer source biblique, définition conciliaire, théologien, témoignage historique et interprétation éditoriale.', 'Les langues, éditions, passages et droits encore à vérifier sont signalés.'],
+                ],
+                [
+                    'type' => 'method',
+                    'eyebrow' => 'Provenance éditoriale',
+                    'title' => 'Une sélection générale par IA, deux ajouts déclarés',
+                    'body' => 'La sélection générale des auteurs, des œuvres, des sujets et des axes d’étude a été effectuée par l’intelligence artificielle. Deux ajouts relèvent d’un choix explicite du concepteur : Pierre Teilhard de Chardin et Le Dieu cosmique : À la recherche du Dieu d’Einstein, de Jacques Languirand et Jean Proulx.',
+                    'items' => [
+                        'La provenance par IA est déclarée sans prétendre que l’IA serait parfaitement neutre ou objective.',
+                        'Teilhard et Le Dieu cosmique sont identifiés comme des ajouts explicites du concepteur, distincts de la sélection générale.',
+                        'Le Dieu cosmique sert notamment de pont vers des philosophes et des conceptions non chrétiennes du divin afin d’éviter le cloisonnement doctrinal et de favoriser le dialogue.',
+                    ],
                 ],
                 [
                     'type' => 'positioning',
@@ -87,7 +98,7 @@ final class home {
                     'title' => 'Le Dieu cosmique comme continuum de navigation',
                     'body' => 'Le Dieu cosmique : À la recherche du Dieu d’Einstein, de Jacques Languirand et Jean Proulx, est référencé explicitement comme ouvrage-charnière. UCC l’utilise moins comme interprétation à adopter que comme carte de passage entre plusieurs manières de penser le divin : raison et émerveillement, immanence et transcendance, nature et création, science et métaphysique, expérience religieuse et évolution.',
                     'items' => [
-                        'L’ouvrage est nommé et cité comme source d’orientation, sans être présenté comme doctrine UCC.',
+                        'L’ouvrage est nommé et cité comme source d’orientation, sans être présenté comme doctrine UCC; son intégration au corpus est un choix explicitement déclaré du concepteur.',
                         'Une Voie dédiée permet de suivre les auteurs, concepts et textes historiques auxquels cette cartographie conduit.',
                         'La table des matières exacte n’est pas reconstruite sans source vérifiable; le parcours UCC est une architecture éditoriale distincte.',
                     ],
@@ -125,7 +136,7 @@ final class home {
                 ],
                 [
                     'title' => 'Méthode éditoriale',
-                    'body' => 'L’IA arbitre par défaut les synthèses et les demandes de correction; ses propres erreurs restent révisables et doivent pouvoir être contestées par des arguments.',
+                    'body' => 'L’IA a effectué la sélection générale du corpus et intervient aussi dans les synthèses et les demandes de correction; ses propres erreurs restent révisables et doivent pouvoir être contestées par des arguments.',
                     'url' => '/local/uckk/method.php',
                     'actionlabel' => 'Lire la méthode',
                     'type' => 'method',
@@ -165,6 +176,7 @@ final class home {
                 ['label' => 'Vue principale', 'value' => 'Personnes, auteurs, penseurs et collectifs intellectuels'],
                 ['label' => 'Index transversal', 'value' => 'Glossaire dérivé des concepts reliés aux personnes, œuvres, sources et assertions'],
                 ['label' => 'Point de départ', 'value' => 'Héritages chrétiens, dont un important corpus catholique'],
+                ['label' => 'Provenance éditoriale', 'value' => 'Sélection générale par IA; ajouts déclarés : Pierre Teilhard de Chardin et Le Dieu cosmique'],
                 ['label' => 'Horizon', 'value' => 'Relier progressivement les intellectuels marquants de l’histoire humaine'],
             ],
 

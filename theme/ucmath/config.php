@@ -74,7 +74,7 @@ $THEME->layouts = [
     'admin' => $drawers,
     'report' => $drawers,
     'login' => [
-        'theme' => 'boost',
+        'theme' => 'ucmath',
         'file' => 'login.php',
         'regions' => [],
         'options' => ['langmenu' => true],

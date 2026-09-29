@@ -436,7 +436,7 @@ final class search_public_courses extends external_api {
             'fullname' => $fullname,
             'title' => $fullname !== '' ? $fullname : $shortname,
             'summary' => $summary,
-            'url' => (new moodle_url('/course/view.php', ['id' => $courseid]))->out(false),
+            'url' => (new moodle_url('/local/uckk/courses.php', ['course' => $courseid]))->out(false),
             'categorykey' => self::course_category_key($record),
             'categorylabel' => $categorylabel,
             'categoryname' => $categoryname,

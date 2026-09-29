@@ -44,7 +44,7 @@ final class transparency {
                 ['title' => 'Identité chrétienne', 'body' => 'Orientation intellectuelle et culturelle du projet.', 'type' => 'corpus'],
                 ['title' => 'Corpus catholique', 'body' => 'Sous-corpus historique et intellectuel documenté au sein du projet.', 'url' => '/local/uckk/christian.php', 'actionlabel' => 'Explorer le corpus', 'type' => 'library'],
                 ['title' => 'Reconnaissance ecclésiale', 'body' => 'Statut qui ne peut être affirmé que sur la base d’une décision officielle de l’autorité compétente.', 'type' => 'integrity'],
-                ['title' => 'Méthode éditoriale', 'body' => 'Règles distinctes concernant l’IA, les corrections et les interventions personnelles.', 'url' => '/local/uckk/method.php', 'actionlabel' => 'Lire la méthode', 'type' => 'method'],
+                ['title' => 'Méthode éditoriale', 'body' => 'Provenance de la sélection par IA, corrections, biais possibles et ajouts éditoriaux explicitement déclarés.', 'url' => '/local/uckk/method.php', 'actionlabel' => 'Lire la méthode', 'type' => 'method'],
             ],
             'notices' => [
                 [

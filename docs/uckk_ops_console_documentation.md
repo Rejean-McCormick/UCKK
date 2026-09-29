@@ -811,3 +811,8 @@ NeedsServerSmoke = false
 - Réécriture du formulaire login Moodle
 - Déploiement serveur sans confirmation utilisateur
 ```
+
+
+### Source de vérité et publication
+
+`uckk-moodle` est la source de vérité. Le runtime Moodle local est une cible d’exécution. UCKK Publisher v0.1.8 synchronise automatiquement la source vers `moodle/moodle/public` avant de construire un paquet et bloque si les empreintes ne correspondent pas. Ops Console reste l’outil de développement/maintenance locale; Publisher possède le pipeline de publication.

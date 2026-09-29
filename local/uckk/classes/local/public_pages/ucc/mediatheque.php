@@ -63,7 +63,7 @@ final class mediatheque {
             'eyebrow' => 'Bibliothèque publique',
             'title' => 'Médiathèque chrétienne',
             'subtitle' => 'Explorer les œuvres, médias, collections, références et passages documentés de l’Univers-Cité chrétienne.',
-            'summary' => 'La Médiathèque chrétienne constitue un fonds autonome. Elle rassemble les œuvres, documents, sons, images, vidéos et références rattachés à l’Univers-Cité chrétienne. Le fonds privilégie les œuvres publiées jusqu’en 1926 inclusivement, avec des exceptions déclarées. Le Dieu cosmique de Jacques Languirand et Jean Proulx est l’une de ces exceptions et sert d’ouvrage-charnière à une Voie dédiée.',
+            'summary' => 'La Médiathèque chrétienne constitue un fonds autonome. Elle rassemble les œuvres, documents, sons, images, vidéos et références rattachés à l’Univers-Cité chrétienne. Le fonds privilégie les œuvres publiées jusqu’en 1926 inclusivement, avec des exceptions déclarées. Le Dieu cosmique de Jacques Languirand et Jean Proulx est l’une de ces exceptions chronologiques, sert d’ouvrage-charnière à une Voie dédiée et fait partie des deux ajouts explicitement introduits par le concepteur.',
             'cardsheading' => 'Entrer dans la bibliothèque',
 
             'has_mediatheque_explorer' => true,
@@ -134,7 +134,7 @@ final class mediatheque {
                     'type' => 'orientation',
                     'eyebrow' => 'Ouvrage-charnière',
                     'title' => 'Le Dieu cosmique : une carte, pas une doctrine',
-                    'body' => 'Le Dieu cosmique : À la recherche du Dieu d’Einstein (Jacques Languirand et Jean Proulx, Le Jour, 2008) est conservé comme référence explicite malgré la règle historique de 1926. La Médiathèque le traite comme une synthèse permettant de circuler entre différentes conceptions du divin et de rejoindre leurs sources primaires.',
+                    'body' => 'Le Dieu cosmique : À la recherche du Dieu d’Einstein (Jacques Languirand et Jean Proulx, Le Jour, 2008) est conservé comme référence explicite malgré la règle historique de 1926. Son intégration au corpus relève d’un choix déclaré du concepteur. La Médiathèque le traite comme une synthèse permettant de circuler entre différentes conceptions du divin, y compris hors d’un cadre strictement chrétien, et de rejoindre leurs sources primaires.',
                     'items' => [
                         'ISBN papier : 978-2-89044-764-6.',
                         'L’ouvrage demeure sous droit d’auteur : UCC référence les accès légaux et les métadonnées, sans republier le PDF ou l’EPUB.',

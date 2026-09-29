@@ -195,7 +195,7 @@ final class programs {
                     $categoryid = (int)($record->categoryid ?? 0);
                     $categoryvisible = (int)($record->categoryvisible ?? 0);
                     if ($categoryid > 0 && $categoryvisible === 1) {
-                        $categoryurls[$pathwayid] = (new moodle_url('/course/index.php', [
+                        $categoryurls[$pathwayid] = (new moodle_url('/local/uckk/courses.php', [
                             'categoryid' => $categoryid,
                         ]))->out(false);
                     }
@@ -364,7 +364,7 @@ final class programs {
             'ucc.path.arts-beauty-culture' => ['eyebrow' => 'Kreative · Créer', 'body' => 'Explorer les œuvres, images, récits et pratiques culturelles des traditions chrétiennes, notamment catholiques, en les reliant à leurs sources et à leurs contextes.', 'type' => 'kreative'],
             'ucc.path.language-letters-transmission' => ['eyebrow' => 'Kreative · Créer', 'body' => 'Étudier les mots, textes, langues, traductions et traditions de lecture qui rendent les corpus chrétiens — dont les traditions catholiques — intelligibles et transmissibles.', 'type' => 'kreative'],
             'ucc.path.philosophy-metaphysics-person' => ['eyebrow' => 'KonnectED · Comprendre', 'body' => 'Explorer être, vérité, connaissance, personne, liberté, bien, mal, temps et loi naturelle à partir de positions et sources documentées.', 'type' => 'konnected'],
-            'ucc.path.cosmic-divine-continuum' => ['eyebrow' => 'KonnectED · Comprendre', 'body' => 'Parcourir un continuum de réflexions sur le divin, la nature, le cosmos, la science et l’expérience religieuse à partir de l’ouvrage-charnière Le Dieu cosmique de Jacques Languirand et Jean Proulx, sans transformer cette synthèse en doctrine UCC.', 'type' => 'konnected'],
+            'ucc.path.cosmic-divine-continuum' => ['eyebrow' => 'KonnectED · Comprendre', 'body' => 'Parcourir un continuum de réflexions sur le divin, la nature, le cosmos, la science et l’expérience religieuse à partir de l’ouvrage-charnière Le Dieu cosmique de Jacques Languirand et Jean Proulx, ajouté explicitement par le concepteur comme point de passage vers des perspectives chrétiennes et non chrétiennes, sans transformer cette synthèse en doctrine UCC.', 'type' => 'konnected'],
             'ucc.path.theology-scripture-tradition' => ['eyebrow' => 'KonnectED · Comprendre', 'body' => 'Lire les grands ensembles théologiques du corpus en distinguant sources, développement doctrinal, réception, statut épistémique et interprétation.', 'type' => 'konnected'],
             'ucc.path.creation-sciences-ecology' => ['eyebrow' => 'KonnectED · Comprendre', 'body' => 'Étudier les rapports entre création, sciences, évolution, progrès, écologie et responsabilité envers le vivant.', 'type' => 'konnected'],
             'ucc.path.education-universities-transmission' => ['eyebrow' => 'KeenKonnect · Servir', 'body' => 'Explorer écoles, universités, formation, recherche, accès au savoir et responsabilités institutionnelles.', 'type' => 'keenkonnect'],

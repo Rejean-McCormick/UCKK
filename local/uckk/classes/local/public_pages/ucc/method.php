@@ -19,11 +19,15 @@ final class method {
             'typography' => 'editorial',
             'eyebrow' => 'Méthode éditoriale',
             'title' => 'Faire arbitrer les arguments plutôt que publier une opinion personnelle',
-            'subtitle' => 'L’intelligence artificielle sert d’outil de synthèse, de confrontation et d’arbitrage éditorial; elle n’est ni infaillible ni soustraite à la critique.',
-            'summary' => 'Dans la mesure du possible, le contenu n’est pas présenté comme l’interprétation personnelle du fondateur. Lorsqu’une correction est proposée, son argument peut être soumis à une nouvelle évaluation afin de décider si le passage doit être maintenu, nuancé ou corrigé.',
+            'subtitle' => 'La sélection générale du corpus a été effectuée par l’intelligence artificielle; cette provenance est déclarée, révisable et ne fait pas de l’IA une autorité infaillible ou parfaitement neutre.',
+            'summary' => 'La sélection générale des auteurs, des œuvres, des sujets et des axes d’étude a été effectuée par l’intelligence artificielle. Deux ajouts relèvent toutefois d’un choix explicite du concepteur : Pierre Teilhard de Chardin et Le Dieu cosmique : À la recherche du Dieu d’Einstein, de Jacques Languirand et Jean Proulx. Le corpus demeure révisable et les objections argumentées peuvent conduire à une correction, une nuance ou au maintien d’un passage.',
             'sections' => [
                 [
-                    'title' => 'Rôle de l’IA',
+                    'title' => 'Provenance de la sélection générale',
+                    'body' => 'La sélection générale des auteurs, des œuvres, des sujets et des axes d’étude a été effectuée par l’intelligence artificielle. Elle ne doit donc pas être présentée comme une liste personnelle du concepteur. Cette provenance ne garantit pas une neutralité parfaite : les modèles, les consignes, les sources disponibles et les révisions peuvent introduire des biais.',
+                ],
+                [
+                    'title' => 'Rôle de l’IA dans le travail éditorial',
                     'body' => 'L’IA peut produire des synthèses, comparer des interprétations, repérer des tensions et réexaminer un passage à la lumière d’une objection. Le but est de réduire la dépendance à l’opinion d’une seule personne, sans prétendre que l’IA serait parfaitement neutre ou objective.',
                 ],
                 [
@@ -35,8 +39,8 @@ final class method {
                     'body' => 'Des coquilles, simplifications, rapprochements abusifs ou affirmations insuffisamment étayées peuvent apparaître. Le corpus est donc conçu comme révisable. Une décision éditoriale précédente peut elle-même être réexaminée.',
                 ],
                 [
-                    'title' => 'Exception déclarée : Teilhard de Chardin',
-                    'body' => 'Le fondateur se réserve un grain de sel explicite autour de Pierre Teilhard de Chardin : certains ponts, rapprochements ou développements peuvent être personnels et originaux. Ils doivent être identifiés comme tels pour ne pas être confondus avec une synthèse attribuable au corpus ou à l’IA.',
+                    'title' => 'Deux ajouts explicitement déclarés',
+                    'body' => 'Deux éléments ont été introduits explicitement par le concepteur : Pierre Teilhard de Chardin et l’ouvrage Le Dieu cosmique : À la recherche du Dieu d’Einstein, de Jacques Languirand et Jean Proulx. Leur présence sert de point de passage entre le corpus chrétien et une interrogation plus large sur le divin, le cosmos, la nature, la raison et l’expérience religieuse. L’ajout de l’ouvrage permet notamment de rejoindre des philosophes et des perspectives non chrétiennes auxquels il renvoie, afin d’éviter le cloisonnement doctrinal et les lectures intégristes et de favoriser le dialogue. Ces références ne constituent pas pour autant une doctrine UCC.',
                 ],
                 [
                     'title' => 'Séparer fait, interprétation et hypothèse',

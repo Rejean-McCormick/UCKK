@@ -4684,6 +4684,34 @@ body:has(.local-uckk-public-page) [role="main"] {
 
 
 
+/* Public linked cards: make the full visual card a click target.
+ *
+ * public_page.php already marks every card that owns a public URL with
+ * local-uckk-public-card--linked. Stretch the title link over the card while
+ * keeping the explicit action link above it for keyboard/pointer clarity.
+ */
+.local-uckk-public-card--linked {
+    position: relative;
+    cursor: pointer;
+}
+
+.local-uckk-public-card--linked .local-uckk-public-card__title a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.local-uckk-public-card--linked .local-uckk-public-card__action-link {
+    position: relative;
+    z-index: 2;
+}
+
+.local-uckk-public-card--linked:focus-within {
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+}
+
 .local-uckk-voie-card,
 
 .local-uckk-faculty-link-card,

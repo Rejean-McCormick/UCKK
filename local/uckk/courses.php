@@ -76,11 +76,13 @@ echo $OUTPUT->footer();
 /**
  * Read the public explorer request state.
  *
- * @return array{q: string, category: string, sort: string}
+ * @return array{q: string, category: string, categoryid: int, course: int, sort: string}
  */
 function local_uckk_public_courses_request_state(): array {
     $q = local_uckk_public_courses_safe_param_text(optional_param('q', '', PARAM_TEXT));
     $category = local_uckk_public_courses_normalise_category_key(optional_param('category', '', PARAM_TEXT));
+    $categoryid = optional_param('categoryid', 0, PARAM_INT);
+    $course = optional_param('course', 0, PARAM_INT);
     $sort = local_uckk_public_courses_slug(optional_param('sort', 'pedagogical', PARAM_TEXT));
 
     if (!in_array($sort, ['pedagogical', 'title', 'category'], true)) {
@@ -90,6 +92,8 @@ function local_uckk_public_courses_request_state(): array {
     return [
         'q' => $q,
         'category' => $category,
+        'categoryid' => max(0, (int)$categoryid),
+        'course' => max(0, (int)$course),
         'sort' => $sort,
     ];
 }
@@ -98,7 +102,7 @@ function local_uckk_public_courses_request_state(): array {
  * Add live visible Moodle courses to the public page definition.
  *
  * @param array<string, mixed> $definition Base page definition.
- * @param array{q: string, category: string, sort: string} $state Public explorer state.
+ * @param array{q: string, category: string, categoryid: int, course: int, sort: string} $state Public explorer state.
  * @return array<string, mixed>
  */
 function local_uckk_public_courses_enrich_definition(array $definition, array $state): array {
@@ -106,6 +110,23 @@ function local_uckk_public_courses_enrich_definition(array $definition, array $s
     $ismath = $site === \local_uckk\local\public_site_context::SITE_MATH;
     $isucc = $site === \local_uckk\local\public_site_context::SITE_UCC;
     $allcards = local_uckk_public_courses_get_cards();
+
+    if ($state['course'] > 0) {
+        $detail = local_uckk_public_courses_find_card($allcards, $state['course']);
+        if ($detail !== null) {
+            return local_uckk_public_courses_detail_definition($definition, $detail);
+        }
+    }
+
+    if ($state['categoryid'] > 0) {
+        foreach ($allcards as $card) {
+            if ((int)($card['categoryid'] ?? 0) === $state['categoryid']) {
+                $state['category'] = (string)($card['categorykey'] ?? '');
+                break;
+            }
+        }
+    }
+
     $filters = local_uckk_public_courses_category_filters($allcards, $state['category']);
 
     if ($state['category'] !== '' && !local_uckk_public_courses_filter_exists($filters, $state['category'])) {
@@ -150,14 +171,10 @@ function local_uckk_public_courses_enrich_definition(array $definition, array $s
     ];
 
     $definition['cta'] = [
-        'title' => 'Index Moodle des cours',
-        'body' => $ismath
-            ? 'L’index Moodle donne accès aux mêmes espaces de cours et reste la référence de l’état actuellement publié.'
-            : ($isucc
-                ? 'L’index Moodle reste la référence de l’état actuellement publié des espaces de cours reliés à l’UCC.'
-                : 'L’index permet aussi de parcourir les espaces de cours.'),
-        'url' => '/course/index.php',
-        'label' => 'Ouvrir l’index',
+        'title' => 'Participer dans le campus Moodle',
+        'body' => 'La consultation publique reste ouverte sans compte. La connexion est demandée seulement pour entrer dans les espaces Moodle protégés, participer aux activités ou enregistrer une progression.',
+        'url' => local_uckk_public_courses_login_url(),
+        'label' => 'Se connecter',
     ];
 
     if (empty($allcards)) {
@@ -182,7 +199,7 @@ function local_uckk_public_courses_enrich_definition(array $definition, array $s
 /**
  * Build the template context for the public course explorer.
  *
- * @param array{q: string, category: string, sort: string} $state Public explorer state.
+ * @param array{q: string, category: string, categoryid: int, course: int, sort: string} $state Public explorer state.
  * @param array<int, array<string, mixed>> $filters Category filters.
  * @param array<int, array<string, mixed>> $cards Filtered cards.
  * @param int $total Total available courses before filtering.
@@ -343,12 +360,13 @@ function local_uckk_public_courses_get_cards(): array {
             'categorylabel' => $categorylabel,
             'categorykey' => $categorykey,
             'categoryname' => $categoryname,
+            'categoryid' => (int)$record->category,
             'categoryidnumber' => $categoryidnumber,
             'title' => $title,
             'body' => $summary,
             'summary' => $summary,
             'description' => $summary,
-            'url' => (new moodle_url('/course/view.php', ['id' => $courseid]))->out(false),
+            'url' => (new moodle_url('/local/uckk/courses.php', ['course' => $courseid]))->out(false),
             'type' => 'course',
             'shortname' => $shortname,
             'code' => $shortname,
@@ -382,10 +400,107 @@ function local_uckk_public_courses_get_cards(): array {
 }
 
 /**
+ * Find one public course card by Moodle course id.
+ *
+ * @param array<int, array<string, mixed>> $cards Public course cards.
+ * @param int $courseid Moodle course id.
+ * @return array<string, mixed>|null
+ */
+function local_uckk_public_courses_find_card(array $cards, int $courseid): ?array {
+    if ($courseid <= 0) {
+        return null;
+    }
+
+    foreach ($cards as $card) {
+        if ((int)($card['id'] ?? 0) === $courseid) {
+            return $card;
+        }
+    }
+
+    return null;
+}
+
+/**
+ * Turn one public course card into a public detail page.
+ *
+ * The course preview intentionally stays in local_uckk. Entering Moodle's
+ * protected course view is an explicit action, never an accidental result of
+ * browsing a public Voie or public course card.
+ *
+ * @param array<string, mixed> $definition Base courses page definition.
+ * @param array<string, mixed> $course Public course card.
+ * @return array<string, mixed>
+ */
+function local_uckk_public_courses_detail_definition(array $definition, array $course): array {
+    $title = (string)($course['title'] ?? 'Cours');
+    $summary = (string)($course['summary'] ?? $course['body'] ?? '');
+    $category = (string)($course['categorylabel'] ?? $course['category'] ?? '');
+    $shortname = (string)($course['shortname'] ?? $course['code'] ?? '');
+    $courseid = (int)($course['id'] ?? 0);
+    $categoryid = (int)($course['categoryid'] ?? 0);
+
+    $definition['eyebrow'] = $category !== '' ? $category : 'Cours public';
+    $definition['title'] = $title;
+    $definition['subtitle'] = $shortname;
+    $definition['summary'] = $summary;
+    $definition['has_course_explorer'] = false;
+    $definition['course_explorer'] = [];
+    $definition['cards'] = [];
+    $definition['sections'] = [
+        [
+            'eyebrow' => 'Consultation publique',
+            'title' => 'Aperçu du cours',
+            'body' => 'Cette fiche reste accessible sans connexion. Les activités, remises, traces de progression et autres espaces protégés demeurent dans Moodle et demandent une connexion lorsque nécessaire.',
+            'type' => 'course-public-preview',
+        ],
+    ];
+    $definition['metadata'] = array_values(array_filter([
+        $shortname !== '' ? ['label' => 'Code', 'value' => $shortname] : null,
+        $category !== '' ? ['label' => 'Voie', 'value' => $category] : null,
+    ]));
+    $definition['quicklinks'] = [
+        [
+            'label' => 'Retour aux cours',
+            'description' => $category !== '' ? 'Revenir aux cours de cette Voie.' : 'Revenir au catalogue public.',
+            'url' => (new moodle_url('/local/uckk/courses.php', $categoryid > 0 ? ['categoryid' => $categoryid] : []))->out(false),
+        ],
+        [
+            'label' => 'Voir les Voies',
+            'description' => 'Revenir au répertoire public des Voies.',
+            'url' => (new moodle_url('/local/uckk/programs.php'))->out(false),
+        ],
+    ];
+    $definition['cta'] = [
+        'title' => 'Entrer dans le cours Moodle',
+        'body' => 'Moodle demandera une connexion uniquement si cet espace de cours ou l’action demandée est protégé.',
+        'url' => (new moodle_url('/course/view.php', ['id' => $courseid]))->out(false),
+        'label' => 'Ouvrir le cours Moodle',
+    ];
+
+    return $definition;
+}
+
+/**
+ * Build an explicit login URL preserving the active Univers-Cité theme.
+ *
+ * @return string
+ */
+function local_uckk_public_courses_login_url(): string {
+    $site = \local_uckk\local\public_site_context::current();
+    $theme = match ($site) {
+        \local_uckk\local\public_site_context::SITE_UCC => \local_uckk\local\public_site_context::THEME_UCC,
+        \local_uckk\local\public_site_context::SITE_MATH => \local_uckk\local\public_site_context::THEME_MATH,
+        default => \local_uckk\local\public_site_context::THEME_UCKK,
+    };
+
+    return (new moodle_url('/login/index.php', ['theme' => $theme]))->out(false);
+}
+
+/**
  * Filter course cards from the current explorer state.
  *
  * @param array<int, array<string, mixed>> $cards Course cards.
- * @param array{q: string, category: string, sort: string} $state Public explorer state.
+ * @param array{q: string, category: string, categoryid: int, course: int, sort: string} $state Public explorer state.
  * @return array<int, array<string, mixed>>
  */
 function local_uckk_public_courses_filter_cards(array $cards, array $state): array {

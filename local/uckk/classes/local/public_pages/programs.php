@@ -241,7 +241,7 @@ final class programs {
             $actionlabel = '';
 
             if ($categoryid > 0 && $categoryvisible === 1) {
-                $url = (new moodle_url('/course/index.php', ['categoryid' => $categoryid]))->out(false);
+                $url = (new moodle_url('/local/uckk/courses.php', ['categoryid' => $categoryid]))->out(false);
                 $actionlabel = 'Accéder aux cours';
             }
 

@@ -5,11 +5,11 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'theme_ucc';
-$plugin->version = 2026092801;
+$plugin->version = 2026092901;
 $plugin->requires = 2025041400; // Moodle 5.0 or later.
 $plugin->supported = [500, 503];
 $plugin->maturity = MATURITY_ALPHA;
-$plugin->release = '0.1.1';
+$plugin->release = '0.1.2';
 $plugin->dependencies = [
-    'local_uckk' => 2026092801,
+    'local_uckk' => 2026092901,
 ];

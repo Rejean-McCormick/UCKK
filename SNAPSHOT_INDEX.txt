@@ -1,5 +1,5 @@
 SmartSnap snapshot file index
-Files included: 1040
+Files included: 1082
 
 .gitignore
 _ucc_switcher_install_20260924_233136.txt
@@ -154,7 +154,6 @@ blocks/uckk_dashboard/templates/dashboard_block.mustache
 blocks/uckk_dashboard/templates/progress_summary.mustache
 blocks/uckk_dashboard/tests/block_uckk_dashboard_test.php
 blocks/uckk_dashboard/version.php
-CODE_SNAPSHOT_MANIFEST.md
 course/format/uckk/amd/src/archivepanel.js
 course/format/uckk/amd/src/courseformat.js
 course/format/uckk/amd/src/sectionnav.js
@@ -204,15 +203,32 @@ docs/contracts/univers-cite-projection/1.0.0/schema.json
 docs/contracts/univers-cite-projection/1.0.0/ucc-current.example.json
 docs/DOC_mediatheque_explorateur.md
 docs/json_preset_reference.md
+docs/Mettre +++¾ jour le texte d++°++÷++óune page publique UCKK-Moodle.txt
+docs/Mettre ++â jour le texte d+Û+Ô+ýune page publique UCKK-Moodle.txt
+docs/Mettre ++È÷ú­ª jour le texte d+È÷ú­¢+È÷ú­±+È÷úÈ‗úune page publique UCKK-Moodle.txt
+docs/Mettre ++├в jour le texte d+├Ы+├Ф+├╜une page publique UCKK-Moodle.txt
 docs/Mettre +ß jour le texte dÈÃÍune page publique UCKK-Moodle.txt
+docs/Mettre +È÷ú­╗ jour le texte dÈ÷ú­È÷ú­¶È÷ú­Ïune page publique UCKK-Moodle.txt
+docs/Mettre +├Я jour le texte d├И├Г├Нune page publique UCKK-Moodle.txt
 docs/Mettre à jour le texte d’une page publique UCKK-Moodle.txt
+docs/Mettre È÷ú­ª jour le texte dðÚ­╔­«une page publique UCKK-Moodle.txt
+docs/Mettre ├а jour le texte dтАЩune page publique UCKK-Moodle.txt
 docs/README_import_uckkarchive_media.md
 docs/refactor_public_pages_contract.md
 docs/status/2026-09-26_moodle_global_status.md
 docs/status/2026-09-28_ucc_christian_refactor.md
+docs/status/2026-09-28_ucc_cosmic_divine_pathway.md
+docs/status/2026-09-28_ucc_math_canonical_pathways_cleanup.md
 docs/status/2026-09-28_ucc_projection_model_refinement.md
+docs/status/2026-09-29_ucc_editorial_provenance_correction.md
 docs/THEME_SWITCHER_PROTOTYPE.md
 docs/TODO_refactor_explorateur_cours_public_UCKK.md
+docs/ucc/CATALOGUE_UCC.html
+docs/ucc/CHANGEMENTS.json
+docs/ucc/INSTALLATION_ET_VALIDATION.md
+docs/ucc/PLANS_110_COURS.md
+docs/ucc/RAPPORT_REFONTE.md
+docs/ucc/VALIDATION.md
 docs/uckk-style-system-officiel.md
 docs/UCKK_Moodle_Source_Runtime_Sync.md
 docs/UCKK_Notes_Operationnelles_Conversation_2026-06-01.md
@@ -233,10 +249,20 @@ local/uckk/archives.php
 local/uckk/assemblies.php
 local/uckk/atlas/atlas_manifest.json
 local/uckk/atlas/atlas_schema.json
+local/uckk/atlas/math_curriculum_registry.json
+local/uckk/atlas/math_mediatheque_course_links.json
+local/uckk/atlas/math_mediatheque_reference_registry.json
+local/uckk/atlas/math_pathway_migrations.json
+local/uckk/atlas/math_reference_profiles.json
+local/uckk/atlas/math_universe.json
+local/uckk/atlas/ucc_course_syllabi.json
 local/uckk/atlas/ucc_curriculum_registry.json
 local/uckk/atlas/ucc_domains.json
 local/uckk/atlas/ucc_glossary_map.json
 local/uckk/atlas/ucc_legacy_aliases.json
+local/uckk/atlas/ucc_mediatheque_course_links.json
+local/uckk/atlas/ucc_mediatheque_reference_registry.json
+local/uckk/atlas/ucc_pathway_migrations.json
 local/uckk/atlas/ucc_universe.json
 local/uckk/atlas/voies/voie_architecture_sociotechnique.json
 local/uckk/atlas/voies/voie_ecologie.json
@@ -304,8 +330,13 @@ local/uckk/classes/form/program_form.php
 local/uckk/classes/hook_listener.php
 local/uckk/classes/local/atlas/atlas_cache.php
 local/uckk/classes/local/atlas/atlas_manifest.php
+local/uckk/classes/local/atlas/math_curriculum_registry.php
+local/uckk/classes/local/atlas/math_legacy_resolver.php
 local/uckk/classes/local/atlas/ucc_curriculum_registry.php
 local/uckk/classes/local/atlas/ucc_domain_registry.php
+local/uckk/classes/local/atlas/ucc_legacy_resolver.php
+local/uckk/classes/local/atlas/ucc_mediatheque_registry.php
+local/uckk/classes/local/atlas/ucc_syllabus_registry.php
 local/uckk/classes/local/atlas/voie_moodle_mapper.php
 local/uckk/classes/local/atlas/voie_normalizer.php
 local/uckk/classes/local/atlas/voie_repository.php
@@ -338,6 +369,7 @@ local/uckk/classes/local/player_profile.php.bak_core_text_20260622_084804
 local/uckk/classes/local/program.php
 local/uckk/classes/local/provenance.php
 local/uckk/classes/local/provenance.php.bak_core_text_20260622_084804
+local/uckk/classes/local/public_login.php
 local/uckk/classes/local/public_pages.php
 local/uckk/classes/local/public_pages/about.php
 local/uckk/classes/local/public_pages/archives.php
@@ -464,6 +496,8 @@ local/uckk/method.php
 local/uckk/news.php
 local/uckk/pathways.php
 local/uckk/programs.php
+local/uckk/reference/math/anchors/continuous-change-cyclicity-phase.docx
+local/uckk/reference/math/anchors/modern-math-physics-reference-notes.docx
 local/uckk/settings.php
 local/uckk/styles.css
 local/uckk/templates/canon_panel.mustache
@@ -513,6 +547,8 @@ local/uckk/tests/faculty_page_builder_test.php
 local/uckk/tests/faculty_registry_test.php
 local/uckk/tests/faculty_repository_test.php
 local/uckk/tests/faculty_validator_test.php
+local/uckk/tests/math_curriculum_registry_test.php
+local/uckk/tests/math_legacy_resolver_test.php
 local/uckk/tests/mediatheque_page_test.php
 local/uckk/tests/pathway_api_test.php
 local/uckk/tests/player_profile_test.php
@@ -520,12 +556,16 @@ local/uckk/tests/program_api_test.php
 local/uckk/tests/public_site_context_test.php
 local/uckk/tests/ucc_curriculum_registry_test.php
 local/uckk/tests/ucc_domain_registry_test.php
+local/uckk/tests/ucc_mediatheque_registry_test.php
+local/uckk/tests/ucc_syllabus_registry_test.php
 local/uckk/tests/voie_normalizer_test.php
 local/uckk/tests/voie_repository_test.php
 local/uckk/tests/voie_validator_test.php
 local/uckk/thinkers.php
 local/uckk/transparency.php
+local/uckk/ucc_study.php
 local/uckk/version.php
+MATH_DOCUMENT_FOCUSED_CURRICULUM.md
 MEDIATHEQUE_BRIDGES_CHANGESET.md
 mod/uckkarchive/add.php
 mod/uckkarchive/amd/src/archive.js
@@ -950,17 +990,11 @@ report/uckk/tests/behat/report_uckk.feature
 report/uckk/tests/report_test.php
 report/uckk/version.php
 scan_moodle_strings.py
-string_inventory/string_defined_unused.csv
-string_inventory/string_definitions.csv
-string_inventory/string_dynamic.csv
-string_inventory/string_inventory.json
-string_inventory/string_missing.csv
-string_inventory/string_missing.md
-string_inventory/string_references.csv
 theme/ucc/config.php
 theme/ucc/lang/en/theme_ucc.php
 theme/ucc/lang/fr/theme_ucc.php
 theme/ucc/layout/frontpage.php
+theme/ucc/layout/login.php
 theme/ucc/lib.php
 theme/ucc/scss/ucc.scss
 theme/ucc/version.php
@@ -1005,6 +1039,7 @@ theme/ucmath/config.php
 theme/ucmath/lang/en/theme_ucmath.php
 theme/ucmath/lang/fr/theme_ucmath.php
 theme/ucmath/layout/frontpage.php
+theme/ucmath/layout/login.php
 theme/ucmath/lib.php
 theme/ucmath/scss/ucmath.scss
 theme/ucmath/version.php
@@ -1013,6 +1048,12 @@ tools/Import-UckkPlayExternalRefs.final-working.ps1
 tools/Import-UckkPlayExternalRefs.ps1
 tools/Test-UckkArchiveExternalRefWrites.ps1
 tools/Test-UckkMoodleDbWrite.ps1
+tools/ucc_editorial/build.py
+tools/ucc_editorial/course_design.tsv
+tools/ucc_editorial/export_html.py
+tools/ucc_editorial/integrate.py
+tools/ucc_editorial/new_sources.tsv
+tools/ucc_editorial/validate.py
 tools/uckk-ops/import/DRYRUN_LOCAL_MEDIA.cmd
 tools/uckk-ops/import/Import-UckkArchiveMedia.ps1
 tools/uckk-ops/import/Import-UckkArchiveMedia.ps1.bak_exitcode_20260925_155243
@@ -1020,6 +1061,7 @@ tools/uckk-ops/import/IMPORT_LOCAL_MEDIA.cmd
 tools/uckk-ops/import/import_uckkarchive_media.php
 tools/uckk-ops/import/import_uckkarchive_media.php.bak_advisory_20260925_173801
 tools/uckk_nomenclature_patch.py
+UCC_MEDIATHEQUE_COURSE_LINK_AUDIT.md
 uckk-presets/archive_templates.json
 uckk-presets/assembly_templates.json
 uckk-presets/badges.json

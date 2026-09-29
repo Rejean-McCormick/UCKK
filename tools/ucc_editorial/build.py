@@ -105,11 +105,11 @@ works[keys['ft']]['intellectual_status'] = 'magisterial'
 works[keys['ft']]['formats'] = [
     {'format':'html','url':works[keys['ft']]['sourceurl'],'status':'inherited_official_url'},
     {'format':'pdf','url':'https://www.vatican.va/content/francesco/fr/encyclicals/documents/papa-francesco_20201003_enciclica-fratelli-tutti.pdf','status':'user_supplied_official_url'}]
-refs['policy'].update(editorial_revision='2026-09-28',
+refs['policy'].update(editorial_revision='2026-09-29',
     eligibility_basis='Original work before 1927. Later substantive revisions need review; modern translations are separately flagged, not presumed historical or free.',
     exceptions_structured=[{'scope':'author','name':'Pierre Teilhard de Chardin'}, {'scope':'work','work_ref':keys['ft']}, {'scope':'work','work_ref':keys['cosmic']}],
     minimum_links_is_not_quality=True, orphan_policy='Unselected references remain discoverable as reserves; no artificial course association.',
-    provenance_rule='Book-derived references require a verified passage in the book. All additional selections are UCC editorial choices.',
+    provenance_rule='General author, work, subject and study-axis selection was performed by AI. Book-derived references require a verified passage in the book. Explicit designer additions are Pierre Teilhard de Chardin and Le Dieu cosmique : À la recherche du Dieu d’Einstein by Jacques Languirand and Jean Proulx.',
     linking='Explicit editorial course selections; semantic intersections are secondary signals, never sufficient evidence of relevance.')
 
 rubric = [

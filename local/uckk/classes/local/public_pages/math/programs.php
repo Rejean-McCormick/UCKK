@@ -28,7 +28,7 @@ final class programs {
             'cardsheading' => 'Explorer',
             'cards' => [
                 ['title' => 'Tous les cours', 'body' => 'Voir le catalogue de cours actuellement visible.', 'url' => '/local/uckk/courses.php', 'actionlabel' => 'Ouvrir le catalogue'],
-                ['title' => 'Index des cours', 'body' => 'Parcourir directement l’index complet des espaces de cours.', 'url' => '/course/index.php', 'actionlabel' => 'Voir l’index'],
+                ['title' => 'Parcours et cours publics', 'body' => 'Parcourir les espaces de cours sans quitter la surface publique.', 'url' => '/local/uckk/courses.php', 'actionlabel' => 'Explorer les cours'],
             ],
         ];
     }

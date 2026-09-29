@@ -40,7 +40,7 @@ final class christian {
                 ],
                 [
                     'title' => 'Un point de départ, pas une frontière',
-                    'body' => 'Les auteurs catholiques et les œuvres de tradition catholique ont une place importante dans le corpus actuel. Univers-Cité chrétienne est néanmoins conçue pour accueillir progressivement d’autres traditions, disciplines et figures majeures de l’histoire intellectuelle humaine.',
+                    'body' => 'Les auteurs catholiques et les œuvres de tradition catholique ont une place importante dans le corpus actuel. Univers-Cité chrétienne est néanmoins conçue pour accueillir progressivement d’autres traditions, disciplines et figures majeures de l’histoire intellectuelle humaine. Des points de passage vers des perspectives non chrétiennes sont volontairement maintenus afin que ce point de départ ne devienne pas un cloisonnement confessionnel.',
                 ],
             ],
             'cardsheading' => 'Explorer le corpus',

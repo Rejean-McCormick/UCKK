@@ -28,6 +28,8 @@ final class site {
         return [
             ['key' => 'uccstudy', 'label' => 'Plans et lectures', 'url' => '/local/uckk/ucc_study.php'],
             ['key' => 'home', 'label' => 'Accueil', 'url' => '/local/uckk/index.php'],
+            ['key' => 'programs', 'label' => 'Voies', 'url' => '/local/uckk/programs.php'],
+            ['key' => 'courses', 'label' => 'Cours', 'url' => '/local/uckk/courses.php'],
             ['key' => 'thinkers', 'label' => 'Penseurs', 'url' => '/local/uckk/thinkers.php'],
             ['key' => 'glossary', 'label' => 'Glossaire', 'url' => '/local/uckk/glossary.php'],
             ['key' => 'christian', 'label' => 'Corpus chrétien', 'url' => '/local/uckk/christian.php'],

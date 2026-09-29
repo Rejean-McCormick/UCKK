@@ -586,7 +586,7 @@ final class public_pages {
                     'total' => 0,
                     'emptytitle' => 'Aucun cours trouvé',
                     'emptybody' => 'Aucun cours public ne correspond aux filtres actuels.',
-                    'indexurl' => '/course/index.php',
+                    'indexurl' => '/local/uckk/courses.php',
                     'indexlabel' => 'Ouvrir l’index des cours',
                 ],
                 'metadata' => [
@@ -602,8 +602,8 @@ final class public_pages {
                 'cta' => [
                     'title' => 'Index des cours',
                     'body' => 'L’index des cours permet de parcourir les catégories, espaces de cours et ressources accessibles.',
-                    'url' => '/course/index.php',
-                    'label' => 'Ouvrir l’index',
+                    'url' => '/local/uckk/programs.php',
+                    'label' => 'Voir les Voies',
                 ],
             ],
 
@@ -1145,7 +1145,7 @@ final class public_pages {
             $actionlabel = '';
 
             if ($categoryid > 0 && $categoryvisible === 1) {
-                $url = (new moodle_url('/course/index.php', ['categoryid' => $categoryid]))->out(false);
+                $url = (new moodle_url('/local/uckk/courses.php', ['categoryid' => $categoryid]))->out(false);
                 $actionlabel = 'Voir les cours associés';
             }
 
@@ -1401,7 +1401,52 @@ final class public_pages {
         }
 
         $siteclass = self::alternate_site_class($site);
-        return $siteclass::navigation();
+        return self::ensure_public_explorer_navigation($siteclass::navigation());
+    }
+
+    /**
+     * Ensure every alternate Univers-Cité exposes the shared public exploration
+     * surface before any protected Moodle area is needed.
+     *
+     * Site-specific navigation may add or reorder its own entries, but Voies and
+     * Cours are baseline public routes for the multi-Univers-Cité shell.
+     *
+     * @param array<int, array<string, mixed>> $navigation Site navigation.
+     * @return array<int, array<string, mixed>>
+     */
+    private static function ensure_public_explorer_navigation(array $navigation): array {
+        $keys = [];
+        foreach ($navigation as $item) {
+            if (is_array($item) && isset($item['key'])) {
+                $keys[] = (string)$item['key'];
+            }
+        }
+
+        $required = [
+            self::KEY_PROGRAMS => ['key' => self::KEY_PROGRAMS, 'label' => 'Voies', 'url' => '/local/uckk/programs.php'],
+            self::KEY_COURSES => ['key' => self::KEY_COURSES, 'label' => 'Cours', 'url' => '/local/uckk/courses.php'],
+        ];
+
+        $insertat = count($navigation);
+        foreach ($navigation as $index => $item) {
+            if (is_array($item) && (($item['key'] ?? '') === self::KEY_HOME)) {
+                $insertat = $index + 1;
+                break;
+            }
+        }
+
+        $missing = [];
+        foreach ($required as $key => $item) {
+            if (!in_array($key, $keys, true)) {
+                $missing[] = $item;
+            }
+        }
+
+        if (!empty($missing)) {
+            array_splice($navigation, $insertat, 0, $missing);
+        }
+
+        return array_values($navigation);
     }
 
     /**

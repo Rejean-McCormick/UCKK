@@ -32,18 +32,18 @@ final class about {
                 ],
                 [
                     'title' => 'Une méthode révisable',
-                    'body' => 'Le corpus n’est pas présenté comme l’interprétation personnelle de son fondateur. L’intelligence artificielle produit ou arbitre une grande partie des synthèses; les erreurs et objections doivent pouvoir être soumises à une nouvelle évaluation argumentée.',
+                    'body' => 'La sélection générale des auteurs, des œuvres, des sujets et des axes d’étude a été effectuée par l’intelligence artificielle. L’IA produit aussi une grande partie des synthèses et peut réexaminer les objections; ses erreurs, biais et simplifications doivent pouvoir être soumis à une nouvelle évaluation argumentée.',
                 ],
                 [
-                    'title' => 'Une exception déclarée : Teilhard de Chardin',
-                    'body' => 'Autour de Pierre Teilhard de Chardin, certains rapprochements peuvent intégrer des idées personnelles et originales du fondateur. Cette contribution doit rester identifiable afin de ne pas être confondue avec la méthode générale du corpus.',
+                    'title' => 'Deux ajouts déclarés du concepteur',
+                    'body' => 'Pierre Teilhard de Chardin et Le Dieu cosmique : À la recherche du Dieu d’Einstein, de Jacques Languirand et Jean Proulx, ont été ajoutés explicitement par le concepteur. Ces ajouts ouvrent des passages entre le point de départ chrétien du corpus et des réflexions plus larges, notamment non chrétiennes, sur le divin, le cosmos, la nature et la raison. Ils visent le dialogue plutôt que le cloisonnement doctrinal et ne constituent pas une doctrine UCC.',
                 ],
             ],
             'cardsheading' => 'Comprendre le projet',
             'cards' => [
                 ['title' => 'Penseurs', 'body' => 'Le fil humain de l’encyclopédie.', 'url' => '/local/uckk/thinkers.php', 'actionlabel' => 'Explorer', 'type' => 'people'],
                 ['title' => 'Glossaire', 'body' => 'Le fil lexical et conceptuel de l’encyclopédie.', 'url' => '/local/uckk/glossary.php', 'actionlabel' => 'Explorer', 'type' => 'glossary'],
-                ['title' => 'Méthode éditoriale', 'body' => 'IA, objections, corrections et exception Teilhard.', 'url' => '/local/uckk/method.php', 'actionlabel' => 'Lire', 'type' => 'method'],
+                ['title' => 'Méthode éditoriale', 'body' => 'Provenance de la sélection par IA, objections, corrections et deux ajouts déclarés du concepteur.', 'url' => '/local/uckk/method.php', 'actionlabel' => 'Lire', 'type' => 'method'],
                 ['title' => 'Transparence', 'body' => 'Statut institutionnel et relation avec l’Église catholique.', 'url' => '/local/uckk/transparency.php', 'actionlabel' => 'Consulter', 'type' => 'integrity'],
             ],
         ];

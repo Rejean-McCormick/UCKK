@@ -6,7 +6,7 @@ Date: 2026-09-28
 
 `Le Dieu cosmique : À la recherche du Dieu d’Einstein` de Jacques Languirand et Jean Proulx (Le Jour, 2008) devient un **ouvrage-charnière explicitement référencé** dans l’Univers-Cité chrétienne.
 
-Il n’est pas traité comme doctrine UCC ni comme interprétation à adopter. Il sert de carte comparative permettant de circuler entre plusieurs réflexions sur le divin, le cosmos, la nature, la raison, l’expérience religieuse, la science, l’évolution, l’immanence et la transcendance.
+Il n’est pas traité comme doctrine UCC ni comme interprétation à adopter. Il sert de carte comparative permettant de circuler entre plusieurs réflexions sur le divin, le cosmos, la nature, la raison, l’expérience religieuse, la science, l’évolution, l’immanence et la transcendance. Son intégration au corpus résulte d’un choix explicite du concepteur, afin d’ouvrir un pont vers les philosophes et les perspectives non chrétiennes auxquels l’ouvrage renvoie et de favoriser le dialogue au-delà d’un cadre confessionnel fermé.
 
 ## Nouvelle Voie canonique
 

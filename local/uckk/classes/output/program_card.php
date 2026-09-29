@@ -354,7 +354,7 @@ final class program_card implements renderable, templatable, named_templatable {
             return '';
         }
 
-        return (new moodle_url('/course/index.php', [
+        return (new moodle_url('/local/uckk/courses.php', [
             'categoryid' => $this->program->categoryid,
         ]))->out(false);
     }

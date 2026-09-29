@@ -63,3 +63,14 @@ Apply categories serveur
 - Le runtime serveur n’est pas la source.
 - La source officielle est le repo `uckk-moodle`.
 - Les JSON de seed doivent être appliqués à la DB Moodle avant d’apparaître dans certaines interfaces.
+
+
+## Rôles consolidés : Source, Ops Console et Publisher
+
+La source de vérité du code UCKK est `C:\mycode\UCKK\uckk-moodle`. Le runtime local `C:\mycode\UCKK\moodle\moodle\public` est une cible d’exécution, pas une source éditoriale.
+
+- **UCKK Ops Console** : développement et opérations locales (diagnostics, démarrage Moodle local, upgrade, purge caches, opérations de maintenance). La synchronisation manuelle source → runtime reste utile pour le développement interactif.
+- **UCKK Publisher** : chaîne de publication. À partir de v0.1.8, `Préparer le paquet` synchronise automatiquement `uckk-moodle` vers le webroot runtime, vérifie les empreintes source/runtime, puis construit le paquet. Une divergence résiduelle bloque la publication.
+- **VPS** : cible de déploiement seulement. Les corrections normales ne doivent pas être faites directement dans `/opt/uckk/current`.
+
+Docker n’est pas requis pour synchroniser ou préparer un paquet. Il faut uniquement qu’un serveur Moodle local soit démarré (Docker ou autre) lorsqu’on veut tester les URLs `127.0.0.1:8000` dans un navigateur.

@@ -39,7 +39,7 @@ Le corpus chrétien constitue un point de départ important, notamment par les t
 
 L’intelligence artificielle est décrite comme un mécanisme éditorial révisable : elle peut synthétiser, confronter et réévaluer des arguments, mais n’est pas présentée comme infaillible ou parfaitement objective. Les objections argumentées peuvent entraîner une correction, une nuance, l’ajout d’une perspective ou le maintien du texte.
 
-Une exception éditoriale est explicitement signalée autour de **Pierre Teilhard de Chardin**, où des rapprochements personnels et originaux du fondateur peuvent être ajoutés à condition d’être identifiés comme tels.
+La sélection générale des auteurs, des œuvres, des sujets et des axes d’étude est déclarée comme ayant été effectuée par l’intelligence artificielle. Deux ajouts relèvent toutefois d’un choix explicite du concepteur : **Pierre Teilhard de Chardin** et **Le Dieu cosmique : À la recherche du Dieu d’Einstein**, de Jacques Languirand et Jean Proulx. Ces ajouts servent de points de passage vers une réflexion plus large sur le divin et visent à éviter le cloisonnement doctrinal tout en favorisant le dialogue. Cette correction de provenance a été apportée le 2026-09-29.
 
 Le projet est présenté comme une **initiative chrétienne indépendante**. Il ne revendique aucune approbation ou reconnaissance officielle de l’Église catholique qui n’aurait pas été formellement accordée.
 

@@ -31,7 +31,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$homeurl = new moodle_url('/local/uckk/index.php');
+$login = \local_uckk\local\public_login::definition();
+$homeurl = new moodle_url('/local/uckk/index.php', ['theme' => $login['theme']]);
 $loginagain = optional_param('loginagain', 0, PARAM_BOOL);
 
 if (!$loginagain && isloggedin() && !isguestuser()) {
@@ -74,30 +75,24 @@ echo $OUTPUT->doctype();
 
                 <div class="login-layout-left-content">
                     <p class="theme-uckk-eyebrow">
-                        Univers-Cité King Klown
+                        <?php echo s($login['eyebrow']); ?>
                     </p>
 
                     <h1 id="theme-uckk-login-title">
-                        Lire le Grand Jeu social
+                        <?php echo s($login['title']); ?>
                     </h1>
 
                     <p class="login-layout-left__summary">
-                        UCKK est une univers-cité émergente issue du mouvement kOA. Elle
-                        accompagne des joueurs lucides capables de lire les systèmes, d’agir
-                        avec intégrité et de transformer les règles.
+                        <?php echo s($login['summary']); ?>
                     </p>
 
-                    <div class="login-layout-stats" aria-label="Repères UCKK">
-                        <p>
-                            <strong>Comprendre.</strong>
-                            Lire les règles, récits, institutions et pouvoirs qui structurent
-                            le monde social.
-                        </p>
-                        <p>
-                            <strong>Agir.</strong>
-                            Apprendre par l’enquête, la preuve, les assemblées, les défis et
-                            la mémoire.
-                        </p>
+                    <div class="login-layout-stats" aria-label="Repères publics">
+                        <?php foreach ($login['points'] as $point): ?>
+                            <p>
+                                <strong><?php echo s($point['title']); ?></strong>
+                                <?php echo s($point['body']); ?>
+                            </p>
+                        <?php endforeach; ?>
                     </div>
 
                     <p class="theme-uckk-login-skip-wrap">
@@ -105,7 +100,7 @@ echo $OUTPUT->doctype();
                             class="theme-uckk-login-skip"
                             href="<?php echo s($skipurl); ?>"
                         >
-                            Explorer sans connexion
+                            <?php echo s($login['explorelabel']); ?>
                         </a>
                     </p>
                 </div>
