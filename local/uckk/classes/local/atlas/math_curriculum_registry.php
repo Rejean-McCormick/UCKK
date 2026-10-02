@@ -1,7 +1,7 @@
 <?php
 // This file is part of Moodle - https://moodle.org/
 
-/** Canonical Univers-Cité des mathématiques pathway registry. */
+/** Legacy Math curriculum compatibility snapshot. New knowledge projections use math_university_projection. */
 
 declare(strict_types=1);
 
@@ -69,14 +69,14 @@ final class math_curriculum_registry {
         if (!is_array($doc) || ($doc['schema_version'] ?? '') !== self::SCHEMA_VERSION || ($doc['universe_id'] ?? '') !== 'math') {
             throw new \coding_exception('Invalid Math curriculum registry contract.');
         }
-        if (!isset($doc['pathways']) || !is_array($doc['pathways']) || count($doc['pathways']) !== 8) {
-            throw new \coding_exception('Math curriculum registry must contain exactly eight canonical pathways.');
+        if (!isset($doc['pathways']) || !is_array($doc['pathways']) || !$doc['pathways']) {
+            throw new \coding_exception('Legacy Math curriculum snapshot must contain at least one pathway.');
         }
-        if (!isset($doc['courses']) || !is_array($doc['courses']) || count($doc['courses']) !== 64) {
-            throw new \coding_exception('Math curriculum registry must contain exactly 64 canonical courses.');
+        if (!isset($doc['courses']) || !is_array($doc['courses']) || !$doc['courses']) {
+            throw new \coding_exception('Legacy Math curriculum snapshot must contain at least one course.');
         }
-        if (!isset($doc['concepts']) || !is_array($doc['concepts']) || count($doc['concepts']) < 30) {
-            throw new \coding_exception('Math curriculum registry must contain the document-anchored concept map.');
+        if (!isset($doc['concepts']) || !is_array($doc['concepts']) || !$doc['concepts']) {
+            throw new \coding_exception('Legacy Math curriculum snapshot must contain its concept map.');
         }
         $seen = [];
         foreach ($doc['pathways'] as $pathway) {

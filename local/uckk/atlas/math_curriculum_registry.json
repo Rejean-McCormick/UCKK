@@ -8,9 +8,11 @@
     "course_namespace": "MATH",
     "legacy_mode": "read_only_migration",
     "write_rule": "Only canonical math.path.* pathway identifiers and MATH-* course identifiers may be written by new integrations.",
-    "course_authority": "This registry defines the canonical conceptual curriculum; Moodle runtime materializes course spaces.",
-    "curriculum_focus": "Concepts explicitly supported by the anchor documents and their cited research directions.",
-    "epistemic_boundary": "Structural and mathematical claims are kept distinct from stronger metaphysical or ontological interpretations."
+    "course_authority": "Compatibility snapshot only. Current Math public knowledge projection is atlas/math_university_projection.json; Moodle runtime may retain these historical course spaces until explicit migration.",
+    "curriculum_focus": "Historical document-anchored snapshot retained for migration/compatibility; no longer the public Math knowledge authority.",
+    "epistemic_boundary": "Structural and mathematical claims are kept distinct from stronger metaphysical or ontological interpretations.",
+    "projection_successor": "atlas/math_university_projection.json",
+    "epistemic_authority": "MathKristal pinned by atlas/math_kristal_lock.json"
   },
   "source_documents": [
     {

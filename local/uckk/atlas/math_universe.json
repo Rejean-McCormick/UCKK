@@ -8,31 +8,60 @@
     "canonical_pathway_namespace": "math.path",
     "legacy_resolution": "atlas/math_pathway_migrations.json",
     "legacy_mode": "read_only_migration",
-    "curriculum_focus": "document_anchored_conceptual_curriculum"
+    "curriculum_focus": "kristal_projected_mathematical_curriculum"
   },
   "learning": {
     "provider": "Univers-Cité des mathématiques on Moodle/local_uckk",
-    "curriculum_registry": "atlas/math_curriculum_registry.json",
-    "pathways": 8,
-    "course_authority": "atlas/math_curriculum_registry.json; Moodle runtime materializes course spaces",
-    "courses": 64,
-    "anchor_documents": [
-      "math.source.e-pi-i",
-      "math.source.modern-notes"
-    ]
+    "curriculum_projection": "atlas/math_university_projection.json",
+    "projection_builder": "tools/uckk-ops/kristal/build_math_university_projection.py",
+    "projection_authority": "UCKK owns pedagogical selection/topology; MathKristal owns mathematical knowledge.",
+    "pathways": "derived from pinned MathKristal pedagogical paths",
+    "courses": "derived projected course steps; counts are not architectural constants",
+    "page_specs": "one semantic page specification per projected course step in the current projection",
+    "legacy_curriculum_registry": "atlas/math_curriculum_registry.json",
+    "legacy_registry_status": "compatibility_snapshot_only",
+    "moodle_materialization": "derived surfaces may be rebuilt idempotently; human/transactional state must be preserved"
   },
   "mediatheque": {
     "provider": "Bibliothèque mathématique",
     "mode": "autonomous_fund_with_explicit_bridges",
-    "public_surface": "/local/uckk/mediatheque.php"
+    "public_surface": "/local/uckk/mediatheque.php",
+    "kristal_catalog_entry": "math.media.kristal.mathkristal-1.6.0",
+    "semantic_binding": "projected course/page source_refs resolve to MathKristal provenance and Source Store; legacy concept_refs remain compatibility only"
   },
   "integration_invariants": [
-    "Canonical Math pathway identifiers use the math.path.* namespace.",
-    "The Math curriculum is concept-led and anchored in the declared source documents.",
-    "Structural mathematical claims must remain distinct from stronger metaphysical or ontological interpretations.",
-    "Former Math v1 pathway identifiers are resolved through explicit read-only split mappings; they are never written by new integrations.",
-    "New integrations must write canonical Math identifiers only.",
-    "Live media, permission and user state remain owned by Moodle and their existing plugins.",
-    "The mathematical library remains an autonomous fund; cross-library visibility requires explicit bridges."
-  ]
+    "MathKristal is the epistemic/reference authority for mathematical referents, assertions, proofs, dependencies and provenance.",
+    "UCKK owns pedagogical selection and topology: pathways, projected course steps, page specifications and materialization policy.",
+    "A pedagogical path is a consumer projection and never alters logical proof dependencies in MathKristal.",
+    "SemantiK Architect articulates already-selected communication obligations; it does not select mathematical content or curriculum.",
+    "Only RELEASED SemantiK Architect language/profile RuntimeSets may produce canonical multilingual page artifacts.",
+    "The canonical page-serving path does not require an LLM at runtime; AI may assist authoring, enrichment or tutoring outside the deterministic projection/render path.",
+    "Moodle owns live media, permissions, enrolments, grades, submissions, annotations and other human/transactional state.",
+    "Projection rebuilds must be idempotent for derived surfaces and must never overwrite human/transactional Moodle state.",
+    "The historical MATH-CURRICULUM-2.0 registry remains readable for compatibility but is no longer the knowledge authority or public Math navigation source.",
+    "Former Math pathway identifiers remain migration-only; new projected knowledge identities use the MathKristal-backed projection and stable URNs.",
+    "The mathematical library remains an autonomous fund; MathKristal is referenced as a pinned corpus and page/course links use source provenance rather than duplicated epistemic ownership."
+  ],
+  "knowledge": {
+    "provider": "MathKristal",
+    "artifact": "mathkristal",
+    "release": "1.6.0",
+    "state_id": "sha256:35aef425c4029076e1af3ada6a52413e975ed402ce0c64644943b11a5849ff71",
+    "referent_registry_id": "sha256:140aad0f12061f1717c0b9f960871b515279f68052f93c54a4d034f06fb37e1a",
+    "mode": "read_only_semantic_projection",
+    "lock": "atlas/math_kristal_lock.json",
+    "projection_contract": "uckk.math-university-projection/1.0.0",
+    "projection": "atlas/math_university_projection.json",
+    "primary_view": "pedagogical_paths",
+    "source_authority": "MathKristal source_refs / Source Store provenance"
+  },
+  "rendering": {
+    "provider": "SemantiK Architect",
+    "mode": "compile_ahead_deterministic",
+    "boundary": "articulation_not_content_selection",
+    "request_source": "atlas/math_university_projection.json page_specs[].communication_obligations",
+    "language_policy": "serve only RELEASED language/profile RuntimeSets; no silent fallback",
+    "ai_runtime_required": false,
+    "multilingual_model": "realize the same semantic page spec independently in each admitted target language; do not translate through a pivot language"
+  }
 }

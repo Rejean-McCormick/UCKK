@@ -32,3 +32,7 @@ Machine-readable files:
 
 - `docs/contracts/univers-cite-projection/1.0.0/schema.json`;
 - `docs/contracts/univers-cite-projection/1.0.0/ucc-current.example.json`.
+
+## Specialized consumers
+
+The Univers-Cité des mathématiques specializes this boundary through `uckk.math-university-projection/1.0.0`. See `docs/16_math_university_kristal_bridge.md`. The Math specialization adds a deterministic curriculum/page projector and a downstream SemantiK Architect articulation stage while preserving Kristal epistemic authority and Moodle transactional ownership.

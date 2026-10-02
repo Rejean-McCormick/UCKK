@@ -3,7 +3,9 @@
   "universe_id": "math",
   "policy": {
     "method": "explicit concept-ref intersection",
-    "max_media_per_course": 5
+    "max_media_per_course": 5,
+    "status": "legacy_compatibility_snapshot",
+    "successor": "Projected Math pages/courses use source_refs in atlas/math_university_projection.json and MathKristal Source Store provenance."
   },
   "links": [
     {

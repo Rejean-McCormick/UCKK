@@ -52,3 +52,7 @@ Compatibility only:
 - UCC public program rendering resolves existing Moodle legacy identifiers at the compatibility boundary, then uses canonical pathway identity for presentation.
 - Math public program sections are populated from `math_curriculum_registry.json`.
 - No database schema change is required by this cleanup.
+
+## Superseded Math runtime note — 2026-10-01
+
+The Math cleanup described above remains valid as migration history for `MATH-CURRICULUM-2.0`. It is no longer the current public Math projection. Public Math pages now consume `local/uckk/atlas/math_university_projection.json`, generated from the pinned MathKristal state. See `docs/status/2026-10-01_math_kristal_university_bridge.md` and `docs/16_math_university_kristal_bridge.md`.

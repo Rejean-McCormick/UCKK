@@ -682,3 +682,18 @@ UCKK-Moodle is self-standing. Konnaxion is an optional connected-mode integratio
 | `UCC_TARGET_KRISTAL_RELEASE` | `5.0.0-rc.3` | migration target | Must not be claimed as current source state until conversion is completed and pinned. |
 | `UCC_REFERENT_PROFILE` | `kristal.referent-registry/1.0.0` | migration target | External identifiers remain anchors and do not replace internal/domain refs. |
 
+
+### 24.1 Univers-Cité des mathématiques — Kristal bridge
+
+| Variable | Canonical value | Owner | Rule |
+|---|---|---|---|
+| `MATH_KRISTAL_RELEASE` | `1.6.0` | MathKristal pin | Current source artifact consumed by the Math universe. |
+| `MATH_KRISTAL_STATE_ID` | `sha256:35aef425c4029076e1af3ada6a52413e975ed402ce0c64644943b11a5849ff71` | MathKristal | Epistemic/reference state identity; Moodle materialization does not replace it. |
+| `MATH_KRISTAL_REFERENT_REGISTRY_ID` | `sha256:140aad0f12061f1717c0b9f960871b515279f68052f93c54a4d034f06fb37e1a` | MathKristal | Stable referent identity registry used by projected courses/pages. |
+| `MATH_UNIVERSITY_PROJECTION_CONTRACT` | `uckk.math-university-projection/1.0.0` | `local_uckk` | Specializes the generic Univers-Cité projection contract for MathKristal. |
+| `MATH_UNIVERSITY_PROJECTION_FILE` | `local/uckk/atlas/math_university_projection.json` | `local_uckk` | Rebuildable derived artifact; not a second mathematical canon. |
+| `MATH_CONTENT_SELECTION_OWNER` | `UCKK Math University Projector` | `local_uckk` | Chooses pedagogical topology and communication obligations. |
+| `MATH_LINGUISTIC_REALIZER` | `SemantiK Architect` | external deterministic realization layer | Articulates submitted obligations only; never selects mathematical facts/curriculum. |
+| `MATH_LANGUAGE_RULE` | `RELEASED language/profile RuntimeSet only` | SemantiK Architect | No silent best-effort or pivot-language fallback. |
+| `MATH_RUNTIME_AI_REQUIRED` | `false` | Math public page serving path | Canonical pages may be compiled ahead without LLM calls. |
+| `MATH_LEGACY_CURRICULUM_STATUS` | `compatibility_snapshot_only` | `MATH-CURRICULUM-2.0` | Existing 8-path / 64-course identities remain readable until explicit Moodle migration. |

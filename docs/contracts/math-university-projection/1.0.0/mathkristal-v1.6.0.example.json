@@ -1,0 +1,199 @@
+{
+  "schema_version": "MATH-UNIVERSITY-PROJECTION-1.0",
+  "universe_id": "math",
+  "generated_from": {
+    "artifact": "mathkristal",
+    "release": "1.6.0",
+    "state_id": "sha256:35aef425c4029076e1af3ada6a52413e975ed402ce0c64644943b11a5849ff71",
+    "content_hash": {
+      "alg": "sha256",
+      "value": "35aef425c4029076e1af3ada6a52413e975ed402ce0c64644943b11a5849ff71"
+    },
+    "referent_registry_id": "sha256:140aad0f12061f1717c0b9f960871b515279f68052f93c54a4d034f06fb37e1a",
+    "referent_profile_version": "1.0.0",
+    "corpus_index_sha256": "bf53a7714d61217427bd8dfba91248acfb5a3817b3f27c1976cba4033dbc0eee",
+    "pedagogical_paths_sha256": "a12a055e4dc19a9f807707ab91a630714e11e058ccd9ea94fe49db7eff7e7946"
+  },
+  "policy": {
+    "authority": "MathKristal is epistemic authority; this file is a rebuildable UCKK consumer projection.",
+    "path_rule": "curated paths are projections; they do not alter logical dependency",
+    "content_selection_owner": "UCKK Math University Projector",
+    "linguistic_realizer": "SemantiK Architect",
+    "moodle_role": "pedagogical runtime and transactional learning state",
+    "human_state_preservation": "enrolments, grades, submissions, annotations and editorial overrides are never derived from Kristal and must not be overwritten by rebuilds"
+  },
+  "statistics": {
+    "kristal_referents": 3403,
+    "kristal_assertions": 5221,
+    "kristal_sources": 94,
+    "projected_pathways": 1,
+    "projected_courses": 1,
+    "projected_page_specs": 1,
+    "projected_unique_referents": 68
+  },
+  "pathways": [
+    {
+      "pathway_id": "math.path.foundations-to-euler",
+      "kristal_path_id": "foundations-to-euler",
+      "code": "EUL",
+      "title": "Fondations vers Euler",
+      "description": "Projection pédagogique Kristal de « Ensemble » à « Identité d’Euler ». Cette séquence guide l’apprentissage sans modifier les dépendances logiques du corpus.",
+      "course_ids": [
+        "MATH-EUL-101"
+      ],
+      "referent_sequence": [
+        "urn:mathkristal:class:Set"
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "math_course_id": "MATH-EUL-101",
+      "pathway_id": "math.path.foundations-to-euler",
+      "title": "Ensemble",
+      "kristal_ref": "urn:mathkristal:class:Set",
+      "page_spec_id": "math.page.eul.101",
+      "sequence": 1,
+      "prerequisite_refs": [
+        "urn:mathkristal:concept:path-v14"
+      ],
+      "source_refs": [
+        "urn:mathkristal:source:foundations-sets-v0.3.0",
+        "urn:mathkristal:source:navigation-expansion-v0.3.0",
+        "urn:mathkristal:source:order-lattice-v1.3",
+        "urn:mathkristal:source:algebraic-topology-v1.4"
+      ]
+    }
+  ],
+  "page_specs": [
+    {
+      "page_spec_id": "math.page.eul.101",
+      "math_course_id": "MATH-EUL-101",
+      "pathway_id": "math.path.foundations-to-euler",
+      "subject": {
+        "ref": "urn:mathkristal:class:Set",
+        "label": "Ensemble",
+        "classifications": [
+          "math:MetaClass"
+        ]
+      },
+      "path_context": {
+        "position": 1,
+        "previous_ref": null,
+        "next_ref": "urn:mathkristal:number-system:R"
+      },
+      "selection": {
+        "assertion_refs": [
+          "sha256:f978292a029d06aacc395f98d949f22979a54a5209d3b33addc182482ab80d62",
+          "sha256:953090a2a8ad6d1d31243d8d73d65bf069fb73f84a4cfe95070a24fba47be62d",
+          "sha256:b2fe151ce2b4d5de1176f0e3c13768a5ad5054bbf2273cd7ccc384e60892a1f1",
+          "sha256:fff38ade01ff1ae6a57eff54430f10a4422055e85b1d4023e4ccb36ee1102c35",
+          "sha256:ad046c237a9652b11bf6461aaa0503cb3b749316bf9192006534991a9a6fdaae",
+          "sha256:a60124cf4545417ce686a094a596ae8c0f6381c8b741f4dca84fda2fe8020c85"
+        ],
+        "assertion_refs_by_role": {
+          "definition": [
+            "sha256:f978292a029d06aacc395f98d949f22979a54a5209d3b33addc182482ab80d62"
+          ],
+          "pedagogical_dependency": [
+            "sha256:953090a2a8ad6d1d31243d8d73d65bf069fb73f84a4cfe95070a24fba47be62d",
+            "sha256:b2fe151ce2b4d5de1176f0e3c13768a5ad5054bbf2273cd7ccc384e60892a1f1",
+            "sha256:a60124cf4545417ce686a094a596ae8c0f6381c8b741f4dca84fda2fe8020c85"
+          ],
+          "semantic_bridge": [
+            "sha256:ad046c237a9652b11bf6461aaa0503cb3b749316bf9192006534991a9a6fdaae"
+          ],
+          "structural_relation": [
+            "sha256:fff38ade01ff1ae6a57eff54430f10a4422055e85b1d4023e4ccb36ee1102c35"
+          ]
+        },
+        "definition_refs": [
+          "urn:mathkristal:definition:set"
+        ],
+        "proof_refs": [],
+        "pedagogical_prerequisite_refs": [
+          "urn:mathkristal:concept:path-v14"
+        ],
+        "source_refs": [
+          "urn:mathkristal:source:foundations-sets-v0.3.0",
+          "urn:mathkristal:source:navigation-expansion-v0.3.0",
+          "urn:mathkristal:source:order-lattice-v1.3",
+          "urn:mathkristal:source:algebraic-topology-v1.4"
+        ]
+      },
+      "communication_obligations": [
+        {
+          "obligation_id": "heading",
+          "kind": "heading",
+          "semantic_refs": [
+            "urn:mathkristal:class:Set"
+          ],
+          "required": true
+        },
+        {
+          "obligation_id": "identity",
+          "kind": "referent_identity",
+          "semantic_refs": [
+            "urn:mathkristal:class:Set"
+          ],
+          "required": true
+        },
+        {
+          "obligation_id": "definitions",
+          "kind": "definitions",
+          "semantic_refs": [
+            "urn:mathkristal:definition:set"
+          ],
+          "required": true
+        },
+        {
+          "obligation_id": "prerequisites",
+          "kind": "pedagogical_prerequisites",
+          "semantic_refs": [
+            "urn:mathkristal:concept:path-v14"
+          ],
+          "required": true
+        },
+        {
+          "obligation_id": "core-assertions",
+          "kind": "assertion_projection",
+          "assertion_refs": [
+            "sha256:f978292a029d06aacc395f98d949f22979a54a5209d3b33addc182482ab80d62",
+            "sha256:953090a2a8ad6d1d31243d8d73d65bf069fb73f84a4cfe95070a24fba47be62d",
+            "sha256:b2fe151ce2b4d5de1176f0e3c13768a5ad5054bbf2273cd7ccc384e60892a1f1",
+            "sha256:fff38ade01ff1ae6a57eff54430f10a4422055e85b1d4023e4ccb36ee1102c35",
+            "sha256:ad046c237a9652b11bf6461aaa0503cb3b749316bf9192006534991a9a6fdaae",
+            "sha256:a60124cf4545417ce686a094a596ae8c0f6381c8b741f4dca84fda2fe8020c85"
+          ],
+          "required": true
+        },
+        {
+          "obligation_id": "provenance",
+          "kind": "source_provenance",
+          "source_refs": [
+            "urn:mathkristal:source:foundations-sets-v0.3.0",
+            "urn:mathkristal:source:navigation-expansion-v0.3.0",
+            "urn:mathkristal:source:order-lattice-v1.3",
+            "urn:mathkristal:source:algebraic-topology-v1.4"
+          ],
+          "required": true
+        }
+      ],
+      "rendering": {
+        "content_selection_owner": "UCKK Math University Projector",
+        "linguistic_realizer": "SemantiK Architect",
+        "mode": "compile_ahead_deterministic",
+        "language_rule": "render only against a RELEASED language/profile RuntimeSet",
+        "ai_runtime_required": false
+      }
+    }
+  ],
+  "semantik_architect": {
+    "boundary": "articulation_not_content_selection",
+    "request_source": "page_specs[].communication_obligations",
+    "target_language_source": "request context",
+    "target_locale_source": "request context",
+    "capability_rule": "language/profile must be RELEASED for the selected immutable RuntimeSet",
+    "runtime_policy": "compile ahead where possible; no LLM required in the canonical page-serving path"
+  }
+}

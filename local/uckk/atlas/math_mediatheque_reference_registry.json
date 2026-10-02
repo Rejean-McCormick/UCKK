@@ -1,10 +1,26 @@
 {
-  "schema_version": "MATH-MEDIATHEQUE-REFERENCES-1.0",
+  "schema_version": "MATH-MEDIATHEQUE-REFERENCES-1.1",
   "universe_id": "math",
   "policy": {
-    "source_grounding": "Only references explicit in the supplied documents are included in this initial registry. URLs are not invented; external access may be added after verification."
+    "source_grounding": "MathKristal source_refs / Source Store are the primary provenance path for projected pages. Historical anchor documents remain catalogued as legacy/reference material.",
+    "kristal_authority": "A Kristal catalog entry is a pointer to a pinned corpus; the mediatheque does not become epistemic owner of the corpus.",
+    "external_links": "URLs are not invented; external access is added only from verified source metadata."
   },
   "items": [
+    {
+      "media_id": "math.media.kristal.mathkristal-1.6.0",
+      "title": "MathKristal 1.6.0",
+      "creator": "MathKristal Builder",
+      "kind": "kristal_corpus",
+      "artifact": "mathkristal",
+      "release": "1.6.0",
+      "state_id": "sha256:35aef425c4029076e1af3ada6a52413e975ed402ce0c64644943b11a5849ff71",
+      "referent_registry_id": "sha256:140aad0f12061f1717c0b9f960871b515279f68052f93c54a4d034f06fb37e1a",
+      "lock_ref": "local/uckk/atlas/math_kristal_lock.json",
+      "projection_ref": "local/uckk/atlas/math_university_projection.json",
+      "role": "epistemic_reference_corpus",
+      "publication_state": "pinned_reference"
+    },
     {
       "media_id": "math.media.anchor.e-pi-i",
       "title": "Continuous Change, Cyclicity, and Phase: A Structural Reading of e, π, and i",

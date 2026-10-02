@@ -1,29 +1,30 @@
-# Univers-Cité des mathématiques — curriculum focalisé sur les documents d’ancrage
+# Univers-Cité des mathématiques — snapshot historique du curriculum document-ancré
 
-## Résultat
+## Statut
 
-- 2 documents d’ancrage conservés dans `local/uckk/reference/math/anchors/`.
-- 35 concepts canoniques.
-- 8 parcours canoniques.
-- 64 cours canoniques (8 par parcours).
-- 9 références de bibliothèque initiales, limitées aux documents fournis et aux références bibliographiques explicitement citées dans le papier e/π/i.
-- 141 liens cours ↔ médias calculés par intersection explicite des `concept_refs`.
+**Superseded for public Math knowledge projection as of 2026-10-01.**
 
-## Parcours
+Ce document décrit le snapshot `MATH-CURRICULUM-2.0` qui a précédé le bridge MathKristal. Il reste utile pour la compatibilité et la migration des espaces Moodle existants, mais il n’est plus l’autorité épistémique ni la source de navigation publique de l’Univers-Cité des mathématiques.
 
-- `math.path.intelligibility-structure` — Intelligibilité, structures et modèles (8 cours)
-- `math.path.continuity-exponential` — Continuité, changement et exponentielle (8 cours)
-- `math.path.cyclicity-pi` — π, cercle et cyclicité (8 cours)
-- `math.path.complex-phase` — Nombres complexes, rotation et phase (8 cours)
-- `math.path.euler-synthesis` — Formule d’Euler et synthèse des structures (8 cours)
-- `math.path.information-computation-universe` — Information, calculabilité et univers mathématique (8 cours)
-- `math.path.pi-randomness-experiment` — π, normalité et mathématiques expérimentales (8 cours)
-- `math.path.proportion-self-similarity` — φ, proportion, récursion et auto-similarité (8 cours)
+La doctrine courante est définie dans :
+
+- `docs/16_math_university_kristal_bridge.md`;
+- `docs/contracts/math-university-projection/1.0.0/`;
+- `local/uckk/atlas/math_kristal_lock.json`;
+- `local/uckk/atlas/math_university_projection.json`.
+
+## Snapshot conservé
+
+Le snapshot historique comprend :
+
+- 2 documents d’ancrage dans `local/uckk/reference/math/anchors/`;
+- 35 concepts locaux;
+- 8 parcours;
+- 64 cours;
+- un registre de références et des liens cours ↔ médias fondés sur `concept_refs`.
+
+Ces nombres ne sont plus des constantes architecturales. Le runtime public Math lit maintenant la projection générée depuis le MathKristal épinglé. Les identités historiques demeurent lisibles pour éviter de casser les matérialisations Moodle existantes.
 
 ## Frontière épistémique
 
-Le curriculum reprend la distinction du papier d’ancrage : les constantes et structures sont étudiées comme formes générales d’intelligibilité et de représentation. Le passage à une thèse métaphysique ou ontologique n’est pas traité comme une conséquence mathématique automatique.
-
-## Note sur les profils contemporains
-
-`math_reference_profiles.json` conserve les noms et axes du document de repérage contemporain comme **orientation de recherche seulement**. Les affiliations et caractérisations doivent être vérifiées indépendamment avant publication publique.
+Le principe de prudence du snapshot reste valide : les affirmations mathématiques/structurelles doivent rester distinctes d’interprétations métaphysiques plus fortes. Dans l’architecture actuelle, cette frontière est renforcée par le fait que MathKristal conserve l’autorité sur les assertions, preuves, dépendances et provenance, tandis qu’UCKK ne fait qu’en construire une projection pédagogique.

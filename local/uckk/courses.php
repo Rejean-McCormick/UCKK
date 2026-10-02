@@ -110,6 +110,8 @@ function local_uckk_public_courses_enrich_definition(array $definition, array $s
     $ismath = $site === \local_uckk\local\public_site_context::SITE_MATH;
     $isucc = $site === \local_uckk\local\public_site_context::SITE_UCC;
     $allcards = local_uckk_public_courses_get_cards();
+    $mathprojectionstats = $ismath ? \local_uckk\local\atlas\math_university_projection::statistics() : [];
+    $mathboundcount = $ismath ? count(array_filter($allcards, static fn(array $card): bool => !empty($card['projection_bound']))) : 0;
 
     if ($state['course'] > 0) {
         $detail = local_uckk_public_courses_find_card($allcards, $state['course']);
@@ -142,7 +144,7 @@ function local_uckk_public_courses_enrich_definition(array $definition, array $s
             'eyebrow' => $ismath ? 'Catalogue' : 'Répertoire public',
             'title' => 'Explorer les cours',
             'body' => $ismath
-                ? 'Les cours ci-dessous sont ceux que Moodle rend actuellement publics selon leur visibilité et leurs permissions. Le site mathématique les présente sans maintenir une copie parallèle du catalogue.'
+                ? 'Les cartes ci-dessous représentent les espaces Moodle actuellement matérialisés et publics. Lorsqu’un code de cours correspond à la projection MathKristal, la carte est liée à son référent et à sa voie projetée; le reste demeure un espace historique ou non encore lié.'
                 : ($isucc
                     ? 'Les cours ci-dessous sont les espaces Moodle actuellement visibles. L’UCC les présente comme portes d’entrée vers les Voies et les corpus documentés, sans maintenir une copie parallèle du catalogue.'
                     : 'Les cours ci-dessous sont visibles publiquement et accessibles en consultation. Ils structurent les Voies, les preuves de progression et la puissance opératoire des Joueurs de l’UCKK.'),
@@ -165,10 +167,20 @@ function local_uckk_public_courses_enrich_definition(array $definition, array $s
 
     $definition['metadata'] = [
         [
-            'label' => 'Cours affichés',
+            'label' => 'Cours Moodle affichés',
             'value' => count($cards) . ' / ' . count($allcards),
         ],
     ];
+    if ($ismath) {
+        $definition['metadata'][] = [
+            'label' => 'Cours projetés depuis Kristal',
+            'value' => (string)($mathprojectionstats['projected_courses'] ?? 0),
+        ];
+        $definition['metadata'][] = [
+            'label' => 'Cours Moodle liés au Kristal',
+            'value' => $mathboundcount . ' / ' . count($allcards),
+        ];
+    }
 
     $definition['cta'] = [
         'title' => 'Participer dans le campus Moodle',
@@ -268,6 +280,11 @@ function local_uckk_public_courses_explorer_context(array $state, array $filters
 function local_uckk_public_courses_get_cards(): array {
     global $DB;
 
+    $ismath = \local_uckk\local\public_site_context::is_math();
+    $courseprefix = $ismath ? 'MATH-%' : 'UCKK-%';
+    $categoryprefix = $ismath ? 'MATH%' : 'UCKK%';
+    $mathprojection = $ismath ? local_uckk_public_courses_math_projection_index() : [];
+
     $records = $DB->get_records_sql("
         SELECT
             c.id,
@@ -296,9 +313,9 @@ function local_uckk_public_courses_get_cards(): array {
       ORDER BY cc.sortorder, c.sortorder, c.shortname
     ", [
         'siteid' => defined('SITEID') ? SITEID : 1,
-        'courseshortname' => 'UCKK-%',
-        'courseidnumber' => 'UCKK-%',
-        'categoryidnumber' => 'UCKK%',
+        'courseshortname' => $courseprefix,
+        'courseidnumber' => $courseprefix,
+        'categoryidnumber' => $categoryprefix,
     ]);
 
     $cards = [];
@@ -312,6 +329,12 @@ function local_uckk_public_courses_get_cards(): array {
         $categorylabel = local_uckk_public_courses_public_category_label($categoryname, $categoryidnumber);
         $categorykey = local_uckk_public_courses_slug($categorylabel !== '' ? $categorylabel : $categoryidnumber);
         $courseidnumber = local_uckk_public_courses_safe_param_text((string)($record->idnumber ?? ''));
+        $projectioncourseid = $ismath ? local_uckk_public_courses_math_course_id($shortname, $courseidnumber) : '';
+        $projectionbinding = $projectioncourseid !== '' && isset($mathprojection[$projectioncourseid]) ? $mathprojection[$projectioncourseid] : null;
+        if (is_array($projectionbinding)) {
+            $categorylabel = (string)$projectionbinding['pathway_title'];
+            $categorykey = local_uckk_public_courses_slug($categorylabel);
+        }
         $signature = local_uckk_public_courses_visual_signatures_enabled()
             ? local_uckk_public_courses_voie_signature(
                 $categoryidnumber,
@@ -328,7 +351,9 @@ function local_uckk_public_courses_get_cards(): array {
             if (\local_uckk\local\public_site_context::is_ucc()) {
                 $summary = 'Cours public UCC disponible en consultation.';
             } else if (\local_uckk\local\public_site_context::is_math()) {
-                $summary = 'Cours public disponible en consultation.';
+                $summary = is_array($projectionbinding)
+                    ? 'Étape Moodle liée au référent Kristal « ' . (string)$projectionbinding['subject_label'] . ' ».'
+                    : 'Cours public disponible en consultation.';
             } else {
                 $summary = 'Cours public UCKK disponible en consultation.';
             }
@@ -343,6 +368,7 @@ function local_uckk_public_courses_get_cards(): array {
             . ($signature['label'] ?? '') . ' '
             . ($signature['code'] ?? '') . ' '
             . ($signature['slug'] ?? '') . ' '
+            . (is_array($projectionbinding) ? ((string)$projectionbinding['subject_label'] . ' ' . (string)$projectionbinding['kristal_ref'] . ' ' . (string)$projectionbinding['page_spec_id']) : '') . ' '
             . $summary
         ));
 
@@ -382,8 +408,15 @@ function local_uckk_public_courses_get_cards(): array {
             'sorttitle' => \core_text::strtolower($title),
             'sortcategory' => \core_text::strtolower($categorylabel),
             'searchtext' => \core_text::strtolower($searchtext),
+            'projection_bound' => is_array($projectionbinding),
+            'projection_course_id' => is_array($projectionbinding) ? (string)$projectionbinding['math_course_id'] : '',
+            'projection_pathway_id' => is_array($projectionbinding) ? (string)$projectionbinding['pathway_id'] : '',
+            'projection_pathway_title' => is_array($projectionbinding) ? (string)$projectionbinding['pathway_title'] : '',
+            'kristal_ref' => is_array($projectionbinding) ? (string)$projectionbinding['kristal_ref'] : '',
+            'kristal_subject_label' => is_array($projectionbinding) ? (string)$projectionbinding['subject_label'] : '',
+            'page_spec_id' => is_array($projectionbinding) ? (string)$projectionbinding['page_spec_id'] : '',
             'hasmetadata' => true,
-            'metadata' => [
+            'metadata' => array_values(array_filter([
                 [
                     'label' => 'Voie',
                     'value' => $categorylabel,
@@ -392,11 +425,56 @@ function local_uckk_public_courses_get_cards(): array {
                     'label' => 'Numéro de cours',
                     'value' => $shortname,
                 ],
-            ],
+                is_array($projectionbinding) ? [
+                    'label' => 'Référent Kristal',
+                    'value' => (string)$projectionbinding['subject_label'],
+                ] : null,
+            ])),
         ];
     }
 
     return $cards;
+}
+
+/**
+ * Return the MathKristal-backed projected course index for public binding.
+ *
+ * @return array<string, array<string, string>>
+ */
+function local_uckk_public_courses_math_projection_index(): array {
+    $pathways = [];
+    foreach (\local_uckk\local\atlas\math_university_projection::pathways() as $pathway) {
+        $pathways[(string)$pathway['pathway_id']] = (string)$pathway['title'];
+    }
+    $pages = [];
+    foreach (\local_uckk\local\atlas\math_university_projection::page_specs() as $page) {
+        $pages[(string)$page['page_spec_id']] = (string)($page['subject']['label'] ?? $page['subject']['ref'] ?? '');
+    }
+    $index = [];
+    foreach (\local_uckk\local\atlas\math_university_projection::courses() as $course) {
+        $id = (string)$course['math_course_id'];
+        $index[$id] = [
+            'math_course_id' => $id,
+            'pathway_id' => (string)$course['pathway_id'],
+            'pathway_title' => $pathways[(string)$course['pathway_id']] ?? (string)$course['pathway_id'],
+            'kristal_ref' => (string)$course['kristal_ref'],
+            'page_spec_id' => (string)$course['page_spec_id'],
+            'subject_label' => $pages[(string)$course['page_spec_id']] ?? (string)$course['title'],
+        ];
+    }
+    return $index;
+}
+
+/**
+ * Extract a projected Math course id from Moodle identifiers.
+ */
+function local_uckk_public_courses_math_course_id(string $shortname, string $idnumber): string {
+    foreach ([$idnumber, $shortname] as $value) {
+        if (preg_match('/MATH-[A-Z0-9]{3}-1[0-9]{2}/', $value, $matches)) {
+            return (string)$matches[0];
+        }
+    }
+    return '';
 }
 
 /**
@@ -454,9 +532,19 @@ function local_uckk_public_courses_detail_definition(array $definition, array $c
             'type' => 'course-public-preview',
         ],
     ];
+    if (!empty($course['projection_bound'])) {
+        $definition['sections'][] = [
+            'eyebrow' => 'MathKristal',
+            'title' => (string)($course['kristal_subject_label'] ?? 'Ancrage Kristal'),
+            'body' => 'Cette matérialisation Moodle est liée à ' . (string)($course['kristal_ref'] ?? '') . '. La page sémantique correspondante est ' . (string)($course['page_spec_id'] ?? '') . '; le Kristal reste l’autorité épistémique.',
+            'type' => 'course-kristal-binding',
+        ];
+    }
     $definition['metadata'] = array_values(array_filter([
         $shortname !== '' ? ['label' => 'Code', 'value' => $shortname] : null,
         $category !== '' ? ['label' => 'Voie', 'value' => $category] : null,
+        !empty($course['projection_bound']) ? ['label' => 'Référent Kristal', 'value' => (string)($course['kristal_ref'] ?? '')] : null,
+        !empty($course['projection_bound']) ? ['label' => 'Page spec', 'value' => (string)($course['page_spec_id'] ?? '')] : null,
     ]));
     $definition['quicklinks'] = [
         [

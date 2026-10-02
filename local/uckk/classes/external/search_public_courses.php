@@ -174,6 +174,17 @@ final class search_public_courses extends external_api {
         $perpage = min(self::MAX_PER_PAGE, max(1, (int)$params['perpage']));
 
         $records = self::get_public_course_records($query);
+
+        // Math search also includes data carried by the Kristal projection
+        // (subject label, URN, page spec and projected pathway), which is not
+        // stored in Moodle's course table and therefore cannot be expressed
+        // by the SQL LIKE clause below.
+        if ($query !== '' && \local_uckk\local\public_site_context::is_math()) {
+            $records = array_values(array_filter($records, static function(stdClass $record) use ($query): bool {
+                return self::course_matches_query($record, $query);
+            }));
+        }
+
         $filters = self::build_category_filters($records, $categorykey);
 
         if ($categorykey !== '') {
@@ -290,14 +301,18 @@ final class search_public_courses extends external_api {
             )',
         ];
 
+        $ismath = \local_uckk\local\public_site_context::is_math();
+        $courseprefix = $ismath ? 'MATH-%' : 'UCKK-%';
+        $categoryprefix = $ismath ? 'MATH%' : 'UCKK%';
+
         $params = [
             'siteid' => defined('SITEID') ? SITEID : 1,
-            'courseshortname' => 'UCKK-%',
-            'courseidnumber' => 'UCKK-%',
-            'categoryidnumber' => 'UCKK%',
+            'courseshortname' => $courseprefix,
+            'courseidnumber' => $courseprefix,
+            'categoryidnumber' => $categoryprefix,
         ];
 
-        if ($query !== '') {
+        if ($query !== '' && !$ismath) {
             $needle = '%' . $DB->sql_like_escape($query) . '%';
 
             $conditions[] = '('
@@ -362,10 +377,7 @@ final class search_public_courses extends external_api {
         foreach ($records as $record) {
             $key = self::course_category_key($record);
             $keys = self::course_category_keys($record);
-            $label = self::public_category_label(
-                trim((string)($record->categoryname ?? '')),
-                trim((string)($record->categoryidnumber ?? ''))
-            );
+            $label = self::course_category_label($record);
 
             if ($key === '') {
                 continue;
@@ -414,7 +426,10 @@ final class search_public_courses extends external_api {
         $fullname = self::safe_param_text((string)$record->fullname);
         $categoryname = self::safe_param_text((string)($record->categoryname ?? ''));
         $categoryidnumber = self::safe_param_text((string)($record->categoryidnumber ?? ''));
-        $categorylabel = self::public_category_label($categoryname, $categoryidnumber);
+        $binding = self::math_projection_binding($record);
+        $categorylabel = $binding !== null
+            ? self::safe_param_text((string)$binding['pathway_title'])
+            : self::public_category_label($categoryname, $categoryidnumber);
         $signature = self::course_voie_signature($record, $shortname, $fullname, $categoryname, $categoryidnumber);
         $classes = self::course_card_classes($signature);
 
@@ -424,7 +439,12 @@ final class search_public_courses extends external_api {
             if (\local_uckk\local\public_site_context::is_ucc()) {
                 $summary = 'Cours public UCC disponible en consultation dans Moodle.';
             } else if (\local_uckk\local\public_site_context::is_math()) {
-                $summary = 'Cours public disponible en consultation dans Moodle.';
+                if ($binding !== null) {
+                    $summary = 'Étape Moodle liée au référent Kristal « '
+                        . self::safe_param_text((string)$binding['subject_label']) . ' ».';
+                } else {
+                    $summary = 'Cours public disponible en consultation dans Moodle.';
+                }
             } else {
                 $summary = 'Cours public UCKK disponible en consultation dans le campus Moodle.';
             }
@@ -445,7 +465,7 @@ final class search_public_courses extends external_api {
             'voieslug' => $signature['slug'],
             'classes' => $classes,
             'type' => 'course',
-            'metadata' => [
+            'metadata' => array_values(array_filter([
                 [
                     'label' => 'Code',
                     'value' => $shortname,
@@ -454,8 +474,48 @@ final class search_public_courses extends external_api {
                     'label' => 'Voie',
                     'value' => $categorylabel,
                 ],
-            ],
+                $binding !== null ? [
+                    'label' => 'Référent Kristal',
+                    'value' => self::safe_param_text((string)$binding['subject_label']),
+                ] : null,
+                $binding !== null ? [
+                    'label' => 'Page spec',
+                    'value' => self::safe_param_text((string)$binding['page_spec_id']),
+                ] : null,
+            ])),
         ];
+    }
+
+    /**
+     * Match a Math course against Moodle text and its read-only Kristal binding.
+     *
+     * @param stdClass $record Course record.
+     * @param string $query Normalised public query.
+     * @return bool
+     */
+    private static function course_matches_query(stdClass $record, string $query): bool {
+        $binding = self::math_projection_binding($record);
+        $parts = [
+            (string)($record->shortname ?? ''),
+            (string)($record->fullname ?? ''),
+            strip_tags((string)($record->summary ?? '')),
+            (string)($record->categoryname ?? ''),
+            (string)($record->categoryidnumber ?? ''),
+        ];
+
+        if ($binding !== null) {
+            $parts[] = (string)$binding['math_course_id'];
+            $parts[] = (string)$binding['pathway_id'];
+            $parts[] = (string)$binding['pathway_title'];
+            $parts[] = (string)$binding['kristal_ref'];
+            $parts[] = (string)$binding['page_spec_id'];
+            $parts[] = (string)$binding['subject_label'];
+        }
+
+        $haystack = core_text::strtolower(self::safe_utf8(implode(' ', $parts)));
+        $needle = core_text::strtolower(self::safe_utf8($query));
+
+        return $needle === '' || core_text::strpos($haystack, $needle) !== false;
     }
 
     /**
@@ -537,10 +597,14 @@ final class search_public_courses extends external_api {
     private static function course_category_keys(stdClass $record): array {
         $categoryname = trim((string)($record->categoryname ?? ''));
         $categoryidnumber = trim((string)($record->categoryidnumber ?? ''));
-        $publiclabel = self::public_category_label($categoryname, $categoryidnumber);
+        $binding = self::math_projection_binding($record);
+        $publiclabel = $binding !== null
+            ? (string)$binding['pathway_title']
+            : self::public_category_label($categoryname, $categoryidnumber);
 
         $sources = [
             $publiclabel,
+            $binding !== null ? (string)$binding['pathway_id'] : '',
             $categoryname,
             $categoryidnumber,
         ];
@@ -569,10 +633,109 @@ final class search_public_courses extends external_api {
      * @return string
      */
     private static function course_category_label(stdClass $record): string {
+        $binding = self::math_projection_binding($record);
+
+        if ($binding !== null) {
+            return self::safe_param_text((string)$binding['pathway_title']);
+        }
+
         return self::public_category_label(
             trim((string)($record->categoryname ?? '')),
             trim((string)($record->categoryidnumber ?? ''))
         );
+    }
+
+    /**
+     * Resolve a Moodle Math course to its deterministic MathKristal projection binding.
+     *
+     * The bridge is read-only: it never mutates Moodle or the projection. A Moodle
+     * course is considered bound when its shortname or idnumber carries a stable
+     * projected id such as MATH-EUL-101.
+     *
+     * @param stdClass $record Course record.
+     * @return array<string, string>|null
+     */
+    private static function math_projection_binding(stdClass $record): ?array {
+        if (!\local_uckk\local\public_site_context::is_math()) {
+            return null;
+        }
+
+        static $index = null;
+        static $failed = false;
+
+        if ($failed) {
+            return null;
+        }
+
+        if ($index === null) {
+            try {
+                $projection = \local_uckk\local\atlas\math_university_projection::get();
+                $pathways = [];
+                $pages = [];
+
+                foreach ((array)($projection['pathways'] ?? []) as $pathway) {
+                    if (!is_array($pathway)) {
+                        continue;
+                    }
+                    $pathwayid = trim((string)($pathway['pathway_id'] ?? ''));
+                    if ($pathwayid === '') {
+                        continue;
+                    }
+                    $pathways[$pathwayid] = self::safe_param_text((string)($pathway['title'] ?? $pathwayid));
+                }
+
+                foreach ((array)($projection['page_specs'] ?? []) as $page) {
+                    if (!is_array($page)) {
+                        continue;
+                    }
+                    $courseid = trim((string)($page['math_course_id'] ?? ''));
+                    if ($courseid === '') {
+                        continue;
+                    }
+                    $pages[$courseid] = [
+                        'page_spec_id' => (string)($page['page_spec_id'] ?? ''),
+                        'subject_label' => (string)($page['subject']['label'] ?? ''),
+                    ];
+                }
+
+                $index = [];
+                foreach ((array)($projection['courses'] ?? []) as $course) {
+                    if (!is_array($course)) {
+                        continue;
+                    }
+                    $courseid = trim((string)($course['math_course_id'] ?? ''));
+                    $pathwayid = trim((string)($course['pathway_id'] ?? ''));
+                    if ($courseid === '' || $pathwayid === '') {
+                        continue;
+                    }
+                    $page = $pages[$courseid] ?? [];
+                    $index[$courseid] = [
+                        'math_course_id' => $courseid,
+                        'pathway_id' => $pathwayid,
+                        'pathway_title' => (string)($pathways[$pathwayid] ?? $pathwayid),
+                        'kristal_ref' => (string)($course['kristal_ref'] ?? ''),
+                        'page_spec_id' => (string)($course['page_spec_id'] ?? ($page['page_spec_id'] ?? '')),
+                        'subject_label' => (string)($page['subject_label'] ?? ($course['title'] ?? $courseid)),
+                    ];
+                }
+            } catch (Throwable $e) {
+                $failed = true;
+                return null;
+            }
+        }
+
+        $identifiers = [
+            (string)($record->idnumber ?? ''),
+            (string)($record->shortname ?? ''),
+        ];
+
+        foreach ($identifiers as $identifier) {
+            if (preg_match('/\b(MATH-[A-Z0-9]{3}-1[0-9]{2})\b/', strtoupper($identifier), $matches)) {
+                return $index[$matches[1]] ?? null;
+            }
+        }
+
+        return null;
     }
 
     /**

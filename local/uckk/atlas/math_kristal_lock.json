@@ -1,0 +1,51 @@
+{
+  "schema_version": "MATH-KRISTAL-LOCK-1.0",
+  "artifact": "mathkristal",
+  "release": "1.6.0",
+  "state_id": "sha256:35aef425c4029076e1af3ada6a52413e975ed402ce0c64644943b11a5849ff71",
+  "content_hash": {
+    "alg": "sha256",
+    "value": "35aef425c4029076e1af3ada6a52413e975ed402ce0c64644943b11a5849ff71"
+  },
+  "referent_registry_id": "sha256:140aad0f12061f1717c0b9f960871b515279f68052f93c54a4d034f06fb37e1a",
+  "artifact_status": "reference",
+  "grammar_contract": "../integration/mathkristal-grammar-contract.json",
+  "source_store_integration": "1.0.0",
+  "pinned_files": {
+    "corpus/index.json": {
+      "sha256": "bf53a7714d61217427bd8dfba91248acfb5a3817b3f27c1976cba4033dbc0eee",
+      "bytes": 4324
+    },
+    "corpus/math.referent-registry.json": {
+      "sha256": "c6c02d43934ded9175d5db602fbfe3d88e31246ccfe898dab61206c5ecdbe3f7",
+      "bytes": 1428269
+    },
+    "corpus/math.structured-epistemic-state.json": {
+      "sha256": "df1b6d74760f502d677b5d2e8c97f8478b17fe768eb0aa0809fc9eae22445d8b",
+      "bytes": 12779348
+    },
+    "corpus/pedagogical-paths.json": {
+      "sha256": "a12a055e4dc19a9f807707ab91a630714e11e058ccd9ea94fe49db7eff7e7946",
+      "bytes": 4602
+    },
+    "external-sources/catalog.json": {
+      "sha256": "22048d3c5793f6ed34468cfd8a34fd74040823b5781b33a034ebd791f8ab030a",
+      "bytes": 22418
+    },
+    "integration/source-store-contract.json": {
+      "sha256": "48180535c1e298ce64a827c722afabcd59712a1fa7e20dd469ad4222627e7a22",
+      "bytes": 1781
+    }
+  },
+  "consumer": {
+    "component": "local_uckk",
+    "universe_id": "math",
+    "projection_contract": "uckk.math-university-projection/1.0.0",
+    "projection_file": "local/uckk/atlas/math_university_projection.json"
+  },
+  "delivery_archive": {
+    "filename": "mathkristal-v1.6.0(1).zip",
+    "sha256": "904bfc98f50761c957316130c303b09f54ac82418454d747df599c3dd389c2f7",
+    "note": "Hash of the MathKristal distribution archive used to build this UCKK projection snapshot."
+  }
+}

@@ -7,7 +7,7 @@ namespace local_uckk\local\atlas;
 
 defined('MOODLE_INTERNAL') || die();
 
-/** Read-only resolver for pre MATH-CURRICULUM-2.0 pathway identifiers. */
+/** Read-only resolver into the MATH-CURRICULUM-2.0 compatibility snapshot. It does not resolve current MathKristal projection paths. */
 final class math_legacy_resolver {
     public const SCHEMA_VERSION = 'MATH-PATHWAY-MIGRATIONS-2.0';
     public const RELATIVE_PATH = 'local/uckk/atlas/math_pathway_migrations.json';

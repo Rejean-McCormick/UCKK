@@ -4,14 +4,16 @@
   "policy": {
     "canonical_authority": "local/uckk/atlas/math_curriculum_registry.json",
     "legacy_mode": "read_only_migration",
-    "write_rule": "Legacy identifiers are readable, never writable. New writes must use MATH-CURRICULUM-2.0 identifiers.",
+    "write_rule": "This registry only resolves historical identities into the MATH-CURRICULUM-2.0 compatibility snapshot. New Math knowledge projections are emitted from math_university_projection.json with stable MathKristal URNs. Existing Moodle materializations are migrated only by an explicit, state-preserving operation.",
     "allowed_relations": [
       "renamed_to",
       "absorbed_into",
       "split_into",
       "merged_into",
       "retired"
-    ]
+    ],
+    "compatibility_authority": "local/uckk/atlas/math_curriculum_registry.json",
+    "current_projection": "local/uckk/atlas/math_university_projection.json"
   },
   "pathways": [
     {
