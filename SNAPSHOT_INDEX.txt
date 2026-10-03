@@ -1,7 +1,15 @@
 SmartSnap snapshot file index
-Files included: 1102
+Files included: 1109
 
 .gitignore
+MATH_DOCUMENT_FOCUSED_CURRICULUM.md
+MATH_KRISTAL_BRIDGE_CHANGESET.md
+MEDIATHEQUE_BRIDGES_CHANGESET.md
+MEDIATHEQUE_DEPLOYMENT_BOUNDARY_20261003.md
+README.md
+UCC_MEDIATHEQUE_COURSE_LINK_AUDIT.md
+UCKK_Ops_Console_Runbook.md
+UCKK_PLAY_MEDIATHEQUE_IMPORT_AUDIT.md
 _ucc_switcher_install_20260924_233136.txt
 academic_registry_json/archive_templates.json
 academic_registry_json/assembly_templates.json
@@ -182,6 +190,13 @@ course/format/uckk/templates/local/content/section/uckksectionheader.mustache
 course/format/uckk/tests/behat/format_uckk.feature
 course/format/uckk/tests/format_uckk_test.php
 course/format/uckk/version.php
+data/play_inventory/inventory.articles.catalog.json
+data/play_inventory/inventory.audio.catalog.json
+data/play_inventory/inventory.code-tech.catalog.json
+data/play_inventory/inventory.manifest.json
+data/play_inventory/inventory.root.json
+data/play_inventory/inventory.youtube.catalog.json
+data/play_inventory/uckk_play_reference_registry.json
 docs/00_master_execution_doctrine.md
 docs/01_domain_boundaries_and_glossary.md
 docs/02_distribution_architecture.md
@@ -199,25 +214,35 @@ docs/13_faculty_json_authoring_guide.md
 docs/14_atlas_moodle_sync_reference.md
 docs/15_univers_cite_kristal_projection_contract.md
 docs/16_math_university_kristal_bridge.md
-docs/contracts/math-university-projection/1.0.0/mathkristal-v1.6.0.example.json
+docs/DOC_mediatheque_explorateur.md
+docs/Mettre ++++\udcf8+\udcd4\udcf6\udcf6+-\udcac-+\udca1--+ jour le texte d+++\udcf8+\udcd4\udcf6\udcf6+-\udcac-+\udca1--\udca5+++\udcf8+\udcd4\udcf6\udcf6+-\udcac-+\udca1--\udcac+++\udcf8+\udcd4\udcf6\udcf6+-\udcac++\udcf8+\udcea+\udce2-\udcbf+-\udcacune page publique UCKK-Moodle.txt
+docs/Mettre +++-+\udce6 jour le texte d++--\udcac+++\udcd4\udcf6\udcf6+++-\udcacune page publique UCKK-Moodle.txt
+docs/Mettre +++-\udca5 jour le texte d++-\udca6+++\udcc0+++\udca6une page publique UCKK-Moodle.txt
+docs/Mettre +++\udcea+\udcc0+\udca6-\udca1-\udcac jour le texte d++\udcea+\udcc0+\udca6-\udca1-\udcf3++\udcea+\udcc0+\udca6-\udca1-\udca6++\udcea+\udcc0+\udca6+\udcea\udcd4\udcc7\udcf9+\udca6une page publique UCKK-Moodle.txt
+docs/Mettre +++\udcf3 jour le texte d++\udcf8++\udcf6++\udca2une page publique UCKK-Moodle.txt
+docs/Mettre +++\udcf8+\udcd4\udcf6\udcf6+-\udcac-+\udca1+\udcea\udcd4\udcc7\udcf9-\udcbf jour le texte d++\udcf8+\udcd4\udcf6\udcf6+-\udcac-+\udca1++\udcf8+\udcd4\udcf6\udcf6+-\udcac-+\udca1-\udcd4\udcf6\udcbc++\udcf8+\udcd4\udcf6\udcf6+-\udcac-+\udca1+\udcd4\udcf6+une page publique UCKK-Moodle.txt
+docs/Mettre ++\udc83 jour le texte d+\udcea+\udce2+\udcecune page publique UCKK-Moodle.txt
+docs/Mettre ++\udcd4\udcf6\udca3\udcf0\udca6 jour le texte d+\udcd4\udcf6\udca3\udcf0\udcbd+\udcd4\udcf6\udca3\udcf0\udcf1+\udcd4\udcf6\udca3\udcd4\udcf2\udca3une page publique UCKK-Moodle.txt
+docs/Mettre ++\udcea+\udcc0+\udca6-\udca1\udcd4\udcf2\udcf9 jour le texte d+\udcea+\udcc0+\udca6-\udca1+\udcea+\udcc0+\udca6-\udca1-\udcc2+\udcea+\udcc0+\udca6-\udca1+\udcc5une page publique UCKK-Moodle.txt
+docs/Mettre ++\udcf8+\udcd4\udcf6\udcf6+-\udcac-+\udca1--+ jour le texte d+-\udcac+\udcd4\udcfb\udce4-+\udca1+\udcea\udcd4\udcc7\udcf9+\udcc0-+\udca1--\udcf3une page publique UCKK-Moodle.txt
+docs/Mettre +\udcd4\udcf6\udca3\udcf0\udcbb jour le texte d\udcd4\udcf6\udca3\udcf0\udcd4\udcf6\udca3\udcf0\udcf4\udcd4\udcf6\udca3\udcf0\udcd8une page publique UCKK-Moodle.txt
+docs/Mettre +\udce1 jour le texte d\udcd4\udcc7\udcd6une page publique UCKK-Moodle.txt
+docs/Mettre +\udcea+\udcc0+\udca6-\udca1-\udcac jour le texte d+\udca6+\udcdc-\udca1\udcd4\udcf2\udcf6-\udca1-\udcbdune page publique UCKK-Moodle.txt
+docs/Mettre \udcd4\udcf6\udca3\udcf0\udca6 jour le texte d\udcd0\udce9\udcf0\udcc9\udcf0\udcaeune page publique UCKK-Moodle.txt
+docs/README_import_uckkarchive_media.md
+docs/THEME_SWITCHER_PROTOTYPE.md
+docs/TODO_refactor_explorateur_cours_public_UCKK.md
+docs/UCKK_Moodle_Source_Runtime_Sync.md
+docs/UCKK_Notes_Operationnelles_Conversation_2026-06-01.md
+docs/UCKK_Ops_Console_Runbook.md
+docs/UCKK_Server_Access_Runbook.md
 docs/contracts/math-university-projection/1.0.0/README.md
+docs/contracts/math-university-projection/1.0.0/mathkristal-v1.6.0.example.json
 docs/contracts/math-university-projection/1.0.0/schema.json
 docs/contracts/univers-cite-projection/1.0.0/README.md
 docs/contracts/univers-cite-projection/1.0.0/schema.json
 docs/contracts/univers-cite-projection/1.0.0/ucc-current.example.json
-docs/DOC_mediatheque_explorateur.md
 docs/json_preset_reference.md
-docs/Mettre +++¾ jour le texte d++°++÷++óune page publique UCKK-Moodle.txt
-docs/Mettre ++â jour le texte d+Û+Ô+ýune page publique UCKK-Moodle.txt
-docs/Mettre ++È÷ú­ª jour le texte d+È÷ú­¢+È÷ú­±+È÷úÈ‗úune page publique UCKK-Moodle.txt
-docs/Mettre ++├в jour le texte d+├Ы+├Ф+├╜une page publique UCKK-Moodle.txt
-docs/Mettre +ß jour le texte dÈÃÍune page publique UCKK-Moodle.txt
-docs/Mettre +È÷ú­╗ jour le texte dÈ÷ú­È÷ú­¶È÷ú­Ïune page publique UCKK-Moodle.txt
-docs/Mettre +├Я jour le texte d├И├Г├Нune page publique UCKK-Moodle.txt
-docs/Mettre à jour le texte d’une page publique UCKK-Moodle.txt
-docs/Mettre È÷ú­ª jour le texte dðÚ­╔­«une page publique UCKK-Moodle.txt
-docs/Mettre ├а jour le texte dтАЩune page publique UCKK-Moodle.txt
-docs/README_import_uckkarchive_media.md
 docs/refactor_public_pages_contract.md
 docs/status/2026-09-26_moodle_global_status.md
 docs/status/2026-09-28_ucc_christian_refactor.md
@@ -226,8 +251,6 @@ docs/status/2026-09-28_ucc_math_canonical_pathways_cleanup.md
 docs/status/2026-09-28_ucc_projection_model_refinement.md
 docs/status/2026-09-29_ucc_editorial_provenance_correction.md
 docs/status/2026-10-01_math_kristal_university_bridge.md
-docs/THEME_SWITCHER_PROTOTYPE.md
-docs/TODO_refactor_explorateur_cours_public_UCKK.md
 docs/ucc/CATALOGUE_UCC.html
 docs/ucc/CHANGEMENTS.json
 docs/ucc/INSTALLATION_ET_VALIDATION.md
@@ -235,11 +258,7 @@ docs/ucc/PLANS_110_COURS.md
 docs/ucc/RAPPORT_REFONTE.md
 docs/ucc/VALIDATION.md
 docs/uckk-style-system-officiel.md
-docs/UCKK_Moodle_Source_Runtime_Sync.md
-docs/UCKK_Notes_Operationnelles_Conversation_2026-06-01.md
 docs/uckk_ops_console_documentation.md
-docs/UCKK_Ops_Console_Runbook.md
-docs/UCKK_Server_Access_Runbook.md
 local/uckk/about.php
 local/uckk/amd/src/canon.js
 local/uckk/amd/src/course_explorer.js
@@ -574,9 +593,7 @@ local/uckk/thinkers.php
 local/uckk/transparency.php
 local/uckk/ucc_study.php
 local/uckk/version.php
-MATH_DOCUMENT_FOCUSED_CURRICULUM.md
-MATH_KRISTAL_BRIDGE_CHANGESET.md
-MEDIATHEQUE_BRIDGES_CHANGESET.md
+mod/uckkarchive/README.md
 mod/uckkarchive/add.php
 mod/uckkarchive/amd/src/archive.js
 mod/uckkarchive/amd/src/content_advisory.js
@@ -757,6 +774,7 @@ mod/uckkarchive/docs/24_release_spec.md
 mod/uckkarchive/docs/25_mediatheque_public_explorer.md
 mod/uckkarchive/docs/26_operations_app_runtime_contract.md
 mod/uckkarchive/docs/27_media_library_partition_and_bridges.md
+mod/uckkarchive/docs/28_standalone_mediatheque_boundary.md
 mod/uckkarchive/docs/_alignment_variables.md
 mod/uckkarchive/export.php
 mod/uckkarchive/index.php
@@ -768,7 +786,6 @@ mod/uckkarchive/library_admin.php
 mod/uckkarchive/locallib.php
 mod/uckkarchive/media.php
 mod/uckkarchive/mod_form.php
-mod/uckkarchive/README.md
 mod/uckkarchive/settings.php
 mod/uckkarchive/styles.css
 mod/uckkarchive/templates/archive_item_card.mustache
@@ -967,7 +984,6 @@ mod/uckkchallenge/tests/challenge_test.php
 mod/uckkchallenge/tests/lib_test.php
 mod/uckkchallenge/version.php
 mod/uckkchallenge/view.php
-README.md
 release/acceptance-checklist.md
 report/uckk/amd/src/filters.js
 report/uckk/amd/src/report.js
@@ -1053,11 +1069,11 @@ theme/ucmath/layout/login.php
 theme/ucmath/lib.php
 theme/ucmath/scss/ucmath.scss
 theme/ucmath/version.php
-tools/fix_uckk_academic_registry_json.py
 tools/Import-UckkPlayExternalRefs.final-working.ps1
 tools/Import-UckkPlayExternalRefs.ps1
 tools/Test-UckkArchiveExternalRefWrites.ps1
 tools/Test-UckkMoodleDbWrite.ps1
+tools/fix_uckk_academic_registry_json.py
 tools/ucc_editorial/build.py
 tools/ucc_editorial/course_design.tsv
 tools/ucc_editorial/export_html.py
@@ -1065,15 +1081,14 @@ tools/ucc_editorial/integrate.py
 tools/ucc_editorial/new_sources.tsv
 tools/ucc_editorial/validate.py
 tools/uckk-ops/import/DRYRUN_LOCAL_MEDIA.cmd
+tools/uckk-ops/import/IMPORT_LOCAL_MEDIA.cmd
 tools/uckk-ops/import/Import-UckkArchiveMedia.ps1
 tools/uckk-ops/import/Import-UckkArchiveMedia.ps1.bak_exitcode_20260925_155243
-tools/uckk-ops/import/IMPORT_LOCAL_MEDIA.cmd
 tools/uckk-ops/import/import_uckkarchive_media.php
 tools/uckk-ops/import/import_uckkarchive_media.php.bak_advisory_20260925_173801
-tools/uckk-ops/kristal/build_math_university_projection.py
 tools/uckk-ops/kristal/README.md
+tools/uckk-ops/kristal/build_math_university_projection.py
 tools/uckk_nomenclature_patch.py
-UCC_MEDIATHEQUE_COURSE_LINK_AUDIT.md
 uckk-presets/archive_templates.json
 uckk-presets/assembly_templates.json
 uckk-presets/badges.json
@@ -1094,14 +1109,3 @@ uckk-tools/install.sh
 uckk-tools/package.sh
 uckk-tools/release.sh
 uckk-tools/validate.sh
-UCKK_Ops_Console_Runbook.md
-
-Index file: SNAPSHOT_INDEX.txt
-UCKK_PLAY_MEDIATHEQUE_IMPORT_AUDIT.md
-data/play_inventory/inventory.articles.catalog.json
-data/play_inventory/inventory.audio.catalog.json
-data/play_inventory/inventory.code-tech.catalog.json
-data/play_inventory/inventory.manifest.json
-data/play_inventory/inventory.root.json
-data/play_inventory/inventory.youtube.catalog.json
-data/play_inventory/uckk_play_reference_registry.json

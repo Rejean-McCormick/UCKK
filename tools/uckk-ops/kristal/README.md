@@ -1,17 +1,18 @@
-# MathKristal → UCKK projection builder
+# UCKK Kristal tools
 
-`build_math_university_projection.py` compiles a pinned MathKristal directory into the read-only/rebuildable UCKK Math University projection.
+UCKK owns **Atlas blueprints and bindings**, not a second copy of Kristal bytes.
 
-Example:
+Canonical UCKK Kristals live under `%KRISTAL_KOLLECTION_ROOT%\universities\uckk\` (default `C:\mycode\Kristal\Kristal-Kollection`).
 
 ```bash
-python tools/uckk-ops/kristal/build_math_university_projection.py \
-  --mathkristal-root /path/to/mathkristal-v1.6.0 \
-  --output local/uckk/atlas/math_university_projection.json \
-  --lock-output local/uckk/atlas/math_kristal_lock.json \
-  --archive /path/to/mathkristal-v1.6.0.zip
+python tools/uckk-ops/kristal/build_atlas_kristal_hierarchy.py
+python tools/uckk-ops/kristal/validate_atlas_kristal_hierarchy.py
 ```
 
-The builder performs content selection/topology only. SemantiK Architect is downstream and may articulate the generated communication obligations in a released language/profile RuntimeSet.
+The builder writes directly to Kristal-Kollection and refreshes `local/uckk/atlas/kristal-bindings/`. Do **not** recreate `local/uckk/atlas/kristals/`.
 
-Do not run this builder as a request-time web operation. Build and validate projections ahead of materialization.
+Après toute modification directe d'un Kristal canonique, synchroniser les hashes/paths UCKK + Médiathèque avec :
+
+```bash
+python tools/uckk-ops/kristal/sync_kristal_kollection_bindings.py
+```

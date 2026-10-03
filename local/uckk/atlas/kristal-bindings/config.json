@@ -1,0 +1,8 @@
+{
+  "format": "uckk.kristal-repository-config/1.0.0",
+  "repository_id": "Kristal-Kollection",
+  "root_env": "KRISTAL_KOLLECTION_ROOT",
+  "default_windows_root": "C:\\mycode\\Kristal\\Kristal-Kollection",
+  "manifest": "manifest.json",
+  "mode": "external_repository_reference"
+}

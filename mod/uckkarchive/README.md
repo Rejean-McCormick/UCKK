@@ -630,3 +630,27 @@ Strengthen it with documentation, file-area normalization, and an optional media
 ```
 
 
+
+---
+
+## Relation avec Médiathèque kOA standalone
+
+`mod_uckkarchive` est la **Médiathèque UCKK**. Elle est distincte de l'application locale `koa-mediatheque`.
+
+```text
+koa-mediatheque
+  = application standalone vide au checkout
+  = peut ouvrir un workspace local privé
+  = SQLite + filesystem local
+
+mod_uckkarchive
+  = Médiathèque UCKK
+  = Moodle DB + Moodle File API + capabilities
+  = surfaces institutionnelles/publiques UCKK
+```
+
+Les deux systèmes ne partagent jamais une base writable et le module Moodle ne monte pas le stockage privé local. Tout transfert doit être explicite, autorisé et auditable. Le format d'export natif actuel de ce module reste `uckkarchive_export_v2`.
+
+Les Kristals conservés ou projetés ici ne donnent pas à UCKK l'autorité sémantique sur Kristal/Kristall; UCKK conserve sa propre représentation/archive institutionnelle.
+
+Voir `docs/28_standalone_mediatheque_boundary.md`.
