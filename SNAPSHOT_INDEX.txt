@@ -1,5 +1,5 @@
 SmartSnap snapshot file index
-Files included: 1082
+Files included: 1102
 
 .gitignore
 _ucc_switcher_install_20260924_233136.txt
@@ -198,6 +198,10 @@ docs/12_faculty_pages_atlas_public_contract.md
 docs/13_faculty_json_authoring_guide.md
 docs/14_atlas_moodle_sync_reference.md
 docs/15_univers_cite_kristal_projection_contract.md
+docs/16_math_university_kristal_bridge.md
+docs/contracts/math-university-projection/1.0.0/mathkristal-v1.6.0.example.json
+docs/contracts/math-university-projection/1.0.0/README.md
+docs/contracts/math-university-projection/1.0.0/schema.json
 docs/contracts/univers-cite-projection/1.0.0/README.md
 docs/contracts/univers-cite-projection/1.0.0/schema.json
 docs/contracts/univers-cite-projection/1.0.0/ucc-current.example.json
@@ -221,6 +225,7 @@ docs/status/2026-09-28_ucc_cosmic_divine_pathway.md
 docs/status/2026-09-28_ucc_math_canonical_pathways_cleanup.md
 docs/status/2026-09-28_ucc_projection_model_refinement.md
 docs/status/2026-09-29_ucc_editorial_provenance_correction.md
+docs/status/2026-10-01_math_kristal_university_bridge.md
 docs/THEME_SWITCHER_PROTOTYPE.md
 docs/TODO_refactor_explorateur_cours_public_UCKK.md
 docs/ucc/CATALOGUE_UCC.html
@@ -250,11 +255,13 @@ local/uckk/assemblies.php
 local/uckk/atlas/atlas_manifest.json
 local/uckk/atlas/atlas_schema.json
 local/uckk/atlas/math_curriculum_registry.json
+local/uckk/atlas/math_kristal_lock.json
 local/uckk/atlas/math_mediatheque_course_links.json
 local/uckk/atlas/math_mediatheque_reference_registry.json
 local/uckk/atlas/math_pathway_migrations.json
 local/uckk/atlas/math_reference_profiles.json
 local/uckk/atlas/math_universe.json
+local/uckk/atlas/math_university_projection.json
 local/uckk/atlas/ucc_course_syllabi.json
 local/uckk/atlas/ucc_curriculum_registry.json
 local/uckk/atlas/ucc_domains.json
@@ -332,6 +339,7 @@ local/uckk/classes/local/atlas/atlas_cache.php
 local/uckk/classes/local/atlas/atlas_manifest.php
 local/uckk/classes/local/atlas/math_curriculum_registry.php
 local/uckk/classes/local/atlas/math_legacy_resolver.php
+local/uckk/classes/local/atlas/math_university_projection.php
 local/uckk/classes/local/atlas/ucc_curriculum_registry.php
 local/uckk/classes/local/atlas/ucc_domain_registry.php
 local/uckk/classes/local/atlas/ucc_legacy_resolver.php
@@ -549,6 +557,7 @@ local/uckk/tests/faculty_repository_test.php
 local/uckk/tests/faculty_validator_test.php
 local/uckk/tests/math_curriculum_registry_test.php
 local/uckk/tests/math_legacy_resolver_test.php
+local/uckk/tests/math_university_projection_test.php
 local/uckk/tests/mediatheque_page_test.php
 local/uckk/tests/pathway_api_test.php
 local/uckk/tests/player_profile_test.php
@@ -566,6 +575,7 @@ local/uckk/transparency.php
 local/uckk/ucc_study.php
 local/uckk/version.php
 MATH_DOCUMENT_FOCUSED_CURRICULUM.md
+MATH_KRISTAL_BRIDGE_CHANGESET.md
 MEDIATHEQUE_BRIDGES_CHANGESET.md
 mod/uckkarchive/add.php
 mod/uckkarchive/amd/src/archive.js
@@ -1060,6 +1070,8 @@ tools/uckk-ops/import/Import-UckkArchiveMedia.ps1.bak_exitcode_20260925_155243
 tools/uckk-ops/import/IMPORT_LOCAL_MEDIA.cmd
 tools/uckk-ops/import/import_uckkarchive_media.php
 tools/uckk-ops/import/import_uckkarchive_media.php.bak_advisory_20260925_173801
+tools/uckk-ops/kristal/build_math_university_projection.py
+tools/uckk-ops/kristal/README.md
 tools/uckk_nomenclature_patch.py
 UCC_MEDIATHEQUE_COURSE_LINK_AUDIT.md
 uckk-presets/archive_templates.json
@@ -1085,3 +1097,11 @@ uckk-tools/validate.sh
 UCKK_Ops_Console_Runbook.md
 
 Index file: SNAPSHOT_INDEX.txt
+UCKK_PLAY_MEDIATHEQUE_IMPORT_AUDIT.md
+data/play_inventory/inventory.articles.catalog.json
+data/play_inventory/inventory.audio.catalog.json
+data/play_inventory/inventory.code-tech.catalog.json
+data/play_inventory/inventory.manifest.json
+data/play_inventory/inventory.root.json
+data/play_inventory/inventory.youtube.catalog.json
+data/play_inventory/uckk_play_reference_registry.json

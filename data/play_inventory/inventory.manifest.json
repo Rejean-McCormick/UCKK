@@ -1,0 +1,66 @@
+{
+  "schema_version": "UCKK-PLAY-INVENTORY-MANIFEST-1.0",
+  "generated_at": "2026-10-02T20:12:00Z",
+  "purpose": "Bundled source inventory for UCKK Mediatheque external-reference import.",
+  "runtime_authority": "mod_uckkarchive database after explicit importer application",
+  "importer": "tools/Import-UckkPlayExternalRefs.ps1",
+  "rights_mode": "external_reference_only",
+  "catalogs": {
+    "inventory.root.json": {
+      "sha256": "cedb7e621b06ca51998c4524ad178895214d1398498816557190f5c7cd6ded89",
+      "items": 0
+    },
+    "inventory.youtube.catalog.json": {
+      "sha256": "b5fd1c3a479f976ded3e5146c71c7b86aaa5978c334d9b72fd05fce5fc6b300c",
+      "items": 66
+    },
+    "inventory.articles.catalog.json": {
+      "sha256": "c7ffd5ca4537fb5eefb801783529c444986009b59fa38e321a4f451ed177afe1",
+      "items": 41
+    },
+    "inventory.audio.catalog.json": {
+      "sha256": "ebb19e7873461de28a244a12f80582618b9c9abfc7aa24aa4d15a5897536df14",
+      "items": 11
+    },
+    "inventory.code-tech.catalog.json": {
+      "sha256": "f9f2d86dcbe9cf84fd3ad33ffb3a945adc596141b7a9ead942c2a3f69a6b2909",
+      "items": 11
+    }
+  },
+  "counts": {
+    "total_items": 129,
+    "by_catalog": {
+      "inventory.youtube.catalog.json": 66,
+      "inventory.articles.catalog.json": 41,
+      "inventory.audio.catalog.json": 11,
+      "inventory.code-tech.catalog.json": 11
+    },
+    "by_platform": {
+      "amazon": 5,
+      "github": 11,
+      "medium": 31,
+      "philpapers": 5,
+      "soundcloud": 3,
+      "spotify": 8,
+      "youtube": 66
+    },
+    "by_type": {
+      "amazon_book": 5,
+      "github_repository": 2,
+      "github_wiki": 9,
+      "medium_article": 31,
+      "philpaper_article": 5,
+      "soundcloud_set": 3,
+      "spotify_podcast": 8,
+      "youtube_video": 66
+    },
+    "duplicate_ids": 0,
+    "duplicate_urls": 0,
+    "missing_title_or_url": 0
+  },
+  "validation": {
+    "duplicate_ids": [],
+    "duplicate_urls": [],
+    "missing_title_or_url": []
+  }
+}

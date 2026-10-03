@@ -1,4 +1,4 @@
-# Import UCKK Archive Media Inventory — paquet v2
+﻿# Import UCKK Archive Media Inventory — paquet v2
 
 Ce paquet remplace la première proposition qui ajoutait un fichier sous `mod/uckkarchive/cli/`.
 
@@ -107,3 +107,31 @@ Formats supportés par défaut :
 ```
 
 Le `.doc` legacy n’est pas activé par défaut.
+
+
+---
+
+# Références externes `/play` — Médiathèque UCKK
+
+Le snapshot embarque maintenant les cinq catalogues `/play` sous `data/play_inventory/`. Ils représentent 129 références externes : 66 YouTube, 41 articles/livres/PhilPapers, 11 Spotify/SoundCloud et 11 GitHub/code-tech.
+
+`tools/Import-UckkPlayExternalRefs.ps1` utilise automatiquement ce dossier lorsque `-SourceDir` est omis. L’import reste **external-reference-only** : aucune vidéo, piste audio ou autre média tiers n’est copié dans Moodle.
+
+Dry-run :
+
+```powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File .\tools\Import-UckkPlayExternalRefs.ps1 `
+  -MoodleRoot "C:\mycode\UCKK\moodle\moodle\public" `
+  -OutputDir "C:\mycode\UCKK\uckk-play-import-check"
+```
+
+Apply :
+
+```powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File .\tools\Import-UckkPlayExternalRefs.ps1 `
+  -MoodleRoot "C:\mycode\UCKK\moodle\moodle\public" `
+  -OutputDir "C:\mycode\UCKK\uckk-play-import-check" `
+  -Apply
+```
+
+Voir `UCKK_PLAY_MEDIATHEQUE_IMPORT_AUDIT.md` et `data/play_inventory/inventory.manifest.json` pour l’audit du catalogue embarqué.

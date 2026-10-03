@@ -28,6 +28,8 @@
     inventory.articles.catalog.json
     inventory.audio.catalog.json
     inventory.code-tech.catalog.json
+  When omitted, the importer uses the bundled UCKK inventory at:
+    <repo>/data/play_inventory
 
 .PARAMETER OutputDir
   Directory where helper and import reports are written.
@@ -46,6 +48,13 @@
   Actually write to the Moodle DB. Without this switch, the importer performs a dry-run.
 
 .EXAMPLE
+  # Use the inventory bundled with this UCKK snapshot.
+  pwsh -NoProfile -ExecutionPolicy Bypass -File .\Import-UckkPlayExternalRefs.ps1 `
+    -MoodleRoot "C:\mycode\UCKK\moodle\moodle\public" `
+    -OutputDir "C:\mycode\UCKK\uckk-play-import-check"
+
+.EXAMPLE
+  # Override with another /play inventory source.
   pwsh -NoProfile -ExecutionPolicy Bypass -File .\Import-UckkPlayExternalRefs.ps1 `
     -MoodleRoot "C:\mycode\UCKK\moodle\moodle\public" `
     -SourceDir "C:\mycode\HomePage\HomePage\public" `
@@ -65,9 +74,8 @@ param(
   [ValidateNotNullOrEmpty()]
   [string]$MoodleRoot,
 
-  [Parameter(Mandatory = $true)]
-  [ValidateNotNullOrEmpty()]
-  [string]$SourceDir,
+  [Parameter(Mandatory = $false)]
+  [string]$SourceDir = "",
 
   [Parameter(Mandatory = $false)]
   [ValidateNotNullOrEmpty()]
@@ -112,6 +120,10 @@ function Stop-WithMessage {
 function Test-CommandExists {
   param([Parameter(Mandatory = $true)][string]$Command)
   return ($null -ne (Get-Command $Command -ErrorAction SilentlyContinue))
+}
+
+if ([string]::IsNullOrWhiteSpace($SourceDir)) {
+  $SourceDir = Join-Path $PSScriptRoot "..\data\play_inventory"
 }
 
 $resolvedMoodleRoot = (Resolve-Path -LiteralPath $MoodleRoot).Path

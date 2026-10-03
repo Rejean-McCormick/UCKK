@@ -1,0 +1,327 @@
+{
+  "schemaVersion": "1.1",
+  "generatedAt": "2026-02-13T18:30:21.046Z",
+  "taxonomyRef": "inventory.root.json",
+  "items": [
+    {
+      "title": "King Klown 4 the Krown",
+      "url": "https://open.spotify.com/show/2hMamhJENVfWsULSuUVEG4",
+      "description": "Podcast (FR/EN) porté par King Klown, « clown couronné » mêlant fiction, symboles et projets concrets : une méthode d’innovation par le détour narratif (du réel → fiction → réel élargi) pour réveiller les consciences et transformer la société.",
+      "type": "spotify_podcast",
+      "language": null,
+      "id": "spotify_podcast-king-klown-4-the-krown-7e2f8262",
+      "platform": "spotify",
+      "embed": {
+        "provider": "spotify",
+        "kind": "show",
+        "id": "2hMamhJENVfWsULSuUVEG4"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown"
+      ],
+      "level": "intermediate",
+      "featured": true,
+      "sections": [
+        "kreature"
+      ],
+      "primarySection": "kreature"
+    },
+    {
+      "title": "Le pouvoir du langage comme outil spirituel, symbolique et politique",
+      "url": "https://open.spotify.com/episode/5OXg6jswwsStuewfAkkJ6Y",
+      "description": "Essai sur une « métaphysique du langage » : la parole comme force de bénédiction/malédiction, les lettres comme symboles vivants, les mythes comme savoir encodé, et les récits comme leviers de transformation spirituelle et politique, avec lecture à la fois spirituelle et critique.",
+      "type": "spotify_podcast",
+      "language": "fr",
+      "id": "spotify_podcast-le-pouvoir-du-langage-comme-outil-spirituel-symbolique-et-politique-c89a3780",
+      "platform": "spotify",
+      "embed": {
+        "provider": "spotify",
+        "kind": "episode",
+        "id": "5OXg6jswwsStuewfAkkJ6Y"
+      },
+      "topics": [
+        "audio_book",
+        "governance",
+        "metaphysics",
+        "natural_language_generation",
+        "peace_and_efficiency",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "kreature"
+      ],
+      "primarySection": "kreature"
+    },
+    {
+      "title": "Le Surreal : Innover par la Fiction pour Transformer le Réel",
+      "url": "https://open.spotify.com/episode/5SdgCbo2GsiN9XTVwnF3vL",
+      "description": "Présentation du « Surreal » : une approche où l’on part d’un problème réel, on le met en scène par la fiction (décalage, humour, poésie), puis on revient au réel avec des possibilités élargies et des pistes d’action. King Klown y incarne le fou du roi qui dit vrai pour mieux réparer le monde.",
+      "type": "spotify_podcast",
+      "language": "fr",
+      "id": "spotify_podcast-le-surreal-innover-par-la-fiction-pour-transformer-le-r-el-7b93191a",
+      "platform": "spotify",
+      "embed": {
+        "provider": "spotify",
+        "kind": "episode",
+        "id": "5SdgCbo2GsiN9XTVwnF3vL"
+      },
+      "topics": [
+        "art_creativity",
+        "audio_book",
+        "governance",
+        "king_klown",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "kreature"
+      ],
+      "primarySection": "kreature"
+    },
+    {
+      "title": "Open letter from King Klown to Pope Francis",
+      "url": "https://open.spotify.com/episode/7bQGtwpOao1PRNy8INL6Oa",
+      "description": "Open letter in which King Klown introduces himself as a benevolent trickster serving Love, and proposes an alliance with the Catholic Church: a vision of renewal supported by an “infinite trellis” of tools—Konnaxion (knowledge/collaboration) and Orgo (accountable communication).",
+      "type": "spotify_podcast",
+      "language": "en",
+      "id": "spotify_podcast-open-letter-from-king-klown-to-pope-francis-fdcd3a95",
+      "platform": "spotify",
+      "embed": {
+        "provider": "spotify",
+        "kind": "episode",
+        "id": "7bQGtwpOao1PRNy8INL6Oa"
+      },
+      "topics": [
+        "audio_book",
+        "governance",
+        "king_klown",
+        "konnaxion",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "platforms",
+        "kreature"
+      ],
+      "primarySection": "platforms"
+    },
+    {
+      "title": "Konvergence",
+      "url": "https://open.spotify.com/episode/6fW61SLWYHekbIehl5n73z",
+      "description": "Récit de réforme systémique et de mobilisation collective : naissance d’un mouvement (« Parti de la Convergence ») et diffusion de manuels concrets pour transformer institutions et société via Konnaxion et ses modules (gouvernance éthique, décision pondérée par l’expertise, éducation mondiale, transparence).",
+      "type": "spotify_podcast",
+      "language": null,
+      "id": "spotify_podcast-konvergence-0c3c630a",
+      "platform": "spotify",
+      "embed": {
+        "provider": "spotify",
+        "kind": "episode",
+        "id": "6fW61SLWYHekbIehl5n73z"
+      },
+      "topics": [
+        "audio_book",
+        "art_creativity",
+        "governance",
+        "king_klown",
+        "konnaxion",
+        "metaphysics",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "platforms",
+        "kreature"
+      ],
+      "primarySection": "platforms"
+    },
+    {
+      "title": "King Klown Kronicles V1",
+      "url": "https://open.spotify.com/episode/1WlslWu5iqn9H2lB0SOqsy",
+      "description": "Chronique fictionnelle de la métamorphose : Réjean découvre Pi comme « blague cosmique », franchit le seuil du théâtre de la transformation et devient King Klown. L’univers se révèle performance, tandis que Konnaxion et Orgo basculent vers la résonance, la synchronicité et l’éveil symbolique.",
+      "type": "spotify_podcast",
+      "language": null,
+      "id": "spotify_podcast-king-klown-kronicles-v1-3aa0b3aa",
+      "platform": "spotify",
+      "embed": {
+        "provider": "spotify",
+        "kind": "episode",
+        "id": "1WlslWu5iqn9H2lB0SOqsy"
+      },
+      "topics": [
+        "audio_book",
+        "art_creativity",
+        "governance",
+        "infrastructure",
+        "king_klown",
+        "konnaxion",
+        "metaphysics",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "platforms",
+        "kreature"
+      ],
+      "primarySection": "platforms"
+    },
+    {
+      "title": "Les Mystères de Pi",
+      "url": "https://open.spotify.com/episode/4k1HuQerI8SZPrpQYEZ50R",
+      "description": "Voyage à travers l’histoire et les mythes de π : des premières civilisations aux lectures métaphysiques, Pi devient pont entre l’infini et le concret. King Klown apparaît comme trickster cosmique, gardien des synchronicités et des résonances qui relient les mondes possibles.",
+      "type": "spotify_podcast",
+      "language": "fr",
+      "id": "spotify_podcast-les-myst-res-de-pi-94be683e",
+      "platform": "spotify",
+      "embed": {
+        "provider": "spotify",
+        "kind": "episode",
+        "id": "4k1HuQerI8SZPrpQYEZ50R"
+      },
+      "topics": [
+        "art_creativity",
+        "audio_book",
+        "king_klown",
+        "metaphysics"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research",
+        "kreature"
+      ],
+      "primarySection": "research"
+    },
+    {
+      "title": "Livre La Plateforme de la Connaissance",
+      "url": "https://open.spotify.com/episode/52YomgJloKFLMMFtEyj2wr",
+      "description": "Vision d’une plateforme globale de savoir, collaborative et ouverte, conçue pour former et outiller face aux défis futurs (climat, inégalités, crises). La connaissance y sert l’action : éthique, inclusion, durabilité et co-création à l’échelle mondiale.",
+      "type": "spotify_podcast",
+      "language": "fr",
+      "id": "spotify_podcast-livre-la-plateforme-de-la-connaissance-8b55e255",
+      "platform": "spotify",
+      "embed": {
+        "provider": "spotify",
+        "kind": "episode",
+        "id": "52YomgJloKFLMMFtEyj2wr"
+      },
+      "topics": [
+        "art_creativity",
+        "audio_book",
+        "governance",
+        "infrastructure",
+        "king_klown",
+        "konnaxion",
+        "metaphysics",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "kreature"
+      ],
+      "primarySection": "kreature"
+    },
+    {
+      "title": "Le Ninja Arc-en-Ciel",
+      "url": "https://soundcloud.com/rejean-mccormick/sets/ninja_arc-en-ciel",
+      "description": "Playlist/album (SoundCloud set). Contains tracks including: « Chanson 1 _ Le Départ », « Chanson 2 _ Pensée Nuancée », « Chanson 3 _ Parole Juste », « Chanson 4 _ Limites Claires », « Chanson 5 _ L'Ennemi Devenu Allié ».",
+      "type": "soundcloud_set",
+      "language": "fr",
+      "id": "soundcloud_set-le-ninja-arc-en-ciel-3a9b3c2f",
+      "platform": "soundcloud",
+      "embed": {
+        "provider": "soundcloud",
+        "kind": "set",
+        "id": "rejean-mccormick/sets/ninja_arc-en-ciel"
+      },
+      "topics": [
+        "music_and_videos",
+        "art_creativity"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "kreature"
+      ],
+      "primarySection": "kreature"
+    },
+    {
+      "title": "Lumière Blanche",
+      "url": "https://soundcloud.com/rejean-mccormick/sets/lumiere_blanche",
+      "description": "Playlist/album (SoundCloud set). Contains tracks including: « 1- Écho de Lumière », « 2- Kin City », « 3- Quête de reconnaissance », « 4- Le sens du moi », « 5- Aumia _ Point de Fusion ».",
+      "type": "soundcloud_set",
+      "language": "fr",
+      "id": "soundcloud_set-lumiere-blanche-0f4e55b1",
+      "platform": "soundcloud",
+      "embed": {
+        "provider": "soundcloud",
+        "kind": "set",
+        "id": "rejean-mccormick/sets/lumiere_blanche"
+      },
+      "topics": [
+        "music_and_videos",
+        "art_creativity"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "kreature"
+      ],
+      "primarySection": "kreature"
+    },
+    {
+      "title": "Le Rire Cosmique",
+      "url": "https://soundcloud.com/rejean-mccormick/sets/le-rire-cosmique",
+      "description": "Album rock théâtral en 12 chansons (FR) inspiré par l’univers symbolique et engagé de King Klown : naissance et éveil d’un clown-roi, transformation personnelle, révolution pacifique, intelligence collective et résilience sociale. Relié à l’esprit du projet « Konnaxion » (imagination, empathie, technologie éthique).",
+      "type": "soundcloud_set",
+      "language": "fr",
+      "id": "soundcloud_set-le-rire-cosmique-7b2e3cf9",
+      "platform": "soundcloud",
+      "embed": {
+        "provider": "soundcloud",
+        "kind": "set",
+        "id": "rejean-mccormick/sets/le-rire-cosmique"
+      },
+      "topics": [
+        "music_and_videos",
+        "art_creativity",
+        "king_klown",
+        "konnaxion",
+        "sociotechnical_os(koa_digital_ecosystem)",
+        "peace_and_efficiency",
+        "social_cohesion",
+        "governance",
+        "metaphysics"
+      ],
+      "level": "intermediate",
+      "featured": true,
+      "sections": [
+        "kreature"
+      ],
+      "primarySection": "kreature"
+    }
+  ]
+}

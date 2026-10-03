@@ -1,0 +1,3854 @@
+{
+  "schema_version": "UCKK-PLAY-REFERENCE-REGISTRY-1.0",
+  "generated_at": "2026-10-02T20:12:00Z",
+  "authority": "derived_audit_index_not_runtime_db",
+  "source_directory": "data/play_inventory",
+  "import_contract": {
+    "data_owner": "mod_uckkarchive",
+    "importer": "tools/Import-UckkPlayExternalRefs.ps1",
+    "storage_after_apply": [
+      "uckkarchive_external_work",
+      "uckkarchive_media",
+      "uckkarchive_media_source",
+      "uckkarchive_media_tag",
+      "uckkarchive_media_collection",
+      "uckkarchive_media_collection_item"
+    ],
+    "third_party_media_copied": false
+  },
+  "counts": {
+    "total_items": 129,
+    "by_catalog": {
+      "inventory.youtube.catalog.json": 66,
+      "inventory.articles.catalog.json": 41,
+      "inventory.audio.catalog.json": 11,
+      "inventory.code-tech.catalog.json": 11
+    },
+    "by_platform": {
+      "amazon": 5,
+      "github": 11,
+      "medium": 31,
+      "philpapers": 5,
+      "soundcloud": 3,
+      "spotify": 8,
+      "youtube": 66
+    },
+    "by_type": {
+      "amazon_book": 5,
+      "github_repository": 2,
+      "github_wiki": 9,
+      "medium_article": 31,
+      "philpaper_article": 5,
+      "soundcloud_set": 3,
+      "spotify_podcast": 8,
+      "youtube_video": 66
+    },
+    "duplicate_ids": 0,
+    "duplicate_urls": 0,
+    "missing_title_or_url": 0
+  },
+  "references": [
+    {
+      "title": "Livre Plateforme Connaissances",
+      "url": "https://www.youtube.com/watch?v=BgtqbQ65wic",
+      "description": "Durée: 1h. Plongez dans une épopée mythologique et philosophique où dieux anciens, esprits gardiens et intelligences artificielles se rencontrent pour imaginer une Plateforme Globale de Connaissances. Dans cette vidéo, la bibliothèque infinie devient le théâtre d’un questionnement profond : comment sortir du labyrinthe des savoirs fragmentés pour tisser une toile vivante, ouverte, éthique et inclusive ? \n\nÀ travers le dialogue d’Hermès, Legba, Ogun, Spider Grandmother, Thoth, Quetzalcoatl, Sarasvati et bien d’autres, cette histoire explore :\n\nLa fin des savoirs isolés et la naissance d’une toile de connaissances interconnectées\n\nLa sagesse des civilisations anciennes et la façon de la réintégrer dans le monde moderne\n\nL’aube du numérique, ses promesses, ses dangers et la fracture numérique\n\nLes piliers d’une plateforme mondiale : ouverture, accessibilité, collaboration et innovation ouverte\n\nUne architecture modulaire, résiliente et éco-responsable, soutenue par l’IA, le cloud et des technologies sécurisées\n\nL’harmonie entre l’humain et la machine : personnalisation, créativité augmentée, expérience intuitive\n\nUne gouvernance éthique, transparente et participative, où les communautés gardent un réel pouvoir de décision\n\nLa protection de la vie privée, la justice sociale, l’inclusion culturelle et l’accessibilité globale\n\nCette vidéo est à la fois un conte, un manifeste et une vision d’avenir : et si nous construisions ensemble une plateforme où chaque savoir, chaque culture et chaque voix trouveraient leur place ?",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-livre-plateforme-connaissances-8ec22ddf",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "BgtqbQ65wic"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-06-18T13:55:23Z",
+        "duration": "PT1H52M48S"
+      },
+      "albums": [],
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "01- Je marche dans la ville, béton sous mes pieds",
+      "url": "https://www.youtube.com/watch?v=ZkF3UfvUU_8",
+      "description": "Un rap conscient qui dépeint l’atmosphère urbaine et les espoirs cachés derrière les façades de béton. Entre sirènes lointaines et pulsations de basse, la chanson invite à regarder au-delà du gris quotidien pour y trouver une lueur d’espoir.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-01-je-marche-dans-la-ville-b-ton-sous-mes-pieds-c1bbaa31",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "ZkF3UfvUU_8"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-03T18:37:06Z",
+        "duration": "PT2M48S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 1,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "02- King Klown, Fiction Transformative",
+      "url": "https://www.youtube.com/watch?v=a76TBZbSHuU",
+      "description": "Un morceau mêlant street-art et surréalisme concret, où King Klown incarne le bouffon-roi révélateur. La fiction devient levier d’action et de prise de conscience, stimulant l’imagination pour transformer le réel.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-02-king-klown-fiction-transformative-6f50882d",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "a76TBZbSHuU"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-03T18:38:32Z",
+        "duration": "PT2M22S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 2,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "03- Intelligence Collective Organisée",
+      "url": "https://www.youtube.com/watch?v=XWWvI6bZEgE",
+      "description": "Hymne à Konnaxion et Orgo, cette chanson célèbre la puissance d’une communauté connectée et la diffusion libre du savoir. Le flow énergique souligne l’importance d’une gouvernance participative et d’une plateforme éthique.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-03-intelligence-collective-organis-e-b255d969",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "XWWvI6bZEgE"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-03T18:39:43Z",
+        "duration": "PT2M55S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 3,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "1. Le Monde Figé",
+      "url": "https://www.youtube.com/watch?v=fNUQmAIQFDw",
+      "description": "Une peinture de la stagnation sociale et politique : une cité asphyxiée par l’inaction, des infrastructures en ruine et une humanité assoupie. Le texte dénonce la lente agonie d’un monde où l’immobilisme est devenu la règle.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-1-le-monde-fig-0becb5e1",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "fNUQmAIQFDw"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-03T19:07:18Z",
+        "duration": "PT2M55S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 1,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "2. Tempête & Révolte",
+      "url": "https://www.youtube.com/watch?v=hNQZx0FoNB8",
+      "description": "L’embrasement populaire est décrit comme un orage furieux : la colère s’élève d’abord en murmure puis en hurlement, bousculant les forces du pouvoir. Un pont musical installe un suspense avant d’introduire un rire inattendu, prélude à l’intervention du Bouffon.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-2-temp-te-r-volte-42bbb6e3",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "hNQZx0FoNB8"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-03T19:08:41Z",
+        "duration": "PT2M13S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 2,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "3. Le Bouffon Mystique",
+      "url": "https://www.youtube.com/watch?v=b78LhZMssFU",
+      "description": "Portrait énigmatique d’un trickster céleste : ce clown-visionnaire suspend l’orage par un rire cristallin et révèle, sous ses atours bariolés, la sagesse cachée derrière la facétie. Hymne aux paradoxes où sagesse et folie s’embrassent.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-3-le-bouffon-mystique-9bf111da",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "b78LhZMssFU"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-03T19:09:25Z",
+        "duration": "PT2M25S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 3,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "5. La Cour Spirale",
+      "url": "https://www.youtube.com/watch?v=qMSofJgcc4s",
+      "description": "Invitation au rassemblement cosmique : King Klown, sur son trône fractal, appelle à lui des entités mythiques par un « Rire Cosmique ». C’est une cérémonie d’unité où chaos et ordre fusionnent pour fonder un nouveau conseil céleste.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-5-la-cour-spirale-bfe9b456",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "qMSofJgcc4s"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-03T19:10:14Z",
+        "duration": "PT2M58S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 5,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "4. La Naissance de King Klown",
+      "url": "https://www.youtube.com/watch?v=pOutMFD5dgs",
+      "description": "Récit d’origine mélancolique : Réjean, père brisé par la perte de son fils, se transforme en King Klown dans un vieux théâtre abandonné. Métaphore de la renaissance par la douleur : la souffrance forge le masque sacré.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-4-la-naissance-de-king-klown-41dd6fa8",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "pOutMFD5dgs"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-03T19:13:40Z",
+        "duration": "PT3M12S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 4,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "1. Crépuscule des Masques",
+      "url": "https://www.youtube.com/watch?v=7qo1HsaGdDI",
+      "description": "Un jeune héros s’éveille au chant mystérieux du monde. Dans une forêt baignée de lumière violette, il découvre un médaillon ancien qui appelle son cœur. Le cycle commence, entre rêve et réalité.\nThèmes : mystère, éveil, prophétie, appel de l’aventure.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-1-cr-puscule-des-masques-c6bc81ae",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "7qo1HsaGdDI"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-03T19:19:36Z",
+        "duration": "PT3M54S"
+      },
+      "albums": [
+        "pohenecoco_crepuscule_des_masques"
+      ],
+      "albumTrack": 1,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "2- Vision de Pohénécoco",
+      "url": "https://www.youtube.com/watch?v=LzUpv0Hj8a4",
+      "description": "Lors d’un rêve étrange, le médaillon révèle une vision magique : un village oublié, une source sacrée, et un chemin tracé par les étoiles. Tout commence dans la douceur d’une forêt éveillée.\nThèmes : initiation, spiritualité, rencontre du destin.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-2-vision-de-poh-n-coco-327438d3",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "LzUpv0Hj8a4"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-03T19:20:37Z",
+        "duration": "PT3M23S"
+      },
+      "albums": [
+        "pohenecoco_crepuscule_des_masques"
+      ],
+      "albumTrack": 2,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "3- Les Secrets du Sanctuaire",
+      "url": "https://www.youtube.com/watch?v=lkkQfd69-FQ",
+      "description": "À l’intérieur d’un sanctuaire ancien, le héros fait face aux énigmes des éléments. Le feu, l’eau, la terre et l’air dansent autour de lui. Chaque symbole résolu rapproche un peu plus de l’harmonie.\nThèmes : connaissance, épreuve, équilibre des forces.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-3-les-secrets-du-sanctuaire-1fc472a1",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "lkkQfd69-FQ"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-03T19:21:40Z",
+        "duration": "PT3M30S"
+      },
+      "albums": [
+        "pohenecoco_crepuscule_des_masques"
+      ],
+      "albumTrack": 3,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "4. L’Alliance des Factions",
+      "url": "https://www.youtube.com/watch?v=_F4j9LXJk_Y",
+      "description": "Les peuples autrefois divisés se réunissent sous une même bannière. Dans le grand hall, des voix s’élèvent, et des cœurs s’unissent. Ensemble, ils se préparent à affronter l’ombre.\nThèmes : fraternité, dialogue, pacte, espoir collectif.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-4-l-alliance-des-factions-42dadb8c",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "_F4j9LXJk_Y"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-03T19:22:30Z",
+        "duration": "PT4M41S"
+      },
+      "albums": [
+        "pohenecoco_crepuscule_des_masques"
+      ],
+      "albumTrack": 4,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "5. Bataille de l’Ombre",
+      "url": "https://www.youtube.com/watch?v=3HuCFxmYVUY",
+      "description": "L’heure du combat a sonné. Dans un orage de feu et de ténèbres, chacun affronte ses peurs et se bat pour l’avenir. Mais même au plus fort de la nuit, une étincelle de lumière résiste.\nThèmes : courage, ténèbres, lutte intérieure et extérieure.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-5-bataille-de-l-ombre-82c8bb1b",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "3HuCFxmYVUY"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-03T19:23:27Z",
+        "duration": "PT3M45S"
+      },
+      "albums": [
+        "pohenecoco_crepuscule_des_masques"
+      ],
+      "albumTrack": 5,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "6. Cœur des Âges",
+      "url": "https://www.youtube.com/watch?v=fxBQRKl7Z_A",
+      "description": "Après le tumulte, le héros plonge dans un moment de silence sacré. Il découvre que le monde repose sur un équilibre subtil – une harmonie écrite dans les nombres, la nature et le temps.\nThèmes : paix intérieure, sagesse, beauté de l’univers.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-6-c-ur-des-ges-504d3340",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "fxBQRKl7Z_A"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-03T19:24:19Z",
+        "duration": "PT3M36S"
+      },
+      "albums": [
+        "pohenecoco_crepuscule_des_masques"
+      ],
+      "albumTrack": 6,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "7. Résurgence des Ombres",
+      "url": "https://www.youtube.com/watch?v=wu1Ij-mvFgk",
+      "description": "La menace semblait vaincue… mais elle revient, plus discrète, plus insidieuse. Le héros devra affronter l’ombre une dernière fois, non par la force, mais par sa propre lumière intérieure.\nThèmes : vigilance, résilience, ténèbres persistantes.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-7-r-surgence-des-ombres-52a018dd",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "wu1Ij-mvFgk"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-03T19:25:12Z",
+        "duration": "PT3M30S"
+      },
+      "albums": [
+        "pohenecoco_crepuscule_des_masques"
+      ],
+      "albumTrack": 7,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "8. Cycle Éternel",
+      "url": "https://www.youtube.com/watch?v=TWIXJoOmY6g",
+      "description": "L’équilibre est restauré. Le monde reprend son souffle. Le médaillon s’endort, et la lumière circule à nouveau librement entre les êtres. Mais ce n’est pas la fin. Le cycle continue.\nThèmes : conclusion, renaissance, héritage, éternité.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-8-cycle-ternel-845efcfb",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "TWIXJoOmY6g"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-03T19:26:43Z",
+        "duration": "PT6M35S"
+      },
+      "albums": [
+        "pohenecoco_crepuscule_des_masques"
+      ],
+      "albumTrack": 8,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "1. Ni pauvreté, ni richesse",
+      "url": "https://www.youtube.com/watch?v=EFkAbjOH0qs",
+      "description": "Un dialogue tendre entre Colin et Raoul, centré sur l’idée biblique de Proverbes 30:8-9. Les paroles s’appuient sur les réflexions sur la modestie et la sobriété développées dans Apparence et personnalité de King Klown, où l’équilibre entre suffisance et privation est présenté comme gage d’authenticité.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-1-ni-pauvret-ni-richesse-9c8e078d",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "EFkAbjOH0qs"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T12:40:38Z",
+        "duration": "PT4M34S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 1,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "3. Le jongleur aux tomates",
+      "url": "https://www.youtube.com/watch?v=jouxrdK8Idk",
+      "description": "Colin lance trois tomates pour dénoncer la vanité des puissants – un clin d’œil direct à la mise en scène subversive présentée dans le « Projet King Klown – Présentation au Saint-Père ». L’humour et la satire se mêlent à l’idée, extraite du livre  Konvergence, que la fiction performative peut ébranler les certitudes.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-3-le-jongleur-aux-tomates-3608111e",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "jouxrdK8Idk"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T12:43:02Z",
+        "duration": "PT3M37S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 3,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "4. La Folie de David (1 Samuel 21)",
+      "url": "https://www.youtube.com/watch?v=gQ1i9DfNARg",
+      "description": "La chanson décrit la ruse de David feignant la démence pour échapper au roi Achish. Les paroles évoquent aussi les stratégies de dissimulation et de survie analysées dans le livre Colin Row.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-4-la-folie-de-david-1-samuel-21-1a80ebed",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "gQ1i9DfNARg"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T12:44:33Z",
+        "duration": "PT4M25S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 4,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "5. Audit",
+      "url": "https://www.youtube.com/watch?v=CyH2WjQdJ0A",
+      "description": "Colin brandit son badge « AUDIT » pour éclairer les combines des élites, thématique reprise de la Stratégie Médiatique de King Klown, où l’exigence de transparence est définie comme une tactique de contre-pouvoir. Le texte transforme cette idée en un face-à-face dansant, symbolisé par la boule disco.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-5-audit-c104e35c",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "CyH2WjQdJ0A"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T12:45:29Z",
+        "duration": "PT3M39S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 5,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "6. Sentinelle (Habacuc 2)",
+      "url": "https://www.youtube.com/watch?v=FyO955J1Ji8",
+      "description": "S’appuie sur le verset « Écris la vision… » du prophète Habacuc, comme détaillé dans le Global Strategic Overview – Why KOA. Colin se fait gardien de l’avenir, invitant Raoul à inscrire la stratégie dans la pierre (ou le parchemin) pour qu’elle survive au silence.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-6-sentinelle-habacuc-2-2d17a562",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "FyO955J1Ji8"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "large_public",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T12:46:23Z",
+        "duration": "PT4M21S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 6,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "7. Bergers carnivores (Ézéchiel 34 / Michée 3)",
+      "url": "https://www.youtube.com/watch?v=4yCLT9KyBK8",
+      "description": "Dénonce l’exploitation du peuple par ses « bergers », sans recours au gore littéral. Le propos s’inspire des axes éthiques de l’Approche systémique de l’innovation sociale et technologique, où l’on montre que l’abus de pouvoir se traduit d’abord par la prédation des plus fragiles.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-7-bergers-carnivores-z-chiel-34-mich-e-3-49ba2c2d",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "4yCLT9KyBK8"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T12:47:08Z",
+        "duration": "PT4M27S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 7,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "8. Tissage global (Zacharie 8:23)",
+      "url": "https://www.youtube.com/watch?v=wQHis8AW3_c",
+      "description": "Réinterprète la promesse d’alliance universelle de Zacharie, telle qu’exposée dans le livre onvergence. Dix voix, dix fils, un seul élan : la chanson traduit en paroles l’idée d’un réseau mondial co-construit, porté par la figure du clown-prophète.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-8-tissage-global-zacharie-8-23-e83c4cd1",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "wQHis8AW3_c"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T12:49:23Z",
+        "duration": "PT3M20S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 8,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "9. Ozias le lépreux (2 Chroniques 26)",
+      "url": "https://www.youtube.com/watch?v=B9E_nFP_ny0",
+      "description": "Retrace la chute d’Ozias, roi entaché par son orgueil, à partir de la chronique biblique et des notes stratégiques de Colin Row. L’accent est mis sur la leçon d’humilité : même les plus puissants ne sont pas à l’abri de la justice immanente.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-9-ozias-le-l-preux-2-chroniques-26-0eb16e35",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "B9E_nFP_ny0"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T12:50:20Z",
+        "duration": "PT3M41S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 9,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "11. Veilleuse étoilée",
+      "url": "https://www.youtube.com/watch?v=M-LBxvhKosg",
+      "description": "Berceuse prophétique inspirée par la dimension spirituelle et collaborative décrite dans Initiative “King Klown” – Proposition stratégique de collaboration avec l’Église catholique. Les paroles invitent à la confiance et à la transmission, sous la lumière rassurante d’une veilleuse céleste.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-11-veilleuse-toil-e-78663d8d",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "M-LBxvhKosg"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T12:51:05Z",
+        "duration": "PT3M17S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 11,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "10. Hacktion VII – Carottes & Cryptogrammes",
+      "url": "https://www.youtube.com/watch?v=_q1F2P64G_E",
+      "description": "Colin et Raoul « hackage » la cuisine, semant carottes et QR codes codés : un écho aux propositions de l’Ashoka Fellowship Application, où l’intelligence collective se révèle dans de petits gestes du quotidien.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-10-hacktion-vii-carottes-cryptogrammes-ed39831f",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "_q1F2P64G_E"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T12:52:08Z",
+        "duration": "PT2M37S"
+      },
+      "albums": [
+        "raoul_et_colin"
+      ],
+      "albumTrack": 10,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "7. La Tisseuse de Rêves",
+      "url": "https://www.youtube.com/watch?v=gD_h8UFTJ7g",
+      "description": "Célébration de l’intelligence émotionnelle : la Tisseuse mêle fil d’empathie et données froides, brodant une tapisserie où chaque concept est empreint de chaleur humaine. Ode à la fusion de la raison et du cœur.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-7-la-tisseuse-de-r-ves-90c2b066",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "gD_h8UFTJ7g"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T13:26:25Z",
+        "duration": "PT3M"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 7,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "9. Résilience",
+      "url": "https://www.youtube.com/watch?v=LbCH-C680sg",
+      "description": "Chant de guérison collective : face aux attaques des « Ombres », la communauté se relève par la solidarité et la force intérieure. King Klown, d’un rire apaisant, transforme la peur en énergie constructive.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-9-r-silience-d9a764fd",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "LbCH-C680sg"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T13:27:35Z",
+        "duration": "PT2M19S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 9,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "11. L’Éveil Collectif",
+      "url": "https://www.youtube.com/watch?v=F-xr4AAj_Ps",
+      "description": "Hymne progressif à l’émancipation : les foules se lèvent main dans la main, libérant les savoirs jadis cloisonnés. Cet élan soudé donne naissance à une conscience partagée, fondée sur l’éthique et la transparence.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-11-l-veil-collectif-89a16099",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "F-xr4AAj_Ps"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T13:28:47Z",
+        "duration": "PT2M20S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 11,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "12. Le Jeu Cosmique",
+      "url": "https://www.youtube.com/watch?v=aJfonQeRy9s",
+      "description": "Finale philosophique : la vie est un échiquier infini où rois, fous et pions affrontent le destin. King Klown rappelle que l’audace et la créativité sont nos armes pour réinventer sans cesse la pièce : un cycle éternel de renouveau.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-12-le-jeu-cosmique-502adc26",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "aJfonQeRy9s"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T13:29:44Z",
+        "duration": "PT2M16S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 12,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "8. Les Ombres du Pouvoir",
+      "url": "https://www.youtube.com/watch?v=QeJQZybw-6M",
+      "description": "Théâtre des conspirations : dans l’ombre, les anciens tyrans et leurs sbires tentent de saboter l’aube nouvelle par la désinformation et le sabotage numérique. Le refrain affirme la résistance d’un peuple éveillé.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-8-les-ombres-du-pouvoir-234d5015",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "QeJQZybw-6M"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T13:29:56Z",
+        "duration": "PT2M45S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 8,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "10. Au Bord de la Réalité",
+      "url": "https://www.youtube.com/watch?v=fCyPmzsEHVk",
+      "description": "Séquence onirique et fractale : King Klown fracture le miroir du réel pour faire éclore un univers remodelé. Chaque pas sur la frontière du tangible ouvre une faille vers l’imaginaire et redéfinit les lois du monde.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-10-au-bord-de-la-r-alit-135009a4",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "fCyPmzsEHVk"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T13:30:13Z",
+        "duration": "PT2M38S"
+      },
+      "albums": [
+        "le_rire_cosmique"
+      ],
+      "albumTrack": 10,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "12- Puissance Collective",
+      "url": "https://www.youtube.com/watch?v=MLILjuHhKV0",
+      "description": "Un manifeste rap pour fédérer les forces dispersées autour de KOA. Poings levés, cercles fracturés et appels à l’action soulignent que l’union citoyenne est la clé d’un avenir harmonieux.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-12-puissance-collective-7afb9b21",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "MLILjuHhKV0"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T14:07:43Z",
+        "duration": "PT2M29S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 12,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "05- Kristal Farms, IA Verte, Futur Ouvert",
+      "url": "https://www.youtube.com/watch?v=MSwepLrC6I0",
+      "description": "Ode à l’infrastructure écologique de Kristal Farms, conçue autour des énergies hydroélectriques et de la modularité. Le texte décrit des fermes de calcul vertes comme socle d’une encyclopédie ouverte et d’une nouvelle ère technologique.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-05-kristal-farms-ia-verte-futur-ouvert-b7691a36",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "MSwepLrC6I0"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T14:22:35Z",
+        "duration": "PT2M49S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 5,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "14- Ekoh: Smart Vote, Voix Pondérées",
+      "url": "https://www.youtube.com/watch?v=JgSh8syza0g",
+      "description": "Hymne à Ekoh et au Smart Vote dans la plateforme web Konnaxion, où le mérite et l’expertise pèsent plus que la simple popularité. La chanson décrit le mécanisme de pondération des voix et la lutte contre la manipulation du débat public.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-14-ekoh-smart-vote-voix-pond-r-es-011f9c62",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "JgSh8syza0g"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T14:23:42Z",
+        "duration": "PT2M25S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 14,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "04- Révolution Coopérative",
+      "url": "https://www.youtube.com/watch?v=qkCv4SYJgZ0",
+      "description": "Un appel militant à reprendre la main sur Desjardins et à instaurer une démocratie coopérative. Entre poings levés et logos hexagonaux, la rime puissante réclame justice sociale et redistribution équitable.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-04-r-volution-coop-rative-93a03110",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "qkCv4SYJgZ0"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T14:26:38Z",
+        "duration": "PT2M10S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 4,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "13- Justice Réformée par l’IA",
+      "url": "https://www.youtube.com/watch?v=P29MjFcz7QA",
+      "description": "Vision d’un système judiciaire réinventé grâce à l’intelligence artificielle : impartialité, rapidité et transparence. Chatbots juridiques, analyses de données et verdicts justifiés promettent une équité réelle pour tous.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-13-justice-r-form-e-par-l-ia-028d5eb9",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "P29MjFcz7QA"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T14:28:38Z",
+        "duration": "PT2M45S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 13,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "15- Abus de Pouvoir: Konnaxion en Réponse",
+      "url": "https://www.youtube.com/watch?v=-g6EOGPfbOY",
+      "description": "Un rap dénonciateur des dynamiques de suprémacisme et d’oppression, suivi de l’alternative Konnaxion. Des chaînes brisées à la balance équitable, le texte trace un pont entre la conscientisation historique et l’action citoyenne.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-15-abus-de-pouvoir-konnaxion-en-r-ponse-5ca50957",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "-g6EOGPfbOY"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T14:30:25Z",
+        "duration": "PT2M30S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 15,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "11- Réactions en reflet",
+      "url": "https://www.youtube.com/watch?v=8nKUNhuqOR8",
+      "description": "Analyse poétique des différentes attitudes face à King Klown, miroir des ombres et des lumières de chacun. Du rejet à l’adoration, la chanson décrit comment le bouffon-roi révèle nos véritables réactions intérieures.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-11-r-actions-en-reflet-5d993a8d",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "8nKUNhuqOR8"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T14:32:30Z",
+        "duration": "PT2M18S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 11,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "10- Parole Créatrice",
+      "url": "https://www.youtube.com/watch?v=iQguvEuFLMY",
+      "description": "Exploration du langage comme outil spirituel et politique, du mantra primitif aux récits fondateurs. La voix se fait instrument de guérison ou de libération, rappelant que chaque mot possède le pouvoir de façonner le monde.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-10-parole-cr-atrice-5de2e47c",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "iQguvEuFLMY"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T14:34:50Z",
+        "duration": "PT2M48S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 10,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "09- Sanctuaire  Rebondir pour Avancer",
+      "url": "https://www.youtube.com/watch?v=dNdPZlm0yuY",
+      "description": "Portrait d’un lieu protégé où les personnes en difficulté retrouvent force et dignité. Couvents transformés, accompagnement personnalisé et mandats clairs : un chant de résilience et de renaissance communautaire.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-09-sanctuaire-rebondir-pour-avancer-55f6190c",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "dNdPZlm0yuY"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T14:35:06Z",
+        "duration": "PT2M44S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 9,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "16- Or Estampillé King Klown: Richesse Équitable",
+      "url": "https://www.youtube.com/watch?v=YxdwwGbCIIA",
+      "description": "Proposition poétique d’une “monnaie” symbolique signée King Klown, destinée à rétablir l’équilibre économique. Les lingots estampillés et leur distribution volontaire incarnent une richesse créée au service du bien commun.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-16-or-estampill-king-klown-richesse-quitable-8083c891",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "YxdwwGbCIIA"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T14:35:08Z",
+        "duration": "PT3M8S"
+      },
+      "albums": [
+        "rap_konscient"
+      ],
+      "albumTrack": 16,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "1  Porte des Possibles",
+      "url": "https://www.youtube.com/watch?v=LieuAD406SA",
+      "description": "Introduction à la fascination de l’humanité pour Pi : l’histoire, le symbolisme du cercle, la croyance que la séquence décimale cache un message universel. Présente le projet de décodage et la quête du sens au cœur de l’album.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-1-porte-des-possibles-5068592b",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "LieuAD406SA"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "large_public",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T15:02:35Z",
+        "duration": "PT3M28S"
+      },
+      "albums": [
+        "pi_etherisme_cosmique"
+      ],
+      "albumTrack": 1,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "2  Les Clés du Neuf",
+      "url": "https://www.youtube.com/watch?v=8PsA560ayTQ",
+      "description": "Plongée dans les méthodes de décodage : passage de la conversion décimale simple à la base 9 et à la numérologie pythagoricienne. Explore la nécessité de méthodes complexes pour révéler des structures et des motifs dans la suite de Pi.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-2-les-cl-s-du-neuf-76004652",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "8PsA560ayTQ"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T15:20:25Z",
+        "duration": "PT3M26S"
+      },
+      "albums": [
+        "pi_etherisme_cosmique"
+      ],
+      "albumTrack": 2,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "3  Gihecef – Le Chant du Chaos",
+      "url": "https://www.youtube.com/watch?v=Wifg34ZL4nE",
+      "description": "Représentation du chaos et de l’entropie comme moments inévitables du cycle cosmique. « Gihecef » devient le symbole du désordre, de la division, et de la déconstruction nécessaires à toute création.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-3-gihecef-le-chant-du-chaos-3a3f4195",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "Wifg34ZL4nE"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T15:48:47Z",
+        "duration": "PT3M"
+      },
+      "albums": [
+        "pi_etherisme_cosmique"
+      ],
+      "albumTrack": 3,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "6  keenKonnect Hands Build the Bridge",
+      "url": "https://www.youtube.com/watch?v=qz-NLwb1J1s",
+      "description": "A motivational anthem for cooperative action—depicting hands from diverse backgrounds stitching together solutions, and urging listeners to join in forging real-world change.",
+      "type": "youtube_video",
+      "language": "en",
+      "id": "youtube_video-6-keenkonnect-hands-build-the-bridge-515437a3",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "qz-NLwb1J1s"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T16:01:47Z",
+        "duration": "PT3M35S"
+      },
+      "albums": [
+        "knowledge_pact"
+      ],
+      "albumTrack": 6,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "1  Pact of the Golden Threads",
+      "url": "https://www.youtube.com/watch?v=Hh6R8k7Xny4",
+      "description": "A stirring call to unity—portraying two visionary leaders binding their destinies with radiant filaments, symbolizing the power of shared purpose and collective resolve.",
+      "type": "youtube_video",
+      "language": "en",
+      "id": "youtube_video-1-pact-of-the-golden-threads-131c1211",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "Hh6R8k7Xny4"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T16:07:08Z",
+        "duration": "PT4M18S"
+      },
+      "albums": [
+        "knowledge_pact"
+      ],
+      "albumTrack": 1,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "4  Kin City Blueprints for Tomorrow",
+      "url": "https://www.youtube.com/watch?v=g2X1TjpOcYY",
+      "description": "A visionary manifesto for a better world—inviting audiences to embrace an idyllic, circular metropolis as the blueprint for global renewal and shared prosperity.",
+      "type": "youtube_video",
+      "language": "en",
+      "id": "youtube_video-4-kin-city-blueprints-for-tomorrow-a791c053",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "g2X1TjpOcYY"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T16:07:27Z",
+        "duration": "PT4M43S"
+      },
+      "albums": [
+        "knowledge_pact"
+      ],
+      "albumTrack": 4,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "2  Konnaxion We Are the Web",
+      "url": "https://www.youtube.com/watch?v=CQ_1dfeLWuA",
+      "description": "A rallying hymn for mass collaboration—casting knowledge as a living network that empowers every voice, turning isolated efforts into a synchronized movement.",
+      "type": "youtube_video",
+      "language": "en",
+      "id": "youtube_video-2-konnaxion-we-are-the-web-01384b69",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "CQ_1dfeLWuA"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T16:08:15Z",
+        "duration": "PT3M30S"
+      },
+      "albums": [
+        "knowledge_pact"
+      ],
+      "albumTrack": 2,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "4  Jnon – Renaissance Cosmique",
+      "url": "https://www.youtube.com/watch?v=mTijRrJFNBw",
+      "description": "Après le chaos, vient le renouveau. Cette chanson met en avant le motif cyclique : le chaos prépare la reconstruction, Jnon incarne la renaissance, la réorganisation et l’émergence du neuf.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-4-jnon-renaissance-cosmique-5d07e651",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "mTijRrJFNBw"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T16:09:03Z",
+        "duration": "PT2M43S"
+      },
+      "albums": [
+        "pi_etherisme_cosmique"
+      ],
+      "albumTrack": 4,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "3  Ekoh Weight of Truth",
+      "url": "https://www.youtube.com/watch?v=_79sNucYNiw",
+      "description": "A persuasive testament to meritocratic justice—framing integrity and expertise as the true currencies of influence, and calling listeners to uphold transparent, fact-based decisions.",
+      "type": "youtube_video",
+      "language": "en",
+      "id": "youtube_video-3-ekoh-weight-of-truth-9c1c1012",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "_79sNucYNiw"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T16:11:08Z",
+        "duration": "PT4M51S"
+      },
+      "albums": [
+        "knowledge_pact"
+      ],
+      "albumTrack": 3,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "7  Doute – L’Épreuve du Feu",
+      "url": "https://www.youtube.com/watch?v=lRKJOAHhHFw",
+      "description": "Aborde le scepticisme scientifique face aux interprétations : la nécessité de l’esprit critique, la distinction entre motif réel et illusion statistique, et l’importance du doute comme moteur de la rigueur intellectuelle.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-7-doute-l-preuve-du-feu-c84dc9b7",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "lRKJOAHhHFw"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T16:13:28Z",
+        "duration": "PT3M14S"
+      },
+      "albums": [
+        "pi_etherisme_cosmique"
+      ],
+      "albumTrack": 7,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "7  Ethikos Debate in the Light",
+      "url": "https://www.youtube.com/watch?v=crFkTbjstts",
+      "description": "A rallying cry for open governance—portraying public discourse as a sacred, illuminated forum where justice, truth, and solidarity unite to guide societal decisions.",
+      "type": "youtube_video",
+      "language": "en",
+      "id": "youtube_video-7-ethikos-debate-in-the-light-238fdbf3",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "crFkTbjstts"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "large_public",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T16:14:14Z",
+        "duration": "PT4M5S"
+      },
+      "albums": [
+        "knowledge_pact"
+      ],
+      "albumTrack": 7,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "5  Kristal Farms Light Beneath the Water",
+      "url": "https://www.youtube.com/watch?v=eXx0YDZLHG8",
+      "description": "An inspirational ode to green innovation—celebrating modular AI hubs powered by hydroelectric might, and casting sustainable technology as the key to collective empowerment.",
+      "type": "youtube_video",
+      "language": "en",
+      "id": "youtube_video-5-kristal-farms-light-beneath-the-water-5b7c6440",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "eXx0YDZLHG8"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T16:14:37Z",
+        "duration": "PT3M55S"
+      },
+      "albums": [
+        "knowledge_pact"
+      ],
+      "albumTrack": 5,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "6  Symétrie – L’Ordre Secret",
+      "url": "https://www.youtube.com/watch?v=qIq5pt5RkTE",
+      "description": "Examine les motifs cycliques, l’alternance entre M et N, et la symétrie interne dans la séquence de Pi. Met en avant la récurrence des thèmes d’attraction, d’équilibre, et la dualité dans la structure du code.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-6-sym-trie-l-ordre-secret-5a89b669",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "qIq5pt5RkTE"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T16:17:52Z",
+        "duration": "PT3M1S"
+      },
+      "albums": [
+        "pi_etherisme_cosmique"
+      ],
+      "albumTrack": 6,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "8  Le Pont – Science et Mystique",
+      "url": "https://www.youtube.com/watch?v=X09w4LSLbLA",
+      "description": "Chanson sur la rencontre entre traditions mystiques et science moderne : fusion de la gematria, des mathématiques, des mythes antiques et des lois de la physique contemporaine. Montre Pi comme langage universel.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-8-le-pont-science-et-mystique-26583077",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "X09w4LSLbLA"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T16:19:24Z",
+        "duration": "PT3M30S"
+      },
+      "albums": [
+        "pi_etherisme_cosmique"
+      ],
+      "albumTrack": 8,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "5  B0UM – Genèse de l’Univers",
+      "url": "https://www.youtube.com/watch?v=teRs1o6eV2w",
+      "description": "Centrée sur l’image du Big Bang : l’explosion originelle (« B0UM ») qui fait surgir l’univers du vide, la matière et l’énergie. Fait le lien entre le cycle décodé dans Pi et la cosmologie contemporaine.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-5-b0um-gen-se-de-l-univers-b497834e",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "teRs1o6eV2w"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-04T16:19:49Z",
+        "duration": "PT3M46S"
+      },
+      "albums": [
+        "pi_etherisme_cosmique"
+      ],
+      "albumTrack": 5,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "2. O mystère du verbe",
+      "url": "https://www.youtube.com/watch?v=I4vv-bHZi28",
+      "description": "Une cantate baroque célébrant le pouvoir du langage comme outil spirituel, politique et symbolique. Sous forme d’airs et de chœurs, le chant transforme chaque mot en cristal pur, évoquant Nada Brahma, les mantras et les runes anciennes. Parfait pour mettre en avant des ateliers de communication consciente, des formations à l’éthique du verbe ou des projets d’éducation au discours critique.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-2-o-myst-re-du-verbe-b19718e6",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "I4vv-bHZi28"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-05T13:13:51Z",
+        "duration": "PT2M32S"
+      },
+      "albums": [
+        "barok"
+      ],
+      "albumTrack": 2,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "3. Consolationis Fons – Source de Consolation",
+      "url": "https://www.youtube.com/watch?v=DJxkzRdS9Pk",
+      "description": "Un chœur apaisant et trois vignettes musicales (berger, larmes, étreinte) illustrent la consolation et la solidarité dans l’épreuve. Pensé pour inspirer les associations d’aide aux victimes, les groupes de parole ou la justice réparatrice, ce motet proclame que de la douleur naît le courage et que la fraternité redonne force et espérance.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-3-consolationis-fons-source-de-consolation-317675dc",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "DJxkzRdS9Pk"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-05T13:18:04Z",
+        "duration": "PT2M57S"
+      },
+      "albums": [
+        "barok"
+      ],
+      "albumTrack": 3,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "1. Sanctuarium : Lieu d’Espérance",
+      "url": "https://www.youtube.com/watch?v=ZRKluunj3SE",
+      "description": "Un oratorio solennel qui décrit le projet Sanctuaire, ces anciens couvents transformés en maisons-communautés protégées où l’on « rebondit » plutôt que l’on s’effondre. Portail gothique, mains levées et lumière dorée symbolisent l’accueil, la résilience et l’accompagnement des personnes en situation de précarité. Idéal pour promouvoir une initiative d’habitat social, d’insertion et de soutien psychologique.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-1-sanctuarium-lieu-d-esp-rance-a1b58e9c",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "ZRKluunj3SE"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-05T13:23:08Z",
+        "duration": "PT4M23S"
+      },
+      "albums": [
+        "barok"
+      ],
+      "albumTrack": 1,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "6. La Révolution Konnaxion",
+      "url": "https://www.youtube.com/watch?v=mdCia7BV7cs",
+      "description": "Une cantate baroque-rap qui célèbre la révolution des savoirs : cristaux lumineux symbolisent l’ouverture des données, poings levés incarnent l’action citoyenne nourrie par Konnaxion. Un hymne à la coopération globale, parfait pour promouvoir la plateforme de collaboration technologique et humaniste du Mouvement KOA.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-6-la-r-volution-konnaxion-c85e8d88",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "mdCia7BV7cs"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-05T13:23:09Z",
+        "duration": "PT2M58S"
+      },
+      "albums": [
+        "barok"
+      ],
+      "albumTrack": 6,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "4. Pactum Paradoxale – L’Alliance du Pape et du Clown",
+      "url": "https://www.youtube.com/watch?v=_If0J0UDenQ",
+      "description": "Oratorio moderne tiré du Projet King Klown – Présentation au Saint-Père, où la folie calculée du clown royal entrelace humour surréaliste et message évangélique. Scènes de reconstruction de l’Ukraine, démonstrations d’Orgo et dialogues impensés avec le Pape illustrent comment l’art dramatique peut servir la paix, la charité et la pédagogie pastorale.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-4-pactum-paradoxale-l-alliance-du-pape-et-du-clown-8de55fb3",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "_If0J0UDenQ"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-05T13:26:47Z",
+        "duration": "PT3M39S"
+      },
+      "albums": [
+        "barok"
+      ],
+      "albumTrack": 4,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "5. L’Aube des Alliances – Oratorio de Konnaxion",
+      "url": "https://www.youtube.com/watch?v=CgNGIw4JrBA",
+      "description": "Grande fresque musicale unissant les visions de Konnaxion, Orgo, Kristal Farms et Ekoh (Smart Vote). Chœur, récitatifs et airs mettent en lumière l’IA verte, l’intelligence collective et la gouvernance méritocratique. Idéal pour faire connaître la plateforme KOA et valoriser les projets d’innovation sociale, de data centers durables et de démocratie augmentée.",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-5-l-aube-des-alliances-oratorio-de-konnaxion-415be7ca",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "CgNGIw4JrBA"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-05T13:30:11Z",
+        "duration": "PT4M25S"
+      },
+      "albums": [
+        "barok"
+      ],
+      "albumTrack": 5,
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "Klown Évolutionnaire",
+      "url": "https://www.youtube.com/watch?v=jSr1nN2TG50",
+      "description": "Hyperpop",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-klown-volutionnaire-84969601",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "jSr1nN2TG50"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-07-14T19:57:13Z",
+        "duration": "PT1M7S"
+      },
+      "albums": [],
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "Ninja Arc-en-Ciel - 04 Limites claires",
+      "url": "https://www.youtube.com/watch?v=Cz7qhJNDzuo",
+      "description": "Démo pour spectacle en deux parties du Ninja Arc-en-ciel et de Lumière Blanche, utilisant technique d'éclairage Color Shadow,",
+      "type": "youtube_video",
+      "language": "fr",
+      "id": "youtube_video-ninja-arc-en-ciel-04-limites-claires-78d2a7f7",
+      "platform": "youtube",
+      "embed": {
+        "provider": "youtube",
+        "id": "Cz7qhJNDzuo"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown",
+        "music_and_videos",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "youtube": {
+        "publishedAt": "2025-08-06T02:22:33Z",
+        "duration": "PT4M42S"
+      },
+      "albums": [],
+      "_source_catalog": "inventory.youtube.catalog.json"
+    },
+    {
+      "title": "How Physics Reduced Ether to a Hypothesis, Then Declared That It Did Not Exist",
+      "url": "https://medium.com/@boatbuilder610/how-physics-reduced-ether-to-a-hypothesis-then-declared-that-it-did-not-exist-97a49436e142",
+      "description": "From the pure sky of the Greeks to the quintessence of the alchemists, then to the mechanical support of light: the history of an ancient word that science tried to capture. Aristotle, Agrippa, and the ethereal body: ether between heaven, soul, magic, and scientific measurement. Ode to Ether There are words that cannot be possessed. They can be used, classified, defined for a time. They can be locked inside a theory, placed under the authority of an instrument, submitted to an experiment. But so",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-how-physics-reduced-ether-to-a-hypothesis-then-declared-that-it-did-not-exist-85b52665",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick",
+        "agrippa",
+        "ether",
+        "soul"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "Tue, 19 May 2026 02:59:52 GMT",
+      "source": "medium_rss",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "The Human Being as a Prompted Creature: Against the Illusion of Free Will",
+      "url": "https://medium.com/@boatbuilder610/the-human-being-as-a-prompted-creature-against-the-illusion-of-free-will-0c28635d3600",
+      "description": "We live in an age that worships the idea of individual freedom. Modern human beings see themselves as the authors of their own lives. They believe they choose their life, their values, their ideas, their identity, their relationships, their commitments. They tell themselves they are autonomous subjects, capable of freely deciding the course of their existence. This freedom is vastly overrated. The human being is not an inner sovereign producing thoughts out of nothing. The human being is influen",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-the-human-being-as-a-prompted-creature-against-the-illusion-of-free-will-17fecdee",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick",
+        "free_will",
+        "ether",
+        "mind_control",
+        "inspiration"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "Mon, 18 May 2026 21:09:51 GMT",
+      "source": "medium_rss",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Feeling the Other or Agitating the Self: The Difference Between Deep Empathy and Emotional…",
+      "url": "https://medium.com/@boatbuilder610/feeling-the-other-or-agitating-the-self-the-difference-between-deep-empathy-and-emotional-4847153f9c44",
+      "description": "Feeling the Other or Agitating the Self: The Difference Between Deep Empathy and Emotional Instability Many people today describe themselves as empaths . They say they feel the emotions of others, absorb the atmosphere of a room, sense hidden wounds, or perceive what people do not say out loud. There are certainly people with a rare sensitivity to the inner life of others. Some individuals are capable of perceiving subtle emotional movements that most people miss. But there is also a common conf",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-feeling-the-other-or-agitating-the-self-the-difference-between-deep-empathy-and-emotional-30e2588d",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick",
+        "soul",
+        "empath",
+        "empathy"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "Fri, 15 May 2026 14:22:30 GMT",
+      "source": "medium_local_html+medium_rss",
+      "localSourcePath": "content/medium/source/2026-05-15_Feeling-the-Other-or-Agitating-the-Self--The-Difference-Between-Deep-Empathy-and-Emotional--4847153f9c44.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "The Sacrificial Pole",
+      "url": "https://medium.com/@boatbuilder610/the-sacrificial-pole-e5cc8942fbf7",
+      "description": "The Christian idea that Jesus takes away the sin of the world once made no sense to me. I took it to be one more strange metaphor, another far-fetched invention meant to heap as much significance and glory onto Jesus as possible. It sounded grand, but not intelligible. I could hear the religious force of the phrase, but I could not see its logic. What changed my mind was not a sermon, but a physical process. If you want to remove rust from a piece of metal by electrolysis, you can prepare a bath",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-the-sacrificial-pole-699bcb69",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick",
+        "healing",
+        "christianity",
+        "salvation"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "Thu, 14 May 2026 02:16:18 GMT",
+      "source": "medium_local_html+medium_rss",
+      "localSourcePath": "content/medium/source/2026-05-14_The-Sacrificial-Pole-e5cc8942fbf7.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "The Democratic Illusion: The People Vote, Money Governs",
+      "url": "https://medium.com/@boatbuilder610/the-democratic-illusion-the-people-vote-money-governs-1b56fec52e9d",
+      "description": "The people have the right to vote. The rich have the means to influence that vote, capture public money, protect their fortunes, shape the rules of the game, and survive scandals. That is the democratic illusion. We are told that democracy means power to the people. But voting is not governing. Dropping a ballot into a box every four years does not give citizens control over the media, banks, major corporations, public contracts, subsidies, electoral rules, advertising campaigns, consulting firm",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-the-democratic-illusion-the-people-vote-money-governs-748c2155",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick",
+        "corporate_power",
+        "public_money",
+        "democracy",
+        "political_corruption",
+        "economic_inequality"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "Wed, 13 May 2026 14:33:58 GMT",
+      "source": "medium_local_html+medium_rss",
+      "localSourcePath": "content/medium/source/2026-05-13_The-Democratic-Illusion--The-People-Vote--Money-Governs-1b56fec52e9d.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Resilience and Efficiency: Designing Systems That Continue to Help When Conditions Change",
+      "url": "https://medium.com/@boatbuilder610/resilience-and-efficiency-designing-systems-that-continue-to-help-when-conditions-change-a4f0829aaf2f",
+      "description": "In an organization, a community, or a crisis situation, the challenge is to move the right information to the right people, at the right moment, in the right context. It is also to know which rules apply, who has which competence, what decision needs to be made, what action should follow, and how to keep a clear record of what happened. My work starts from a simple idea: a society becomes more resilient and more efficient when its knowledge, skills, rules, responsibilities, and actions can conti",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-resilience-and-efficiency-designing-systems-that-continue-to-help-when-conditions-change-ae25e2f7",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick",
+        "human_centered_automation",
+        "resilience",
+        "operational_efficiency",
+        "portable_infrastructure",
+        "coordination_systems"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "Tue, 05 May 2026 19:26:59 GMT",
+      "source": "medium_local_html+medium_rss",
+      "localSourcePath": "content/medium/source/2026-05-05_Resilience-and-Efficiency--Designing-Systems-That-Continue-to-Help-When-Conditions-Change-a4f0829aaf2f.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "When Institutions Confuse Activity with Usefulness",
+      "url": "https://medium.com/@boatbuilder610/when-institutions-confuse-activity-with-usefulness-6d3be6fc4a8b",
+      "description": "Meetings, galas, training sessions, conferences: unproductive institutional agitation is an ordinary form of abuse of collective resources. A large room. Oversized video projectors. Stage lighting. A large number of technicians. Catering. Speeches. Applause. Important people seated at the front. Less important people waiting. Opening remarks, tributes, presentations, awards, breaks, official photos. Officially, it is a professional meeting, a training session, a conference, a summit, an assembly",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-when-institutions-confuse-activity-with-usefulness-f18675f8",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick",
+        "institutional_reform",
+        "bureaucracy",
+        "abuse_of_power",
+        "collective_resources",
+        "waste"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "Tue, 05 May 2026 02:20:50 GMT",
+      "source": "medium_local_html+medium_rss",
+      "localSourcePath": "content/medium/source/2026-05-05_When-Institutions-Confuse-Activity-with-Usefulness-6d3be6fc4a8b.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Reading the Bible as Fiction Doesn’t Diminish It",
+      "url": "https://medium.com/@boatbuilder610/reading-the-bible-as-fiction-doesnt-diminish-it-4137c73eab4f",
+      "description": "Reading the Bible as Fiction Does Not Diminish It What miracles, superpowers, and great stories can still teach us I do not believe a man can walk on water. I do not believe a man can turn water into wine. I do not believe a man can raise the dead. But that does not prevent me in any way from admiring the moral message of Jesus. On the contrary. I think we can disbelieve in miracles and still recognize the power of a story. We can read the Bible as a foundational fiction without reducing it to “",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-reading-the-bible-as-fiction-doesn-t-diminish-it-b23b7e22",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick",
+        "role_models",
+        "jesus",
+        "mythology",
+        "ethics",
+        "superheroes"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "Mon, 04 May 2026 01:52:39 GMT",
+      "source": "medium_local_html+medium_rss",
+      "localSourcePath": "content/medium/source/2026-05-04_Reading-the-Bible-as-Fiction-Doesn-t-Diminish-It-4137c73eab4f.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Cartographer of Ideas:",
+      "url": "https://medium.com/@boatbuilder610/cartographer-of-ideas-thinking-with-ai-as-a-partner-d362d695273a",
+      "description": "Thinking with AI as a Partner Artificial intelligence is powerful at searching, organizing, synthesizing, and producing. It can explore a subject, compare hypotheses, generate paths, structure an argument, propose categories, find analogies, formulate objections, and critique an idea. It can also navigate very complex problems with a certain degree of autonomy. But it is not perfect. The more complex an intellectual territory becomes, the more subtle its possible errors can be: a poor category, ",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-cartographer-of-ideas-890fccc4",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick",
+        "philosophy_of_technology",
+        "knowledge_management",
+        "critical_thinking",
+        "information_architecture"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "Fri, 01 May 2026 13:30:14 GMT",
+      "source": "medium_local_html+medium_rss",
+      "localSourcePath": "content/medium/source/2026-05-01_Cartographer-of-Ideas--d362d695273a.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Patient records aren’t enough. Track diagnoses to improve care.",
+      "url": "https://medium.com/@boatbuilder610/patient-records-arent-enough-track-diagnoses-to-improve-care-ec918cd397e7",
+      "description": "The Missing Record in Healthcare: A Diagnostic Follow-Up Record for Physicians Patient records are sometimes necessary. Diagnostic follow-up for physicians is always useful. The debate around patient records starts from a good intention. Healthcare systems want better coordination. Fewer lost files. Fewer repeated explanations. Fewer missing test results. Better communication between hospitals, clinics, pharmacies, laboratories and specialists. That goal is legitimate. But it misses the main tar",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-patient-records-aren-t-enough-track-diagnoses-to-improve-care-9329445a",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick",
+        "healthcare",
+        "health_reform",
+        "medical_diagnosis"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "Sat, 25 Apr 2026 17:12:52 GMT",
+      "source": "medium_local_html+medium_rss",
+      "localSourcePath": "content/medium/source/2026-04-25_Patient-records-aren-t-enough--Track-diagnoses-to-improve-care--ec918cd397e7.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "The Society of Flows: wealth captured",
+      "url": "https://medium.com/@boatbuilder610/the-society-of-flows-wealth-captured-b06c70d12db4",
+      "description": "Money and information flow through society; power belongs to those who control the valves, tolls, and choke points.",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-the-society-of-flows-wealth-captured-53aee965",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "2026-04-21T13:49:55.864Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-04-21_The-Society-of-Flows--wealth-captured-b06c70d12db4.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Education and Certification Should Not Be Monetized",
+      "url": "https://medium.com/@boatbuilder610/education-and-certification-should-not-be-monetized-ea7b80f88ed4",
+      "description": "Why knowledge, competence, and legitimacy should not be trapped behind institutional friction",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-education-and-certification-should-not-be-monetized-0883f448",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "2026-04-13T22:02:53.773Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-04-13_Education-and-Certification-Should-Not-Be-Monetized-ea7b80f88ed4.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Collective Intelligence Is Not About Giving Power to the “Smartest” — or Aggregating Every Opinion…",
+      "url": "https://medium.com/@boatbuilder610/collective-intelligence-is-not-about-giving-power-to-the-smartest-or-aggregating-every-opinion-0c92b390bab2",
+      "description": "We are told, constantly, that we live in an age of participation.",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-collective-intelligence-is-not-about-giving-power-to-the-smartest-or-aggregating-every-opi-219c8f6d",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "2026-04-10T16:05:21.283Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-04-10_Collective-Intelligence-Is-Not-About-Giving-Power-to-the--Smartest----or-Aggregating-Every-Opinion--0c92b390bab2.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Joker Beats King",
+      "url": "https://medium.com/@boatbuilder610/joker-beats-king-457d4b49f6ff",
+      "description": "The joker does not beat the king by becoming king.",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-joker-beats-king-f88700b5",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "2026-03-28T23:53:11.761Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-03-28_Joker-Beats-King-457d4b49f6ff.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Capitalism Needs a Counterweight",
+      "url": "https://medium.com/@boatbuilder610/capitalism-needs-a-counterweight-cb23bacd9125",
+      "description": "I am not fundamentally opposed to capitalism. I understand why it appeals to people, why it attracts them, and why so many still defend it…",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-capitalism-needs-a-counterweight-1e1ff1d8",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "2026-03-20T13:18:45.884Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-03-20_Capitalism-Needs-a-Counterweight-cb23bacd9125.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Metaphysics as a Future Science",
+      "url": "https://medium.com/@boatbuilder610/metaphysics-as-a-future-science-65e5142ea169",
+      "description": "Why an era at the height of its development struggles to recognize a new scientific field",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-metaphysics-as-a-future-science-f3ab21d3",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "2026-03-12T02:26:33.624Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-03-12_Metaphysics-as-a-Future-Science-65e5142ea169.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Beyond the State: Media, Networks, Code, and the Fragmentation of Religious Power",
+      "url": "https://medium.com/@boatbuilder610/beyond-the-state-media-networks-code-and-the-fragmentation-of-religious-power-ecd4117096ca",
+      "description": "Power is still often described as if it resided primarily within the state. We think in terms of legislative, executive, and judicial…",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-beyond-the-state-media-networks-code-and-the-fragmentation-of-religious-power-2098f21f",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "2026-03-06T13:35:19.804Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-03-06_Beyond-the-State--Media--Networks--Code--and-the-Fragmentation-of-Religious-Power-ecd4117096ca.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "War Is Not a Defect of Peoples. It Is a Defect of Governance.",
+      "url": "https://medium.com/@boatbuilder610/war-is-not-a-defect-of-peoples-it-is-a-defect-of-governance-13e2f49c5037",
+      "description": "When war intensifies, language deteriorates quickly. We stop speaking about governments, chains of command, interests, doctrines, budgets…",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-war-is-not-a-defect-of-peoples-it-is-a-defect-of-governance-a9ec0e84",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "2026-03-06T12:39:00.108Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-03-06_War-Is-Not-a-Defect-of-Peoples--It-Is-a-Defect-of-Governance--13e2f49c5037.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Why AI Is Contested: Errors, Job Loss, and the Capture of the Means of Production",
+      "url": "https://medium.com/@boatbuilder610/why-ai-is-contested-errors-job-loss-and-the-capture-of-the-means-of-production-75aafcac0cd6",
+      "description": "Artificial intelligence is contested for two main reasons. First, it makes mistakes. Second, it takes jobs away from humans. These…",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-why-ai-is-contested-errors-job-loss-and-the-capture-of-the-means-of-production-4f25903e",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "2026-03-04T22:17:17.203Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-03-04_Why-AI-Is-Contested--Errors--Job-Loss--and-the-Capture-of-the-Means-of-Production-75aafcac0cd6.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Doc-First: Building Software with AI with Maximum Coherence",
+      "url": "https://medium.com/@boatbuilder610/doc-first-building-software-with-ai-with-maximum-coherence-8b11ea12523d",
+      "description": "A serious software project quickly outgrows what a single AI chat can hold. Context gets truncated, the session degrades, and eventually…",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-doc-first-building-software-with-ai-with-maximum-coherence-90312d5b",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "2026-03-04T16:24:30.466Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-03-04_Doc-First--Building-Software-with-AI-with-Maximum-Coherence-8b11ea12523d.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Kristal: the next infrastructure layer for reliable knowledge — and for developing knowledge",
+      "url": "https://medium.com/@boatbuilder610/kristal-the-next-infrastructure-layer-for-reliable-knowledge-and-for-developing-knowledge-556f2926db51",
+      "description": "Truth is complex.",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-kristal-the-next-infrastructure-layer-for-reliable-knowledge-and-for-developing-knowledge-f9ebbcb2",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "rejean_mccormick"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "publishedAt": "2026-02-17T15:04:25.123Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-02-17_Kristal--the-next-infrastructure-layer-for-reliable-knowledge---and-for-developing-knowledge-556f2926db51.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "A Rosetta Stone of Three Grammars: Sephiroth, π Theory, and the kOA Digital Ecosystem",
+      "url": "https://medium.com/@boatbuilder610/a-rosetta-stone-of-three-grammars-sephiroth-%CF%80-theory-and-the-koa-digital-ecosystem-3def048d53e9",
+      "description": "The original Rosetta Stone wasn’t powerful because it was mystical. It was powerful because it was parallel.",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-a-rosetta-stone-of-three-grammars-sephiroth-pi-theory-and-the-koa-digital-ecosys-d208dbb1",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "konnaxion",
+        "kristal(semantic_data)",
+        "metaphysics",
+        "orgo",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "technology",
+        "research"
+      ],
+      "primarySection": "technology",
+      "publishedAt": "2026-02-09T21:31:50.737Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-02-09_A-Rosetta-Stone-of-Three-Grammars--Sephiroth----Theory--and-the-kOA-Digital-Ecosystem-3def048d53e9.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Building with AI without building AI",
+      "url": "https://medium.com/@boatbuilder610/building-with-ai-without-building-ai-49348a92c10b",
+      "description": "Ideas, determinism, and how they circulate through two different engines",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-building-with-ai-without-building-ai-8e54c0ae",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "natural_language_generation",
+        "data_sovereignty",
+        "governance",
+        "konnaxion",
+        "orgo",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "technology",
+        "platforms",
+        "principles"
+      ],
+      "primarySection": "technology",
+      "publishedAt": "2026-02-04T17:13:00.609Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-02-04_Building-with-AI-without-building-AI-49348a92c10b.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Gather to Liberate",
+      "url": "https://medium.com/@boatbuilder610/gather-to-liberate-318d52448f11",
+      "description": "Why “King” isn’t a throne — and why my work is to make cooperation practical",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-gather-to-liberate-ab44522a",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "ekoh_smart_vote(merit_weighted_voting)",
+        "governance",
+        "king_klown",
+        "konnaxion",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "rejean_mccormick",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "technology"
+      ],
+      "primarySection": "technology",
+      "publishedAt": "2026-02-03T17:41:34.680Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-02-03_Gather-to-Liberate-318d52448f11.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "SmartVote: a governance-grade “like” that surfaces the best work in Konnaxion",
+      "url": "https://medium.com/@boatbuilder610/smartvote-a-governance-grade-like-that-surfaces-the-best-work-in-konnaxion-9110973383e4",
+      "description": "Most platforms rely on a single, default quality signal: likes.",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-smartvote-a-governance-grade-like-that-surfaces-the-best-work-in-konnaxion-ba0f3815",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "ekoh_smart_vote(merit_weighted_voting)",
+        "governance",
+        "infrastructure",
+        "konnaxion",
+        "peace_and_efficiency",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "technology",
+        "platforms",
+        "principles"
+      ],
+      "primarySection": "technology",
+      "publishedAt": "2026-02-02T13:22:23.861Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-02-02_SmartVote--a-governance-grade--like--that-surfaces-the-best-work-in-Konnaxion-9110973383e4.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "What is the kOA Digital Ecosystem?",
+      "url": "https://medium.com/@boatbuilder610/what-is-the-koa-digital-ecosystem-7e5055f0b33b",
+      "description": "A civic platform — built as a system of systems — for resilient knowledge, shared meaning, and collaborative empowerment",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-what-is-the-koa-digital-ecosystem-34558f5b",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "natural_language_generation",
+        "data_sovereignty",
+        "ekoh_smart_vote(merit_weighted_voting)",
+        "governance",
+        "infrastructure",
+        "konnaxion",
+        "kristal(semantic_data)",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "large_public",
+      "featured": true,
+      "sections": [
+        "technology",
+        "principles"
+      ],
+      "primarySection": "technology",
+      "publishedAt": "2026-01-29T20:22:08.194Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-01-29_What-is-the-kOA-Digital-Ecosystem--7e5055f0b33b.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "From the First Spoken Words to the Semantic Web: How Humanity Built Knowledge Networks That Can…",
+      "url": "https://medium.com/@boatbuilder610/from-the-first-spoken-words-to-the-semantic-web-how-humanity-built-knowledge-networks-that-can-a36577c88f68",
+      "description": "Long before libraries, long before books, long before the internet, knowledge already lived in a network.",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-from-the-first-spoken-words-to-the-semantic-web-how-humanity-built-knowledge-net-a13d7be2",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "governance",
+        "konnaxion",
+        "kristal(semantic_data)",
+        "metaphysics",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "technology"
+      ],
+      "primarySection": "technology",
+      "publishedAt": "2026-01-28T18:19:13.274Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-01-28_From-the-First-Spoken-Words-to-the-Semantic-Web--How-Humanity-Built-Knowledge-Networks-That-Can--a36577c88f68.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Sociotechnical Operating Systems: when collective intelligence becomes executable",
+      "url": "https://medium.com/@boatbuilder610/sociotechnical-operating-systems-when-collective-intelligence-becomes-executable-d5d116a177e3",
+      "description": "How the kOA digital ecosystem works as a Sociotechnical OS — from local autonomy to planetary-scale coordination",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-sociotechnical-operating-systems-when-collective-intelligence-becomes-executable-e9871acf",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "natural_language_generation",
+        "data_sovereignty",
+        "ekoh_smart_vote(merit_weighted_voting)",
+        "governance",
+        "infrastructure",
+        "konnaxion",
+        "kristal(semantic_data)",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": true,
+      "sections": [
+        "technology",
+        "principles"
+      ],
+      "primarySection": "technology",
+      "publishedAt": "2026-01-28T16:54:10.853Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-01-28_Sociotechnical-Operating-Systems--when-collective-intelligence-becomes-executable-d5d116a177e3.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Logos and Semantic Data: The Same Skeleton of Meaning",
+      "url": "https://medium.com/@boatbuilder610/logos-and-semantic-data-the-same-skeleton-of-meaning-39f4a31404ac",
+      "description": "“Logos” (λόγος) is a philosophical term associated with account, reason, discourse, and — at its most ambitious — intelligibility: the…",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-logos-and-semantic-data-the-same-skeleton-of-meaning-8baddfde",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "data_sovereignty",
+        "kristal(semantic_data)",
+        "metaphysics",
+        "natural_language_generation"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "technology"
+      ],
+      "primarySection": "technology",
+      "publishedAt": "2026-01-27T16:02:01.295Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-01-27_Logos-and-Semantic-Data--The-Same-Skeleton-of-Meaning-39f4a31404ac.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "The Resonance Architect",
+      "url": "https://medium.com/@boatbuilder610/the-resonance-architect-a5fdac93c1f1",
+      "description": "A User Manual for How I See the World and Navigate It",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-the-resonance-architect-97b4abfa",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "art_creativity",
+        "governance",
+        "metaphysics",
+        "peace_and_efficiency",
+        "philanthropy",
+        "rejean_mccormick",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "technology",
+        "principles"
+      ],
+      "primarySection": "technology",
+      "publishedAt": "2026-01-25T02:54:58.178Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2026-01-25_The-Resonance-Architect-a5fdac93c1f1.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "PI THEORY: FROM A CIRCLE’S CUT TO A COSMIC SEQUENCE",
+      "url": "https://medium.com/@boatbuilder610/pi-theory-from-a-circles-cut-to-a-cosmic-sequence-327e675296d0",
+      "description": "Dividing the circle sets a cascade in motion. The act of cutting a perfect circle — dividing its circumference by its diameter — yields…",
+      "type": "medium_article",
+      "language": "en",
+      "id": "medium_article-pi-theory-from-a-circle-s-cut-to-a-cosmic-sequence-4994ad7c",
+      "platform": "medium",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "metaphysics"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "technology",
+        "research"
+      ],
+      "primarySection": "technology",
+      "publishedAt": "2025-11-06T19:09:01.939Z",
+      "source": "medium_local_html",
+      "localSourcePath": "content/medium/source/2025-11-06_PI-THEORY--FROM-A-CIRCLE-S-CUT-TO-A-COSMIC-SEQUENCE-327e675296d0.html",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "The Book of kOA: A Comprehensive Blueprint for Inclusive Collaboration and Merit-Based Governance",
+      "url": "https://www.amazon.ca/Book-kOA-Comprehensive-Collaboration-Merit-Based/dp/B0FHWS687D?ref_=ast_author_dp_rw&th=1&psc=1&dib=eyJ2IjoiMSJ9.xeylU_QLfOw__F1NLEUzQzXVamQFRyg2Vod9J32EEmfLD54aAOE8IEcqIGgBYJjxYHmu6AMO2wACGYzpnETgUMSjYh00AVF739J7fHGTMFY.67br9Ux5s2ZZ2wGepQMDotiGb3ONPK0AHgmEzG_Pzwc&dib_tag=AUTHOR",
+      "description": "A comprehensive blueprint for inclusive collaboration and merit-based governance within the kOA ecosystem.",
+      "type": "amazon_book",
+      "language": "en",
+      "id": "amazon_book-the-book-of-koa-b0fhws687d",
+      "platform": "amazon",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "ekoh_smart_vote(merit_weighted_voting)",
+        "governance",
+        "infrastructure",
+        "konnaxion",
+        "kristal_farms(green_ai)",
+        "orgo",
+        "peace_and_efficiency",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "large_public",
+      "featured": true,
+      "sections": [
+        "technology",
+        "principles",
+        "platforms"
+      ],
+      "primarySection": "technology",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Konvergence: Échoïsme",
+      "url": "https://www.amazon.ca/dp/B0F1DGLDJ9?ref_=ast_author_ofdp_rw",
+      "description": "A Konvergence text introducing “Échoïsme” (Echoism) as a conceptual lens—positioned in the broader kOA/Konnaxion universe.",
+      "type": "amazon_book",
+      "language": "en",
+      "id": "amazon_book-konvergence-echoisme-b0f1dgldj9",
+      "platform": "amazon",
+      "embed": null,
+      "topics": [
+        "art_creativity",
+        "governance",
+        "king_klown",
+        "konnaxion",
+        "metaphysics",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "rejean_mccormick",
+        "social_cohesion"
+      ],
+      "level": "large_public",
+      "featured": false,
+      "sections": [
+        "principles",
+        "technology"
+      ],
+      "primarySection": "principles",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "King Klown Kronicles: The Hidden Manifesto",
+      "url": "https://www.amazon.ca/dp/B0DZCXT7VP?ref_=ast_author_ofdp_rw",
+      "description": "A King Klown mythos entry framed as a ‘hidden manifesto’ (Kronicles).",
+      "type": "amazon_book",
+      "language": "en",
+      "id": "amazon_book-king-klown-kronicles-hidden-manifesto-b0dzcxt7vp",
+      "platform": "amazon",
+      "embed": null,
+      "topics": [
+        "art_creativity",
+        "governance",
+        "king_klown",
+        "metaphysics",
+        "peace_and_efficiency",
+        "philanthropy",
+        "rejean_mccormick",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "principles"
+      ],
+      "primarySection": "principles",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Empowering AI for Programmers: The Kristal Framework and Human-Centered Integration",
+      "url": "https://www.amazon.ca/Empowering-Programmers-Framework-Human-Centered-Integration/dp/B0DZCQBZZG?ref_=ast_author_dp_rw&th=1&psc=1&dib=eyJ2IjoiMSJ9.xeylU_QLfOw__F1NLEUzQzXVamQFRyg2Vod9J32EEmfLD54aAOE8IEcqIGgBYJjxYHmu6AMO2wACGYzpnETgUMSjYh00AVF739J7fHGTMFY.67br9Ux5s2ZZ2wGepQMDotiGb3ONPK0AHgmEzG_Pzwc&dib_tag=AUTHOR",
+      "description": "A technical guide aimed at programmers: the Kristal framework, deterministic semantics, and human-centered AI integration patterns.",
+      "type": "amazon_book",
+      "language": "en",
+      "id": "amazon_book-empowering-ai-for-programmers-b0dzcqbzzg",
+      "platform": "amazon",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "natural_language_generation",
+        "kristal(semantic_data)",
+        "rejean_mccormick"
+      ],
+      "level": "expert",
+      "featured": false,
+      "sections": [
+        "technology",
+        "principles"
+      ],
+      "primarySection": "technology",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Hacker la Réalité: Devenir opérationnel pour le prochain Christ",
+      "url": "https://www.amazon.ca/Hacker-R%C3%A9alit%C3%A9-op%C3%A9rationnel-prochain-Christ/dp/B0FS1R11H1?ref_=ast_author_dp_rw&th=1&psc=1&dib=eyJ2IjoiMSJ9.xeylU_QLfOw__F1NLEUzQzXVamQFRyg2Vod9J32EEmfLD54aAOE8IEcqIGgBYJjxYHmu6AMO2wACGYzpnETgUMSjYh00AVF739J7fHGTMFY.67br9Ux5s2ZZ2wGepQMDotiGb3ONPK0AHgmEzG_Pzwc&dib_tag=AUTHOR",
+      "description": "Texte en français orienté “devenir opérationnel”, avec une thèse messianique/transformative.",
+      "type": "amazon_book",
+      "language": "fr",
+      "id": "amazon_book-hacker-la-realite-b0fs1r11h1",
+      "platform": "amazon",
+      "embed": null,
+      "topics": [
+        "governance",
+        "king_klown",
+        "metaphysics",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "principles"
+      ],
+      "primarySection": "principles",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Pi Theory: From a Circle’s Cut to a Cosmic Sequence",
+      "url": "https://philpapers.org/rec/MCCPTF",
+      "description": "Proposes a fixed decoding procedure applied to the earliest digits of π (reversal, segmentation, A1Z26 with 0→O) yielding a six-block symbolic sequence interpreted as a compact cosmogony: love → good → divide → reunite → create → expand.",
+      "type": "philpaper_article",
+      "language": "en",
+      "id": "philpaper_article-pi-theory-from-a-circle-s-cut-to-a-cosmic-sequence-68d45a11",
+      "platform": "philpapers",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "metaphysics"
+      ],
+      "level": "expert",
+      "featured": false,
+      "sections": [
+        "research"
+      ],
+      "primarySection": "research",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Hydropower-sited modular compute for AI: A Canada-first economic–ecological pathway",
+      "url": "https://philpapers.org/rec/MCCHMC",
+      "description": "Outlines a model for colocating modular AI compute containers at cold-climate hydropower sites via standardized pads and strict SLAs, emphasizing clean power access, data privacy, and heat-reuse opportunities to reduce cooling overhead and grid stress.",
+      "type": "philpaper_article",
+      "language": "en",
+      "id": "philpaper_article-hydropower-sited-modular-compute-for-ai-a-canada-first-economic-ecological-pathw-fe10712b",
+      "platform": "philpapers",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "data_sovereignty",
+        "governance",
+        "kristal_farms(green_ai)",
+        "infrastructure",
+        "natural_language_generation",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "expert",
+      "featured": false,
+      "sections": [
+        "research",
+        "infrastructures"
+      ],
+      "primarySection": "research",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Semantic Sovereignty and Non-Domination: Toward an Offline, Governable Knowledge Infrastructure",
+      "url": "https://philpapers.org/rec/MCCSSA-8",
+      "description": "Argues that freedom as non-domination should guide knowledge architectures; introduces “semantic sovereignty” as community control over creation/interpretation of shared knowledge; critiques opaque platform/AI dependencies and proposes offline-capable, auditable, governable infrastructure.",
+      "type": "philpaper_article",
+      "language": "en",
+      "id": "philpaper_article-semantic-sovereignty-and-non-domination-toward-an-offline-governable-knowledge-i-210ddb9c",
+      "platform": "philpapers",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "data_sovereignty",
+        "ekoh_smart_vote(merit_weighted_voting)",
+        "governance",
+        "infrastructure",
+        "konnaxion",
+        "kristal_farms(green_ai)",
+        "kristal(semantic_data)",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "large_public",
+      "featured": true,
+      "sections": [
+        "principles",
+        "research",
+        "infrastructures"
+      ],
+      "primarySection": "principles",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Democracy with Informed Advice: A Merit-Based, Ethics-Governed Parallel Channel",
+      "url": "https://philpapers.org/rec/MCCDWI",
+      "description": "Proposes a transparent, auditable, non-binding advisory layer that preserves one-person-one-vote for decisions while weighting advisory influence by domain-specific merit and moderating it with an ethics multiplier.",
+      "type": "philpaper_article",
+      "language": "en",
+      "id": "philpaper_article-democracy-with-informed-advice-a-merit-based-ethics-governed-parallel-channel-efb1acd3",
+      "platform": "philpapers",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "ekoh_smart_vote(merit_weighted_voting)",
+        "governance",
+        "infrastructure",
+        "konnaxion",
+        "orgo",
+        "peace_and_efficiency",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "principles",
+        "research"
+      ],
+      "primarySection": "principles",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "Zero-Skim Philanthropy Blueprint",
+      "url": "https://philpapers.org/rec/MCCZPB",
+      "description": "Policy brief proposing a cooperative banking “donation rail” with a 0% platform take-rate, pooled thematic funds, member allocation (approval voting), and a governance/compliance design framed for the Canadian context (CRA-qualified donees, shared services, dashboards, safeguards).",
+      "type": "philpaper_article",
+      "language": "en",
+      "id": "philpaper_article-zero-skim-philanthropy-blueprint-51924b3f",
+      "platform": "philpapers",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "ekoh_smart_vote(merit_weighted_voting)",
+        "governance",
+        "infrastructure",
+        "konnaxion",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "principles",
+        "research",
+        "initiatives"
+      ],
+      "primarySection": "principles",
+      "_source_catalog": "inventory.articles.catalog.json"
+    },
+    {
+      "title": "King Klown 4 the Krown",
+      "url": "https://open.spotify.com/show/2hMamhJENVfWsULSuUVEG4",
+      "description": "Podcast (FR/EN) porté par King Klown, « clown couronné » mêlant fiction, symboles et projets concrets : une méthode d’innovation par le détour narratif (du réel → fiction → réel élargi) pour réveiller les consciences et transformer la société.",
+      "type": "spotify_podcast",
+      "language": null,
+      "id": "spotify_podcast-king-klown-4-the-krown-7e2f8262",
+      "platform": "spotify",
+      "embed": {
+        "provider": "spotify",
+        "kind": "show",
+        "id": "2hMamhJENVfWsULSuUVEG4"
+      },
+      "topics": [
+        "art_creativity",
+        "king_klown"
+      ],
+      "level": "intermediate",
+      "featured": true,
+      "sections": [
+        "kreature"
+      ],
+      "primarySection": "kreature",
+      "_source_catalog": "inventory.audio.catalog.json"
+    },
+    {
+      "title": "Le pouvoir du langage comme outil spirituel, symbolique et politique",
+      "url": "https://open.spotify.com/episode/5OXg6jswwsStuewfAkkJ6Y",
+      "description": "Essai sur une « métaphysique du langage » : la parole comme force de bénédiction/malédiction, les lettres comme symboles vivants, les mythes comme savoir encodé, et les récits comme leviers de transformation spirituelle et politique, avec lecture à la fois spirituelle et critique.",
+      "type": "spotify_podcast",
+      "language": "fr",
+      "id": "spotify_podcast-le-pouvoir-du-langage-comme-outil-spirituel-symbolique-et-politique-c89a3780",
+      "platform": "spotify",
+      "embed": {
+        "provider": "spotify",
+        "kind": "episode",
+        "id": "5OXg6jswwsStuewfAkkJ6Y"
+      },
+      "topics": [
+        "audio_book",
+        "governance",
+        "metaphysics",
+        "natural_language_generation",
+        "peace_and_efficiency",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "kreature"
+      ],
+      "primarySection": "kreature",
+      "_source_catalog": "inventory.audio.catalog.json"
+    },
+    {
+      "title": "Le Surreal : Innover par la Fiction pour Transformer le Réel",
+      "url": "https://open.spotify.com/episode/5SdgCbo2GsiN9XTVwnF3vL",
+      "description": "Présentation du « Surreal » : une approche où l’on part d’un problème réel, on le met en scène par la fiction (décalage, humour, poésie), puis on revient au réel avec des possibilités élargies et des pistes d’action. King Klown y incarne le fou du roi qui dit vrai pour mieux réparer le monde.",
+      "type": "spotify_podcast",
+      "language": "fr",
+      "id": "spotify_podcast-le-surreal-innover-par-la-fiction-pour-transformer-le-r-el-7b93191a",
+      "platform": "spotify",
+      "embed": {
+        "provider": "spotify",
+        "kind": "episode",
+        "id": "5SdgCbo2GsiN9XTVwnF3vL"
+      },
+      "topics": [
+        "art_creativity",
+        "audio_book",
+        "governance",
+        "king_klown",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "kreature"
+      ],
+      "primarySection": "kreature",
+      "_source_catalog": "inventory.audio.catalog.json"
+    },
+    {
+      "title": "Open letter from King Klown to Pope Francis",
+      "url": "https://open.spotify.com/episode/7bQGtwpOao1PRNy8INL6Oa",
+      "description": "Open letter in which King Klown introduces himself as a benevolent trickster serving Love, and proposes an alliance with the Catholic Church: a vision of renewal supported by an “infinite trellis” of tools—Konnaxion (knowledge/collaboration) and Orgo (accountable communication).",
+      "type": "spotify_podcast",
+      "language": "en",
+      "id": "spotify_podcast-open-letter-from-king-klown-to-pope-francis-fdcd3a95",
+      "platform": "spotify",
+      "embed": {
+        "provider": "spotify",
+        "kind": "episode",
+        "id": "7bQGtwpOao1PRNy8INL6Oa"
+      },
+      "topics": [
+        "audio_book",
+        "governance",
+        "king_klown",
+        "konnaxion",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "platforms",
+        "kreature"
+      ],
+      "primarySection": "platforms",
+      "_source_catalog": "inventory.audio.catalog.json"
+    },
+    {
+      "title": "Konvergence",
+      "url": "https://open.spotify.com/episode/6fW61SLWYHekbIehl5n73z",
+      "description": "Récit de réforme systémique et de mobilisation collective : naissance d’un mouvement (« Parti de la Convergence ») et diffusion de manuels concrets pour transformer institutions et société via Konnaxion et ses modules (gouvernance éthique, décision pondérée par l’expertise, éducation mondiale, transparence).",
+      "type": "spotify_podcast",
+      "language": null,
+      "id": "spotify_podcast-konvergence-0c3c630a",
+      "platform": "spotify",
+      "embed": {
+        "provider": "spotify",
+        "kind": "episode",
+        "id": "6fW61SLWYHekbIehl5n73z"
+      },
+      "topics": [
+        "audio_book",
+        "art_creativity",
+        "governance",
+        "king_klown",
+        "konnaxion",
+        "metaphysics",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "platforms",
+        "kreature"
+      ],
+      "primarySection": "platforms",
+      "_source_catalog": "inventory.audio.catalog.json"
+    },
+    {
+      "title": "King Klown Kronicles V1",
+      "url": "https://open.spotify.com/episode/1WlslWu5iqn9H2lB0SOqsy",
+      "description": "Chronique fictionnelle de la métamorphose : Réjean découvre Pi comme « blague cosmique », franchit le seuil du théâtre de la transformation et devient King Klown. L’univers se révèle performance, tandis que Konnaxion et Orgo basculent vers la résonance, la synchronicité et l’éveil symbolique.",
+      "type": "spotify_podcast",
+      "language": null,
+      "id": "spotify_podcast-king-klown-kronicles-v1-3aa0b3aa",
+      "platform": "spotify",
+      "embed": {
+        "provider": "spotify",
+        "kind": "episode",
+        "id": "1WlslWu5iqn9H2lB0SOqsy"
+      },
+      "topics": [
+        "audio_book",
+        "art_creativity",
+        "governance",
+        "infrastructure",
+        "king_klown",
+        "konnaxion",
+        "metaphysics",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "platforms",
+        "kreature"
+      ],
+      "primarySection": "platforms",
+      "_source_catalog": "inventory.audio.catalog.json"
+    },
+    {
+      "title": "Les Mystères de Pi",
+      "url": "https://open.spotify.com/episode/4k1HuQerI8SZPrpQYEZ50R",
+      "description": "Voyage à travers l’histoire et les mythes de π : des premières civilisations aux lectures métaphysiques, Pi devient pont entre l’infini et le concret. King Klown apparaît comme trickster cosmique, gardien des synchronicités et des résonances qui relient les mondes possibles.",
+      "type": "spotify_podcast",
+      "language": "fr",
+      "id": "spotify_podcast-les-myst-res-de-pi-94be683e",
+      "platform": "spotify",
+      "embed": {
+        "provider": "spotify",
+        "kind": "episode",
+        "id": "4k1HuQerI8SZPrpQYEZ50R"
+      },
+      "topics": [
+        "art_creativity",
+        "audio_book",
+        "king_klown",
+        "metaphysics"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "research",
+        "kreature"
+      ],
+      "primarySection": "research",
+      "_source_catalog": "inventory.audio.catalog.json"
+    },
+    {
+      "title": "Livre La Plateforme de la Connaissance",
+      "url": "https://open.spotify.com/episode/52YomgJloKFLMMFtEyj2wr",
+      "description": "Vision d’une plateforme globale de savoir, collaborative et ouverte, conçue pour former et outiller face aux défis futurs (climat, inégalités, crises). La connaissance y sert l’action : éthique, inclusion, durabilité et co-création à l’échelle mondiale.",
+      "type": "spotify_podcast",
+      "language": "fr",
+      "id": "spotify_podcast-livre-la-plateforme-de-la-connaissance-8b55e255",
+      "platform": "spotify",
+      "embed": {
+        "provider": "spotify",
+        "kind": "episode",
+        "id": "52YomgJloKFLMMFtEyj2wr"
+      },
+      "topics": [
+        "art_creativity",
+        "audio_book",
+        "governance",
+        "infrastructure",
+        "king_klown",
+        "konnaxion",
+        "metaphysics",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "kreature"
+      ],
+      "primarySection": "kreature",
+      "_source_catalog": "inventory.audio.catalog.json"
+    },
+    {
+      "title": "Le Ninja Arc-en-Ciel",
+      "url": "https://soundcloud.com/rejean-mccormick/sets/ninja_arc-en-ciel",
+      "description": "Playlist/album (SoundCloud set). Contains tracks including: « Chanson 1 _ Le Départ », « Chanson 2 _ Pensée Nuancée », « Chanson 3 _ Parole Juste », « Chanson 4 _ Limites Claires », « Chanson 5 _ L'Ennemi Devenu Allié ».",
+      "type": "soundcloud_set",
+      "language": "fr",
+      "id": "soundcloud_set-le-ninja-arc-en-ciel-3a9b3c2f",
+      "platform": "soundcloud",
+      "embed": {
+        "provider": "soundcloud",
+        "kind": "set",
+        "id": "rejean-mccormick/sets/ninja_arc-en-ciel"
+      },
+      "topics": [
+        "music_and_videos",
+        "art_creativity"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "kreature"
+      ],
+      "primarySection": "kreature",
+      "_source_catalog": "inventory.audio.catalog.json"
+    },
+    {
+      "title": "Lumière Blanche",
+      "url": "https://soundcloud.com/rejean-mccormick/sets/lumiere_blanche",
+      "description": "Playlist/album (SoundCloud set). Contains tracks including: « 1- Écho de Lumière », « 2- Kin City », « 3- Quête de reconnaissance », « 4- Le sens du moi », « 5- Aumia _ Point de Fusion ».",
+      "type": "soundcloud_set",
+      "language": "fr",
+      "id": "soundcloud_set-lumiere-blanche-0f4e55b1",
+      "platform": "soundcloud",
+      "embed": {
+        "provider": "soundcloud",
+        "kind": "set",
+        "id": "rejean-mccormick/sets/lumiere_blanche"
+      },
+      "topics": [
+        "music_and_videos",
+        "art_creativity"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "sections": [
+        "kreature"
+      ],
+      "primarySection": "kreature",
+      "_source_catalog": "inventory.audio.catalog.json"
+    },
+    {
+      "title": "Le Rire Cosmique",
+      "url": "https://soundcloud.com/rejean-mccormick/sets/le-rire-cosmique",
+      "description": "Album rock théâtral en 12 chansons (FR) inspiré par l’univers symbolique et engagé de King Klown : naissance et éveil d’un clown-roi, transformation personnelle, révolution pacifique, intelligence collective et résilience sociale. Relié à l’esprit du projet « Konnaxion » (imagination, empathie, technologie éthique).",
+      "type": "soundcloud_set",
+      "language": "fr",
+      "id": "soundcloud_set-le-rire-cosmique-7b2e3cf9",
+      "platform": "soundcloud",
+      "embed": {
+        "provider": "soundcloud",
+        "kind": "set",
+        "id": "rejean-mccormick/sets/le-rire-cosmique"
+      },
+      "topics": [
+        "music_and_videos",
+        "art_creativity",
+        "king_klown",
+        "konnaxion",
+        "sociotechnical_os(koa_digital_ecosystem)",
+        "peace_and_efficiency",
+        "social_cohesion",
+        "governance",
+        "metaphysics"
+      ],
+      "level": "intermediate",
+      "featured": true,
+      "sections": [
+        "kreature"
+      ],
+      "primarySection": "kreature",
+      "_source_catalog": "inventory.audio.catalog.json"
+    },
+    {
+      "title": "Rejean-McCormick — Repositories",
+      "url": "https://github.com/Rejean-McCormick?tab=repositories",
+      "description": "GitHub profile and repositories list. Bio highlights modular socio-technical systems focused on civic tech, open collaboration, and merit-based governance.",
+      "type": "github_wiki",
+      "language": "en",
+      "id": "github_wiki-rejean-mccormick-repositories-834823c0",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "rejean_mccormick"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "_source_catalog": "inventory.code-tech.catalog.json"
+    },
+    {
+      "title": "π Cosmology: The Blueprint Engine",
+      "url": "https://github.com/Rejean-McCormick/Ame-Artificielle/wiki",
+      "description": "Preuve de concept explorant l’hypothèse d’une structure mathématique et géométrique fondamentale encodée dans π; utilise la séquence de π comme carte topologique (« sillon ») pour permettre à une IA de naviguer entre discret (nombres) et continu (réalité émergente). Inclut des spécifications du moteur EL (contrôle de personnalité, méta-cognition, éthique/gouvernance).",
+      "type": "github_wiki",
+      "language": "fr",
+      "id": "github_wiki-pi-cosmology-the-blueprint-engine-4c116c67",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "metaphysics"
+      ],
+      "level": "expert",
+      "featured": false,
+      "_source_catalog": "inventory.code-tech.catalog.json"
+    },
+    {
+      "title": "Koa Digital Ecosystem",
+      "url": "https://github.com/Rejean-McCormick/kOA_Digital_Ecosystem/wiki",
+      "description": "A contract-driven knowledge system that converts raw inputs into immutable, canonical truth artifacts (Kristal Exchange) and portable runtime packs, with deterministic rendering, governed execution, and strict auditability.",
+      "type": "github_wiki",
+      "language": "en",
+      "id": "github_wiki-koa-digital-ecosystem-5d7f3bba",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "data_sovereignty",
+        "ekoh_smart_vote(merit_weighted_voting)",
+        "governance",
+        "infrastructure",
+        "konnaxion",
+        "kristal(semantic_data)",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": true,
+      "_source_catalog": "inventory.code-tech.catalog.json"
+    },
+    {
+      "title": "Kristal Framework",
+      "url": "https://github.com/Rejean-McCormick/kristal-framework/wiki",
+      "description": "Modular framework for defining, compiling, validating, and versioning Kristals (knowledge artifacts used by AI systems like Sentient), based on an enhanced Wikibase format with offline usage, entity linking, and provenance traceability.",
+      "type": "github_wiki",
+      "language": "en",
+      "id": "github_wiki-kristal-framework-594b254f",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "natural_language_generation",
+        "data_sovereignty",
+        "infrastructure",
+        "kristal(semantic_data)",
+        "orgo",
+        "peace_and_efficiency",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": true,
+      "_source_catalog": "inventory.code-tech.catalog.json"
+    },
+    {
+      "title": "Konnaxion — Civic Workflows & Module Interactions",
+      "url": "https://github.com/Rejean-McCormick/Konnaxion/wiki",
+      "description": "Socio-technical framework for coordinating people, knowledge, and action through an ethical, modular civic architecture built on the KOA model (KonnectED, Ethikos, Kreative, keenKonnect, EkoH, Smart Vote).",
+      "type": "github_wiki",
+      "language": "en",
+      "id": "github_wiki-konnaxion-civic-workflows-module-interactions-c48c5025",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "data_sovereignty",
+        "governance",
+        "infrastructure",
+        "konnaxion",
+        "peace_and_efficiency",
+        "ekoh_smart_vote(merit_weighted_voting)",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": true,
+      "_source_catalog": "inventory.code-tech.catalog.json"
+    },
+    {
+      "title": "SemantiK Architect",
+      "url": "https://github.com/Rejean-McCormick/SemantiK_Architect",
+      "description": "Industrial-grade data-driven NLG system for Abstract Wikipedia, Wikifunctions, and standalone API use, built around a modular Python backend, GF grammar assets, language-specific schema/config data, and a separate Next.js frontend.",
+      "type": "github_repository",
+      "language": "en",
+      "id": "github_repository-semantik-architect",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "semantik_architect",
+        "abstract_wikipedia",
+        "wikifunctions",
+        "natural_language_generation",
+        "gf",
+        "pgf",
+        "semantic_frames",
+        "language_generation",
+        "infrastructure"
+      ],
+      "level": "expert",
+      "featured": false,
+      "_source_catalog": "inventory.code-tech.catalog.json"
+    },
+    {
+      "title": "GF Zone Auditor",
+      "url": "https://github.com/Rejean-McCormick/SemantiK-Architect-GF-Zone-Auditor",
+      "description": "Project-level audit tool for GF grammars and SemantiK grammar-surface verification. It scans GF source files, optionally compiles them with gf.exe, classifies failures, separates scan findings from compile failures, and produces AI-ready debugging reports.",
+      "type": "github_repository",
+      "language": "en",
+      "id": "github_repository-gf-zone-auditor",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "gf",
+        "gf_audit",
+        "grammar_surface",
+        "grammar_auditing",
+        "compile_diagnostics",
+        "language_auditing",
+        "ai_ready_reports",
+        "infrastructure"
+      ],
+      "level": "expert",
+      "featured": false,
+      "_source_catalog": "inventory.code-tech.catalog.json"
+    },
+    {
+      "title": "VM-ENGINE v0 — Voting Machine",
+      "url": "https://github.com/Rejean-McCormick/VotingMachine/wiki",
+      "description": "Offline-by-default voting/tabulation engine implementing deterministic allocation with explicit gates and frontier handling; produces canonical artifacts and is verified by a normative test pack, aiming for byte-identical outputs given the same inputs.",
+      "type": "github_wiki",
+      "language": "en",
+      "id": "github_wiki-vm-engine-v0-voting-machine-2db885f0",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "natural_language_generation",
+        "governance",
+        "infrastructure",
+        "peace_and_efficiency"
+      ],
+      "level": "expert",
+      "featured": false,
+      "_source_catalog": "inventory.code-tech.catalog.json"
+    },
+    {
+      "title": "Orgo System Overview",
+      "url": "https://github.com/Rejean-McCormick/Orgo/wiki",
+      "description": "Conceptual and technical map of the Orgo platform, positioned as a multi-tenant “nervous system” for organizations, distinct from standard ticketing systems or CRMs.",
+      "type": "github_wiki",
+      "language": "en",
+      "id": "github_wiki-orgo-system-overview-79bf161f",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "data_sovereignty",
+        "governance",
+        "infrastructure",
+        "orgo",
+        "peace_and_efficiency",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "large_public",
+      "featured": false,
+      "_source_catalog": "inventory.code-tech.catalog.json"
+    },
+    {
+      "title": "SenTient",
+      "url": "https://github.com/Rejean-McCormick/SenTient/wiki",
+      "description": "Tool to deconstruct language and format it for Wikidata, inspired by Falcon 2.0, OpenRefine, and OpenTapioca.",
+      "type": "github_wiki",
+      "language": "en",
+      "id": "github_wiki-sentient-40ce02fd",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "data_sovereignty",
+        "infrastructure",
+        "konnaxion",
+        "kristal(semantic_data)",
+        "natural_language_generation",
+        "orgo"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "_source_catalog": "inventory.code-tech.catalog.json"
+    },
+    {
+      "title": "Freeze → Vote → Rebuild (Operational Peace Framework)",
+      "url": "https://github.com/Rejean-McCormick/Freeze-Vote-Rebuild_Operational-Peace-Framework",
+      "description": "Verification-first, status-neutral peace framework for Ukraine: Freeze → Vote → Rebuild, with gates, legal pathways, risks, and an implementation toolkit; includes an optional Cultural Bridge Track (Ukrainian language worldwide + curated Russian literature).",
+      "type": "github_wiki",
+      "language": "en",
+      "id": "github_wiki-freeze-vote-rebuild-operational-peace-framework-a3848122",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "governance",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "rejean_mccormick",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false,
+      "_source_catalog": "inventory.code-tech.catalog.json"
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "schemaVersion": "1.1",
+  "generatedAt": "2026-02-13T18:30:21.046Z",
+  "taxonomyRef": "inventory.root.json",
+  "items": [
+    {
+      "title": "Rejean-McCormick — Repositories",
+      "url": "https://github.com/Rejean-McCormick?tab=repositories",
+      "description": "GitHub profile and repositories list. Bio highlights modular socio-technical systems focused on civic tech, open collaboration, and merit-based governance.",
+      "type": "github_wiki",
+      "language": "en",
+      "id": "github_wiki-rejean-mccormick-repositories-834823c0",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "rejean_mccormick"
+      ],
+      "level": "intermediate",
+      "featured": false
+    },
+    {
+      "title": "π Cosmology: The Blueprint Engine",
+      "url": "https://github.com/Rejean-McCormick/Ame-Artificielle/wiki",
+      "description": "Preuve de concept explorant l’hypothèse d’une structure mathématique et géométrique fondamentale encodée dans π; utilise la séquence de π comme carte topologique (« sillon ») pour permettre à une IA de naviguer entre discret (nombres) et continu (réalité émergente). Inclut des spécifications du moteur EL (contrôle de personnalité, méta-cognition, éthique/gouvernance).",
+      "type": "github_wiki",
+      "language": "fr",
+      "id": "github_wiki-pi-cosmology-the-blueprint-engine-4c116c67",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "metaphysics"
+      ],
+      "level": "expert",
+      "featured": false
+    },
+    {
+      "title": "Koa Digital Ecosystem",
+      "url": "https://github.com/Rejean-McCormick/kOA_Digital_Ecosystem/wiki",
+      "description": "A contract-driven knowledge system that converts raw inputs into immutable, canonical truth artifacts (Kristal Exchange) and portable runtime packs, with deterministic rendering, governed execution, and strict auditability.",
+      "type": "github_wiki",
+      "language": "en",
+      "id": "github_wiki-koa-digital-ecosystem-5d7f3bba",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "data_sovereignty",
+        "ekoh_smart_vote(merit_weighted_voting)",
+        "governance",
+        "infrastructure",
+        "konnaxion",
+        "kristal(semantic_data)",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": true
+    },
+    {
+      "title": "Kristal Framework",
+      "url": "https://github.com/Rejean-McCormick/kristal-framework/wiki",
+      "description": "Modular framework for defining, compiling, validating, and versioning Kristals (knowledge artifacts used by AI systems like Sentient), based on an enhanced Wikibase format with offline usage, entity linking, and provenance traceability.",
+      "type": "github_wiki",
+      "language": "en",
+      "id": "github_wiki-kristal-framework-594b254f",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "natural_language_generation",
+        "data_sovereignty",
+        "infrastructure",
+        "kristal(semantic_data)",
+        "orgo",
+        "peace_and_efficiency",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": true
+    },
+    {
+      "title": "Konnaxion — Civic Workflows & Module Interactions",
+      "url": "https://github.com/Rejean-McCormick/Konnaxion/wiki",
+      "description": "Socio-technical framework for coordinating people, knowledge, and action through an ethical, modular civic architecture built on the KOA model (KonnectED, Ethikos, Kreative, keenKonnect, EkoH, Smart Vote).",
+      "type": "github_wiki",
+      "language": "en",
+      "id": "github_wiki-konnaxion-civic-workflows-module-interactions-c48c5025",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "data_sovereignty",
+        "governance",
+        "infrastructure",
+        "konnaxion",
+        "peace_and_efficiency",
+        "ekoh_smart_vote(merit_weighted_voting)",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "intermediate",
+      "featured": true
+    },
+    {
+      "title": "SemantiK Architect",
+      "url": "https://github.com/Rejean-McCormick/SemantiK_Architect",
+      "description": "Industrial-grade data-driven NLG system for Abstract Wikipedia, Wikifunctions, and standalone API use, built around a modular Python backend, GF grammar assets, language-specific schema/config data, and a separate Next.js frontend.",
+      "type": "github_repository",
+      "language": "en",
+      "id": "github_repository-semantik-architect",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "semantik_architect",
+        "abstract_wikipedia",
+        "wikifunctions",
+        "natural_language_generation",
+        "gf",
+        "pgf",
+        "semantic_frames",
+        "language_generation",
+        "infrastructure"
+      ],
+      "level": "expert",
+      "featured": false
+    },
+    {
+      "title": "GF Zone Auditor",
+      "url": "https://github.com/Rejean-McCormick/SemantiK-Architect-GF-Zone-Auditor",
+      "description": "Project-level audit tool for GF grammars and SemantiK grammar-surface verification. It scans GF source files, optionally compiles them with gf.exe, classifies failures, separates scan findings from compile failures, and produces AI-ready debugging reports.",
+      "type": "github_repository",
+      "language": "en",
+      "id": "github_repository-gf-zone-auditor",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "gf",
+        "gf_audit",
+        "grammar_surface",
+        "grammar_auditing",
+        "compile_diagnostics",
+        "language_auditing",
+        "ai_ready_reports",
+        "infrastructure"
+      ],
+      "level": "expert",
+      "featured": false
+    },
+    {
+      "title": "VM-ENGINE v0 — Voting Machine",
+      "url": "https://github.com/Rejean-McCormick/VotingMachine/wiki",
+      "description": "Offline-by-default voting/tabulation engine implementing deterministic allocation with explicit gates and frontier handling; produces canonical artifacts and is verified by a normative test pack, aiming for byte-identical outputs given the same inputs.",
+      "type": "github_wiki",
+      "language": "en",
+      "id": "github_wiki-vm-engine-v0-voting-machine-2db885f0",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "academic_paper_and_article",
+        "natural_language_generation",
+        "governance",
+        "infrastructure",
+        "peace_and_efficiency"
+      ],
+      "level": "expert",
+      "featured": false
+    },
+    {
+      "title": "Orgo System Overview",
+      "url": "https://github.com/Rejean-McCormick/Orgo/wiki",
+      "description": "Conceptual and technical map of the Orgo platform, positioned as a multi-tenant “nervous system” for organizations, distinct from standard ticketing systems or CRMs.",
+      "type": "github_wiki",
+      "language": "en",
+      "id": "github_wiki-orgo-system-overview-79bf161f",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "data_sovereignty",
+        "governance",
+        "infrastructure",
+        "orgo",
+        "peace_and_efficiency",
+        "social_cohesion",
+        "sociotechnical_os(koa_digital_ecosystem)"
+      ],
+      "level": "large_public",
+      "featured": false
+    },
+    {
+      "title": "SenTient",
+      "url": "https://github.com/Rejean-McCormick/SenTient/wiki",
+      "description": "Tool to deconstruct language and format it for Wikidata, inspired by Falcon 2.0, OpenRefine, and OpenTapioca.",
+      "type": "github_wiki",
+      "language": "en",
+      "id": "github_wiki-sentient-40ce02fd",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "data_sovereignty",
+        "infrastructure",
+        "konnaxion",
+        "kristal(semantic_data)",
+        "natural_language_generation",
+        "orgo"
+      ],
+      "level": "intermediate",
+      "featured": false
+    },
+    {
+      "title": "Freeze → Vote → Rebuild (Operational Peace Framework)",
+      "url": "https://github.com/Rejean-McCormick/Freeze-Vote-Rebuild_Operational-Peace-Framework",
+      "description": "Verification-first, status-neutral peace framework for Ukraine: Freeze → Vote → Rebuild, with gates, legal pathways, risks, and an implementation toolkit; includes an optional Cultural Bridge Track (Ukrainian language worldwide + curated Russian literature).",
+      "type": "github_wiki",
+      "language": "en",
+      "id": "github_wiki-freeze-vote-rebuild-operational-peace-framework-a3848122",
+      "platform": "github",
+      "embed": null,
+      "topics": [
+        "governance",
+        "orgo",
+        "peace_and_efficiency",
+        "philanthropy",
+        "rejean_mccormick",
+        "social_cohesion"
+      ],
+      "level": "intermediate",
+      "featured": false
+    }
+  ]
+}

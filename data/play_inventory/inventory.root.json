@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "1.1",
+  "generatedAt": "2026-02-13T00:00:00Z",
+  "taxonomies": {
+    "languages": ["en", "fr"],
+
+    "levels": ["large_public", "intermediate", "expert"],
+    "level_labels": {
+      "large_public": { "en": "General public", "fr": "Grand public" },
+      "intermediate": { "en": "Intermediate", "fr": "Intermédiaire" },
+      "expert": { "en": "Expert", "fr": "Expert" }
+    },
+
+    "types": [
+      "youtube_video",
+      "medium_article",
+      "wiki_article",
+      "github_wiki",
+      "audio",
+      "pdf_document",
+      "print_book"
+    ],
+    "type_labels": {
+      "youtube_video": { "en": "YouTube", "fr": "YouTube" },
+      "medium_article": { "en": "Medium article", "fr": "Article sur Medium" },
+      "wiki_article": { "en": "Wiki", "fr": "Wiki" },
+      "github_wiki": { "en": "GitHub Wiki", "fr": "Wiki GitHub" },
+      "audio": { "en": "Audio", "fr": "Audio" },
+      "pdf_document": { "en": "PDF", "fr": "PDF" },
+      "print_book": { "en": "Print book", "fr": "Livre imprimé" }
+    },
+
+    "platforms": [
+      "youtube",
+      "medium",
+      "wiki",
+      "github",
+      "local",
+      "amazon_print",
+      "spotify_podcast",
+      "soundcloud",
+      "philpapers"
+    ],
+    "platform_labels": {
+      "youtube": { "en": "YouTube", "fr": "YouTube" },
+      "medium": { "en": "Medium", "fr": "Medium" },
+      "wiki": { "en": "Website", "fr": "Site web" },
+      "github": { "en": "GitHub", "fr": "GitHub" },
+      "local": { "en": "Local file", "fr": "Fichier local" },
+
+      "amazon_print": { "en": "Amazon (Print)", "fr": "Amazon (imprimé)" },
+      "spotify_podcast": { "en": "Spotify (Podcast)", "fr": "Spotify (balado)" },
+      "soundcloud": { "en": "SoundCloud", "fr": "SoundCloud" },
+      "philpapers": { "en": "PhilPapers", "fr": "PhilPapers" }
+    },
+
+    "topics": [
+      "academic_paper_and_article",
+      "king_klown",
+      "audio_book",
+      "art_creativity",
+      "data_sovereignty",
+      "ekoh_smart_vote(merit_weighted_voting)",
+      "governance",
+      "kristal_farms(green_ai)",
+      "infrastructure",
+      "social_cohesion",
+      "konnaxion",
+      "kristal(semantic_data)",
+      "music_and_videos",
+      "natural_language_generation",
+      "orgo",
+      "peace_and_efficiency",
+      "philanthropy",
+      "sociotechnical_os(koa_digital_ecosystem)",
+      "rejean_mccormick",
+      "metaphysics"
+    ],
+
+    "topic_labels": {
+      "academic_paper_and_article": { "en": "Academic papers & articles", "fr": "Articles & publications" },
+      "king_klown": { "en": "King Klown", "fr": "Roi Klown" },
+      "audio_book": { "en": "Audiobook", "fr": "Livre audio" },
+      "art_creativity": { "en": "Art and Creativity", "fr": "Art et créativité" },
+      "data_sovereignty": { "en": "Data sovereignty", "fr": "Souveraineté des données" },
+      "ekoh_smart_vote(merit_weighted_voting)": { "en": "Ekoh / SmartVote (merit-weighted voting)", "fr": "Ekoh / SmartVote (vote pondéré par le mérite)" },
+      "governance": { "en": "Governance", "fr": "Gouvernance" },
+      "kristal_farms(green_ai)": { "en": "Kristal Farms (green AI)", "fr": "Kristal Farms (IA verte)" },
+      "infrastructure": { "en": "Infrastructure", "fr": "Infrastructures" },
+      "social_cohesion": { "en": "Social cohesion", "fr": "Cohésion sociale" },
+      "konnaxion": { "en": "Konnaxion", "fr": "Konnaxion" },
+      "kristal(semantic_data)": { "en": "Kristal (semantic data)", "fr": "Kristal (données sémantiques)" },
+      "music_and_videos": { "en": "Music & videos", "fr": "Musique & vidéos" },
+      "natural_language_generation": { "en": "Natural language generation", "fr": "Génération de langage naturel" },
+      "orgo": { "en": "Orgo", "fr": "Orgo" },
+      "peace_and_efficiency": { "en": "Peace & efficiency", "fr": "Paix & efficacité" },
+      "philanthropy": { "en": "Philanthropy", "fr": "Philanthropie" },
+      "sociotechnical_os(koa_digital_ecosystem)": {
+        "en": "Sociotechnical OS (kOA digital ecosystem)",
+        "fr": "OS sociotechnique (écosystème numérique kOA)"
+      },
+      "rejean_mccormick": { "en": "Réjean McCormick", "fr": "Réjean McCormick" },
+      "metaphysics": { "en": "Metaphysics", "fr": "Métaphysique" }
+    }
+  }
+}
