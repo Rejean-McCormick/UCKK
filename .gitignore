@@ -4,6 +4,8 @@
 # Temporary backups created during manual server/theme edits
 *.bak
 *.bak-*
+*.bak_*
+*.bak.*
 *.backup
 *.orig
 
@@ -20,8 +22,8 @@ desktop.ini
 *.patch
 *.rej
 *.tmp
-*.temp
-GitSink.bat
+*.temp
+GitSink.bat
 /SmartSnap.pyw
 
 # SecurityDiag evidence and local security state
@@ -45,3 +47,19 @@ id_ed25519
 # Local credentials / host pinning
 known_hosts.local
 *.secrets.json
+
+# Additional transient artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.log
+*.backup-*
+*.backup_*
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+Desktop.ini

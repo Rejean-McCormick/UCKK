@@ -1,0 +1,52 @@
+name: Static sanity
+
+on:
+  push:
+    paths:
+      - "**/*.php"
+      - "**/*.js"
+      - "**/*.json"
+      - "**/*.py"
+      - ".gitignore"
+      - ".github/workflows/static-sanity.yml"
+      - "tools/ci_static_check.py"
+  pull_request:
+    paths:
+      - "**/*.php"
+      - "**/*.js"
+      - "**/*.json"
+      - "**/*.py"
+      - ".gitignore"
+      - ".github/workflows/static-sanity.yml"
+      - "tools/ci_static_check.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: static-sanity-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Tool versions
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v php >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y php-cli
+          fi
+          php -v | head -n 2
+          node --version
+          python3 --version
+
+      - name: PHP, JavaScript, Python and JSON sanity
+        run: python3 tools/ci_static_check.py
