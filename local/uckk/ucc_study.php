@@ -10,9 +10,8 @@ use local_uckk\local\atlas\ucc_curriculum_registry as curriculum;
 use local_uckk\local\atlas\ucc_mediatheque_registry as media;
 use local_uckk\local\atlas\ucc_syllabus_registry as syllabi;
 
-if (!empty($CFG->forcelogin)) {
-    require_login();
-}
+// This controller is intentionally public, even when Moodle's global
+// forcelogin setting is enabled. It exposes read-only canonical/public content only.
 $courseid = strtoupper(optional_param('course', '', PARAM_ALPHANUMEXT));
 $view = optional_param('view', 'courses', PARAM_ALPHA);
 $query = optional_param('q', '', PARAM_TEXT);

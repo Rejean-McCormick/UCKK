@@ -25,7 +25,6 @@
 
 namespace local_uckk\local\public_pages\ucc;
 
-use moodle_url;
 use local_uckk\local\atlas\ucc_curriculum_registry;
 use local_uckk\local\atlas\ucc_legacy_resolver;
 
@@ -164,44 +163,10 @@ final class programs {
      * @return array<int, array<string, mixed>>
      */
     private static function program_cards(string $status): array {
-        global $CFG, $DB;
-
-        // Canonical Atlas pathways are the public source of truth. Moodle program
-        // records are used only to discover an optional visible course-category URL.
-        $categoryurls = [];
-
-        if (isset($CFG) && isset($DB)) {
-            if (!class_exists('xmldb_table')) {
-                require_once($CFG->libdir . '/xmldb/xmldb_object.php');
-            }
-
-            if ($DB->get_manager()->table_exists(new \xmldb_table('local_uckk_program'))) {
-                $records = $DB->get_records_sql("
-                    SELECT p.shortname, p.fullname, p.status, p.categoryid,
-                           c.name AS categoryname, c.idnumber AS categoryidnumber, c.visible AS categoryvisible
-                      FROM {local_uckk_program} p
-                 LEFT JOIN {course_categories} c ON c.id = p.categoryid
-                     WHERE p.status = :status
-                ", ['status' => $status]);
-
-                foreach ($records as $record) {
-                    $pathwayid = self::canonical_pathway_id_from_identifiers(
-                        trim((string)($record->shortname ?? '')),
-                        trim((string)($record->categoryidnumber ?? ''))
-                    );
-                    if ($pathwayid === '') {
-                        continue;
-                    }
-                    $categoryid = (int)($record->categoryid ?? 0);
-                    $categoryvisible = (int)($record->categoryvisible ?? 0);
-                    if ($categoryid > 0 && $categoryvisible === 1) {
-                        $categoryurls[$pathwayid] = (new moodle_url('/local/uckk/courses.php', [
-                            'categoryid' => $categoryid,
-                        ]))->out(false);
-                    }
-                }
-            }
-        }
+        // The public Voies page is driven by the canonical Atlas registry.
+        // $status is retained in the signature for compatibility with the previous
+        // database-backed implementation; canonical public pathways are all rendered.
+        unset($status);
 
         $cards = [];
         foreach (ucc_curriculum_registry::pathways() as $pathway) {
@@ -218,13 +183,13 @@ final class programs {
                 $body .= ' ' . $coursecount . ' cours canoniques sont rattachés à cette Voie.';
             }
 
-            $url = $categoryurls[$pathwayid] ?? (new moodle_url('/local/uckk/courses.php'))->out(false);
+            $url = ucc_pathway::url_for_pathway($pathwayid)->out(false);
             $cards[] = [
                 'eyebrow' => $publicidentity['eyebrow'],
                 'title' => $publicidentity['title'],
                 'body' => $body,
                 'url' => $url,
-                'actionlabel' => isset($categoryurls[$pathwayid]) ? 'Accéder aux cours' : 'Explorer les cours',
+                'actionlabel' => 'Découvrir la Voie',
                 'type' => $publicidentity['type'],
                 'classes' => self::program_card_classes($publicidentity['type'], $signature),
             ];

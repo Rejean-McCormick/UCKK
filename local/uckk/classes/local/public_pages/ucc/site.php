@@ -50,6 +50,7 @@ final class site {
             'method' => 'Méthode éditoriale — Univers-Cité chrétienne',
             'transparency' => 'Transparence — Univers-Cité chrétienne',
             'programs' => 'Voies UCC',
+            'ucc_pathway' => 'Voie UCC — Univers-Cité chrétienne',
             'courses' => 'Cours UCC',
             'challenges' => 'Défis UCC',
             'assemblies' => 'Assemblées UCC',
