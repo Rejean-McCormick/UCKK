@@ -55,8 +55,9 @@ class core_renderer extends \theme_boost\output\core_renderer {
     /**
      * Add theme-specific footer requirements.
      *
-     * This override queues the login background selector before Moodle prints
-     * standard footer JavaScript. The module is only loaded on the login page.
+     * This override queues the ambient background selector before Moodle
+     * prints standard footer JavaScript. The module is limited to the login
+     * screen and the public UCKK home page.
      *
      * @return string Standard end-of-body HTML.
      */
@@ -461,12 +462,12 @@ class core_renderer extends \theme_boost\output\core_renderer {
     }
 
     /**
-     * Queue the time-aware login background module when rendering the login page.
+     * Queue the location-aware ambient background module.
      *
-     * Image URLs come from Moodle theme stored files, not from hardcoded pix
-     * paths. This preserves the existing loginbackground setting as a fallback
-     * and allows the new day/between/night fileareas to be configured in the
-     * theme settings.
+     * The same day / between / night image bank can drive both the Moodle
+     * login visual and the public UCKK home hero. Browser geolocation is used
+     * when the visitor grants access; otherwise the configured institutional
+     * coordinates remain the fallback.
      *
      * @return void
      */
@@ -477,11 +478,19 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         $this->uckkloginbackgroundinitialised = true;
 
-        if (!$this->is_uckk_login_page()) {
+        $context = null;
+
+        if ($this->is_uckk_login_page()) {
+            $context = 'login';
+        } elseif ($this->is_uckk_public_home_page()) {
+            $context = 'home';
+        }
+
+        if ($context === null) {
             return;
         }
 
-        $config = $this->get_login_background_config();
+        $config = $this->get_login_background_config($context);
 
         if (empty($config['images']['day'])
                 && empty($config['images']['between'])
@@ -506,16 +515,46 @@ class core_renderer extends \theme_boost\output\core_renderer {
     }
 
     /**
-     * Build the login background AMD configuration.
+     * Determine whether the current page is the public UCKK home.
      *
+     * This covers both Moodle's root frontpage adapter and the canonical
+     * /local/uckk/index.php public home controller.
+     *
+     * @return bool
+     */
+    protected function is_uckk_public_home_page(): bool {
+        $pagelayout = $this->page->pagelayout ?? '';
+
+        if ($pagelayout === 'frontpage') {
+            return true;
+        }
+
+        if ($pagelayout !== 'local_uckk_public' || empty($this->page->url)) {
+            return false;
+        }
+
+        $path = $this->page->url->get_path();
+
+        return is_string($path) && preg_match('~/local/uckk/index\.php$~', $path) === 1;
+    }
+
+    /**
+     * Build the ambient background AMD configuration.
+     *
+     * @param string $context Either "login" or "home".
      * @return array<string, mixed>
      */
-    protected function get_login_background_config(): array {
-        $fallback = $this->get_theme_setting_file_url('loginbackground');
+    protected function get_login_background_config(string $context = 'login'): array {
+        $loginfallback = $this->get_theme_setting_file_url('loginbackground');
+        $frontpagefallback = $this->get_theme_setting_file_url('frontpagebackground');
 
         $day = $this->get_theme_setting_file_url('loginbackgroundday');
         $between = $this->get_theme_setting_file_url('loginbackgroundbetween');
         $night = $this->get_theme_setting_file_url('loginbackgroundnight');
+
+        $fallback = $context === 'home'
+            ? ($frontpagefallback !== '' ? $frontpagefallback : $loginfallback)
+            : $loginfallback;
 
         if ($day === '') {
             $day = $fallback;
@@ -530,17 +569,30 @@ class core_renderer extends \theme_boost\output\core_renderer {
         }
 
         return [
-            'selector' => '.login-layout-left',
+            'context' => $context,
+            'selector' => $context === 'home'
+                ? '.local-uckk-public-page--home .local-uckk-public-hero'
+                : '.login-layout-left',
             'images' => [
                 'day' => $day,
                 'between' => $between,
                 'night' => $night,
             ],
             'fallback' => $fallback,
+            'refreshminutes' => 5,
             'solar' => [
+                'usegeolocation' => true,
+                'geolocationtimeoutms' => 5000,
+                'geolocationmaximumagems' => 900000,
                 'latitude' => $this->get_float_theme_config('loginbackgroundlatitude', 45.5017),
                 'longitude' => $this->get_float_theme_config('loginbackgroundlongitude', -73.5673),
                 'twilightminutes' => $this->get_int_theme_config('loginbackgroundtwilightminutes', 60),
+            ],
+            'fallbackWindows' => [
+                'morningBetweenStart' => '06:00',
+                'dayStart' => '07:00',
+                'eveningBetweenStart' => '18:00',
+                'nightStart' => '19:00',
             ],
         ];
     }

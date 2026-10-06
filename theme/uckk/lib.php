@@ -525,13 +525,15 @@ function theme_uckk_get_login_background_urls(): array {
 /**
  * Return login background configuration for the AMD module.
  *
- * The location is intentionally institutional, not user-specific. No browser
- * geolocation permission and no IP geolocation are required.
+ * Browser geolocation is preferred when the visitor grants permission. The
+ * institutional coordinates below are used only as a privacy-preserving
+ * fallback when geolocation is unavailable or denied.
  *
  * @return array<string, mixed>
  */
 function theme_uckk_get_login_background_config(): array {
     return [
+        'context' => 'login',
         'images' => theme_uckk_get_login_background_urls(),
         'targetSelector' => '.login-layout-left',
         'periodClasses' => [
@@ -539,7 +541,11 @@ function theme_uckk_get_login_background_config(): array {
             'between' => 'theme-uckk-login-background--between',
             'night' => 'theme-uckk-login-background--night',
         ],
+        'refreshMinutes' => 5,
         'solar' => [
+            'useGeolocation' => true,
+            'geolocationTimeoutMs' => 5000,
+            'geolocationMaximumAgeMs' => 900000,
             'latitude' => 45.5017,
             'longitude' => -73.5673,
             'twilightMinutes' => 60,

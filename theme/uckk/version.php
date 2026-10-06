@@ -36,12 +36,12 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'theme_uckk';
 
-$plugin->version = 2026092901;
+$plugin->version = 2026100602;
 $plugin->requires = 2024042200; // Moodle 4.4.0 or later.
 $plugin->supported = [404, 503];
 
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = '1.0.4';
+$plugin->release = '1.0.6';
 
 $plugin->dependencies = [
     'local_uckk' => 2026092901,

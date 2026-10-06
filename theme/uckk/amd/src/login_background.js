@@ -6,10 +6,12 @@
 // any later version.
 
 /**
- * Time-aware login background selector for theme_uckk.
+ * Location-aware day / twilight / night background selector for theme_uckk.
  *
- * The module uses an institutional solar position supplied by PHP. It does not
- * use browser geolocation, IP geolocation, cookies, tracking, or external APIs.
+ * Browser geolocation is used when available and permitted. If geolocation is
+ * unavailable, denied, times out, or is blocked by the browser/security
+ * context, the module falls back to the institutional solar coordinates
+ * supplied by PHP. No coordinates are persisted or sent to an external API.
  *
  * Periods:
  * - night;
@@ -23,10 +25,16 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-const BODY_CLASSES = [
+const LEGACY_BODY_CLASSES = [
     'theme-uckk-login-background--day',
     'theme-uckk-login-background--between',
     'theme-uckk-login-background--night',
+];
+
+const AMBIENT_BODY_CLASSES = [
+    'theme-uckk-ambient-background--day',
+    'theme-uckk-ambient-background--between',
+    'theme-uckk-ambient-background--night',
 ];
 
 const radians = degrees => degrees * Math.PI / 180;
@@ -172,10 +180,14 @@ const fallbackPeriod = (now, windows = {}) => {
     return 'night';
 };
 
-const computePeriod = (now, config) => {
+const computePeriod = (now, config, coordinates = null) => {
     const solar = config.solar || {};
-    const latitude = Number.parseFloat(solar.latitude);
-    const longitude = Number.parseFloat(solar.longitude);
+    const latitude = coordinates && Number.isFinite(coordinates.latitude)
+        ? coordinates.latitude
+        : Number.parseFloat(solar.latitude);
+    const longitude = coordinates && Number.isFinite(coordinates.longitude)
+        ? coordinates.longitude
+        : Number.parseFloat(solar.longitude);
     const twilightMinutes = Number.parseInt(
         solar.twilightMinutes ?? solar.twilightminutes ?? 60,
         10
@@ -189,6 +201,8 @@ const computePeriod = (now, config) => {
             period: fallbackPeriod(now, config.fallbackWindows),
             sunrise: null,
             sunset: null,
+            latitude,
+            longitude,
         };
     }
 
@@ -206,11 +220,90 @@ const computePeriod = (now, config) => {
         period = 'between';
     }
 
-    return {period, sunrise, sunset};
+    return {period, sunrise, sunset, latitude, longitude};
 };
 
 const cssUrl = url => {
     return `url("${String(url).replace(/\\/g, '\\\\').replace(/"/g, '\\"')}")`;
+};
+
+const resolveGeolocation = config => new Promise(resolve => {
+    const solar = config.solar || {};
+    const geolocationEnabled = solar.useGeolocation ?? solar.usegeolocation ?? true;
+
+    if (!geolocationEnabled || !navigator.geolocation || !window.isSecureContext) {
+        resolve(null);
+        return;
+    }
+
+    const timeout = Number.parseInt(solar.geolocationTimeoutMs ?? solar.geolocationtimeoutms ?? 5000, 10);
+    const maximumAge = Number.parseInt(solar.geolocationMaximumAgeMs ?? solar.geolocationmaximumagems ?? 900000, 10);
+
+    navigator.geolocation.getCurrentPosition(
+        position => {
+            const latitude = Number.parseFloat(position.coords.latitude);
+            const longitude = Number.parseFloat(position.coords.longitude);
+
+            if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) {
+                resolve(null);
+                return;
+            }
+
+            resolve({latitude, longitude});
+        },
+        () => resolve(null),
+        {
+            enableHighAccuracy: false,
+            timeout: Number.isFinite(timeout) ? Math.max(1000, timeout) : 5000,
+            maximumAge: Number.isFinite(maximumAge) ? Math.max(0, maximumAge) : 900000,
+        }
+    );
+});
+
+const applyPeriod = (body, target, config, coordinates, locationSource) => {
+    const images = config.images || {};
+    const now = new Date();
+    const result = computePeriod(now, config, coordinates);
+    const period = result.period;
+    const image = images[period] || config.fallback || images.night || images.between || images.day || '';
+    const context = config.context || 'login';
+
+    LEGACY_BODY_CLASSES.forEach(className => body.classList.remove(className));
+    AMBIENT_BODY_CLASSES.forEach(className => body.classList.remove(className));
+
+    if (context === 'login') {
+        body.classList.add(`theme-uckk-login-background--${period}`);
+    }
+
+    body.classList.add(`theme-uckk-ambient-background--${period}`);
+    target.classList.add('theme-uckk-dynamic-background-active');
+
+    body.dataset.themeUckkAmbientPeriod = period;
+    body.dataset.themeUckkAmbientNow = now.toString();
+    body.dataset.themeUckkAmbientLocationSource = locationSource;
+
+    if (context === 'login') {
+        body.dataset.themeUckkLoginPeriod = period;
+        body.dataset.themeUckkLoginNow = now.toString();
+    }
+
+    if (result.sunrise) {
+        body.dataset.themeUckkAmbientSunrise = result.sunrise.toString();
+        if (context === 'login') {
+            body.dataset.themeUckkLoginSunrise = result.sunrise.toString();
+        }
+    }
+
+    if (result.sunset) {
+        body.dataset.themeUckkAmbientSunset = result.sunset.toString();
+        if (context === 'login') {
+            body.dataset.themeUckkLoginSunset = result.sunset.toString();
+        }
+    }
+
+    if (image !== '') {
+        target.style.setProperty('background-image', cssUrl(image), 'important');
+    }
 };
 
 export const init = config => {
@@ -227,28 +320,28 @@ export const init = config => {
         return;
     }
 
-    const images = config.images || {};
-    const now = new Date();
-    const result = computePeriod(now, config);
-    const period = result.period;
+    // Never wait for a permission prompt before selecting the visual. Apply the
+    // institutional fallback coordinates immediately, then refine with browser
+    // geolocation if the visitor grants access.
+    let coordinates = null;
+    let locationSource = 'fallback';
 
-    const image = images[period] || config.fallback || images.night || images.between || images.day || '';
+    applyPeriod(body, target, config, coordinates, locationSource);
 
-    BODY_CLASSES.forEach(className => body.classList.remove(className));
-    body.classList.add(`theme-uckk-login-background--${period}`);
+    resolveGeolocation(config).then(browserCoordinates => {
+        if (!browserCoordinates) {
+            return;
+        }
 
-    body.dataset.themeUckkLoginPeriod = period;
-    body.dataset.themeUckkLoginNow = now.toString();
+        coordinates = browserCoordinates;
+        locationSource = 'browser';
+        applyPeriod(body, target, config, coordinates, locationSource);
+    });
 
-    if (result.sunrise) {
-        body.dataset.themeUckkLoginSunrise = result.sunrise.toString();
-    }
+    const refreshMinutes = Number.parseInt(config.refreshMinutes ?? config.refreshminutes ?? 5, 10);
+    const refreshMs = Math.max(1, Number.isFinite(refreshMinutes) ? refreshMinutes : 5) * 60000;
 
-    if (result.sunset) {
-        body.dataset.themeUckkLoginSunset = result.sunset.toString();
-    }
-
-    if (image !== '') {
-        target.style.setProperty('background-image', cssUrl(image), 'important');
-    }
+    window.setInterval(() => {
+        applyPeriod(body, target, config, coordinates, locationSource);
+    }, refreshMs);
 };

@@ -1092,6 +1092,55 @@ body:has(.local-uckk-public-page) [role="main"] {
 
 }
 
+/* Location-aware day / penumbra / night artwork on the public home hero. */
+.local-uckk-public-page--home .local-uckk-public-hero.theme-uckk-dynamic-background-active {
+
+    background-position: center center !important;
+
+    background-size: cover !important;
+
+    background-repeat: no-repeat !important;
+
+    color: var(--uckk-parchment, #f7f1df);
+
+}
+
+.local-uckk-public-page--home .local-uckk-public-hero.theme-uckk-dynamic-background-active::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    border-radius: inherit;
+
+    background: linear-gradient(120deg, rgba(7, 21, 20, 0.82), rgba(7, 21, 20, 0.40));
+
+}
+
+.local-uckk-public-page--home .local-uckk-public-hero.theme-uckk-dynamic-background-active .local-uckk-public-title,
+.local-uckk-public-page--home .local-uckk-public-hero.theme-uckk-dynamic-background-active .local-uckk-public-subtitle,
+.local-uckk-public-page--home .local-uckk-public-hero.theme-uckk-dynamic-background-active .local-uckk-public-summary {
+
+    color: var(--uckk-parchment, #f7f1df) !important;
+
+}
+
+.local-uckk-public-page--home .local-uckk-public-hero.theme-uckk-dynamic-background-active .local-uckk-public-eyebrow {
+
+    color: var(--uckk-parchment, #f7f1df) !important;
+
+    border-color: rgba(247, 241, 223, 0.58);
+
+    background: rgba(7, 21, 20, 0.42);
+
+}
+
 
 
 .local-uckk-public-eyebrow,
